@@ -92,6 +92,44 @@ deprojection).
 route is closed at galactic scales. The model does not currently provide a mechanism
 for dark-matter-free flat rotation curves.
 
+### Why No Counting Law Variant Rescues the Mechanism
+
+The $10^6$ failure is **geometric**, not law-dependent. The retardation smallness is:
+$$\frac{\dot{c}}{c}\cdot\frac{d}{c} = \frac{H_0\,d}{c} = \frac{d}{c/H_0}
+= \frac{\text{galaxy size}}{\text{Hubble radius}} \approx 2\times10^{-6}.$$
+This ratio contains no horizon exponent. A different counting law
+$c^a \propto N$ (i.e.\ $c \propto R^{3/a}$) only shuffles $O(1)$ coefficients — the
+power $P$, source-strength drift — none of which touch the $10^6$. Getting order unity
+from a retardation mechanism would require $\dot{c}/c \sim 10^6 H_0$ locally, i.e.\
+$c$ changing on a $\sim10$ Myr timescale, which would destroy redshift and ages.
+
+**General conclusion:** *No retardation or light-travel-time mechanism can solve
+galactic rotation curves for any counting law*, because all carry the $d/(c/H_0)$
+suppression. Do not pursue volume-law tweaks or retardation variants for rotation
+curves.
+
+### Structural Diagnostic: Distance-Keyed vs. Acceleration-Keyed
+
+The RAR (T15) sharpens this into a structural statement. Observed galaxy dynamics
+transition from Newtonian to MOND behaviour when the **local gravitational
+acceleration** crosses $g_\dagger \sim cH_0$ — Newtonian above that threshold,
+modified below it. The $\dot{c}/c$ retardation effect is keyed to a **distance ratio**
+($H_0 r/c$ or $H_0 d/c$), not to local acceleration. These are structurally different
+types of correction:
+
+- A distance-keyed mechanism varies smoothly across a galaxy as $r$ changes, but
+  cannot produce a universal acceleration threshold that is independent of galaxy
+  size or distance from the observer.
+- An acceleration-keyed mechanism switches on wherever the local field drops below
+  $g_\dagger$, regardless of location — exactly what is observed.
+
+**Conclusion:** retardation-type effects are ruled out not just quantitatively (factor
+$10^6$ too small) but structurally (wrong functional dependence). Any viable
+dark-matter-free mechanism must be **acceleration-keyed**: it must modify gravity
+below a universal $\sim cH_0$ threshold, independently of where in the galaxy that
+threshold is crossed. The connecton sea picture (T14) is the current best candidate
+for this type.
+
 ---
 
 ## What Survives: The Dimensional Coincidence
@@ -99,13 +137,15 @@ for dark-matter-free flat rotation curves.
 Even with the mechanism failed, one observation remains: the MOND acceleration scale
 $a_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ is numerically close to $cH_0/2\pi$. The
 model "knows" this scale via $H_0$, even though it cannot produce an order-one
-galactic force from $\dot{c}/c$. This coincidence is discussed in detail in T6.
+galactic force from $\dot{c}/c$. This coincidence, and its sharpest form (the Radial
+Acceleration Relation), are discussed in T6 and T15.
 
 ---
 
 ## Possible Paths Forward
 
-Three honest options:
+Three honest options, subject to the structural constraint that any new mechanism must
+be acceleration-keyed (not distance-keyed):
 
 **1. Accept a limitation.** The model may simply need dark matter, like ΛCDM. Rotation
 curves would then be explained by dark matter, and the model's distinctiveness would
@@ -113,17 +153,16 @@ lie elsewhere (redshift, SN distances, orbital dynamics, etc.). This is an hones
 position and not necessarily fatal to the model.
 
 **2. Seek a different mechanism.** A full Liénard-Wiechert / cosmologically-corrected
-gravitoelectromagnetic (GEM) treatment — going beyond the $\dot{c}/c$ approximation
-to include all retardation terms and the full field structure in a time-varying-$c$
-background — is the natural next attempt. This has not been done. Such a treatment
-might reveal corrections at a different scale or of a different type than the $\dot{c}/c$
-mechanism.
+GEM treatment may reveal corrections of a different *type* than the $\dot{c}/c$
+mechanism — but the structural diagnostic (§above) constrains what to look for: it
+must be acceleration-keyed, not distance-keyed. A velocity-dependent cross-product
+force (Lorentz-form, T14) is a candidate that satisfies this structural requirement.
 
-**3. MOND as an emergent phenomenon.** MOND works extremely well phenomenologically
-(T6). If the model can eventually derive MOND from its fundamental premises — even if
-the specific $\dot{c}/c$ mechanism failed — that would be a success. The model knows
-the scale $cH_0$; the challenge is to produce an order-unity force from it at galactic
-radii.
+**3. MOND as an emergent phenomenon via the connecton sea.** The connecton foam-sea
+(T14) is the leading candidate: diffusion through quantum foam restores Newtonian
+$1/r$ and is not distance-keyed. Whether it can also produce the MOND/RAR functional
+form (requiring a nonlinear source coupling) is the current make-or-break open
+question.
 
 ---
 
@@ -153,4 +192,7 @@ current form, likely requires dark matter as an ingredient.
   differ from ΛCDM's NFW halos?
 - Is there a genuinely different mechanism — e.g., involving the connecton field (T14),
   vacuum polarization in the varying-$K$ background, or modified dispersion relations
-  for gravitons — that could produce MOND-like behaviour?
+  for gravitons — that could produce MOND-like behaviour? The structural constraint
+  (§diagnostic above) requires it to be acceleration-keyed.
+- See T15 for the Radial Acceleration Relation, the sharpest observational form of
+  the rotation-curve challenge, and T14 for the current leading candidate mechanism.

@@ -56,8 +56,10 @@ most theories do not naturally generate an acceleration of this magnitude.
 
 The model does not currently have a **working force law** that produces MOND-like
 behaviour at galactic scales. The retardation mechanism (T5) was the attempted bridge,
-but it fails by $\sim 10^3$–$10^6$ at galactic radii. So the dimensional coincidence
-$a_0 \sim cH_0$ is real and tantalizing, but unaccompanied by a mechanism.
+but it fails by $\sim 10^3$–$10^6$ at galactic radii — and not merely quantitatively:
+it is structurally the wrong type of mechanism (distance-keyed, not acceleration-keyed,
+T5). The dimensional coincidence $a_0 \sim cH_0$ is real and tantalizing, but
+unaccompanied by a mechanism.
 
 ### The $a_0$ derivation from the demoted mechanism
 
@@ -76,10 +78,52 @@ principles.
 The correct diagnosis: this derivation is a chain of dimensional reasoning, each step
 of which gives the only combination of $c$, $G$, $H_0$ with the right dimensions. It
 cannot fail to give $a_0 \sim cH_0$ regardless of the physics. The explicit ring
-integration (T5) shows the actual force is many orders of magnitude too small.
+integration shows the actual force is $\sim10^6$ too small (T5).
 
 **Conclusion: the $a_0 \sim cH_0$ coincidence is real but unexplained. Treat it as a
 hint, not a prediction.**
+
+---
+
+## The Sharpest Statement: The Radial Acceleration Relation (T15)
+
+The RAR (McGaugh, Lelli, Schombert 2016) is the sharpest, most theory-neutral form
+of the rotation-curve challenge. Across $\sim150$ galaxies, the observed gravitational
+acceleration $g_\text{obs}$ is a **tight one-parameter function** of the Newtonian
+baryonic acceleration $g_\text{bar}$:
+$$g_\text{obs} = \frac{g_\text{bar}}{1 - e^{-\sqrt{g_\text{bar}/g_\dagger}}},
+\qquad g_\dagger \approx 1.2\times10^{-10}\ \text{m/s}^2.$$
+Scatter is $\sim0.13$ dex; there is **no residual dependence** on galaxy size,
+environment, or morphology. The BTFR is the deep-MOND limit of this relation.
+
+For this model, $g_\dagger \sim cH_0$ is the natural scale. The dimensional match is
+structurally inevitable (it is the only acceleration formable from $c$ and $H_0$),
+shared by MOND and all cosmologically motivated proposals. The challenge is the
+functional form and order-one magnitude — for which no mechanism currently exists.
+
+See T15 for the full RAR discussion. The three OP-2/OP-3/OP-17 problems (MOND
+constant, rotation curves, RAR) **stand or fall together**: solving any one solves
+all three, and the $\sim10^{-6}$ order problem of T5 must be resolved first.
+
+---
+
+## The $\sqrt{M}$ Signature: Why Linear Mechanisms Fail
+
+The key structural feature of MOND is the Baryonic Tully-Fisher Relation $v^4 = GM a_0$.
+In the deep-MOND regime this requires the force at radius $r$ to go as
+$g_\text{MOND} \propto \sqrt{M}/r$ — note the $\sqrt{M}$, not the $M/r^2$ of Newton.
+This is MOND's **irreducible nonlinear signature**.
+
+Every natural mechanism the model produces is **linear in the source mass** $M$
+(retardation terms, linear diffusion, additive GEM-like fields). A linear additive
+term gives $M/r$, hence $v^4 \propto M^2$ — the wrong Tully-Fisher slope.
+
+**General diagnosis:** the scale $\sim cH_0$ keeps matching (dimensional,
+linear-friendly) while the functional form keeps failing (needs $\sqrt{M}$, hence
+nonlinearity). The MOND form requires a **nonlinear source coupling** that none of the
+model's natural linear mechanisms supply. See T14 for the detailed GEM-additive
+analysis, the catalytic-cycle calculation (negative result), and the live candidate
+directions (Lorentz-form $v\times B_c$, criticality-as-license).
 
 ---
 
@@ -98,12 +142,62 @@ Several interpretations have been proposed in the literature (not specific to th
 
 3. **Gravitational polarization of the vacuum.** In theories like MOND's relativistic
    extensions (TEVES, AeST), the vacuum polarizability sets the transition scale. The
-   connecton field of this model (T14) is a candidate for such a vacuum medium, but
-   the explicit connection to $a_0$ has not been worked out.
+   connecton foam-sea (T14) is the best candidate from this model: it gives Newtonian
+   $1/r$ through diffusion, and the background gradient of the cosmic sea provides a
+   natural scale $\sim cH_0$ for a transition. Whether the MOND functional form follows
+   is the open question (T14).
 
 4. **Inertia modification.** Some MOND formulations (MILU, QI) modify inertia rather
    than gravity. This is not the framing of the present model, but the possibility is
    not excluded.
+
+---
+
+## The Connecton Sea: Current Best Candidate (Not Yet MOND)
+
+The connecton sea = quantum foam (T14) is the leading mechanism from this model for
+addressing rotation curves. It:
+- Resolves the ballistic/diffusive dilemma that previously blocked $1/r$ gravity.
+- Gives diffusion everywhere (through the dense virtual $e^+e^-$ foam), restoring
+  Newtonian $1/r$.
+- Is not distance-keyed — it is a steady-state diffusion effect, free of the
+  geometric $10^6$ (T5).
+- Provides a cosmological background gradient $|\nabla\rho_\text{bg}| \sim
+  \rho_\text{bg}H_0/c$ that is mass-independent, giving a universal transition scale
+  $\sim cH_0$ when the mass's connecton gradient drops to this background level.
+
+**The wall** (caveat 2 of OP-14/T14): reproducing the RAR functional form requires
+the low-gradient diffusion to take the specific form $D \propto |\nabla\rho|$ — the
+Bekenstein-Milgrom $\mu(x)\to x$ limit. No independent physical reason for this form
+was found; the natural reading (small perturbation on the large background) gives
+*linear* response = Newton, no enhancement. The foam-sea robustly delivers Newtonian
+$1/r$; the MOND/RAR functional form does not fall out and is currently disfavored by
+the natural reading.
+
+### The target: a Lorentz-type two-component force
+
+The target equation that could carry $\sqrt{M}$ is a velocity-dependent Lorentz-form
+law:
+$$\mathbf{g} = \mathbf{g}_\text{Newton} + \mathbf{v}_\text{star} \times \mathbf{B}_c,$$
+where $\mathbf{B}_c$ is a magnetic-like component of the $c$-field. A flat rotation
+curve requires $B_c \sim v/r$, i.e. $B_c \propto (GM a_0)^{1/4}/r$, which gives
+$v \times B_c = \sqrt{GM a_0}/r$ — **carrying the correct $\sqrt{M}$** (deep-MOND +
+Tully-Fisher). This repackages the difficulty onto the source scaling of $B_c$
+($\propto M^{1/4}$, more non-analytic than $\sqrt{M}$), but it is the first framing
+where velocity-dependence, the $\sqrt{M}$ requirement, and a universal $a_0$ coexist
+without immediate contradiction.
+
+### Criticality-as-license (speculative bridge)
+
+All galaxies possess central black holes, which provide strong-field critical surfaces.
+Two roles for this criticality are distinguished:
+- **Role 1** (BH region *sources* the effect): ruled out — would make the amplitude
+  $\propto M_\text{BH}$, destroying the universal $a_0$.
+- **Role 2** (criticality is an *existence condition* that *licenses* the non-analytic
+  coupling, while the horizon sets the scale $a_0 \sim cH_0$): survives. The BH
+  criticality need only *exist* somewhere (not operate in the weak field) to permit a
+  non-analytic $B_c$ source. Connecting the Lorentz form to this license is the live
+  conjecture, unproven.
 
 ---
 
@@ -128,10 +222,12 @@ functional form and the correct scale.
 
 - Is there a first-principles derivation of $a_0 = cH_0 / (2\pi)$ or $cH_0 / (4\pi)$
   from the geometry of horizon counting, without reverse-engineering the coefficient?
-- Could the connecton mechanism (T14) provide a gravitational contribution at galactic
-  scales that transitions from Newtonian at short range to MOND-like at long range?
+- The connecton foam-sea (T14) gives Newtonian $1/r$: can a nonlinear extension
+  (self-interaction, Lorentz-form $v\times B_c$, or criticality-licensed coupling)
+  yield the RAR functional form and the $\sqrt{M}$ Tully-Fisher scaling?
 - Is the coincidence $a_0 \sim cH_0$ exact in the sense that $a_0$ should vary with
   cosmic epoch as $c(t)H_0(t)$? If so, galaxy rotation curves at high $z$ should
   show a different $a_0$, which is observationally testable (Milgrom 1983 proposed this).
 - The factor $1/(2\pi)$: does it arise from a geometric integration (surface area of
   the horizon sphere) or from some quantum-mechanical phase factor?
+- See T15 for the RAR as a discriminating test and T14 for the full mechanism discussion.

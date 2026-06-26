@@ -151,11 +151,184 @@ issues.
    - This is a substantially different model: connectons as a self-interacting medium,
      not a thin gas.
 
-This self-interacting sea picture is the leading candidate for escaping the dilemma, but
-it has not been derived. Key open questions: (a) does the connecton-sea model give a
-Newtonian $1/r$ force with the right coefficient? (b) does it give $G \propto c^{-2}$
-with the right magnitude? (c) is it consistent with the global $\dot{c}/c = H$
-bookkeeping?
+This self-interacting sea picture is the leading candidate for escaping the dilemma.
+Its full development is in the next section.
+
+---
+
+## The Connecton Sea = Quantum Foam: Escaping the Dilemma
+
+Identify the dense self-interacting connecton sea with the **quantum foam** — the
+virtual $e^+e^-$ pairs of the QED vacuum. No new ontology is required: quantum foam
+already exists and has density $\sim 1/\lambda_\text{Compton}^3 \sim 10^{37}$
+m$^{-3}$.
+
+If connectons scatter off this foam, the mean free path is sub-Compton → **diffusion
+everywhere**, including "empty" space. Ordinary matter is only a weak perturbation on
+the pre-existing dense medium → gravity stays weak. The $1/r$ Poisson equation holds
+everywhere (diffusion in empty space, not just inside bodies):
+$$\nabla^2\rho = S\,\delta^3(\mathbf{x}) \implies \rho \propto \frac{1}{r},
+\quad S \propto M.$$
+
+This **resolves the ballistic/diffusive dilemma**: the foam is the diffusive medium;
+ordinary matter perturbs it weakly. The $1/r$ potential is restored, weak and
+EP-clean (source strength $\propto M$, composition-independent).
+
+It also **dodges the geometric $10^6$** (T5): a steady-state diffusion profile is not
+a light-travel-time effect — it carries no $d/(c/H_0)$ suppression. This is the first
+mechanism in the project that is both the right *type* (acceleration-keyed, not
+distance-keyed) and free of the geometric death.
+
+The connecton capture-delay in the foam is the microscopic origin of the PV refractive
+index perturbation: a mass perturbs the local connecton density, locally reducing $c$
+(raising $K$), and $g \propto -\nabla(\ln K)$ is the PV/Dicke force — so the connecton
+picture reduces to the PV equations in the macroscopic limit, making $G \propto c^{-2}$
+natural (the PV/Dicke-native value).
+
+---
+
+## Toward the RAR: A Gradient-Keyed Transition
+
+Pure diffusion gives Newton ($g \propto 1/r^2$) — no MOND. The route to MOND requires
+a **transition**: Newton above $g_\dagger$, modified below it. Two natural keying
+possibilities were examined:
+
+**Keyed to density** (mass perturbation $\sim$ background): fails. The mass
+perturbation being comparable to the background gives a **mass-dependent** scale
+$g_t \propto 1/M$ — wrong for the universal RAR.
+
+**Keyed to gradients** (cosmological background gradient): works structurally. The
+cosmic connecton sea rises with horizon distance, carrying an intrinsic background
+gradient:
+$$|\nabla\rho_\text{bg}| \sim \rho_\text{bg} H_0 / c \quad\text{(mass-independent,
+cosmological)}.$$
+Where the mass's connecton-density gradient drops to this background level, the
+transition acceleration is:
+$$g_t = \kappa\rho_\text{bg} H_0 / c \quad\text{(mass-independent)},$$
+which is $\sim cH_0$ if $\kappa\rho_\text{bg} \sim c^2$ — the right structure for the
+RAR (T15): universal $\sim cH_0$ onset, no dependence on galaxy mass or size.
+
+### The closure condition $V = c$
+
+The condition $\kappa\rho_\text{bg} \sim c^2$ is dimensionally a velocity$^2$ (forced
+by the force law $g = \kappa\nabla\rho$). So it is the single physical statement
+$V = c$ — the sea's characteristic velocity is the connecton propagation speed. One
+power of $c$ is structural ($D = cL/3$ — connectons move at $c$). The other is a
+concrete microphysical closure condition:
+$$\frac{4\pi G L\rho_\text{bg}}{3\sigma} = c,$$
+linking per-mass emission $\sigma$, mean free path $L$, and background density
+$\rho_\text{bg}$. This is plausible and a specific derivation target, not a free fit.
+
+This is distinct from the earlier OP-3 dimensional sleight-of-hand: there, the
+"amplification" had no force-law backing. Here, $g = \kappa\nabla\rho$ is the actual
+force law, and $V = c$ has definite physical meaning (the sea's signal speed).
+
+### Caveat 2: the functional form is the wall
+
+The gradient-keyed approach gives the **scale** $\sim cH_0$ for the transition — but
+not the **functional form** of the RAR. The deep-MOND regime requires the
+low-gradient diffusion to take the specific form $D \propto |\nabla\rho|$ (equivalently,
+Bekenstein-Milgrom $\mu(x) \to x$ in the deep limit). If it did, everything would
+close beautifully: $g \propto 1/r$ (flat curves), $v^4 = GM\,a_0$ (Tully-Fisher), and
+$a_0 = cH_0$ — the same $V=c$ condition fixing the scale in both regimes.
+
+But no independent physical reason for $D \propto |\nabla\rho|$ was found. Worse, the
+natural reading (small mass-gradient riding on the large cosmic background gradient)
+gives back *linear* response — Newton-on-a-background, **no MOND enhancement** — and
+the obvious nonlinearity (flux saturation) pushes in the wrong direction (toward the
+strong-field end). **Honest status:** the foam-sea robustly delivers Newtonian $1/r$;
+the MOND/RAR functional form (T6, T15) does not fall out and is currently disfavored
+by the natural reading.
+
+---
+
+## The $\sqrt{M}$ Problem: Linear Mechanisms vs. MOND
+
+An additive two-component force law $\mathbf{g} = \mathbf{g}_\text{Newton} +
+\mathbf{g}_\text{cosmo}$ (GEM-inspired) is the right *framing*: it leaves Newton
+intact and avoids wrecking Solar System tests. The cosmological term must go as $1/r$
+(a constant gives rising curves; $1/r^2$ just rescales $G$). But the MOND term must be:
+$$g_\text{cosmo} \propto \frac{\sqrt{M}}{r} \quad\text{(Tully-Fisher: }v^4 = GM\,a_0\text{, T6)}.$$
+This $\sqrt{M}$ is MOND's irreducible signature (T6, T15).
+
+A *linear* additive term — the literal GEM analogue, since GEM is a linear theory
+($\mathbf{B}_g \propto$ mass current $\propto M$) — gives $M/r$, hence $v^4 \propto M^2$:
+**the wrong Tully-Fisher slope**.
+
+**General diagnosis:** every natural mechanism (retardation, linear diffusion, additive
+GEM-like terms) is *linear in $M$*. MOND's $\sqrt{M}$ demands a **nonlinear source
+coupling**. This is why the scale keeps matching (dimensional, linear-friendly) while
+the functional form keeps failing (needs nonlinearity). The one genuine nonlinearity
+in the model is the **self-interacting connecton sea** — whether it can generate a
+$\sqrt{M}$ coupling is the make-or-break question.
+
+---
+
+## The Catalytic-Cycle Calculation (Negative Result)
+
+The author's favored self-interaction: connectons **catalyze** transient virtual
+$e^+e^-$ pairs (triggering pair formation, driving $\dot{c}$ via premise 2) and are
+re-emitted (capture/re-emission — nothing destroyed, conservation symmetry preserved).
+The virtual pair is the *localized* intermediary the horizon-wavelength connecton
+lacks. This was calculated in three stages:
+
+1. **Real non-analytic $\sqrt{\phantom{E}}$.** The threshold density of states for pair
+   creation gives $g \propto \sqrt{E_\text{exc}}$ — exactly the non-analytic form MOND
+   needs.
+
+2. **Wrong argument.** $E_\text{exc}$ is set by the pair's own rest energy
+   ($\sim 2m_e c^2 \sim$ MeV), which swamps the galactic field-gradient energy
+   ($|\nabla\phi|\lambda_C$) by $\sim 10^{33}$. The $\sqrt{\phantom{E}}$ is a
+   *constant* prefactor, not $\sqrt{|\nabla\phi|}$.
+
+3. **Collective version gives Newton.** The coarse-grained / collective version
+   gives linear drift (Einstein relation: $v_\text{drift} \propto F$) → Newtonian
+   gravity. The only route to sublinear ($\sqrt{}$) collective response is
+   **cooperativity** (one pair's formation enhancing neighbors') — criticality —
+   which belongs at the strong-field end, not the weak-field MOND end.
+
+**Verdict:** the catalytic cycle robustly gives Newtonian gravity but **not MOND**. The
+$\sqrt{M}$ requires a weak-field cooperative/non-analytic coupling that this mechanism
+(like retardation, linear diffusion, additive GEM terms) does not supply. Not a proof
+the model cannot do MOND, but a precise statement of what is missing.
+
+---
+
+## Criticality-as-License and the Lorentz-Form Target
+
+### Two roles for central-black-hole criticality
+
+All galaxies possess central black holes = strong-field critical surfaces. Two roles:
+
+- **Role 1** (BH critical region *sources* the effect): ruled out. The amplitude would
+  scale with $M_\text{BH}$, destroying the universal $a_0$.
+- **Role 2** (criticality is an *existence condition* that *licenses* the non-analytic
+  coupling, while the horizon sets the scale $a_0 \sim cH_0$): survives. The BH
+  criticality need only *exist somewhere* (not operate in the weak field) to permit a
+  non-analytic $B_c$ source, and $a_0$ stays universal. This dissolves the
+  catalytic-calc dead end: criticality-as-license need only hold globally, not at
+  every test-mass location. **Open:** a localized ($\sim$AU) BH critical surface
+  licensing a coupling that acts at $\sim10$ kpc requires a
+  global/topological condition, not a local source — conceivable, unproven.
+
+### The Lorentz-form target equation
+
+The two-component law sought is:
+$$\mathbf{g} = \mathbf{g}_\text{Newton} + \mathbf{v}_\text{star} \times \mathbf{B}_c,$$
+where $\mathbf{B}_c$ is a magnetic-like component of the $c$-field — a
+*velocity-dependent* cross-product term. For a flat rotation curve, $B_c \sim v/r$,
+i.e. $B_c \propto (GM\,a_0)^{1/4}/r$, and then:
+$$v_\text{star} \times B_c = \frac{\sqrt{GM\,a_0}}{r}$$
+**carries the correct $\sqrt{M}$** (deep-MOND + Tully-Fisher, T6). This repackages
+the difficulty onto the source: $B_c$ must be sourced $\propto M^{1/4}$, an even more
+non-analytic scaling than $\sqrt{M}$.
+
+**Conjecture** (connecting criticality-as-license and the Lorentz form, unproven):
+Role-2 criticality may be exactly what permits a non-analytic $B_c$ source, with the
+$v\times B_c$ structure then delivering $\sqrt{M}$ and a horizon-set $a_0 \sim cH_0$
+(T6). This is the first framing where velocity-dependence, the $\sqrt{M}$ requirement,
+and a universal $a_0$ coexist without immediate contradiction — a direction for future
+work, not a result.
 
 ---
 
@@ -195,26 +368,32 @@ when normalized to the present-day value.
 
 ## Open Items, In Priority
 
-1. **The ballistic/diffusive dilemma** — does the self-interacting connecton sea
-   picture give diffusion at range (hence $1/r$) without making gravity strong at
-   short range? If yes, this is the primary success of the connecton hypothesis and
-   would establish a plausible mechanism for Newtonian gravity.
+1. **(Make-or-break) The RAR functional form.** Solve the nonlinear diffusion in the
+   foam-sea picture: does it yield the deep-MOND $g \propto \sqrt{M}/r$ law and the
+   RAR interpolating function, not just the $\sim cH_0$ scale? The catalytic-cycle
+   route has been tested and gives Newton; the Lorentz-form $v\times B_c$ route
+   (with criticality-as-license) is the live next target. Whether there is a
+   weak-field cooperativity in the connecton foam is the central open question.
 
-2. **Coefficient derivation** — if diffusion holds at range, does the resulting
-   Poisson-equation Green's function give $G \propto c^{-2}$ with the correct
-   magnitude, not just the $1/r$ form?
+2. **Prove the closure condition** $4\pi G L\rho_\text{bg}/(3\sigma) = c$ (the $V=c$
+   statement) — one power of $c$ is already structural ($D = cL/3$); the other
+   requires a derivation linking the emission rate, mean free path, and background
+   density.
 
-3. **Global bookkeeping** — is $\dot{c}/c = H$ from the connecton termination/turnover
+3. **Coefficient derivation** — does the resulting Poisson-equation Green's function
+   give $G \propto c^{-2}$ with the correct magnitude, not just the $1/r$ form?
+
+4. **Global bookkeeping** — is $\dot{c}/c = H$ from the connecton termination/turnover
    rate consistent with the same field giving local Newtonian gravity? The two
    requirements (global $c$ growth and local $1/r$ force) come from the same field and
    must be mutually consistent.
 
-4. **Light bending** — does the connecton's propagation in a $K$-gradient background
+5. **Light bending** — does the connecton's propagation in a $K$-gradient background
    give the correct general-relativistic prediction for light deflection by the Sun
    ($1.75''$)? The PV framework gives the right answer; the connecton picture should
    reduce to PV in the appropriate limit.
 
-5. **Whether matter must emit continuously or only at creation.** Continuous emission
-   (preferred) gives clean EP and negligible energy drain. Emission only at creation
-   would make the matter contribution history-dependent and could break the relational
-   principle.
+6. **Whether matter must emit continuously or only at creation.** Continuous emission
+   (preferred) gives clean EP and negligible energy drain ($\sim 10^{-39}$ of rest
+   energy per Hubble time). Emission only at creation would make the matter
+   contribution history-dependent and could break the relational principle.

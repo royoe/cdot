@@ -320,7 +320,8 @@ See T11 for the full discussion.
 | Relational principle ($N{\to}c{\to}$ all scales); Machian about $c$ | Core §0, foundational (T12) |
 | Deceleration $q_0=1/(nP)>0$; cannot mimic acceleration | Firm structural result (T4) |
 | Galaxy size evolution $r\propto(1+z)^{-1}$ | Consistency success (T10) |
-| Rotation-curve mechanism (retardation) | **Demoted — fails at galactic scale** (T5) |
+| Rotation-curve mechanism (retardation) | **Demoted — fails at galactic scale, geometric** (T5) |
+| Radial Acceleration Relation / MOND functional form | **Open — scale matches, mechanism absent** (T15, T6, T14) |
 | Premise-2 fork: count $N$ vs classical Mach $M_u$ | **Open fork** (T12) |
 | Mass law: why invariant, not PV $c^{-3/2}$ | **Open** (T8) |
 | MOND constant $a_0$ value | **Open** (T6) |
