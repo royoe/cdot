@@ -326,7 +326,7 @@ See T11 for the full discussion.
 | Mass law: why invariant, not PV $c^{-3/2}$ | **Open** (T8) |
 | MOND constant $a_0$ value | **Open** (T6) |
 | Fine-structure drift $\dot\alpha$ | **Open** (T7) |
-| SN Hubble diagram | Mild tension; $q_0>0$ firm; needs Pantheon+ fit (T4) |
+| SN Hubble diagram | Mild tension; $q_0>0$ firm; standard-candle observable derived end-to-end (T4); Pantheon+ fit open |
 | Primordial genesis / matter-antimatter | **Speculative** (T13) |
 | Connecton gravity — foam-sea gives Newtonian $1/r$; MOND not reproduced | **Speculative** (T14) |
 | CMB power spectrum — first peak translates; higher peaks need PBH wells | **Speculative** (T16) |

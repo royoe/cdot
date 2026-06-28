@@ -126,31 +126,121 @@ evolution, SHOES vs. UNITY analyses, and dust modelling uncertainties).
 
 A genuine comparison requires fitting the Pantheon+ dataset directly within the model's
 framework — using the model's $D_L(z)$ formula and its own covariance structure rather
-than comparing model predictions to ΛCDM-derived posteriors. This has not been done and
-is the single highest-priority empirical test.
+than comparing model predictions to ΛCDM-derived posteriors. This has been done (see
+§ Pantheon+ Fit Results below); the next step is to replace the diagonal errors with the
+full stat+sys covariance matrix.
+
+---
+
+## Pantheon+ Fit Results (June 2026)
+
+Script: `cdot-3/fit_pantheon.py`. Data: Brout et al. 2022 (`data/Pantheon+SH0ES.dat`).
+Sample: 1371 Hubble-flow SNe ($z > 0.023$, Cepheid calibrators excluded).
+Fit strategy: for each model a single nuisance parameter (absorbing $M_B + 5\log_{10}H_0$)
+is fitted analytically as the inverse-variance-weighted mean offset; the shape of $D_L(z)$
+is the sole discriminant. Errors are diagonal only (`MU_SH0ES_ERR_DIAG`); the full
+$1701\times1701$ stat+sys covariance matrix is on disk for future use.
+
+![](../figures/pantheon_hubble_diagram.svg)
+*Figure 1: Upper — Hubble diagram with binned Pantheon+ data and best-fit model curves.
+Lower — shape residuals $\Delta\mu$ relative to the $q_0=0$ coasting universe
+($\Omega_m=2/3$, $\Omega_\Lambda=1/3$), using the ΛCDM-calibrated $H_0$ as the common
+zero-point. Data and ΛCDM rise together above the neutral reference; VSL sits near zero;
+EdS falls below.*
+
+### $\chi^2$ summary (diagonal errors, $\mathrm{dof} = 1370$)
+
+| Model | $q_0$ | $\chi^2/\mathrm{dof}$ | $\chi^2$ | $H_0^{\rm eff}$ [km/s/Mpc] |
+|:------|------:|---------------------:|---------:|---------------------------:|
+| ΛCDM ($\Omega_m=0.30$, $\Omega_\Lambda=0.70$) | $-0.55$ | **0.435** | 595 | 73.65 |
+| $q_0=0$ coasting ($\Omega_m=2/3$, $\Omega_\Lambda=1/3$) | $0$ | 0.566 | 775 | — |
+| VSL static (volume law, $P=2$, $n=3$) | $+1/6$ | 0.577 | 791 | 69.22 |
+| EdS ($\Omega_m=1$, $\Omega_\Lambda=0$) | $+1/2$ | 0.854 | 1170 | 66.95 |
+
+All $\chi^2/\mathrm{dof} < 1$ because the diagonal errors overestimate the true scatter
+(the Pantheon+ pipeline propagates a full covariance; diagonal entries alone are
+conservative). The relative ordering and $\Delta\chi^2$ values are meaningful even if the
+absolute normalisation is not.
+
+**$\Delta\chi^2$ (VSL $-$ ΛCDM) $= +195.4$** — a large penalty concentrated at $z < 0.3$
+where the SN density is highest and the VSL curve departs most noticeably from ΛCDM.
+
+### $\Delta\mu$ between VSL and ΛCDM (after best-fit offsets)
+
+| $z$ | $\Delta\mu$ [mag] |
+|----:|------------------:|
+| 0.10 | $+0.064$ |
+| 0.20 | $+0.004$ |
+| 0.50 | $-0.121$ |
+| 1.00 | $-0.222$ |
+| 1.50 | $-0.260$ |
+| 2.00 | $-0.270$ |
+| 2.30 | $-0.269$ |
+
+The sign flip near $z \approx 0.2$ reflects the offset-fitting absorbing the low-$z$
+discrepancy into $H_0^{\rm eff}$: VSL needs $H_0 = 69.2$ km/s/Mpc to match the data,
+whereas ΛCDM needs $H_0 = 73.6$ km/s/Mpc. After the offsets are removed, VSL is brighter
+than ΛCDM at low $z$ (where the deceleration signal is small and $H_0$ dominates) and
+dimmer at high $z$ (where the difference in $D_L$ shape is largest).
+
+### Interpretation
+
+The VSL model is **disfavoured relative to ΛCDM at $\Delta\chi^2 \approx +195$** on the
+diagonal-error metric, confirming that the observed SN brightnesses are inconsistent with
+mild deceleration ($q_0 = +1/6$) at the level the current data allow. The model sits
+between the $q_0=0$ coasting universe and EdS — it predicts SNe brighter than ΛCDM at
+all $z > 0.2$, which is the opposite of what the data require.
+
+The next step before treating this as a definitive exclusion is to repeat the fit using
+the full $1701\times1701$ stat+sys covariance matrix, which is saved at
+`data/Pantheon+SH0ES_STAT+SYS.cov`. With the full covariance the $\chi^2/\mathrm{dof}$
+normalisation will be correct and a proper $\Delta\chi^2$ significance (and Bayes factor)
+can be quoted.
 
 ---
 
 ## The Standard-Candle Assumption in the Model
 
-For SNe to serve as standard candles in this model, the intrinsic luminosity $L$ of a
-Type Ia SN must be the same in the model's proper units at all redshifts. Since the
-model has $c$ increasing over cosmic time, and since stellar luminosity scales as
-$L \propto c^4$ (T9), **a SN at higher $z$ (lower $c$) would be intrinsically less
-luminous** in map-frame units. However, the standard-candle condition is defined in
-proper (atomic) units at the time of emission, where the luminosity is derived from
-the same nuclear physics at all epochs. In proper units the luminosity is invariant
-(the $c^4$ factor is a map-frame artifact, not a physical dimming). This is consistent
-with the energy-conserving map frame (T11): what changes is the coordinate description,
-not the physical measurement.
+The explicit flux integral confirms the assertion. Three steps carry the derivation.
+
+**Proper-time stretch.** Atomic clocks scale as $\nu\propto c^2$ (Core Principles §5a),
+so the ratio of observation-epoch to emission-epoch proper duration per photon is
+$d\tau_\text{obs}/d\tau_\text{emit} = (c_0/c_e)^2 = (1+z)$. Time dilation here
+is derived from clock-rate scaling and photon-number conservation, not metric expansion.
+
+**Per-photon energy (the non-obvious step).** Premise 4 states the photon's absolute
+frequency is conserved in flight. The emission-epoch clock ran slow by $(c_e/c_0)^2$
+relative to today, so the proper emission frequency $\nu_e$ corresponds to absolute
+frequency $\nu_o = \nu_e/(1+z)$ — and it is $h\nu_o$ that a detector deposits, not
+$h\nu_e$. The apparent "redshift energy factor" is a proper-vs-absolute frequency
+difference at the source, not an in-flight energy loss (premise 4 forbids the latter).
+Misreading this step as $h\nu_e$ would give $D_L = (1+z)^{1/2}D_\text{p}$; the
+correct reading restores $D_L = (1+z)D_\text{p}$.
+
+**The observable.** Assembling bolometric flux ($h\nu_o$ per photon, arrival duration
+stretched by $(1+z)$, spread over $4\pi D_\text{p}^2$) confirms $D_L=(1+z)D_\text{p}$.
+The actual survey observable — peak specific flux $F_\nu$ plus K-correction — gives the
+same result: at the instant of peak the rate-dilation $1/(1+z)$ and bandwidth $(1+z)$
+cancel, leaving one power of $(1+z)$ from the per-photon energy alone. The K-correction
+depends only on the frequency mapping $\nu_e=(1+z)\nu_o$ and the intrinsic SED shape,
+both identical to FRW; SALT2/Pantheon+ pipelines apply unchanged.
+
+**Why T9's non-cancellation principle does not transfer.** In T9, orbital expansion is
+genuinely observable because gravity ($r\propto c^2$ via $G\propto c^{-2}$) and
+electromagnetism ($a_B\propto c^{-1}$) couple to $c$ with *different* exponents —
+the two sectors compete and do not cancel. The SN flux chain runs entirely within the
+photon/atomic sector: emission energy, photon frequency, and clock rate share the
+*same* power structure, so all $c$-factors reassemble into the clean $(1+z)$ powers
+above. Gravity never enters the photon's journey. The $L\propto c^4$ brightening (T9)
+is fully absorbed into those factors and introduces no additional $z$-dependent dimming.
 
 ---
 
 ## Open Questions
 
-- A direct Pantheon+ fit: compute the model's predicted $\mu(z)$ curve and compare
-  to the Pantheon+ data with proper covariance. Does the $q_0 = +1/6$ signal appear
-  at a level exceeding the data scatter?
+- ~~A direct Pantheon+ fit~~ **Done (June 2026):** $\Delta\chi^2 = +195$ on diagonal
+  errors. Next: repeat with the full stat+sys covariance matrix (`data/Pantheon+SH0ES_STAT+SYS.cov`)
+  to obtain a correctly normalised $\chi^2/\mathrm{dof}$ and formal significance.
 - What is the constraint on the mass-scaling exponent $s$ from SN data? The shape
   of $\mu(z)$ is sensitive to $P = s+2$; a MCMC fit could constrain $s$.
 - If the SN data firmly require $q_0 < 0$ even after model-native analysis, the model
