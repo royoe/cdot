@@ -252,7 +252,7 @@ The observable Hubble constant is $P$ times the fractional growth rate of $c$.
 Differentiating $c = kR^3$ and using $\dot R = c$:
 $$H^{\text{hor}} = \frac{\dot c}{c} = 3kR^2 = \frac{3c}{R}, \qquad H_0^{\text{hor}} = 3kR_0^2.$$
 
-$H^{\text{hor}}$ was far larger in the past:
+$H^{\text{hor}}$ grows over cosmic time; it was far smaller in the past:
 $$H^{\text{hor}}(u) = \frac{H_0^{\text{hor}}}{1 + 2kR_0^2\,u}.$$
 
 ---
@@ -328,4 +328,7 @@ See T11 for the full discussion.
 | Fine-structure drift $\dot\alpha$ | **Open** (T7) |
 | SN Hubble diagram | Mild tension; $q_0>0$ firm; needs Pantheon+ fit (T4) |
 | Primordial genesis / matter-antimatter | **Speculative** (T13) |
-| Connecton gravity | **Speculative** (T14) |
+| Connecton gravity — foam-sea gives Newtonian $1/r$; MOND not reproduced | **Speculative** (T14) |
+| CMB power spectrum — first peak translates; higher peaks need PBH wells | **Speculative** (T16) |
+| Primordial black holes — candidate for DM, CMB wells, SMBH seeds | **Speculative** (T13, T16) |
+| Galaxy morphology and M-σ — dynamical selection / Lorentz ejection | **Speculative** (T17) |

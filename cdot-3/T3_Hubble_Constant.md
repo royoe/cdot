@@ -61,12 +61,14 @@ In standard cosmology, $H$ is the rate of expansion of space: $H = \dot a/a$. In
 model, space is static; there is no $\dot a$. Instead,
 $$H \equiv \frac{\dot c}{c}.$$
 The Hubble "constant" is the fractional rate of increase of the speed of light. It is
-not a constant in time:
-$$H(z) = H_0^{\text{hor}} \cdot (1+z)^{1/(3P) \cdot 3} = H_0^{\text{hor}}(1 + 2kR_0^2 u),$$
-where $u$ is coordinate lookback time. $H$ was much larger in the early universe
-(when $c$ was growing rapidly from a small initial value) and asymptotes to
-$H_0^{\text{hor}}$ today. This is a **decelerating** $H(z)$: $H$ increases with $z$,
-opposite to what a dark-energy-dominated universe gives. See T4.
+not a constant in time. From $H^{\text{hor}} = \dot{c}/c = 3kR^2$, the horizon rate
+grows as $R$ grows — it was smaller in the early universe and $H_0^{\text{hor}}$
+is the present-day maximum:
+$$H^{\text{hor}}(z) = \frac{H_0^{\text{hor}}}{(1+z)^{1/3}}\quad(P=2),
+\qquad H^{\text{hor}}(u) = \frac{H_0^{\text{hor}}}{1 + 2kR_0^2\,u}.$$
+The model is structurally **decelerating** ($q_0 = +1/6 > 0$, T4) — sources at high
+$z$ appear closer than in dark-energy-dominated $\Lambda$CDM. See T4 for the SN
+implications.
 
 ---
 
@@ -83,9 +85,8 @@ within the model's framework (the CMB acoustic scale would map differently to $H
 the model's $H(z)$ history differs from ΛCDM's). A genuine comparison requires computing
 the model's CMB power spectrum, which has not been done.
 
-What is clear: **the model's $H(z)$ history is monotonically decelerating** (increasing
-$H$ towards higher $z$), which is qualitatively different from ΛCDM's accelerating phase
-at late times. Whether this difference could account for the tension between early and
+What is clear: **the model is structurally decelerating** ($q_0 = +1/6 > 0$, T4),
+which is qualitatively different from ΛCDM's dark-energy-driven acceleration at late times. Whether this difference could account for the tension between early and
 late $H_0$ measurements is an open and potentially interesting question, but no
 quantitative answer is available.
 
@@ -93,12 +94,12 @@ quantitative answer is available.
 
 ## $H_0$ and the Proper Age
 
-The proper age of the universe in the model is $\tau_\infty = \tfrac{3}{4}H_0^{-1}$
+The proper age of the universe in the model is $\tau_\infty = \tfrac{3}{2}H_0^{-1}$
 where $H_0 = H_0^{\text{obs}}$. The age–$H_0$ relation is therefore:
-$$\tau_\infty H_0^{\text{obs}} = \tfrac{3}{4} \approx 0.75.$$
+$$\tau_\infty H_0^{\text{obs}} = \tfrac{3}{2} = 1.5.$$
 Compare to ΛCDM's $\tau_\infty H_0 \approx 0.96$ (for the concordance parameters).
-This model's product is smaller, meaning for the same $H_0$ the model predicts a
-younger universe. See T1 for the age tension.
+This model's product is larger, meaning for the same $H_0$ the model predicts an
+older universe ($\approx 21$ Gyr vs $\approx 13.8$ Gyr). See T1 for full discussion.
 
 ---
 

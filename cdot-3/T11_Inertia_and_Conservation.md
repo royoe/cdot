@@ -58,22 +58,29 @@ $$u = \frac{p_0}{\sqrt{p_0^2/(c^2) + m^2}} \cdot c^{-1} \times c$$
 
 More carefully, in the relativistic formula with invariant mass:
 $$u = \frac{p_0 c}{\sqrt{p_0^2 + m^2c^2}}.$$
-As $c$ increases, $m^2c^2$ grows while $p_0^2$ is fixed, so $u$ **decreases**.
+This is an **increasing** function of $c$: the numerator $p_0 c$ grows with $c$, while
+in the non-relativistic limit the denominator $\approx mc$ grows at the same rate,
+giving $u \approx p_0/m = \text{const}$. The coordinate velocity stays approximately
+constant (NR) — it does not decrease.
 
-The ratio $u/c$ (velocity as a fraction of the current speed of light) decreases as:
+What decreases is the ratio $u/c$ (velocity as a fraction of the current speed of
+light):
 $$\frac{u}{c} = \frac{p_0}{\sqrt{p_0^2 + m^2c^2}} \propto (1+z)^{1/2},$$
-where the $(1+z)^{1/2}$ factor comes from $c \propto (1+z)^{-1/2}$ (at high $v$).
+where the $(1+z)^{1/2}$ scaling holds in the **non-relativistic limit** ($p_0 \ll mc$),
+giving $u/c \approx p_0/(mc) \propto c^{-1} \propto (1+z)^{1/2}$.
 
-This is the model's **peculiar velocity damping**: free particles slow down (relative to
-$c$) as the universe ages. Compare to standard ΛCDM, where peculiar velocities decay
-as $(1+z)$ — the model's decay is slower ($(1+z)^{1/2}$ vs. $(1+z)^1$), but in
-the same direction. This is a consistency success: the model does not predict
-runaway peculiar velocities, but the damping rate differs from ΛCDM.
+This is the model's **peculiar velocity damping**: free particles slow down *relative
+to $c$* as the universe ages, even while their coordinate velocity stays approximately
+constant. In ΛCDM, peculiar velocities in coordinate units decay as $(1+z)$; here
+the coordinate velocity is conserved (NR: $p = mu \approx \text{const}$) but shrinks
+relative to the growing $c$ as $(1+z)^{1/2}$. This is a consistency success: the
+model does not predict runaway peculiar velocities, though the comparison with ΛCDM
+differs in kind (velocity conserved here vs. damped there).
 
 Meanwhile, the total energy $E = c\sqrt{p_0^2 + m^2c^2}$ **increases** as $c$ grows.
-The particle gains energy from the cosmos even while slowing down. This is the
-symmetric flip in action: in ΛCDM, the same particle would lose its peculiar momentum
-while its energy ($mc^2$) stays fixed.
+The particle gains energy from the cosmos even while its coordinate velocity stays
+constant. This is the symmetric flip in action: in ΛCDM, the same particle would
+lose its peculiar momentum while its energy ($mc^2$) stays fixed.
 
 ---
 

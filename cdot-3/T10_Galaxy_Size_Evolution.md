@@ -82,19 +82,28 @@ would be an additional effect on top of the baseline cosmological expansion.
 The model predicts a universal exponent $-1$, but the observations show different
 exponents for different morphological types. Several explanations are possible:
 
-1. **Initial conditions:** the model gives the cosmological baseline. Additional
+1. **Morphological transformation via dynamical selection (T17).** The Lorentz-type
+   force ($\mathbf{v} \times \mathbf{B}_c$, T14) acts as a velocity selector that
+   strips disk material from orbits above a threshold speed, transforming disks into
+   spheroids. Ellipticals are the end-state of this stripping; they have lost their
+   extended disk orbits and are therefore more compact at every epoch than the
+   baseline $r \propto (1+z)^{-1}$ would predict for a spiral. This naturally
+   steepens their size-evolution exponent beyond $-1$ toward the observed $-1.5$.
+   See T17 for the full disk-stripping and morphological-selection analysis.
+
+2. **Initial conditions:** the model gives the cosmological baseline. Additional
    processes (mergers, gas inflow, quenching) can add or subtract from this baseline
    differently for early vs. late types.
 
-2. **Selection effects:** early-type galaxies are preferentially selected at fixed
+3. **Selection effects:** early-type galaxies are preferentially selected at fixed
    stellar mass (which is itself evolving); late-type galaxies may be selected at
    fixed luminosity or fixed number density, introducing different systematic offsets.
 
-3. **Half-light vs. half-mass radius:** sizes are typically measured as half-light
+4. **Half-light vs. half-mass radius:** sizes are typically measured as half-light
    (effective) radii. If the stellar mass-to-light ratio changes with redshift (as
    stellar populations age), the half-light and half-mass radii evolve differently.
 
-4. **The model's exponent is for adiabatic orbital expansion.** If galaxies form with
+5. **The model's exponent is for adiabatic orbital expansion.** If galaxies form with
    a range of dynamical structures (extended disks vs. compact spheroids), the rate
    of adiabatic expansion could differ.
 
@@ -133,8 +142,8 @@ most powerful near-term tests of the model's size-evolution prediction.
   the model's prediction (where $r/r_0$ is universal at fixed $z$) or does it
   require additional mechanisms?
 - The morphology dependence: can the model's baseline $r \propto (1+z)^{-1}$ account
-  for early-type evolution ($-1.5$) if mergers add an additional $\sim (1+z)^{-0.5}$
-  factor on top?
+  for early-type evolution ($-1.5$) if dynamical disk-stripping (T17) adds an
+  additional $\sim (1+z)^{-0.5}$ compaction factor on top of the cosmological baseline?
 - Surface brightness evolution: since $r \propto c^2$ and luminosities scale as
   $L \propto c^4$, the surface brightness $\Sigma \propto L/r^2 \propto c^4/c^4 = \text{const}$.
   This predicts **no surface-brightness evolution at fixed stellar mass** — a

@@ -93,11 +93,15 @@ track of which quantities are physical observables (transition energies, cross-s
 and which are artifacts of the renormalization scheme. The drift, if any, must be
 compared to the ESPRESSO bound of $|\Delta\alpha/\alpha| \lesssim 1$–$2$ ppm at $z \sim 1$.
 
-With $c$ changing by $\sim 30\%$ from $z = 1$ to today ($(1+z)^{-1/2} = 0.707$),
-a naive QED correction of order $\alpha/(3\pi) \sim 7 \times 10^{-4}$ applied to a
-30% change in $\ln(m_e^2c^4/q^2)$ would give $\Delta\alpha/\alpha \sim 2 \times 10^{-4}$,
-or $\sim 200$ ppm — far above the ESPRESSO bound if correct. However, this estimate
-is speculative; the actual QED correction in this framework needs careful treatment.
+With $c$ changing by a factor of $\sqrt{2}$ from $z = 1$ to today
+($(1+z)^{-1/2} = 1/\sqrt{2}$, so $c_\text{now}/c_\text{emit} = \sqrt{2} \approx 1.41$,
+a $\sim 41\%$ increase), the relevant log-change at the atomic scale $q \sim m_e c$ is:
+$$\Delta\ln\!\left(\frac{m_e^2 c^4}{q^2}\right) = \Delta\ln(c^2) = \ln 2 \approx 0.69.$$
+A naive QED correction of order $\alpha/(3\pi) \sim 7.7 \times 10^{-4}$ then gives:
+$$\frac{\Delta\alpha}{\alpha} \sim \frac{\alpha}{3\pi}\,\ln 2 \approx 5 \times 10^{-4},
+\quad \text{or } \sim 500\ \text{ppm}$$
+— far above the ESPRESSO bound if correct. However, this estimate is speculative; the
+actual QED correction in this framework needs careful treatment.
 
 ---
 

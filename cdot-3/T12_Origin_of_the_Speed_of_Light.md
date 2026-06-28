@@ -150,8 +150,10 @@ varies; $c$ varies because the matter content ($N$) grows.
 
 Sciama's relation $GM_u/(R_u c^2) \approx 1$ looks like it could constrain $G$ via
 the relational principle. In this model:
-$$\frac{GM_u}{R_u c^2} = \frac{c^{-2} \cdot \tfrac{4}{3}\pi R^3 \rho}{R \cdot c^2} \propto \frac{R^2}{c^4} \propto c^{-4+2} \cdot R^0 \propto c^{-4/3},$$
-where we used $c \propto R^3$ so $R \propto c^{1/3}$. This ratio varies as $c^{-10/3}$
+$$\frac{GM_u}{R_u c^2} = \frac{c^{-2} \cdot \tfrac{4}{3}\pi R^3 \rho}{R \cdot c^2} \propto \frac{R^2}{c^4}.$$
+Using $c \propto R^3 \Rightarrow R \propto c^{1/3}$, so $R^2 \propto c^{2/3}$:
+$$\frac{R^2}{c^4} \propto \frac{c^{2/3}}{c^4} = c^{2/3 - 4} = c^{-10/3}.$$
+This ratio varies as $c^{-10/3}$
 and is approximately $1/2$ today by coincidence, not by design. The model's Machianism
 is in the counting rule ($c \propto N$), not in a gravitational-potential relation.
 The two are genuinely different Machian hypotheses.

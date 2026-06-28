@@ -44,13 +44,19 @@ the universe.
 
 ### What the model has
 
-This model naturally contains the scale $cH_0$. The Hubble constant enters as
-$H_0 = \dot{c}/c$, and $c$ is the fundamental kinematic quantity of the theory. Their
-product $cH_0 = c \cdot (\dot{c}/c) = \dot{c}$ is the rate of change of $c$ — a
-physically meaningful quantity with dimensions of acceleration. So
-$$a_0 \sim cH_0 = \dot{c}_0 \approx 6.8 \times 10^{-10}\ \text{m/s}^2.$$
-The model "knows" the MOND scale dimensionally. This is encouraging and non-trivial —
-most theories do not naturally generate an acceleration of this magnitude.
+This model naturally contains the scale $cH_0^{\text{obs}}$. The two Hubble constants
+(Core Principles §4a) are:
+- $H_0^{\text{hor}} = \dot{c}/c = 35$ km/s/Mpc (the horizon rate, internal parameter);
+- $H_0^{\text{obs}} = P\,H_0^{\text{hor}} = 70$ km/s/Mpc (the observable low-$z$ slope).
+
+They give two natural accelerations:
+$$\dot{c}_0 = c_0\,H_0^{\text{hor}} \approx 3.4\times10^{-10}\ \text{m/s}^2,
+\qquad
+c_0\,H_0^{\text{obs}} \approx 6.8\times10^{-10}\ \text{m/s}^2.$$
+The observed MOND scale $a_0 \approx 1.2\times10^{-10}$ m/s$^2$ sits within this
+range; the numerical coincidence section below shows $a_0 \approx cH_0^{\text{obs}}/(2\pi)$
+to within $\sim10\%$. The model "knows" the MOND scale dimensionally — most theories
+do not naturally generate an acceleration of this magnitude.
 
 ### What the model does not have
 
@@ -58,30 +64,8 @@ The model does not currently have a **working force law** that produces MOND-lik
 behaviour at galactic scales. The retardation mechanism (T5) was the attempted bridge,
 but it fails by $\sim 10^3$–$10^6$ at galactic radii — and not merely quantitatively:
 it is structurally the wrong type of mechanism (distance-keyed, not acceleration-keyed,
-T5). The dimensional coincidence $a_0 \sim cH_0$ is real and tantalizing, but
-unaccompanied by a mechanism.
-
-### The $a_0$ derivation from the demoted mechanism
-
-For completeness: the earlier (now demoted) derivation proceeded as follows. The
-rotation floor $v_\text{flat}^4 = 4G^2M^2H_0^2/c^2$ was claimed from the retardation
-mechanism. Matching this to the BTFR $v^4 = GMa_0$:
-$$a_0 = \frac{4GM H_0^2}{c^2}.$$
-Substituting the "Machian" universal mass $M_\text{univ} = c^3/(2GH_0)$ (derived from
-the Sciama relation, also now problematic — T12), one gets:
-$$a_0 = 2cH_0.$$
-With a geometric factor of $1/(2\pi)$, this gives $a_0 = cH_0/\pi \approx
-2.2 \times 10^{-10}$ m/s$^2$ — an 80% overshoot of the observed value. Matching
-precisely requires an additional $1/4\pi$ factor that was never derived from first
-principles.
-
-The correct diagnosis: this derivation is a chain of dimensional reasoning, each step
-of which gives the only combination of $c$, $G$, $H_0$ with the right dimensions. It
-cannot fail to give $a_0 \sim cH_0$ regardless of the physics. The explicit ring
-integration shows the actual force is $\sim10^6$ too small (T5).
-
-**Conclusion: the $a_0 \sim cH_0$ coincidence is real but unexplained. Treat it as a
-hint, not a prediction.**
+T5). **The $a_0 \sim cH_0^{\text{obs}}$ coincidence is real but unexplained. Treat it
+as a hint, not a prediction.**
 
 ---
 
@@ -101,8 +85,8 @@ structurally inevitable (it is the only acceleration formable from $c$ and $H_0$
 shared by MOND and all cosmologically motivated proposals. The challenge is the
 functional form and order-one magnitude — for which no mechanism currently exists.
 
-See T15 for the full RAR discussion. The three OP-2/OP-3/OP-17 problems (MOND
-constant, rotation curves, RAR) **stand or fall together**: solving any one solves
+See T15 for the full RAR discussion. The MOND acceleration scale (T6), rotation
+curves (T5), and RAR (T15) **stand or fall together**: solving any one solves
 all three, and the $\sim10^{-6}$ order problem of T5 must be resolved first.
 
 ---
@@ -211,10 +195,14 @@ mechanism: it must be baryonic mass alone that enters, with no other galaxy prop
 Any mechanism that introduces a dependence on halo size, velocity dispersion, or
 environment is disfavoured.
 
-In the context of this model, where there is no dark matter halo (at least in the
-intended dark-matter-free version), the baryons are the only source of gravity and
-the BTFR is automatically baryonic — the challenge is only to produce the right
-functional form and the correct scale.
+With PBH dark matter now the leading candidate (T5, T13, T16), the BTFR becomes a
+constraint on that dark component being gravitationally inert with respect to the
+MOND interpolation: PBHs provide mass silently, while baryons source the modified
+coupling. The tight scatter ($\lesssim 0.1$ dex, no residual on halo size or
+environment) then constrains any PBH model — the dark matter must not contribute
+independently to the rotation curve beyond its gravitational pull, or the baryonic
+tightness breaks. The challenge shifts from "no dark matter needed" to "baryons alone
+drive the MOND-like term, PBHs sit inertly below it."
 
 ---
 

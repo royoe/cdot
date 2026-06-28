@@ -51,7 +51,7 @@ $$r \propto \frac{1}{G} \propto c^{+2}.$$
 
 The orbit expands as $r \propto c^2$. Since $c \propto (1+z)^{-1/2}$ (from the squared
 redshift law), at $z = 1$ the Earth-Sun distance was
-$$r(z=1) = r_\text{now} \cdot (c_\text{emit}/c_\text{now})^2 = r_\text{now}/\sqrt{2} \approx 0.707\,r_\text{now}.$$
+$$r(z=1) = r_\text{now} \cdot (c_\text{emit}/c_\text{now})^2 = r_\text{now} \cdot (1/\sqrt{2})^2 = r_\text{now}/2 = 0.5\,r_\text{now}.$$
 
 ### Orbital velocity
 
@@ -124,6 +124,36 @@ model's prediction is already excluded by planetary radar data is a quantitative
 question that requires careful analysis. The $\dot{G}/G$ and $\dot{r}/r$ effects are
 related (T8), and a self-consistent computation of both is needed.
 
+### Observability: atomic rulers and orbital expansion are driven by independent mechanisms
+
+A key point for interpreting any measurement: the orbital expansion ($r \propto c^2$,
+a gravitational effect via $G \propto c^{-2}$ and angular-momentum conservation) and
+the atomic length standard ($a_B \propto c^{-1}$, an electromagnetic effect via
+$\varepsilon_0 \propto c^{-1}$, T7) are driven by **different and opposing** power laws
+of $c$. They are structurally independent — one follows from the coupling of gravity to
+$c$, the other from the coupling of electromagnetism to $c$ — and there is no reason
+for them to cancel.
+
+As $c$ grows: orbits expand at $+2\dot{c}/c$; atomic rulers shrink at $-\dot{c}/c$.
+An observer using an atomic-standard ruler to measure the orbit sees both effects add:
+$$\frac{d}{dt}\!\left(\frac{r}{a_B}\right)\bigg/\frac{r}{a_B}
+= \frac{\dot{r}}{r} - \frac{\dot{a}_B}{a_B}
+= 2H_0^{\text{hor}} - (-H_0^{\text{hor}}) = 3H_0^{\text{hor}}
+= \tfrac{3}{2}H_0^{\text{obs}}.$$
+For the Earth-Sun distance this gives $\dot{r} \approx 15$ m/yr in atomic units —
+**larger** than the 10 m/yr coordinate figure, not smaller.
+
+Similarly, radar ranging using an atomic clock (ticking at $\nu \propto c^2$) and a
+constant assumed $c_0$ infers a distance that grows as $c^3$, not $c^2$. Instruments
+that presume constant $c$ do not mask the expansion; they overcount it.
+
+**The orbital expansion is genuinely observable.** The divergence between the
+gravitational and electromagnetic scalings of $c$ is precisely what makes it
+detectable: a universe where all length scales varied as the same power of $c$
+would give a null result, but in this model gravity and electromagnetism respond to
+$c$ with different exponents ($c^{-2}$ vs $c^{-1}$), so no measurement standard
+based on atomic physics can track the orbital motion.
+
 ---
 
 ## Broader Implications
@@ -140,7 +170,8 @@ of varying $c$.
 
 ### Long-period evolution
 
-Looking back to $z = 1$: Earth's orbit was $\sim 0.7$ AU. At $z = 5$: $\sim 0.4$ AU.
+Looking back to $z = 1$: Earth's orbit was $r_\text{now}/(1+1) = 0.5$ AU. At $z = 5$:
+$r_\text{now}/(1+5) \approx 0.17$ AU.
 The orbit was smaller, but the stellar flux was the same, and the star was proportionally
 dimmer. The surface conditions on a planet at those epochs would be governed by the
 same flux, hence similar temperature balance (to the extent that the atmosphere also

@@ -127,8 +127,15 @@ types of correction:
 $10^6$ too small) but structurally (wrong functional dependence). Any viable
 dark-matter-free mechanism must be **acceleration-keyed**: it must modify gravity
 below a universal $\sim cH_0$ threshold, independently of where in the galaxy that
-threshold is crossed. The connecton sea picture (T14) is the current best candidate
-for this type.
+threshold is crossed.
+
+The connecton foam-sea (T14) is the right *type* — steady-state diffusion carries no
+$d/(c/H_0)$ suppression — and robustly delivers Newtonian $1/r$ gravity. But every
+MOND mechanism attempted within the foam-sea picture (linear diffusion, additive GEM,
+catalytic cycle, pilot-wave/broad-spectrum interference) gives Newton, not MOND; the
+eikonal calculation closed the last live attempt. The acceleration-keyed requirement
+is satisfied but the MOND challenge is unresolved. See T14 for the full analysis and
+T15 for the RAR diagnostic.
 
 ---
 
@@ -144,55 +151,104 @@ Acceleration Relation), are discussed in T6 and T15.
 
 ## Possible Paths Forward
 
-Three honest options, subject to the structural constraint that any new mechanism must
-be acceleration-keyed (not distance-keyed):
+Four options, in order of current plausibility:
 
-**1. Accept a limitation.** The model may simply need dark matter, like ΛCDM. Rotation
-curves would then be explained by dark matter, and the model's distinctiveness would
-lie elsewhere (redshift, SN distances, orbital dynamics, etc.). This is an honest
-position and not necessarily fatal to the model.
+**1. Primordial black hole dark matter (current leading candidate).** The project has
+shifted toward accepting dark matter — but as a specific primordial component, not
+an unspecified particle. PBHs formed at genesis through relic freeze-out (T13,
+Reading 2) are gravitating, pressureless, and clustered by construction — the right
+properties for galactic rotation curves and for the CMB higher-peak wells (T16).
+The same PBH population would also seed supermassive black holes (T16). This reframes
+the question from "what particle is dark matter?" to "did genesis produce PBHs at
+$\Omega_\text{PBH} \sim 0.25$?" — gated by the unproven $r_s/R \sim 1$ formation
+check of T13.
 
-**2. Seek a different mechanism.** A full Liénard-Wiechert / cosmologically-corrected
-GEM treatment may reveal corrections of a different *type* than the $\dot{c}/c$
-mechanism — but the structural diagnostic (§above) constrains what to look for: it
-must be acceleration-keyed, not distance-keyed. A velocity-dependent cross-product
-force (Lorentz-form, T14) is a candidate that satisfies this structural requirement.
+**2. Dynamical selection — flatness as an evolutionary attractor (most promising
+mechanism-based direction).** Rather than demanding the force law produce flat curves
+as a static solution, the dynamical selection picture (T14) notes that orbits expand
+as $c$ grows ($r \propto c^2$, T9). A velocity-dependent Lorentz-type force acts as
+a velocity selector: rings whose speed makes the term too strong are ejected; the
+flat rotation curve is the marginally-bound surviving population — an evolutionary
+attractor, not a force-balance solution. This dissolves the "static wall" and
+requires no fine-tuning for flatness. The Tully-Fisher normalization ($v_f^4 = GM\,a_0$)
+remains open (it requires a non-analytic $B_c$ source), but flatness itself is
+explained. See T14 for the derivation and T17 for its connection to the M-σ relation
+and galaxy morphology.
 
-**3. MOND as an emergent phenomenon via the connecton sea.** The connecton foam-sea
-(T14) is the leading candidate: diffusion through quantum foam restores Newtonian
-$1/r$ and is not distance-keyed. Whether it can also produce the MOND/RAR functional
-form (requiring a nonlinear source coupling) is the current make-or-break open
-question.
+**3. A genuinely new MOND mechanism.** The foam-sea has been exhausted as a MOND
+source: five mechanism classes (retardation, linear diffusion, additive GEM, catalytic
+cycle, pilot-wave) all give Newton. Any further attempt must be conceptually new —
+not a variant of the mechanisms tried. The structural diagnostic constrains it
+severely: it must be acceleration-keyed, nonlinear in the source mass ($\sqrt{M}$
+coupling for Tully-Fisher), and produce a universal $\sim cH_0$ scale. No current
+candidate satisfies all three. See T14 for what has been ruled out and why, and T15
+for the observational bar (the RAR).
+
+**4. A Liénard-Wiechert / cosmologically-corrected GEM treatment.** A fully rigorous
+treatment of gravitational radiation in a varying-$c$ background may reveal
+corrections of a structurally different *type* (velocity-dependent, not
+distance-dependent) that go beyond the $\dot{c}/c$ retardation terms already computed.
+The structural diagnostic requires such corrections to be acceleration-keyed; the
+Lorentz-form $v \times B_c$ (T14) is the natural candidate structure, but its source
+has not been derived microscopically.
 
 ---
 
 ## Relationship to Mass Budget
 
-With the rotation-curve mechanism failed, the model currently has no mechanism to
-replace dark matter. Removing dark matter from the cosmological mass budget leaves
-$\Omega_b \approx 0.05$. In ΛCDM this would be catastrophic (no flat space, no
-structure formation). In this model:
-- Spatial flatness is a **premise** (premise 1), not a consequence of $\Omega = 1$.
-  So low density is not a crisis for geometry.
-- The model has no Friedmann constraint (there is no scale factor evolution to
-  constrain by $\rho$), so $H_0$ and matter density $n$ are decoupled free inputs.
-- Structure formation in a static, variable-$c$ universe with only baryonic matter
-  has not been computed.
+With the rotation-curve mechanism failed, the model requires dark matter as an
+ingredient — but the project has a concrete candidate: **primordial black holes from
+genesis** (T13, T16).
 
-The absence of a dark-matter-free rotation-curve mechanism means the model, in its
-current form, likely requires dark matter as an ingredient.
+PBH dark matter in this model differs from particle dark matter in ΛCDM:
+- PBHs are gravitating and pressureless — correct properties for galactic rotation
+  curves.
+- They form at genesis through relic freeze-out (Reading 2, T13), not by late-time
+  collapse, so their abundance is set by initial conditions at the $r_s/R \sim 1$
+  crossover.
+- They are clustered from the start (they are the overdense relics), giving them the
+  spatial distribution needed to sit in galactic halos.
+- The same population serves triple duty: CMB higher-peak gravitational wells (T16),
+  galactic dark matter (here and T15), and seeds for supermassive black holes via
+  early-universe PBH mergers (T16).
+
+For cosmological accounting: spatial flatness is a **premise** (premise 1), not a
+consequence of $\Omega = 1$. The model has no Friedmann constraint ($H_0$ and matter
+density are decoupled free inputs), so $\Omega_b \approx 0.05$ is not a geometry
+crisis. The question becomes purely structural: does the PBH mass function from
+genesis give $\Omega_\text{PBH} \sim 0.25$ at galactic scales? This is gated by
+the unproven $r_s/R \sim 1$ formation check (T13 open questions).
 
 ---
 
 ## Open Questions
 
-- A full Liénard-Wiechert treatment of gravity in a variable-$c$ background: does it
-  produce any galactic-scale correction beyond the $\dot{c}/c$ terms already computed?
-- If dark matter is retained, how does the model's halo structure and formation history
-  differ from ΛCDM's NFW halos?
-- Is there a genuinely different mechanism — e.g., involving the connecton field (T14),
-  vacuum polarization in the varying-$K$ background, or modified dispersion relations
-  for gravitons — that could produce MOND-like behaviour? The structural constraint
-  (§diagnostic above) requires it to be acceleration-keyed.
-- See T15 for the Radial Acceleration Relation, the sharpest observational form of
-  the rotation-curve challenge, and T14 for the current leading candidate mechanism.
+**On the MOND challenge** (see T14 for full analysis, T15 for observational bar):
+- All five mechanism classes in the connecton foam-sea (retardation, linear diffusion,
+  additive GEM, catalytic cycle, pilot-wave/eikonal) give Newton, not MOND. The next
+  attempt requires a genuinely new mechanism satisfying the structural constraint:
+  acceleration-keyed, $\sqrt{M}$ coupling, universal $\sim cH_0$ scale (T14).
+- A full Liénard-Wiechert treatment in a varying-$c$ background: does it produce any
+  galactic-scale correction beyond the $\dot{c}/c$ terms already computed? The
+  Lorentz-form $v \times B_c$ (T14) is the candidate structure.
+
+**On PBH dark matter** (see T13 for formation, T16 for CMB consequences):
+- Does the $r_s/R \sim 1$ crossover at genesis produce a PBH mass function compatible
+  with $\Omega_\text{PBH} \sim 0.25$? (T13 load-bearing open question)
+- What is the spatial clustering of genesis PBHs, and does it match galactic halo
+  profiles at scales $\sim 1$–$100$ kpc?
+- Can the same PBH population simultaneously explain CMB higher peaks (T16) and
+  galactic rotation curves — or do the two constraints pull toward different PBH masses?
+
+**On dynamical selection** (see T14 for derivation, T17 for morphology consequences):
+- The Lorentz-type force produces flatness as an evolutionary attractor (T14). What
+  is the predicted stripping timescale, and does it match the observed disk-to-elliptical
+  ratio across galaxy masses? (T17 falsifiability handles)
+- Can the Tully-Fisher normalization $v_f^4 = GM\,a_0$ be derived from a microscopically
+  computed $B_c$ source, or does it remain a phenomenological input?
+
+**On halo structure**:
+- If PBH dark matter is accepted, how does the model's PBH halo structure and merger
+  history differ from ΛCDM's NFW halos? (relevant to T16 SMBH seeds)
+- Does the RAR (T15) survive in a PBH dark matter model, or is its tight baryonic
+  correlation evidence against a purely PBH explanation?

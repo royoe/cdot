@@ -51,7 +51,8 @@ is a standing theoretical debt.
 
 ### Rate of change
 
-With $G = G_0(c_0/c)^2 = G_0/(1+z)$ using $c/c_0 = (1+z)^{-1/2}$, the present-day
+With $G = G_0(c_0/c)^2 = G_0(1+z)$ using $c_\text{emit}/c_0 = (1+z)^{-1/2}$
+(so $c_0/c_\text{emit} = (1+z)^{+1/2}$ and $(c_0/c_\text{emit})^2 = (1+z)$), the present-day
 rate of change is:
 $$\frac{\dot{G}}{G} = -2\frac{\dot{c}}{c} = -2H_0^{\text{hor}} = -\frac{2H_0^{\text{obs}}}{P}
 = -H_0^{\text{obs}} \approx -7 \times 10^{-11}\ \text{yr}^{-1}.$$
@@ -117,8 +118,6 @@ $s = 0$:
 - The SN Hubble diagram (T4) constrains $s$ via the redshift power $P = s+2$. Fits
   favour $s \approx 0$, not $s = -3/2$.
 - Invariant mass is required for the symmetric-flip conservation structure (T11).
-- The MOND scale from the retardation mechanism (T6) would be modified by $s \neq 0$,
-  but since that mechanism failed anyway, this is no longer a constraint.
 
 **Why is $m$ invariant rather than following the PV self-energy scaling?** This is
 an open question. The PV self-energy gives $m \propto K^{3/2}$, but this
@@ -131,15 +130,16 @@ support; its theoretical justification is a standing debt.
 ## Cosmological Variation of $G$
 
 The model predicts $G \propto c^{-2} \propto (1+z)$ — i.e., $G$ was larger in the
-past. At $z = 1$: $G_\text{emit} = \sqrt{2}\,G_\text{now}$, a 41% increase. At $z = 5$:
-$G \approx 2.4\,G_\text{now}$.
+past. At $z = 1$: $G_\text{emit} = 2\,G_\text{now}$, a 100% increase. At $z = 5$:
+$G \approx 6\,G_\text{now}$.
 
 Observational tests:
 - **BBN:** a larger $G$ at $z \sim 10^{10}$ would speed up the Hubble rate during
   nucleosynthesis, changing the freeze-out temperature and hence the $^4$He abundance.
   Current data allow $G$ to have been within $\sim 20$–$30\%$ of its present value
-  at BBN; the model's prediction ($G$ larger by $\sim z^{1/2}$, so enormously larger
-  at $z \sim 10^{10}$) may be in severe tension. This has not been computed.
+  at BBN; the model's prediction ($G$ larger by $\sim z$ at high $z$, giving
+  $G \sim 10^{10}\,G_\text{now}$ at $z \sim 10^{10}$) is in severe tension with this
+  bound. This has not been computed in detail.
 - **Pulsar timing:** binary pulsar orbital decay measures $\dot{G}/G$ and constrains it
   more loosely than LLR ($\lesssim 10^{-11}$ yr$^{-1}$), still above the model's
   $7 \times 10^{-11}$ yr$^{-1}$.

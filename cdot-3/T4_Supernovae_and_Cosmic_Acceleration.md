@@ -91,9 +91,13 @@ $q_0 = 3/4$. This variant was initially thought to mimic acceleration (under the
 linear redshift law), but that was an artifact of the incorrect linear law. With the
 corrected squared law, S′ gives $q_0 = 3/4$, which is **worse** than the volume law.
 
-S′ has one attractive feature: it gives a **finite coordinate-time origin** (a genuine
-Big Bang in map time), which is required for the genesis bootstrap of T13. But it makes
-the SN tension more acute.
+S′ has one remaining attractive feature: it gives a **finite coordinate-time origin**
+(a genuine Big Bang in map time). This was previously thought to be required for
+primordial black hole formation at genesis, but that requirement has been removed —
+under Reading 2 (T13), PBH relic freeze-out at the $r_s/R \sim 1$ crossover is
+generic to any counting law. S′'s remaining advantage is the finite-coordinate-origin
+aesthetic, a weaker consideration. The volume law therefore carries both the mildest
+SN tension ($q_0 = 1/6$) and the PBH genesis program.
 
 ---
 

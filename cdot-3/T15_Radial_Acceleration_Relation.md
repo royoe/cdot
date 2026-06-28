@@ -41,13 +41,14 @@ two-regime statement; it is the most theoretically demanding form of the challen
 ## Dimensional Match: The Scale $g_\dagger \sim cH_0$
 
 The MOND acceleration scale $g_\dagger$ is numerically:
-$$g_\dagger \approx \frac{cH_0}{2\pi} \approx \frac{cH_0}{6} \approx 1.2\times10^{-10}
-\ \text{m/s}^2,$$
-using $H_0 = 70$ km/s/Mpc. This cosmological–galactic connection has been noted since
-Milgrom (1983). In this model, $cH_0 = \dot{c}_0$ is a natural acceleration (the rate of change of
-$c$). This follows directly from the counting rule $H_0 = \dot{c}/c$ (T3, T12), which
-makes $H_0$ the fractional growth rate of $c$ and $cH_0$ the absolute rate — so the
-dimensional match is structurally built in.
+$$g_\dagger \approx \frac{cH_0^{\text{obs}}}{2\pi} \approx 1.2\times10^{-10}\ \text{m/s}^2,$$
+using $H_0^{\text{obs}} = 70$ km/s/Mpc (the observed low-$z$ Hubble slope). This
+cosmological–galactic connection has been noted since Milgrom (1983). In this model,
+$H_0^{\text{obs}}$ is the directly observable quantity; the horizon rate $H_0^{\text{hor}}
+= \dot{c}/c = H_0^{\text{obs}}/P = 35$ km/s/Mpc is the internal parameter, with
+$\dot{c}_0 = cH_0^{\text{hor}} \approx 3.4\times10^{-10}$ m/s$^2$ (Core Principles §4a).
+The MOND coincidence tracks $H_0^{\text{obs}}$, not $\dot{c}/c$ — the two differ by
+the factor $P = 2$.
 
 **Caveat on the match:** $cH_0$ is the *only* acceleration that can be formed from
 the two characteristic quantities of the model ($c$ and $H_0$). So the scale match
@@ -104,30 +105,33 @@ live candidate directions (Lorentz-form $v\times B_c$ and criticality-as-license
 
 ---
 
-## Relationship to OP-2 (MOND $a_0$) and T5 (Rotation Curves)
+## Relationship to T6 (MOND $a_0$) and T5 (Rotation Curves)
 
 The three problems are one:
-- **OP-2/T6:** derive $a_0 \sim cH_0$ with the correct $1/(2\pi)$ coefficient.
-- **OP-3/T5:** produce order-unity flat rotation curves at galactic radii without dark
-  matter.
-- **OP-17/T15:** reproduce the RAR functional form across all galaxy types.
+- **T6:** derive $a_0 \approx cH_0^{\text{obs}}/(2\pi)$ with the correct coefficient from first principles.
+- **T5:** produce order-unity flat rotation curves at galactic radii.
+- **T15:** reproduce the RAR functional form across all galaxy types.
 
 Solving any one requires solving all three. The blocker common to all is the
 $\sim10^{-6}$ order problem of T5 (retardation too small) plus the $\sqrt{M}$
-nonlinearity problem (functional form). Do not pursue OP-2 or the RAR in isolation
+nonlinearity problem (functional form). Do not pursue T6 or the RAR in isolation
 until a viable acceleration-keyed, order-unity galactic mechanism exists.
 
 ---
 
 ## Observational Discriminant: Epoch Dependence
 
-If $g_\dagger \sim c(t)H(t)$, the MOND scale should vary with cosmic epoch. At
-redshift $z$, using the model's $c(t)$ and $H(t)$:
-$$g_\dagger(z) \sim c(z)\,H(z) \propto \frac{c_0\,H_0}{(1+z)^{1/2}\,(1+z)^{1/3}}
-= \frac{c_0 H_0}{(1+z)^{5/6}},$$
-i.e. $g_\dagger$ was larger in the past — galaxy rotation curves at high $z$ should
-show a higher MOND threshold acceleration. This is observationally testable in
-principle (high-$z$ kinematic surveys), though current data are sparse.
+If $g_\dagger \sim c(t)H_0^{\text{obs}}(t)$, the MOND scale should vary with cosmic
+epoch. In this model, $H_0^{\text{obs}}(z) = H_0^{\text{obs}}/(1+z)^{1/3}$ (from the
+horizon ODE: $H^{\text{hor}} = 3kR^2 \propto c^{2/3} \propto (1+z)^{-1/3}$), so:
+$$g_\dagger(z) \propto c(z)\,H^{\text{obs}}(z) \propto
+\frac{1}{(1+z)^{1/2}}\cdot\frac{1}{(1+z)^{1/3}} = \frac{1}{(1+z)^{5/6}}.$$
+Since $(1+z)^{5/6} > 1$ for $z > 0$, $g_\dagger(z) < g_\dagger(0)$: the MOND threshold
+was **smaller in the past** and grows over cosmic time. Galaxy rotation curves at
+high $z$ should show a **lower** MOND threshold acceleration — the MOND-like regime
+would kick in at smaller $g_\text{bar}$, making a larger fraction of the disk
+dynamically MOND-like at high $z$. This is observationally testable in principle
+(high-$z$ kinematic surveys), though current data are sparse.
 
 ---
 

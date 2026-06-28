@@ -128,6 +128,47 @@ This is highly speculative. The physical mechanism of the bootstrap — specific
 whether the vacuum pair-creation rate in a varying-$c$ background is fast enough to
 sustain the growth — has not been computed.
 
+### Primordial Black Hole Formation at Genesis
+
+**The $r_s/R$ condition.** The Schwarzschild radius of the enclosed horizon mass is:
+$$r_s = \frac{2GM_\text{horizon}}{c^2} \propto \frac{c^{-2} \cdot R^3}{c^2} \propto R^3 c^{-4}.$$
+With $c \propto R^n$: $r_s/R \propto R^{2-4n}$. For $n > 1/2$ — which includes all
+three candidate laws (volume $n=3$, surface $n=2$, S′ $n=2/3$) — this ratio
+$\to \infty$ as $R \to 0$. The early universe is universally super-Schwarzschild.
+
+**Two readings:**
+
+*Reading 1 (old):* if every region is inside its own gravitational radius, no local
+sub-horizon collapse is possible → PBH formation forbidden.
+
+*Reading 2 (preferred):* the early super-Schwarzschild universe is a black-hole-like
+reservoir. As $R$ grows and $c$ rises, $r_s/R$ decreases through a **crossover at
+$r_s/R \sim 1$**. The average region exits the super-Schwarzschild state into a
+normal universe. Overdense lumps that remain super-Schwarzschild are left behind as
+black holes — frozen out as **relics** of the crossover, not formed by collapse.
+
+Reading 2 flips the same constraint that Reading 1 called a barrier into the
+PBH-formation mechanism. Crucially, this crossover is **generic to any counting
+law** (all have $n > 1/2$; all cross $r_s/R \sim 1$), so PBH formation does **not**
+require S′. The volume law can simultaneously have the mildest $q_0$ tension (T4)
+and PBH formation.
+
+**The unproven step:** Reading 2 requires that an overdense lump, once the average
+goes sub-Schwarzschild, cleanly collapses to a black hole rather than merely remaining
+a denser patch. Whether the local inhomogeneity does this work depends on the
+overdense region having a locally normal exterior — a condition that the homogeneous
+cosmology lacks globally (the "homogeneous universe in its own Schwarzschild radius"
+does not imply a black hole, because there is no asymptotically flat exterior).
+Whether a single overdense lump can have the necessary exterior while the average is
+sub-Schwarzschild is the load-bearing open question.
+
+**Consequences if Reading 2 is correct** (see T16 for the full discussion):
+- A population of PBHs formed at genesis could serve as (a) the clustered
+  pressureless gravitational wells needed to drive the CMB acoustic peaks, (b) the
+  galactic dark matter needed for rotation curves (T5, T15), and (c) the seeds for
+  supermassive black holes through early-universe mergers. This reframes the model
+  toward "dark matter = primordial black holes" rather than "no dark matter."
+
 ---
 
 ## Matter-Antimatter Asymmetry
