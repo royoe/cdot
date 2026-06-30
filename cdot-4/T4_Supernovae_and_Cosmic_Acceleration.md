@@ -191,11 +191,14 @@ mild deceleration ($q_0 = +1/6$) at the level the current data allow. The model 
 between the $q_0=0$ coasting universe and EdS — it predicts SNe brighter than ΛCDM at
 all $z > 0.2$, which is the opposite of what the data require.
 
-The next step before treating this as a definitive exclusion is to repeat the fit using
-the full $1701\times1701$ stat+sys covariance matrix, which is saved at
-`data/Pantheon+SH0ES_STAT+SYS.cov`. With the full covariance the $\chi^2/\mathrm{dof}$
-normalisation will be correct and a proper $\Delta\chi^2$ significance (and Bayes factor)
-can be quoted.
+Two steps are needed before treating this as a definitive exclusion. First, repeat the fit
+using the full $1701\times1701$ stat+sys covariance matrix (`data/Pantheon+SH0ES_STAT+SYS.cov`)
+to obtain a correctly normalised $\chi^2/\mathrm{dof}$ and formal significance. Second, the
+fit above does not yet include the Chandrasekhar-mass candle systematic introduced by
+invariant $G$ ($M_\text{Ch}\propto c^{3/2}$, §below), which adds a $z$-dependent intrinsic
+dimming on top of the $q_0 = +1/6$ curve. The net sign of that systematic on the residuals
+is currently undetermined (gated by the ejecta-velocity scaling $q$); the picture could
+improve or worsen once it is included.
 
 ---
 
@@ -225,12 +228,98 @@ cancel, leaving one power of $(1+z)$ from the per-photon energy alone. The K-cor
 depends only on the frequency mapping $\nu_e=(1+z)\nu_o$ and the intrinsic SED shape,
 both identical to FRW; SALT2/Pantheon+ pipelines apply unchanged.
 
-**Why stellar luminosity drift does not affect the SN distance ladder.** The SN flux
+**Why stellar luminosity drift does not affect the SN distance ladder in the general case.** The SN flux
 chain runs entirely within the photon/atomic sector: emission energy, photon frequency,
 and clock rate share the *same* power structure, so all $c$-factors reassemble into the
-clean $(1+z)$ powers above. Gravity never enters the photon's journey. The $L\propto c^4$
-brightening (T9) is fully absorbed into those factors and introduces no additional
-$z$-dependent dimming.
+clean $(1+z)$ powers above. Gravity never enters the photon's journey. With $L\propto c^0$
+(T18: corrected Eddington/electron-scattering mass–luminosity relation), ordinary stellar
+luminosity has no net $c$-drift at fixed composition; any constant rescaling is absorbed
+into $M_B$ and introduces no $z$-dependent terms.
+
+**However, the SN Ia candle is not an ordinary star.** It detonates near the Chandrasekhar
+mass, which carries its own $c$-dependence under invariant $G$ that is *not* a constant
+offset and does *not* drop out of the Hubble-diagram fit. This is a separate systematic
+addressed in §The Chandrasekhar-Mass Candle Systematic below.
+
+---
+
+## The Chandrasekhar-Mass Candle Systematic
+
+### $M_\text{Ch}\propto c^{3/2}$
+
+Type Ia SNe are standardisable because they detonate near the Chandrasekhar mass:
+$$M_\text{Ch}\propto\left(\frac{\hbar c}{G}\right)^{3/2}\frac{1}{m_p^2}.$$
+Under invariant $G$ (and invariant $\hbar, m_p$) with $c$ varying:
+$$M_\text{Ch}\propto c^{3/2}.$$
+In the past ($c$ smaller) the detonating mass — and hence the $^{56}$Ni yield powering
+the light curve — was smaller. With the redshift law $c_\text{emit}/c_\text{now} =
+(1+z)^{-1/2}$, any candle quantity scaling as $c^k$ acquires a factor $(1+z)^{-k/2}$.
+Unlike a constant offset, this is **$z$-dependent** and does not drop out of the fit.
+High-$z$ SNe Ia are **intrinsically fainter** in the model than at low $z$.
+
+### The robust bound: total radiated energy
+
+The time-integrated bolometric output equals the nuclear energy released by the
+$^{56}$Ni→$^{56}$Co→$^{56}$Fe chain:
+$$E_\text{total} = M_\text{Ni}\times(\text{energy per unit mass})\propto c^{3/2}\cdot c^{2} = c^{7/2}.$$
+This is rate-independent and width-independent — the most trustworthy statement. As a
+magnitude shift (positive = fainter at high $z$):
+$$\Delta m = +\tfrac{5}{2}\cdot\tfrac{7}{4}\log_{10}(1+z) = +4.375\log_{10}(1+z).$$
+Representative values: $+0.18$ mag at $z=0.1$; $+0.77$ mag at $z=0.5$; $+1.3$ mag at
+$z=1$. There is no double-counting with the flux-chain factors: T4's $(1+z)$ terms are
+propagation/clock effects on the *same* photons; this is the *source* being intrinsically
+weaker, so they multiply independently.
+
+**Direction is favourable** (the existing residual has VSL predicting SNe too *bright*
+at high $z$; this dims them). **Magnitude taken raw overshoots massively** — far larger
+than the $\lesssim0.12$ mag residual available in the data-rich $0.1 < z < 0.5$ window —
+and would make the model predict SNe much too *faint*, worsening the fit.
+
+### Whether Phillips standardisation absorbs the systematic
+
+The raw dimming can only be reconciled with data if the Phillips width–luminosity
+calibration absorbs most of it — i.e. the $M_\text{Ch}$ shift moves SNe *along* the
+observed brighter–broader locus, so the pipeline calibrates it away. This hinges on the
+**ejecta expansion velocity scaling** $v_\text{exp}\propto c^{-q}$. The light-curve
+diffusion time scales as $\tau_\text{LC}\propto c^{(q/2-3/4)}$ (Arnett); the model's
+track slope is:
+$$\frac{d\log L_\text{peak}}{d\log\tau_\text{LC}} = \frac{17-2q}{2q-3}.$$
+This matches the observed Phillips slope ($\sim+2$ to $+3$) only for $q\approx 3.3$–$3.8$
+(absorption works); for small or negative $q$ the slope is large-negative
+(brighter–narrower, opposite to Phillips → no absorption → fit worsens).
+
+**The sign of $q$ is currently not settled.** Two physical arguments disagree:
+
+- *Opacity argument (favourable, $q>0$):* lengths are larger in the past ($\propto c^{-1}$),
+  so opacity is higher ($\kappa\propto c^{-2}$), coupling radiation more strongly and driving
+  higher past expansion velocities — the direction that can yield Phillips-parallel behaviour.
+- *Self-consistent radiation-hydro (unfavourable, $q=-1$):* closing the coupled system
+  (impulse $a=\kappa F/c$, diffusion time, expanding radius, $E_\text{rad}\sim E_\text{nuclear}$,
+  fixed kinetic fraction) gives $v_\text{exp}\propto c^{+1}$ ($q=-1$). Higher opacity
+  increases trapping but also reduces flux; the net dynamics place the candle
+  **off** the Phillips locus (fit worsens).
+
+The two arguments address slightly different questions: the self-consistent solve held the
+kinetic-energy fraction $f_\text{KE}$ fixed; the opacity argument implicitly lets
+$f_\text{KE}$ rise with $\kappa$ (more trapping → more work on ejecta). The crux — the
+opacity-dependence of the kinetic/radiated energy partition — is not settleable by
+dimensional scaling alone and requires a radiation-hydrodynamics treatment.
+
+A second unspecified input: the $^{56}$Ni weak-decay rate scaling. The model has fixed the
+EM sector ($\epsilon_0\propto c^{-1}$) but not the weak sector. *Provisional working
+assumption:* the weak interaction is intrinsically $c$-invariant except through the
+model's time and energy scales (decay rate $\propto c^2$, energy per decay $\propto c^2$).
+Even under this assumption the peak-luminosity route is gated by $q$; the
+$E_\text{total}\propto c^{7/2}$ bound is independent of it.
+
+### Effect on the fit (honest summary)
+
+The Chandrasekhar-mass systematic adds a real, robust, $z$-dependent intrinsic dimming
+on top of the $q_0 = +1/6$ kinematic curve. Sign is favourable; raw magnitude massively
+overshoots. Net outcome is **undetermined**: requires resolving the sign of $q$ and
+confirming whether the Pantheon+ pipeline standardises on peak luminosity or on fluence
+(the two carry different $c$-scalings). This is a genuine new tension introduced by
+invariant $G$, not yet resolved.
 
 ---
 
@@ -239,6 +328,22 @@ $z$-dependent dimming.
 - ~~A direct Pantheon+ fit~~ **Done (June 2026):** $\Delta\chi^2 = +195$ on diagonal
   errors. Next: repeat with the full stat+sys covariance matrix (`data/Pantheon+SH0ES_STAT+SYS.cov`)
   to obtain a correctly normalised $\chi^2/\mathrm{dof}$ and formal significance.
+- **Resolve the sign of $q$** ($v_\text{exp}\propto c^{-q}$): does the
+  opacity-dependence of the kinetic/radiated energy partition $f_\text{KE}(\kappa)$
+  push $q$ into the Phillips-absorption window ($q\approx 3.3$–$3.8$), or does the
+  self-consistent radiation-hydrodynamics result ($q=-1$) win? **This single exponent
+  gates SN viability** — it determines whether the $M_\text{Ch}$ systematic improves or
+  worsens the fit. Requires a radiation-hydro treatment that floats both dynamics and the
+  energy partition simultaneously.
+- **Specify the weak sector's $c$-scaling.** Currently assumed $c$-invariant except
+  via the model's time/energy scales. Needed for the peak-luminosity route and for BBN.
+- **Redo the Pantheon+ fit with $M_\text{Ch}$ candle evolution included**, as a function
+  of the net Phillips-absorbed fraction, restricted to the well-constrained $0.1 < z < 0.5$
+  window where data dominate; quantify whether any plausible $q$ yields a fit competitive
+  with $\Delta\chi^2 = +195$.
+- **Standardisation observable:** does the Pantheon+ pipeline effectively standardise
+  on peak luminosity or on fluence? The two carry different $c$-scalings
+  ($L_\text{peak}$ vs $E_\text{total}\propto c^{7/2}$) and the answer changes the net.
 - What is the constraint on the mass-scaling exponent $s$ from SN data? The shape
   of $\mu(z)$ is sensitive to $P = s+2$; a MCMC fit could constrain $s$.
 - If the SN data firmly require $q_0 < 0$ even after model-native analysis, the model

@@ -6,15 +6,6 @@ below each have a sign-level check that passes, but no quantitative derivation
 of magnitudes, timescales, or functional forms has been done. The content depends
 on the unproven dynamical-selection / Lorentz-term mechanism of T14.*
 
-**Note (cdot-4):** In addition to the unproven T14 Lorentz mechanism, this topic
-depends on orbital expansion r∝c² (T9, cdot-3) as the driver of dynamical
-selection. Under invariant G (cdot-4), orbits are static and the orbital-expansion
-driver is removed. The 'Flatness as a Dynamical Attractor' picture must be
-re-derived without this driver (see T14 flag). The four-link observational chain
-and its qualitative checks remain on record, but the underlying mechanism needs
-reconstruction. The qualitative morphological observations themselves are
-unaffected.
-
 ---
 
 ## Observational Background
@@ -70,21 +61,18 @@ angular frequency and, from the M-σ connection, $B_c \sim M_\text{BH}^{1/4}/r$
 ### Flatness as a Dynamical Attractor
 
 In the **dynamical selection** picture (T14), rotation curves are not a static
-force-balance solution. **[FLAG — orbital expansion driver removed, cdot-4]** The
-following picture assumes orbital expansion r∝c² as the primary driver (T9,
-cdot-3). Under invariant G, this expansion is absent. The mechanism must be
-reconstructed — the Lorentz term v×B_c still exists but the trigger ('orbits
-expand, outer rings unbind') is gone. Pending re-derivation, the following text is
-preserved for record. As $c$ grows, orbits expand ($r \propto c^2$, T9). A
-Lorentz-type velocity-dependent force acts as a **velocity selector**: stars in
-rings whose orbital speed makes the Lorentz term too strong become unbound and
-are ejected to intergalactic space. The flat rotation curve is the **marginally
-bound surviving population** — an evolutionary attractor rather than a solution
-forced by the force law.
+force-balance solution. Under invariant G (cdot-4), the mechanism is a direct,
+time-steady Lorentz velocity filter rather than the expansion-triggered ejection of
+cdot-3 (see T14 for the full derivation).
 
-This dissolves the "static wall" discussed in T5 and T14: the force law does not
-need to produce flatness at every instant; it only needs to eject over-supported
-rings, and survivors satisfy $B_c(r) = v_f/r$, which is the flat condition.
+For a disk star with tangential velocity $v_\phi$ at radius $r$, the Lorentz term
+$\mathbf{v}\times\mathbf{B}_c = v_\phi B_c\,\hat{r}$ is directed radially outward.
+Stars where this term exceeds the gravitational binding margin experience a net
+outward force and are continuously expelled. The flat rotation curve is the
+**marginally-bound surviving population** — an evolutionary attractor rather than
+a static equilibrium. Survivors satisfy $B_c(r) = v_f/r$ automatically, with no
+fine-tuning. As $c$ grows and $B_c$ strengthens, progressively more disk stars are
+stripped — driving morphological evolution toward ellipticals at low $z$.
 
 ### Ordered vs. Random Orbits: Disk Stripping
 

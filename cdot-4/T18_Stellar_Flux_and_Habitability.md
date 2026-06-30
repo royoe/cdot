@@ -1,10 +1,10 @@
 # T18 — Stellar Flux and the Habitability Ratio
 
-*Note: this topic is a scaling-argument analysis. All results ($L\propto c^4$,
-$F\propto c^4$, $X\propto c^{-1/2}$) derive from dimensional scaling under the premise
-$c(t)$ without a full stellar-structure calculation. The key load-bearing step is
-$L\propto c^4$; the magnitude of the habitability ratio hinges on this exponent being
-correct. A full stellar-structure treatment of $L(c)$ is the primary open calculation.*
+*Note: this topic is a scaling-argument analysis. The key results ($L\propto c^0$,
+$F\propto c^0$, $X\propto c^{-3/2}$) rest on the radius-independent radiative
+mass–luminosity relation with electron-scattering opacity. The sign of the habitability
+shift is robust; the magnitude is opacity-regime-dependent. A full stellar-structure
+derivation of $L(c)$ is the primary open calculation.*
 
 ---
 
@@ -27,74 +27,100 @@ These are possible but require specific atmospheric evolution histories.
 
 ---
 
-## Stellar Luminosity: $L \propto c^4$
+## Stellar Luminosity: $L \propto c^0$
 
-Under invariant mass ($m\propto c^0$) with atomic frequencies $\nu\propto c^2$ (§5a of
-Core Principles) and $\epsilon_0\propto c^{-1}$, the energy scale of nuclear transitions
-is $E\propto c^2$. The luminosity scales as $L\sim E\cdot\nu$ (energy per atomic
-time-unit):
+Under invariant mass and composition, bolometric luminosity is fixed by the balance
+between hydrostatic equilibrium and radiative transport — **not** by the stellar radius.
+The stellar radius drops out of the mass–luminosity relation entirely.
 
-**Route A (energy × rate):** Energy scale $\propto c^2$; atomic rate $\propto\nu\propto c^2$:
-$$L \propto c^2 \cdot c^2 = c^4.$$
+**The standard radiative mass–luminosity relation** (electron-scattering opacity)
+contains no $R_\star$:
+$$L \propto \frac{\mu^4 m_p^4}{k_B^4}\,\frac{a\,c}{\kappa}\,G^4 M^3.$$
+This follows from eliminating $R_\star$ between hydrostatic equilibrium
+($T_c \sim GM\mu m_p/(k_B R_\star)$) and radiative transport; $R_\star$ cancels exactly.
+Only $a$, the explicit $c$, and $\kappa$ carry $c$-dependence:
 
-**Route B (surface emission):** $L = 4\pi R_\star^2\,\sigma_\text{SB}\,T_\text{eff}^4$.
-Stellar radius $R_\star\propto c^{-1}$ (atomic Bohr radii scale as $a_0\propto c^{-1}$ with
-invariant $m$ and $e,h$); Stefan-Boltzmann $\sigma_\text{SB}\propto c^{-2}$ (from
-$\sigma_\text{SB}=\pi^2k_B^4/(60\hbar^3c^2)$ with $k_B,\hbar$ invariant); effective
-temperature $T_\text{eff}\propto c^2$ (from the Wien law with $\nu\propto c^2$):
-$$L \propto (c^{-1})^2 \cdot c^{-2} \cdot (c^2)^4 = c^{-2} \cdot c^{-2} \cdot c^8 = c^4.$$
+| Factor | Derivation | Scaling |
+|---|---|---|
+| $a$ | $a = \pi^2 k_B^4/(15\hbar^3 c^3)$, $k_B/\hbar$ invariant | $c^{-3}$ |
+| $c$ | explicit | $c^{+1}$ |
+| $\kappa^{-1}_\text{es}$ | $r_e = e^2/(4\pi\epsilon_0 mc^2)\propto c^{-1}$, $\sigma_T\propto r_e^2\propto c^{-2}$, $\kappa=\sigma_T/m_p$ | $c^{+2}$ |
+| $G^4 M^3 \mu^4 m_p^4/k_B^4$ | all invariant | $c^0$ |
 
-Both routes agree: $L\propto c^4$.
+$$L \propto c^{-3}\cdot c^{+1}\cdot c^{+2} = c^0.$$
 
-**Caveat.** The actual luminosity of a main-sequence star depends on nuclear reaction
-rates, mean-free-path opacities, and convective transport efficiencies — all of which
-carry their own $c$-dependence. The two-route consistency is reassuring but is not a
-substitute for a full stellar-structure calculation. The exponent 4 is the leading-order
-scaling; corrections could shift it.
+**Luminosity is $c$-invariant** at fixed composition — a three-way cancellation between
+the radiation constant ($a\propto c^{-3}$), the propagation speed ($c^{+1}$), and the
+opacity ($\kappa\propto c^{-2}$).
+
+**Why earlier routes gave $c^4$ — and why they were wrong.**
+
+Route A used $L \sim E \cdot \nu \propto c^2 \cdot c^2 = c^4$. Route B used
+$L = 4\pi R_\star^2\sigma_\text{SB}T_\text{eff}^4$ with $R_\star \propto c^{-1}$
+(atomic Bohr-radius scaling) and $T_\text{eff} \propto c^2$ (Wien law with
+$\nu\propto c^2$), consistently giving $c^4$. Both routes share the same hidden
+assumption: that $T_\text{eff}$ tracks the atomic energy scale ($\propto c^2$). This
+is unjustified — stellar surface temperature is set by the stellar structure, not by
+atomic scales. The correct $T_\text{eff}$ from the mass–luminosity relation (with
+$R_\star\propto c^{-1}$ and $\sigma_\text{SB}\propto c^{-2}$) is:
+$$T_\text{eff}^4 = \frac{L}{4\pi R_\star^2\sigma_\text{SB}}
+\propto \frac{c^0}{c^{-2}\cdot c^{-2}} = c^4
+\;\Longrightarrow\; T_\text{eff}\propto c^1,$$
+not $c^2$. Routes A and B were internally consistent but used a premise the
+mass–luminosity relation contradicts. The mass–luminosity relation supersedes them.
+
+**Caveat.** The formula uses electron-scattering (Thomson) opacity, which dominates in
+hot stellar interiors and is the cleanest primary choice. Kramers (bound-free/free-free)
+opacity scales differently with $c$ and would shift the exponent. The sign of the
+habitability effect is robust; the magnitude is opacity-dependent.
 
 ---
 
-## Received Stellar Flux: $F \propto c^4$
+## Received Stellar Flux: $F \propto c^0$
 
-Under invariant $G$ (T8, T9), orbits are static: $r = L^2/(m^2 GM) = \text{const}$.
-The received flux at a planet's orbital radius is:
-$$F = \frac{L}{4\pi r^2} \propto \frac{c^4}{c^0} = c^4.$$
+Under invariant $G$ (T8, T9), orbits are static: $d = \text{const}$. The received flux
+at Earth's orbital distance is:
+$$F = \frac{L}{4\pi d^2} \propto \frac{c^0}{c^0} = c^0.$$
 
-The drift rate is $\dot F/F = 4H_0^\text{hor} \approx 4\times H_0^\text{obs}/2
-\approx 1.4\times10^{-10}$ yr$^{-1}$, locally unobservable, but an order-unity change
-over $\sim$Gyr timescales.
+**Flux is $c$-invariant.** This restores a constant-flux result, but through a
+different mechanism from cdot-3: in cdot-3, $L\propto c^4$ and $r\propto c^2$ cancelled
+to give $F\propto c^0$; here $L\propto c^0$ and $d=\text{const}$ achieve the same
+outcome.
 
-**Comparison with cdot-3.** Under $G\propto c^{-2}$, orbits expanded as $r\propto c^2$,
-giving $F=L/(4\pi r^2)\propto c^4/c^4 = c^0$ (constant flux). That exact cancellation
-was the source of the earlier "automatic" resolution of the faint young Sun paradox.
-Invariant $G$ removes the cancellation: flux now drifts. The question becomes whether
-physical conditions for liquid water were nevertheless maintained.
+The drift rate from the $c$-scaling alone is zero. The standard solar brightening
+(~25–30% over 4.5 Gyr from core composition evolution: H→He raises $\mu$, the core
+contracts and heats, nuclear rate rises) is a **separate, composition-driven effect**
+that is independent of and additive to the $c$-scaling. It is not included in the $c$
+power laws below.
 
 ---
 
-## The Habitability Ratio: $X \propto c^{-1/2}$
+## The Habitability Ratio: $X \propto c^{-3/2}$
 
 Rather than asking whether the raw flux was constant, the correct model-native question
-is whether the *conditions for liquid water* were maintained. Both the flux and the
-molecular energy scale that sets water's phase boundaries vary with $c$; their ratio is
-the physically meaningful quantity.
+is whether the *conditions for liquid water* were maintained. Both the flux-derived
+temperature and the molecular energy scale that sets water's phase boundaries vary with
+$c$; their ratio is the physically meaningful quantity.
 
 ### Definition
 
 $$X \equiv \frac{T_\text{eq}}{T_\text{mol}},$$
 where $T_\text{eq}$ is Earth's radiative-equilibrium surface temperature and $T_\text{mol}$
-is the water molecular (phase-boundary) temperature scale — the H-bond energy converted
-to kelvin, which governs freezing and boiling.
+is the water molecular (phase-boundary) temperature scale.
 
-### Equilibrium temperature $T_\text{eq} \propto c^{3/2}$
+### Equilibrium temperature $T_\text{eq} \propto c^{1/2}$
 
 Radiative balance: absorbed stellar flux equals thermal re-emission:
 $$\frac{L}{4\pi d^2}\,\pi R_E^2\,(1-A) = 4\pi R_E^2\,\sigma_\text{SB}\,T_\text{eq}^4.$$
 Earth's radius $R_E$ cancels (absorbing cross-section $\pi R_E^2$ vs. radiating area
-$4\pi R_E^2$ — the factor of 4 is body-size-independent). With $L\propto c^4$,
-$d=\text{const}$, and $\sigma_\text{SB}\propto c^{-2}$:
-$$T_\text{eq}^4 \propto \frac{L}{\sigma_\text{SB}\,d^2} \propto \frac{c^4}{c^{-2}}
-= c^6 \quad\Longrightarrow\quad T_\text{eq} \propto c^{3/2}.$$
+$4\pi R_E^2$). With $L\propto c^0$, $d=\text{const}$, and $\sigma_\text{SB}\propto c^{-2}$:
+$$T_\text{eq}^4 \propto \frac{L}{\sigma_\text{SB}\,d^2} \propto \frac{c^{0}}{c^{-2}}
+= c^2 \quad\Longrightarrow\quad T_\text{eq} \propto c^{1/2}.$$
+
+As $c$ decreases toward the past, $T_\text{eq}$ was slightly lower in absolute terms.
+At $c_\text{past}/c_\text{now}\approx0.84$: $T_\text{eq,past}/T_\text{eq,now}\approx0.84^{1/2}\approx0.92$
+— roughly 8% cooler. The equilibrium temperature was lower; the question is relative to
+what yardstick.
 
 ### Molecular temperature scale $T_\text{mol} \propto c^2$
 
@@ -103,16 +129,18 @@ all electromagnetic binding energies in the model: $E_\text{H-bond}\propto c^2$ 
 the Rydberg-like energy scale with invariant $m,e,h$ and $\epsilon_0\propto c^{-1}$).
 With $k_B$ a fixed conversion between energy and kelvin:
 $$T_\text{mol} \propto c^2.$$
+At $c_\text{past}/c_\text{now}\approx0.84$: $T_\text{mol,past}/T_\text{mol,now}\approx0.84^2\approx0.71$
+— the freezing threshold was 29% lower.
 
 ### The ratio
 
-$$\boxed{\,X = \frac{T_\text{eq}}{T_\text{mol}} \propto \frac{c^{3/2}}{c^2} = c^{-1/2}.\,}$$
+$$\boxed{\,X = \frac{T_\text{eq}}{T_\text{mol}} \propto \frac{c^{1/2}}{c^2} = c^{-3/2}.\,}$$
 
-As $c$ decreases toward the past, $X$ **increases**: the early Earth was warmer relative
-to water's freezing point. The mechanism: the molecular yardstick ($\propto c^2$) fell
-faster in the past than the equilibrium temperature ($\propto c^{3/2}$). This is a
-direct consequence of the relational principle — both scales carry $c$-dependence, and
-the molecular scale is steeper.
+As $c$ decreases toward the past, $X$ **increases**: the early Earth was **warmer
+relative to water's freezing point**, not colder. The mechanism is purely relational:
+the equilibrium temperature was slightly lower in absolute terms (~8%), but the
+molecular yardstick for freezing was much lower (~29%). The liquid-water window was
+wider.
 
 ---
 
@@ -122,57 +150,64 @@ Using $c_\text{past}/c_\text{now}\approx0.84$ at 4.5 Gyr lookback
 (from $\Delta c/c\approx H_0^\text{hor}\cdot4.5\ \text{Gyr}\approx0.16$,
 $H_0^\text{hor}=H_0^\text{obs}/2\approx35\ \text{km/s/Mpc}$):
 
-$$\frac{X_\text{past}}{X_\text{now}} = \left(\frac{0.84}{1}\right)^{-1/2} \approx 1.09.$$
+$$\frac{X_\text{past}}{X_\text{now}} = \left(\frac{0.84}{1}\right)^{-3/2} \approx 1.30.$$
 
-This is roughly $+9\%$ in the habitability ratio — or of order $\sim20$ K effective
-warming relative to the freezing point at present-day conditions. At present mean surface
-temperature $\approx15°$C (freezing at $0°$C), a 20 K shift is climatologically
-significant.
+**~30%** larger habitability ratio 4.5 Gyr ago. The equilibrium temperature was 8%
+lower; the freezing threshold was 29% lower; the margin between them grew by ~30%.
 
 ---
 
 ## Implications for the Faint Young Sun Paradox
 
-**Previous status (cdot-3):** the paradox was "automatically resolved" by constant
-stellar flux ($F\propto c^0$). That resolution depended on $r\propto c^2$, which is
-removed by invariant $G$.
+**cdot-3:** paradox automatically resolved — $L\propto c^4$ and $r\propto c^2$ cancelled
+to give constant flux; the relational argument was not needed.
 
-**Current status (cdot-4):** the paradox is **partially eased** in the correct
-direction.
+**cdot-4, old derivation:** $L\propto c^4$ with static orbit gave $F\propto c^4$.
+Paradox partially eased by $X\propto c^{-1/2}$ (~9% habitability gain). The direction
+was correct; the magnitude was small.
 
-- **Sign: correct** — $X$ pushes toward a warmer, more habitable early Earth.
-- **Magnitude: open** — $\sim$20 K is significant but probably not the full deficit.
-  Standard solar models place the early Sun at 70% luminosity, corresponding to an
-  equilibrium temperature deficit of $\sim$25 K. The 20 K offset from $X$ reduces but
-  does not eliminate the required additional greenhouse forcing.
-- **Classification: partially eased, not automatically resolved.**
+**cdot-4, corrected:** flux is again $c$-invariant ($L\propto c^0$, $d=\text{const}$).
+The model's contribution is now **purely relational** — not from extra flux, but from
+the molecular temperature scale falling faster than the equilibrium temperature.
 
-**Distinctiveness.** This is a genuine, falsifiable prediction of the relational model:
-the early Earth's habitability ratio was higher (warmer relative to freezing) by a
-specific amount tied to $\Delta c/c$ over the relevant epoch. The sign and approximate
-magnitude are fixed by the theory; they are not fitted to the paradox.
+- **Sign: correct** — $X\propto c^{-3/2}$ pushes toward a warmer, more habitable
+  early Earth, in the correct direction for the faint-young-Sun paradox.
+- **Magnitude: ~30%** (opacity-dependent), up from the erroneous ~9%.
+- **Distinctiveness.** The ~30% habitability improvement is a genuine, falsifiable
+  prediction of the relational principle — both scales carry $c$-dependence, and the
+  molecular scale is steeper. This is not fitted to the paradox; it is fixed by
+  the scalings of $\sigma_\text{SB}$ and H-bond energies.
+- **Classification: supplementary, not a full resolution.** The standard
+  composition-driven brightening (~25–30% fainter early Sun) still reduces $T_\text{eq}$;
+  the model's $c$-effect (X∝c^{-3/2}) runs in the favorable direction with comparable
+  magnitude but addresses the relative rather than absolute temperature. Additional
+  greenhouse forcing may still be required for the full observed record.
 
 ---
 
 ## Caveats
 
-1. **$L\propto c^4$ is the load-bearing assumption.** Verified by two independent
-   routes (§ "Stellar Luminosity"), but a full stellar-structure calculation — tracking
-   $c$-dependence through nuclear cross-sections, opacity, and convection — has not been
-   done. An exponent shift would change $T_\text{eq}$ and the entire magnitude.
+1. **Opacity regime sets the exponent.** $L\propto c^0$ and $X\propto c^{-3/2}$ rest
+   on **electron-scattering (Thomson) opacity**, $\kappa\propto c^{-2}$ — the dominant,
+   cleanest opacity in hot stellar interiors. A Kramers (bound-free/free-free) regime
+   scales differently and would shift both the $L$ exponent and the $X$ exponent. The
+   robust claim is the **sign** (early Earth warmer relative to freezing), which holds
+   provided $L$ does not scale strongly positively with $c$ (which would require an
+   unusual opacity scaling).
 
-2. **Scaling-argument class.** All results here are power-law scalings, not full
-   physical models. The habitability ratio is a leading-order estimate.
+2. **Scaling-argument class.** All results are power-law scalings, not a full physical
+   model. The habitability ratio is a leading-order estimate; the 30% figure is
+   order-of-magnitude.
 
-3. **Albedo and atmosphere treated as $c$-independent.** Ice-albedo feedbacks and
-   changes in atmospheric composition (CO₂, CH₄, N₂O) are assumed to track their
-   present values. A fuller treatment should allow these to respond to the changing
-   flux and temperature.
+3. **Composition effect held separate.** The standard faint-young-Sun brightening is
+   composition-driven (H→He over ~4 Gyr) and is independent of the $c$-scaling. Both
+   effects are real and additive; the $c$-effect does not replace the composition effect.
 
-4. **$k_B$ convention.** The result $T_\text{mol}\propto c^2$ assumes $k_B$ is a fixed
-   energy-kelvin conversion. If the kelvin is redefined through $k_B\propto c^x$ for
-   some $x\neq0$, the exponents change. The invariant-$k_B$ convention is consistent
-   with the model's stance on $e,h$ but should be stated explicitly.
+4. **Albedo and atmosphere treated as $c$-independent.** Ice-albedo feedbacks and
+   atmospheric composition (CO₂, CH₄) are assumed to track their present values.
+
+5. **$k_B$ convention.** $T_\text{mol}\propto c^2$ assumes $k_B$ is a fixed
+   energy-kelvin conversion. Stated explicitly wherever the result is used.
 
 ---
 
@@ -180,10 +215,10 @@ magnitude are fixed by the theory; they are not fitted to the paradox.
 
 - **Full stellar-structure $L(c)$ derivation.** Opacity, nuclear cross-sections, and
   convective efficiency all carry $c$-dependence. This is the primary open calculation
-  for establishing the habitability magnitude.
-- **Quantitative climate comparison.** Is the $\sim$20 K effective warming sufficient
-  to explain liquid water at 3.8 Gyr without requiring large greenhouse forcing, or
-  does additional CO₂/CH₄ still dominate?
+  for establishing the habitability magnitude rigorously.
+- **Quantitative climate comparison.** Does the ~30% habitability improvement
+  (combined with or separate from standard greenhouse forcing) account for liquid water
+  at 3.8 Gyr?
 - **Albedo and atmospheric evolution.** Cloud-ice albedo feedbacks and changes in
   atmospheric composition modify the effective $X$; a fuller treatment should allow
   these to vary.

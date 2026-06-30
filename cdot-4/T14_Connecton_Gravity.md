@@ -1,14 +1,13 @@
 
 # T14 — Connecton Gravity
 
-*Note: This topic is speculative — it is a research direction with a clear logical
-structure and several quantitative checks, but it has not been adopted into the core
-of the model. It is recorded here because it produced specific results (positive and
-negative) that are worth preserving. Key outcomes: the connecton sea = quantum foam
-identification resolves the ballistic/diffusive dilemma and gives Newtonian $1/r$
-gravity (real progress); but every MOND mechanism examined — retardation, linear
-diffusion, additive GEM, catalytic cycle, pilot-wave interference — gives Newton, not
-MOND. The model most likely needs dark matter for galaxies.*
+*Note: This topic is speculative — it is a research direction with several quantitative
+checks but has not been adopted into the core of the model. Key outcomes: the connecton
+sea = quantum foam identification resolves the ballistic/diffusive dilemma and gives
+Newtonian $1/r$ gravity (real progress); all five MOND mechanisms examined give Newton
+(structural $\sqrt{M}$ obstruction; details in cdot-3); the Lorentz route $v\times B_c$
+accommodates flat curves and M-σ self-consistently and feeds the dynamical-selection
+picture (below) and T17.*
 
 ---
 
@@ -47,23 +46,6 @@ $$E_\text{connecton} = h\nu \sim \hbar H_0 \approx 1.5 \times 10^{-33}\ \text{eV
 This is not a free parameter — it is fixed by the horizon. It is the same scale
 that appears in holographic/IR-cutoff discussions of dark energy and gravitational
 entropy.
-
----
-
-## The Connecton Spectrum
-
-Connectons emitted when the horizon was smaller have shorter wavelengths (higher
-frequency). For the volume law ($c \propto R^3$), the horizon scales as
-$R(z) = R_0(1+z)^{-1/6}$, so the spectrum has a dominant spike near the current
-horizon wavelength with a narrow tail (within $\sim 3\times$ of the horizon
-wavelength over any accessible redshift range).
-
-When mass-dependence is allowed — connectons absorbed and re-emitted at every vacuum
-point by the quantum foam (see below) — the spectrum broadens from the Compton
-wavelength $\lambda_C \propto c^{-1}$ up to $c/H_0$. A detailed-balance +
-number-conservation + scale-invariance argument gives a cascade index $p = 1$ (equal
-connectons per octave, i.e. a $1/\lambda$ spectrum). This broad spectrum is relevant
-to the MOND mechanism attempts below.
 
 ---
 
@@ -168,133 +150,73 @@ mass-independent, and cosmological in origin. But a scale is not a functional fo
 
 ---
 
-## The MOND Obstruction: Every Mechanism Gives Newton
+## MOND/RAR: Structural Obstruction
 
-This section documents the systematic failure of every mechanism attempted to
-reproduce the RAR interpolating function. The analysis is recorded because the
-pattern of failure is informative.
+Five mechanisms were examined for reproducing the RAR interpolating function (additive
+GEM, catalytic cycle, criticality-as-license, pilot-wave broad-spectrum, retardation;
+derivations in cdot-3). All give Newton. The reason is structural: deep MOND requires
+$g \propto \sqrt{M}/r$ — a **nonlinear source coupling** — but every mechanism this
+framework naturally produces is linear in $M$, giving the wrong Tully-Fisher slope
+$v^4 \propto M^2$.
 
-### The $\sqrt{M}$ Requirement
-
-The deep-MOND regime $g_\text{MOND} = \sqrt{g_\text{bar}\,g_\dagger}$ implies
-$g \propto \sqrt{M}/r$ — a **nonlinear source coupling**. This is MOND's irreducible
-signature (the Baryonic Tully-Fisher Relation $v^4 = GM\,g_\dagger$ follows directly).
-Any mechanism linear in $M$ gives the wrong Tully-Fisher slope $v^4 \propto M^2$.
-Every natural mechanism the model produces is linear in the source mass, which is why
-the scale keeps matching (dimensional analysis is linear-friendly) while the
-functional form keeps failing (requires nonlinearity).
-
-### Additive GEM Approach (Negative)
-
-Adding a cosmological term $g_\text{cosmo} \propto 1/r$ to Newton: the MOND term
-must be $g_\text{cosmo} \propto \sqrt{M}/r$, but any linear GEM-type field gives
-$g \propto M/r$ — wrong slope. This is a structural failure, not a tuning problem.
-
-### Catalytic Cycle (Attempted; Negative)
-
-**Idea:** connectons co-catalyze transient virtual $e^+e^-$ pairs. The threshold
-density of states for pair creation gives a real $\sqrt{E_\text{exc}}$ — the right
-functional shape for MOND.
-
-**Result:** $E_\text{exc}$ is set by the pair's own energy ($\sim 2m_e c^2$, MeV),
-not the field gradient energy ($|\nabla\phi|\lambda_C$). The ratio is $\sim 10^{33}$
-— the $\sqrt{}$ is a constant prefactor, not $\sqrt{|\nabla\phi|}$. The collective
-version gives linear drift (Einstein relation: $v_\text{drift} \propto F$ → Newton).
-A sublinear (cooperative, $\sqrt{}$) collective response requires criticality, which
-belongs at the strong-field black-hole end, not the weak-field MOND end. **Verdict:
-Newton, not MOND.**
-
-### Criticality as License (Not Source)
-
-Every galaxy has a central black hole — a strong-field critical surface.
-
-- **Role 1 (source):** BH critical region directly sources the MOND enhancement →
-  flat-curve amplitude $\propto M_\text{BH}$, destroying universality of $a_0$. Ruled out.
-- **Role 2 (license):** criticality is an *existence condition* that licenses the
-  non-analytic coupling, while the *scale* is horizon-set ($a_0 \sim cH_0$). The BH
-  need only exist somewhere in the galaxy. This dissolves the catalytic dead end and
-  survives the universality objection.
-
-This is conceivable but requires licensing-at-a-distance (localized BH at $\sim$ AU
-licensing a coupling at $\sim$ 10 kpc) — a global topological condition, not yet shown.
-
-### The Lorentz Route: $g = g_N + v \times B_c$
-
-A velocity-dependent cross-product force is genuinely different from all density/gradient
-couplings above. The analysis:
-
-1. Standard gravitomagnetic $B_c \sim a_0/c$ gives a $v/c$-suppressed term $\sim 10^{-3}
-   a_0$ — fails.
-
-2. The $B_c$ required for flat curves: $B_c = (GM\,a_0)^{1/4}/r = v_\text{flat}/r$.
-   This must independently equal the orbital angular frequency — a consistency condition.
-
-3. **The M-sigma connection.** The observed M-sigma relation gives
-   $M_\text{BH}^{1/4} \sim (GM_\text{bary}\,a_0)^{1/4}$, exactly the required
-   $B_c$ amplitude. So if $B_c$ is sourced by the central BH as
-   $B_c \sim M_\text{BH}^{1/4}/r$, the Lorentz route gives both flat curves and
-   the M-sigma relation as a BH-flat-curve consistency condition.
-
-4. **The wall is only relocated:** $B_c \propto M^{1/4}/r$ is a non-analytic
-   quarter-power source, which no linear gravitomagnetic mechanism provides.
-   $v \times B_c$ *accommodates* MOND; it does not *derive* it.
-
-**What is genuinely new:** the M-sigma relation as a falsifiable consistency condition
-linking BH mass to galactic flat-curve velocity (see T17).
-
-### Pilot-Wave / Broad-Spectrum Interference (Attempted; Overturned)
-
-**Setup:** the broad $p=1$ spectrum, with BHs resonantly scattering at
-$\lambda^* = 2\pi GM/c^2 \sim r_s$. A *scaling estimate* of the coherence factor
-suggested $M^{-1/2} \to v^4 \propto GM\,a_0$ — the first time $\sqrt{M}$ appeared
-from a mechanism in this project.
-
-**The eikonal integral overturns it.** A connecton crossing a mass at impact parameter
-$b$ has eikonal phase $\Phi(b) = (2\pi/\lambda)(GM/c^2)\cdot 2\ln(L/b)$, giving
-deflection $\theta = 2GM/(c^2 b)$ — **wavelength-independent** ordinary gravitational
-bending. The spectrum washes out; the $\lambda^*$ enhancement is absent.
-
-The diffraction escape fails: the sweet spot $\lambda^* \sim r_s \sim 10^{15}$ m
-has $\delta\phi \sim 1$ (strongly coupled) but $\lambda^* \ll r$ (eikonal valid →
-Newton). The modes in the diffraction regime ($\lambda \sim c/H_0 \sim 10^{26}$ m)
-have $\delta\phi \sim 10^{-12}$ (negligible). **No wavelength is both strongly coupled
-and diffractive.** The Stage-3 $\sqrt{M}$ was an artifact of the scaling estimate.
-**Verdict: Newton.**
-
-**Lesson (recurring):** a clean $\sqrt{M}$ from a scaling estimate is the artifact
-pattern in this project. Only the real integral distinguishes mechanism from
-coincidence. This is the third time it dissolved.
+**Lorentz route and M-σ.** The structure $g = g_N + v\times B_c$ is a distinct class.
+For flat curves the required field is $B_c = v_f/r$; the observed M-σ relation gives
+$M_\text{BH}^{1/4} \sim (GM_\text{bary}\,a_0)^{1/4}$, exactly the $B_c \sim M_\text{BH}^{1/4}/r$
+amplitude needed. The Lorentz route *accommodates* flat curves and M-σ self-consistently
+but does not *derive* them: $B_c \propto M^{1/4}/r$ is non-analytic and no linear
+gravitomagnetic mechanism provides it. This is the non-analytic wall. It feeds the
+dynamical-selection picture (below) and T17.
 
 ---
 
 ## Dynamical Selection: Flatness as an Attractor
 
-**[FLAG — Needs re-derivation under invariant G]** The dynamical selection picture described here assumed that orbits expand as $r\propto c^2$ (T9, cdot-3) as the driver of ring ejection. Under invariant G (cdot-4), orbits are static ($r=\text{const}$, T9). The orbital-expansion driver is removed. Whether a Lorentz-type velocity selector still produces a flat-rotation-curve attractor without the orbital expansion must be re-derived. The Lorentz term $v\times B_c$ still exists in principle, but the "orbits expand, outer rings unbind" narrative no longer applies as stated. This is the most significant downstream casualty of the invariant-G adoption. The section below is preserved for historical record pending re-derivation.
+**Re-derived under invariant G (cdot-4).** The original picture (cdot-3) used orbital
+expansion $r\propto c^2$ as the trigger for ring ejection — as orbits expanded, outer
+rings were delivered to the Lorentz ejection threshold. Under invariant G, orbits are
+static ($r=\text{const}$, T9), so the expansion trigger is gone. The mechanism below
+replaces it with a direct, time-steady Lorentz velocity filter — a simpler causal chain
+that does not require expansion as an intermediate step.
 
-**Reframing.** Every mechanism above was asked to produce a flat curve as a *static
-equilibrium* — which forced a non-analytic $B_c$. But a galaxy is a *dynamical*
-object on the map: orbits expand as $c$ grows ($r \propto c^2$, T9).
+**The direct velocity filter.**
 
-**The picture:**
-- A velocity-dependent Lorentz force is a **velocity selector**: rings whose orbital
-  speed makes the Lorentz term too strong become unbound and are ejected to
-  intergalactic space.
-- The flat rotation curve is the **marginally-bound surviving population** — an
-  evolutionary attractor, not a static solution.
-- Survivors satisfy $B_c(r) = v_f/r$ (flat condition) automatically, **with no
-  fine-tuning**.
+For a disk star on a circular orbit at radius $r$ with tangential velocity $v_\phi$,
+take $\mathbf{B}_c = B_c\hat{z}$ (vertical, perpendicular to the disk plane). Then:
+$$\mathbf{v}\times\mathbf{B}_c = v_\phi B_c\,\hat{r} \quad\text{(directly radially outward)}.$$
+Force balance for a stable circular orbit requires:
+$$\frac{GM}{r^2} = \frac{v_\phi^2}{r} + v_\phi B_c.$$
+Stars satisfying $v_\phi B_c > GM/r^2 - v_\phi^2/r$ experience a net outward force
+and spiral out on a dynamical timescale. This is a **continuous, time-steady velocity
+selector** — no orbital expansion is needed to deliver stars to the threshold. Stars
+above the marginal binding velocity are expelled directly; stars below remain on stable
+orbits.
+
+**Flatness as an attractor (unchanged conclusion).**
+
+- The flat rotation curve is the **marginally-bound surviving population**: survivors
+  satisfy $GM/r^2 = v_f^2/r + v_f B_c$ with $v_f = \text{const}$, which requires
+  $B_c \propto 1/r$ — the same condition as before.
+- Survivors satisfy $B_c(r) = v_f/r$ automatically, **with no fine-tuning**.
+- The attractor is a direct consequence of the Lorentz filter, not a static force-balance
+  solution.
+
+**Cosmic evolution.** $B_c$ grows with $c$ (specific scaling depends on the microphysical
+model). As $c$ increases, the ejection threshold decreases — progressively slower-moving
+stars are stripped. This drives more aggressive disk stripping at late times and more disk
+retention at high $z$ (small $c$), in agreement with the observed morphology-redshift trend
+(T17, Link 4). The filter is always active rather than waiting for expansion to deliver
+stars to a threshold.
 
 **Results:**
 
 | Aspect | Status |
 |---|---|
-| Flatness | **Explained as attractor** — structurally sound; genuine progress |
-| Tully-Fisher normalization | **Open** — pinning $v_f$ requires $B_c \propto M^{-3/4}R$; same non-analytic issue relocated |
-| New falsifiable prediction | Outer rings ejected to intergalactic space over cosmic time; disk stripping → morphological evolution (T17) |
+| Flatness | **Explained as attractor** — mechanism survives invariant G; simpler causal chain |
+| Tully-Fisher normalization | **Open** — pinning $v_f$ requires $B_c \propto M^{-3/4}R$; same non-analytic wall as before |
+| Falsifiable prediction | Disk stripping → ICL growth, morphological evolution with redshift (T17) |
 
-The dynamical calculation (does Lorentz ejection from a realistic evolving disk
-converge to $B_c = v_f/r$?) is unproven. This is now the most promising
-rotation-curve direction.
+The dynamical calculation (does Lorentz ejection from a realistic disk converge to
+$B_c = v_f/r$?) remains unproven. This is the most promising rotation-curve direction.
 
 ---
 
@@ -319,60 +241,39 @@ CMB, even though the pressureless property is already present.
 
 ---
 
-## Connection to the PV Framework
-
-In the Polarizable Vacuum (PV) framework (Puthoff 2002), gravity is mediated by
-variations in the vacuum refractive index $K = c_0/c$, with $g \propto -\nabla(\ln K)$.
-The connecton capture-delay effect — a mass perturbs the local connecton density,
-locally reducing $c$ (raising $K$) — is the microscopic origin of the PV refractive
-index. The connecton field *is* the PV vacuum; the PV equations are the macroscopic
-limit of the connecton dynamics. This makes $G \propto c^{-2}$ natural in the PV
-framework — but the model has abandoned the PV-derived G scaling (T8). Invariant G is
-now the empirically required choice; the foam-sea / PV connection survives as a
-mechanism for present-epoch G, without requiring temporal variation.
-
----
-
 ## Verdict (Honest Summary)
 
-| Mechanism | Result |
+| Result | Status |
 |---|---|
-| Retardation ($\dot c/c$ effect) | Newton; $10^6$ too small (T5) |
-| Foam diffusion ($1/r$) | **Newtonian $1/r$: real success** — dodges geometric $10^6$, EP-clean |
-| Linear additive GEM | Newton; wrong Tully-Fisher slope |
-| Catalytic cycle | Newton; $\sqrt{}$ is MeV-scale constant, not field-gradient |
-| Pilot-wave broad-spectrum | Newton; eikonal dissolves Stage-3 $\sqrt{M}$ |
-| Dynamical selection | Flatness as attractor; TF normalization open |
+| Newtonian $1/r$ gravity from foam diffusion | **Real success** — dodges geometric $10^6$, EP-clean |
+| All MOND mechanisms (5) | **Newton** — structural $\sqrt{M}$ obstruction; details in cdot-3 |
+| Dynamical selection / Lorentz filter | Flatness as attractor; TF normalization open |
 
-Every mechanism gives Newton or a linear-in-$M$ term — never $\sqrt{M}$
-Tully-Fisher. The foam-sea robustly gives **Newtonian $1/r$ gravity** (real progress;
-dodges the geometric $10^6$, EP-clean). **MOND and the RAR are not reproduced.** The
-model most likely needs dark matter for galaxies. The PBH thread (T16) is the best
-candidate: one primordial population for CMB wells, galactic DM, and SMBH seeds (T17).
+**MOND and the RAR are not reproduced.** The model most likely needs dark matter for
+galaxies. The PBH thread (T16) is the best candidate: one primordial population for
+CMB wells, galactic DM, and SMBH seeds (T17).
 
 ---
 
 ## Open Items, In Priority
 
-1. **The RAR functional form** — can nonlinear diffusion in the foam-sea yield the
-   deep-MOND $\sqrt{g_\text{bar}\,g_\dagger}$ law? Requires solving nonlinear diffusion
-   with $D \propto |\nabla\rho|$, which has no independent motivation and is disfavored
-   by the natural (linear) reading.
-
-2. **The closure condition** — prove $4\pi G L\rho_\text{bg}/(3\sigma) = c$ that pins
+1. **The closure condition** — prove $4\pi G L\rho_\text{bg}/(3\sigma) = c$ that pins
    the transition to $cH_0$. One power of $c$ is already structural ($D = cL/3$).
 
-3. **Tully-Fisher normalization** — does the dynamical-ejection picture converge to
+2. **Tully-Fisher normalization** — does the dynamical-ejection picture converge to
    the correct normalization $v_f^4 = GM\,a_0$? This calculation has not been done.
 
-4. **Coefficient derivation** — under invariant G (cdot-4), the question of whether foam-diffusion gives $G \propto c^{-2}$ is **moot** (G is constant). The open question becomes: does the foam-diffusion framework give $G \propto c^0$ at the correct magnitude? The present-epoch normalization argument (connecton sea density → $G_\text{now}$) is unchanged; what changes is that G must not drift, which the constant connecton density in a static foam-sea naturally supports.
+3. **Coefficient derivation** — does the foam-diffusion framework give $G \propto c^0$
+   at the correct magnitude? The constant connecton density in a static foam-sea
+   naturally supports no temporal variation; the present-epoch normalization
+   (connecton sea density → $G_\text{now}$) needs to be made explicit.
 
-5. **Global bookkeeping** — is $\dot c/c = H$ from the connecton termination rate
+4. **Global bookkeeping** — is $\dot c/c = H$ from the connecton termination rate
    consistent with the same field giving local Newtonian gravity?
 
-6. **Light bending** — does the connecton's propagation in a $K$-gradient background
+5. **Light bending** — does the connecton's propagation in a $K$-gradient background
    give the correct GR prediction for light deflection by the Sun ($1.75''$)?
 
-7. **Continuous emission** — continuous emission (preferred) gives clean EP and
+6. **Continuous emission** — continuous emission (preferred) gives clean EP and
    negligible energy drain ($\sim 10^{-39}$ of rest energy per Hubble time). Whether
    emission only at creation is allowed, and what it would imply, is open.

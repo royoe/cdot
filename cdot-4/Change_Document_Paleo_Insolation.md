@@ -1,159 +1,146 @@
 # Change Document — Paleo-Insolation and the Habitability Ratio under Invariant $G$
 
-**Date:** 2026-06-29
+**Date:** 2026-06-29 (revised after a factor-audit)
 **Status:** New material. A consequence of the invariant-$G$ adoption (see the companion
 *Change Document — Adoption of Invariant $G$*). Addresses whether removing Earth's
 orbital expansion leaves the early Earth too cold to be habitable. **Result: it does
-not** — and the model makes a falsifiable prediction in the *favourable* direction for
-the faint-young-Sun paradox. Suggested home: a new section in **T9 (Orbital Dynamics)**
-or a short new topic file **T-paleo / "Habitability and the Faint Young Sun"**, with a
-status-table row in Core Principles.
+not** — and the model supplies a $c$-dependent shift to the habitability ratio in the
+*favourable* direction for the faint-young-Sun paradox. Suggested home: a new section in
+**T9 (Orbital Dynamics)** or a short new topic file **"Habitability and the Faint Young
+Sun"**, with a status-table row in Core Principles.
+
+> **Revision note.** An earlier draft of this document derived $X\propto c^{-1/2}$ from a
+> luminosity scaling $L\propto c^4$. That was **wrong**: it used a stellar radius scaled
+> as an atomic length ($R_\star\propto c^{-1}$). A factor-audit corrected this. The
+> bolometric luminosity is **radius-independent** (set by hydrostatic equilibrium with
+> radiation pressure), so the radius drops out entirely; the correct $c$-scaling of
+> luminosity at fixed composition is $L\propto c^{0}$, giving $X\propto c^{-3/2}$. The
+> *direction* is unchanged (early Earth warmer relative to freezing); the magnitude is
+> larger. The error and its correction are recorded in §4.1 for transparency.
 
 ---
 
 ## 1. The worry
 
 Adopting invariant $G$ removes orbital expansion ($r\propto c^2$ → $r=$ const; companion
-change doc). Two effects then seem to make the early Earth colder, with nothing to
-compensate:
-- **Lower solar luminosity in the past.** $L\propto c^4$ and $c$ was smaller, so the Sun
-  was intrinsically fainter.
-- **No orbital compensation.** Previously, orbital expansion ($r\propto c^2$) exactly
-  cancelled the luminosity drop to keep received flux constant ($F=L/4\pi r^2\propto c^4/(c^2)^2=c^0$). With static orbits that cancellation is gone, so received flux
-  drifts as $F\propto c^4$ — apparently leaving a frozen early Earth.
-
-Taken at face value this looks like a fresh refutation. It is not, because it asks the
-question in fixed human units instead of in the model's own relational terms.
+change doc). Naively this seems to refreeze the early Earth: the past Sun was fainter and
+there is no longer an expanding orbit to compensate. The worry is a unit artifact — it
+tracks the received flux in fixed human units while ignoring that the molecular
+temperature scale that defines "frozen" also moves with $c$.
 
 ## 2. The correct question: a dimensionless ratio
 
-The model is relational — every energy, length, and time is referred to $c$. "Was the
-early Earth colder?" is only physically meaningful as a **dimensionless comparison**
-between Earth's equilibrium temperature and the temperature scale that actually governs
-habitability: the molecular energy scale of water (its freezing/boiling points). Both
-scale with $c$; asking whether the numerator dropped while ignoring the denominator is a
-unit artifact.
-
+The model is relational. "Was the early Earth colder?" is meaningful only as a
+**dimensionless comparison** between Earth's equilibrium temperature and the temperature
+scale governing habitability — the molecular energy scale of water (freezing/boiling).
 Define the **habitability ratio**
-$$X \equiv \frac{T_\text{eq}}{T_\text{mol}},$$
-where $T_\text{eq}$ is Earth's radiative-equilibrium temperature and $T_\text{mol}$ is
-the characteristic molecular temperature of liquid water (H-bond / phase-boundary scale).
-If $X$ is constant as $c$ evolves, the early Earth was equally habitable and there is no
-problem. If $X$ drifts, the model makes a real paleoclimate prediction.
+$$X \equiv \frac{T_\text{eq}}{T_\text{mol}}.$$
+Constant $X$ ⇒ equally habitable early Earth (no problem). Drifting $X$ ⇒ a real,
+testable paleoclimate prediction.
 
 ## 3. Model scalings used (all firm)
 
-- Lengths $\ell\propto c^{-1}$ (Bohr radius and all atomic/solid lengths).
-- Energies $E\propto c^{2}$ (Rydberg, all binding energies; $\nu\propto c^2$).
-- $\hbar, e, m, k_B$ invariant ($k_B$ is a fixed energy↔kelvin conversion, so a kelvin
-  temperature tracks its energy scale $\propto c^2$).
-- Invariant $G$: orbital distance $d\propto c^0$ (no expansion); $G\propto c^0$.
-- Stefan–Boltzmann constant $\sigma_\text{SB}=\dfrac{\pi^2 k_B^4}{60\,\hbar^3 c^2}\propto c^{-2}$ (the $c$ here is the physical, varying speed of light).
+- Lengths $\ell\propto c^{-1}$; energies $E\propto c^{2}$ ($\nu\propto c^2$).
+- $\hbar, e, m, k_B$ invariant ($k_B$ fixed energy↔kelvin conversion ⇒ kelvin temps
+  track energy $\propto c^2$).
+- Invariant $G$: orbital distance $d\propto c^0$; $G\propto c^0$.
+- Radiation constant $a=\dfrac{\pi^2 k_B^4}{15\,\hbar^3 c^3}\propto c^{-3}$.
+- Stefan–Boltzmann $\sigma_\text{SB}=\dfrac{\pi^2 k_B^4}{60\,\hbar^3 c^2}\propto c^{-2}$.
+- Thomson opacity (electron scattering, dominant in hot interiors):
+  $\kappa_\text{es}=\sigma_T/m_p$, $\sigma_T\propto r_e^2$,
+  $r_e=\dfrac{e^2}{4\pi\epsilon_0 m c^2}\propto c^{-1}$ (since $\epsilon_0\propto c^{-1}$),
+  so $\sigma_T\propto c^{-2}$ and $\kappa_\text{es}\propto c^{-2}$.
 
 ## 4. Derivation
 
-### 4.1 Stellar luminosity $L\propto c^4$ (verified two ways)
+### 4.1 Stellar luminosity is radius-independent: $L\propto c^0$
 
-*Route A (energy/time).* Energy radiated per unit time: energy scale $\propto c^2$;
-characteristic time scale (atomic $1/\nu$, or light-crossing $\ell/c$) $\propto c^{-2}$,
-so rate $\propto c^{+2}$. Hence $L\sim E/t\propto c^2\cdot c^2 = c^4$.
+**Why radius drops out.** Bolometric luminosity is fixed by hydrostatic equilibrium (with
+radiation pressure), not by the stellar radius. The earlier draft's $L\propto c^4$ came
+from a surface relation $L=4\pi R_\star^2\sigma_\text{SB}T_\text{eff}^4$ with $R_\star$
+mis-scaled as an atomic length ($c^{-1}$); this was the error. The correct treatment uses
+the radius-independent (Eddington) radiative luminosity.
 
-*Route B (surface emission).* $L = 4\pi R_\star^2\,\sigma_\text{SB}\,T_\text{eff}^4$, with
-$R_\star\propto c^{-1}$ (a length), $\sigma_\text{SB}\propto c^{-2}$, and the stellar
-surface temperature tracking the internal atomic energy scale $T_\text{eff}\propto c^2$:
-$$L \propto (c^{-1})^2\,(c^{-2})\,(c^{2})^4 = c^{-2-2+8} = c^{4}.\qquad\checkmark$$
+**The standard radiative mass–luminosity relation** (electron-scattering opacity), which
+contains no radius:
+$$L \propto \frac{\mu^4 m_p^4}{k_B^4}\,\frac{a\,c}{\kappa}\,G^4 M^3.$$
+Only $a$, $c$, and $\kappa$ carry $c$-dependence in this model:
+$$L \propto a\,c\,\kappa^{-1} \propto c^{-3}\cdot c^{+1}\cdot c^{+2} = c^{0}.$$
+**Luminosity is $c$-invariant** at fixed composition — a clean cancellation between the
+radiation constant ($a\propto c^{-3}$), the explicit $c$, and the opacity
+($\kappa\propto c^{-2}$).
 
-Both routes agree: $L\propto c^4$.
+### 4.2 The faint-young-Sun brightening is a *separate*, composition-driven effect
 
-### 4.2 Earth's equilibrium temperature $T_\text{eq}\propto c^{3/2}$
+The standard ~25–30% solar brightening over $\sim$4 Gyr is **not** a $c$-scaling effect.
+It arises from core composition evolution: H→He raises the mean molecular weight $\mu$,
+the core contracts and heats, the nuclear reaction rate rises, and $L$ increases — at
+essentially fixed fundamental constants over the relevant timescale. This stands on its
+own and is independent of the model. The model's contribution (§4.3) is a *separate*,
+additive $c$-dependent shift of the habitability ratio.
 
-Radiative balance (absorbed sunlight = thermal re-emission):
-$$\frac{L}{4\pi d^2}\,\pi R_E^2\,(1-A) = 4\pi R_E^2\,\sigma_\text{SB}\,T_\text{eq}^4.$$
-**The Earth's radius $R_E$ cancels** (absorbing cross-section $\pi R_E^2$ vs radiating
-area $4\pi R_E^2$ — the factor of 4 is independent of $R_E$). This is the precise reason
-the "smaller/larger Earth" intuition does **not** enter the equilibrium temperature: body
-size drops out of the energy balance. Solving,
+### 4.3 Equilibrium temperature and the habitability ratio
+
+Radiative balance (Earth radius $R_E$ cancels — absorbing $\pi R_E^2$ vs radiating
+$4\pi R_E^2$):
 $$T_\text{eq}^4 = \frac{L\,(1-A)}{16\pi\,\sigma_\text{SB}\,d^2}
-\propto \frac{c^4}{c^{-2}\cdot c^0} = c^{6}
-\;\Longrightarrow\; T_\text{eq}\propto c^{3/2}.$$
-(The albedo $A$ is dimensionless and treated as $c$-independent.)
-
-### 4.3 The molecular (water) temperature scale $T_\text{mol}\propto c^2$
-
-Water's freezing and boiling points are set by hydrogen-bond / molecular binding
-energies, which scale like all energies, $\propto c^2$. In kelvin ($k_B$ fixed),
-$T_\text{mol}\propto c^2$.
-
-### 4.4 The habitability ratio
-
-$$\boxed{\,X = \frac{T_\text{eq}}{T_\text{mol}} \propto \frac{c^{3/2}}{c^{2}} = c^{-1/2}.\,}$$
-
-$X$ is **not** constant — it scales as $c^{-1/2}$. In the past, $c$ was smaller, so $X$
-was **larger**: the early Earth was **warmer relative to water's freezing point**, not
-colder. The lower solar flux is real, but it is *outweighed* because the molecular
-yardstick (the freezing point itself) dropped faster ($\propto c^2$) than the equilibrium
-temperature ($\propto c^{3/2}$).
+\propto \frac{c^{0}}{c^{-2}\cdot c^{0}} = c^{2}
+\;\Longrightarrow\; T_\text{eq}\propto c^{1/2}.$$
+Water's molecular temperature scale (H-bond/binding energies $\propto c^2$, $k_B$ fixed):
+$T_\text{mol}\propto c^{2}$. Hence
+$$\boxed{\,X=\frac{T_\text{eq}}{T_\text{mol}}\propto \frac{c^{1/2}}{c^{2}} = c^{-3/2}.\,}$$
+$X\propto c^{-3/2}$: in the past ($c$ smaller) $X$ was **larger** — the early Earth was
+**warmer relative to water's freezing point**, not colder.
 
 ## 5. Magnitude over Earth history
 
-The model's horizon rate gives a fractional $c$ change over a lookback $t$ of
-$\Delta c/c\sim H_0^{\text{hor}}\,t$, with $H_0^{\text{hor}}=H_0^{\text{obs}}/2$. Over
-$t\approx4.5$ Gyr (age of the Earth):
-$$\frac{\Delta c}{c}\sim H_0^{\text{hor}}\cdot 4.5\ \text{Gyr}\approx 0.16,
-\qquad \frac{c_\text{past}}{c_\text{now}}\approx 0.84.$$
-Then
-$$\frac{X_\text{past}}{X_\text{now}} = \left(\frac{c_\text{past}}{c_\text{now}}\right)^{-1/2}
-\approx (0.84)^{-1/2}\approx 1.09,$$
-a ~9% larger habitability ratio 4.5 Gyr ago. With $T_\text{eq}\approx255$ K today, this
-corresponds to of order ~20 K of effective warming *relative to the freezing point* in
-the deep past (order-of-magnitude; the exact figure depends on the age/$H_0$ structure
-and on how $X$ is converted to a temperature offset).
+With $\Delta c/c\sim H_0^{\text{hor}}t$ and $H_0^{\text{hor}}=H_0^{\text{obs}}/2$, over
+$t\approx4.5$ Gyr: $c_\text{past}/c_\text{now}\approx0.84$. Then
+$$\frac{X_\text{past}}{X_\text{now}}=\left(\frac{c_\text{past}}{c_\text{now}}\right)^{-3/2}
+\approx(0.84)^{-3/2}\approx 1.30,$$
+a **~30%** larger habitability ratio 4.5 Gyr ago (vs the erroneous ~9% in the earlier
+draft). Order-of-magnitude; the exact figure depends on the age/$H_0$ structure.
 
-## 6. The faint-young-Sun connection (a favourable, falsifiable prediction)
+## 6. The faint-young-Sun connection (favourable, falsifiable — and *supplementary*)
 
-The standard **faint young Sun paradox**: stellar models give the Sun ~25–30% fainter
-~4 Gyr ago, which (with today's atmosphere) would freeze Earth's oceans — yet the
-geological record shows persistent liquid water, conventionally requiring large early
-greenhouse forcing.
+The standard paradox: the Sun was ~25–30% fainter ~4 Gyr ago (composition effect, §4.2),
+which with today's atmosphere would freeze the oceans, yet the record shows liquid water
+— conventionally requiring large early greenhouse forcing.
 
-This model's $X\propto c^{-1/2}$ pushes in **exactly the right direction**: it makes the
-early Earth *warmer relative to the freezing point*, partially offsetting the faint young
-Sun **without** invoking as much greenhouse gas. This is a genuine, distinctive,
-falsifiable prediction — testable against the paleotemperature and paleo-greenhouse
-record — and it is a *consequence* of the relational principle (both flux and molecular
-yardstick scale with $c$), not a fitted patch.
-
-**Direction is robust; magnitude is not yet pinned.** Whether the effect is large enough
-to *fully* resolve the paradox (vs merely ease it) requires a quantitative comparison to
-the reconstructed early-Earth temperature and greenhouse budget. The sign is the strong
-claim; the size is open.
+The model adds a *separate*, additive effect: $X\propto c^{-3/2}$ makes the early Earth
+~30% warmer relative to freezing. **The model does not replace the standard explanation;
+it supplements it** — reducing the greenhouse forcing the record otherwise requires. The
+*direction* is the strong, robust claim; the ~30% *magnitude* is opacity-dependent (§7).
+This is a genuine, distinctive, falsifiable consequence of the relational principle (both
+the radiative balance and the molecular yardstick scale with $c$).
 
 ## 7. Caveats (load-bearing assumptions)
 
-1. **$L\propto c^4$ is the pivotal input.** Verified two ways here (§4.1), but real
-   stellar luminosity depends on opacity and nuclear-reaction rates that also carry
-   $c$-dependence. A full stellar-structure treatment of $L(c)$ could shift the exponent;
-   if it does, $X$'s exponent shifts and in principle the sign could change. The present
-   result is "right sign, plausible size," not "established."
-2. **Scaling-argument status.** This is a dimensional/scaling result, the same *class* of
-   argument that produced a spurious $\sqrt M$ elsewhere this programme. The logic here is
-   cleaner (an equilibrium energy balance, not a coherence estimate) and the body-size
-   cancellation is exact, but the honest standard is met only by a worked stellar-
-   structure + radiative-balance calculation. Flagged accordingly.
-3. **Albedo and atmosphere held fixed.** $A$ and atmospheric composition are treated as
-   $c$-independent; a fuller treatment would let cloud/ice-albedo feedbacks respond to the
-   shifting $X$.
-4. **$k_B$ as a fixed conversion.** Temperatures are taken to track energy ($\propto c^2$)
-   with $k_B$ constant; this is the natural choice but is part of the unit convention and
-   should be stated explicitly wherever the result is used.
+1. **Opacity choice sets the exponent.** $X\propto c^{-3/2}$ rests on **electron-
+   scattering (Thomson) opacity**, $\kappa\propto c^{-2}$ — the dominant, cleanest opacity
+   in hot stellar interiors, hence a reasonable primary choice. A Kramers (bound-free/
+   free-free) regime scales differently and would shift the exponent. The robust claim is
+   the **sign** (early Earth warmer rel. to freezing), which holds provided $L$ does not
+   scale strongly positively with $c$.
+2. **$L\propto c^0$ via the radius-independent relation.** This is the corrected, careful
+   result (§4.1); it supersedes the earlier $L\propto c^4$. A full stellar-structure
+   solution (coupling hydrostatic equilibrium, energy generation, and radiative transport
+   under the model's scalings simultaneously) would confirm the exponent rigorously and is
+   the recommended follow-up. Present status: clean scaling result with the dominant
+   opacity, not yet a full structure calculation.
+3. **Composition effect held separate.** The standard faint-young-Sun brightening (§4.2)
+   is composition-driven at fixed constants and is treated as independent of and additive
+   to the model's $c$-effect — not folded into the $c$-scaling.
+4. **Albedo/atmosphere and $k_B$ convention.** $A$ and atmosphere held $c$-independent;
+   $k_B$ a fixed energy↔kelvin conversion (stated explicitly wherever the result is used).
 
 ## 8. Net
 
-Invariant $G$ **survives** the paleo-insolation test. Removing orbital expansion looked
-like it should refreeze the early Earth, but in the model's own relational terms the
-governing quantity is the dimensionless ratio $X=T_\text{eq}/T_\text{mol}\propto c^{-1/2}$,
-which makes the early Earth *warmer* relative to liquid-water conditions — the correct
-direction to **ease the faint-young-Sun paradox**. This converts an apparent liability of
-the invariant-$G$ choice into a falsifiable prediction. The principal open task is a
-quantitative stellar-structure derivation of $L(c)$ to firm up both the exponent and the
-magnitude.
+Invariant $G$ **survives** the paleo-insolation test. In the model's relational terms the
+governing quantity is $X=T_\text{eq}/T_\text{mol}\propto c^{-3/2}$ (corrected from an
+earlier erroneous $c^{-1/2}$), which makes the early Earth ~30% warmer relative to
+liquid-water conditions over 4.5 Gyr — the correct direction to **ease the faint-young-Sun
+paradox**, as a supplement to (not a replacement for) the standard composition-driven
+brightening. The result rests on radius-independent (Eddington) luminosity with electron-
+scattering opacity; the sign is robust, the magnitude is opacity-dependent, and a full
+stellar-structure derivation of $L(c)$ is the recommended next step.
