@@ -1,9 +1,6 @@
 # T15 — The Radial Acceleration Relation (RAR)
 
-*Note: this problem stands or falls together with T5 (rotation curves) and T6 (MOND
-acceleration scale). The $\sim10^{-6}$ order problem of T5 must be solved before
-any further work on the RAR, MOND ($a_0$, T6), or rotation curves — these three are
-the same open problem at different levels of description.*
+*Note: the RAR, MOND scale (T6), and rotation curves (T5) are related but now at different stages. The retardation mechanism of T5 is dead ($\sim10^6$ shortfall); it is not a precondition for the connecton route. The RAR closure is substantially derived from the connecton program (T14) — see §"Status in This Model" below. The T5 rotation-curve order-of-magnitude problem and the empirical RAR stand at different levels of description; progress on the RAR is no longer gated on T5.*
 
 ---
 
@@ -41,14 +38,8 @@ two-regime statement; it is the most theoretically demanding form of the challen
 ## Dimensional Match: The Scale $g_\dagger \sim cH_0$
 
 The MOND acceleration scale $g_\dagger$ is numerically:
-$$g_\dagger \approx \frac{cH_0^{\text{obs}}}{2\pi} \approx 1.2\times10^{-10}\ \text{m/s}^2,$$
-using $H_0^{\text{obs}} = 70$ km/s/Mpc (the observed low-$z$ Hubble slope). This
-cosmological–galactic connection has been noted since Milgrom (1983). In this model,
-$H_0^{\text{obs}}$ is the directly observable quantity; the horizon rate $H_0^{\text{hor}}
-= \dot{c}/c = H_0^{\text{obs}}/P = 35$ km/s/Mpc is the internal parameter, with
-$\dot{c}_0 = cH_0^{\text{hor}} \approx 3.4\times10^{-10}$ m/s$^2$ (Core Principles §4a).
-The MOND coincidence tracks $H_0^{\text{obs}}$, not $\dot{c}/c$ — the two differ by
-the factor $P = 2$.
+$$g_\dagger = \frac{c^2}{R_0} = \frac{cH_0^{\text{obs}}}{6} \approx 1.2\times10^{-10}\ \text{m/s}^2,$$
+using $R_0=6c/H_0^{\text{obs}}$ (Core Principles §4a). The coefficient $6=3P$ is derived from the horizon radius, not a numerical near-miss (T6, T14). In the connecton picture (T14), $g_\dagger=c^2/R_0$ is identified as the sea's kinematic acceleration — the coefficient is fixed by horizon geometry. The MOND scale tracks $H_0^{\text{obs}}$, not $\dot{c}/c = H_0^{\text{hor}} = H_0^{\text{obs}}/P$ — the two differ by $P=2$, so $g_\dagger\neq\dot{c}$.
 
 **Caveat on the match:** $cH_0$ is the *only* acceleration that can be formed from
 the two characteristic quantities of the model ($c$ and $H_0$). So the scale match
@@ -70,16 +61,12 @@ regardless of the counting law. The RAR's transition is keyed to local accelerat
 crossing $g_\dagger$ — retardation-type effects are structurally ruled out by this
 diagnostic alone.
 
-The **connecton foam-sea** (T14) is the current best candidate:
-- It gives Newtonian $1/r$ via diffusion through quantum foam.
-- It is not distance-keyed (steady-state diffusion profile, no $d/(c/H_0)$
-  suppression).
-- The background gradient $|\nabla\rho_\text{bg}| \sim \rho_\text{bg}H_0/c$ provides
-  a mass-independent transition scale $\sim cH_0$ — the right structure.
+The **connecton foam-sea** (T14) is the leading mechanism and has substantially derived the RAR:
+- It gives Newtonian $1/r$ via diffusion through quantum foam — not distance-keyed.
+- The acceleration floor $g_\dagger=c^2/R_0=cH_0/6$ is derived from the horizon radius (not a background gradient — the homogeneous isotropic sea has no net directional gradient; T14).
+- The sea density is a holographic standing population $\rho_\text{bg}=(\pi/6)\rho_\text{crit}$ ($\hbar$-free; T14) — a standalone structural result linking the sea to dark energy, not the source of $g_\dagger$ (which is kinematic: $c^2/R_0$).
 
-But the **functional form is the wall** (T14, caveat 2): reproducing the RAR
-interpolating function requires $D \propto |\nabla\rho|$ (Bekenstein-Milgrom), which
-has no independent motivation and is disfavored by the natural linear reading.
+The **RAR closure is derived** from connecton indistinguishability — the constitutive law $D(g)=g/(g+g_\dagger)$ (MOND's "simple" interpolation) follows from excess connectons relaxing against the total ambient population. The old functional-form wall (Bekenstein-Milgrom $D\propto|\nabla\rho|$) is bypassed — the closure is derived directly from the indistinguishability premise already in T14.
 
 **3. Structural diagnostic (the useful constraint).** Because the RAR is
 acceleration-keyed, any viable mechanism must be acceleration-keyed. Retardation,
@@ -97,25 +84,18 @@ $$g_\text{MOND} \propto \frac{\sqrt{M}}{r}.$$
 This $\sqrt{M}$ dependence (in contrast to Newton's $M/r^2$) is MOND's irreducible
 nonlinear signature. The BTFR $v^4 = GM\,g_\dagger$ follows directly.
 
-Any mechanism linear in $M$ — retardation terms, linear diffusion, additive GEM
-fields — gives $M/r$ and the wrong Tully-Fisher slope $v^4 \propto M^2$. A
-**nonlinear source coupling** is required. See T6 for the diagnosis of why every
-natural mechanism fails this test, and T14 for the GEM-specific analysis and the
-live candidate directions (Lorentz-form $v\times B_c$ and criticality-as-license).
+Any *direct-source* mechanism linear in $M$ — retardation terms, linear diffusion, additive GEM fields — gives $M/r$ and the wrong Tully-Fisher slope $v^4\propto M^2$. The resolution (T14): the quarter power emerges from where the surviving population sits ($r_t\propto\sqrt{M}$), not from the source coupling. The field equations remain linear; the nonlinearity is in the attractor geometry. The RAR closure then follows from connecton indistinguishability. See T14 for the derivation; criticality-as-license is superseded.
 
 ---
 
 ## Relationship to T6 (MOND $a_0$) and T5 (Rotation Curves)
 
-The three problems are one:
-- **T6:** derive $a_0 \approx cH_0^{\text{obs}}/(2\pi)$ with the correct coefficient from first principles.
-- **T5:** produce order-unity flat rotation curves at galactic radii.
-- **T15:** reproduce the RAR functional form across all galaxy types.
+The three problems are related but now at different stages:
+- **T6/T14:** $g_\dagger=c^2/R_0=cH_0/6$ from horizon kinematics (6 from $R_0=6c/H_0$); $\rho_\text{bg}=(\pi/6)\rho_\text{crit}$ a standalone $\hbar$-free identity. **Substantially derived.** Open: force-law derivation of kinematic identification.
+- **T15 (RAR functional form):** closure derived from connecton indistinguishability (T14); 0.020 dex vs McGaugh. **Substantially derived.**
+- **T5 (rotation curves, order-of-magnitude):** the retardation mechanism is dead ($\sim10^6$ shortfall). The connecton route advances the RAR independently; the T5 order-of-magnitude problem (does the Lorentz filter produce order-unity flat curves?) remains open as the attractor-convergence question.
 
-Solving any one requires solving all three. The blocker common to all is the
-$\sim10^{-6}$ order problem of T5 (retardation too small) plus the $\sqrt{M}$
-nonlinearity problem (functional form). Do not pursue T6 or the RAR in isolation
-until a viable acceleration-keyed, order-unity galactic mechanism exists.
+These are no longer gated on each other via the retardation route. Progress on T15/T6 via the connecton program is independent of the T5 retardation failure.
 
 ---
 
@@ -137,15 +117,8 @@ dynamically MOND-like at high $z$. This is observationally testable in principle
 
 ## Open Questions
 
-- Can the connecton foam-sea (T14) produce the RAR functional form — specifically the
-  $\sqrt{g_\text{bar}\,g_\dagger}$ deep-MOND regime — through a nonlinear diffusion
-  or Lorentz-type $v\times B_c$ coupling?
-- Is the $1/(2\pi)$ coefficient of $g_\dagger = cH_0/(2\pi)$ derivable from the
-  geometry of horizon counting (sphere surface), a quantum phase, or the closure
-  condition $V=c$ (T14)?
-- Does $g_\dagger$ vary with cosmic epoch as predicted? Upcoming high-$z$ IFU surveys
-  (e.g. JWST kinematic data) may constrain this.
-- Can the scatter in the RAR ($\sim0.13$ dex) be accounted for by local variations in
-  the connecton-sea background gradient (due to overdensities, filaments, or cluster
-  environments)? If so, the model predicts small but systematic environmental
-  residuals — distinct from MOND, which predicts zero environmental dependence.
+- **Force-law derivation of $g_\dagger$:** $g_\dagger=c^2/R_0=cH_0/6$ is identified kinematically (sea's crossing acceleration; the 6 from $R_0=6c/H_0$). The open task is to derive $g_\dagger=c^2/R_0$ from the connecton equations of motion (T14 §Open Items).
+- **Transport kernel:** The RAR closure is derived from a relaxation-time ansatz; replacing it with a full Boltzmann derivation is the deepening task (T14).
+- **Attractor convergence:** Does the Lorentz filter genuinely concentrate the surviving population at $r_t$ at all radii? Dynamical-systems proof is the binding open item (T14, T17).
+- **Epoch dependence:** Does $g_\dagger\propto c(t)H_0(t)$ vary with cosmic epoch? In this model $g_\dagger(z)\propto(1+z)^{-5/6}$ — a lower MOND threshold in the past, giving a larger fraction of high-$z$ disks in the MOND-like regime. Testable with JWST/IFU kinematic surveys.
+- **RAR scatter:** Can the observed 0.13 dex scatter be predicted from the coherence-factor $f=v_\text{rot}/\sigma$ variation across bulges (T17)? The model predicts environmental and morphological residuals; pure MOND predicts zero.

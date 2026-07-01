@@ -55,8 +55,13 @@ $z \sim 10^{10}$ would be $H_\text{BBN} \gg H_0$, and $c_\text{BBN} \gg c_0$.
 
 The nuclear reaction rates also depend on $c$ (via the nuclear Gamow energy, thermal
 velocities, and electromagnetic coupling), so the freeze-out calculation is more
-complex than simply substituting a different $H$. A full BBN calculation within the
-model's framework has not been done.
+complex than simply substituting a different $H$. T21 (developed for the Chandrasekhar-
+mass problem) proposes a candidate closure for the weak-sector input: under invariant
+$G_F$ (from invariant $g_w,M_W$) and invariant nuclear $Q$-values, the weak decay rate
+scales as $\Gamma_\text{weak}\propto c^4$, and the deuteron binding energy (an EM+strong
+$Q$-value) as $\propto c^2$ — candidate inputs for the $n\leftrightarrow p$ freeze-out
+rate and the reaction network, respectively, not yet used in a full BBN calculation
+within the model's framework, which remains undone.
 
 What can be said qualitatively:
 - The model's $H(z)$ at high $z$ differs from ΛCDM's. Whether it predicts the
@@ -227,7 +232,10 @@ calculation.
 
 - A full BBN calculation within the model: given the horizon ODE and the $c(t)$
   profile at BBN epochs, what are the predicted $^4$He, D, $^3$He, and $^7$Li
-  abundances? Does the model produce a reasonable $^4$He fraction?
+  abundances? Does the model produce a reasonable $^4$He fraction? Use T21's candidate
+  $\Gamma_\text{weak}\propto c^4$ and deuteron-binding $\propto c^2$ scalings as the
+  weak/nuclear inputs, and cross-check plasmon decay's $\Gamma\propto c^{-1}$
+  (fixed-density, T21 Part 4a) as a relevant early-universe neutrino-cooling process.
 - The premise-2 fork discriminator: compute the BBN abundances for both the count
   and mass versions of premise 2, and compare to observations.
 - The genesis bootstrap: can the self-consistent $c \propto N$ fixed point be

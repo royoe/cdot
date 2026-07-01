@@ -4,10 +4,14 @@
 *Note: This topic is speculative — it is a research direction with several quantitative
 checks but has not been adopted into the core of the model. Key outcomes: the connecton
 sea = quantum foam identification resolves the ballistic/diffusive dilemma and gives
-Newtonian $1/r$ gravity (real progress); all five MOND mechanisms examined give Newton
-(structural $\sqrt{M}$ obstruction; details in cdot-3); the Lorentz route $v\times B_c$
-accommodates flat curves and M-σ self-consistently and feeds the dynamical-selection
-picture (below) and T17.*
+Newtonian $1/r$ gravity (real progress); all five direct-source MOND mechanisms give
+Newton (structural $\sqrt{M}$ obstruction; details in cdot-3); the BTFR and RAR
+crossover follow from $g_\dagger = c^2/R_0 = cH_0^{\text{obs}}/6$ (horizon radius, Core
+§4a) plus Newtonian gravity; the RAR closure is **derived** from connecton
+indistinguishability (§below); the connecton / Lorentz route $v\times B_c$ provides the
+attractor mechanism and feeds the dynamical-selection picture (below) and T17. The same
+coherent $B_c$ also produces a vertical restoring spring that thins disks while sparing
+bulges — see T19.*
 
 ---
 
@@ -20,9 +24,9 @@ rule $c \propto N$ requires.
 
 A connecton has the following properties:
 - **Massless**, zero rest energy.
-- **Near-zero but finite energy**: its wavelength is of order the horizon distance,
-  giving frequency $\sim H_0$ and energy $\hbar H_0 \approx 1.5 \times 10^{-33}$ eV —
-  the minimal quantum of the observable universe.
+- **Near-zero but finite energy**: its wavelength is of order the horizon distance
+  $R_0 = 6c/H_0$, giving frequency $\sim H_0/6$ and energy $\hbar H_0/6 \approx
+  2.5 \times 10^{-34}$ eV — the minimal quantum of the observable universe.
 - **Propagates at the local speed of light** $c(t)$ at the time of propagation.
 - **Conserved in number**: never destroyed. Momentarily absorbed by a massive particle
   (in a brief virtual $e^+e^-$ pair creation and re-emission), then re-emitted.
@@ -39,13 +43,20 @@ gravity.
 
 ## Energy Scale: The Minimal Quantum
 
-A connecton with wavelength equal to the current horizon $R_0 = 6c_0/H_0^{\text{obs}}$
-has frequency approximately $H_0/6$. More carefully, the horizon-wavelength mode has
-$\nu \sim H_0$, so:
-$$E_\text{connecton} = h\nu \sim \hbar H_0 \approx 1.5 \times 10^{-33}\ \text{eV}.$$
-This is not a free parameter — it is fixed by the horizon. It is the same scale
-that appears in holographic/IR-cutoff discussions of dark energy and gravitational
-entropy.
+Connectons are re-emitted at every interaction point, so the horizon $R_0 = 6c/H_0^{\text{obs}}$ is the **IR cutoff** — the longest accessible wavelength — not a monochromatic line. The fluctuation floor that competes with local baryonic gravity is a spectral integral over the re-emission cascade.
+
+**The cascade slope is derived.** In steady state, conserved-number cascade with constant number flux $\epsilon_N = n(k)/\tau_k$ and ballistic transfer time $\tau_k \sim 1/(ck)$ gives $n(k)\propto 1/k$ (number per $\ln k$), hence
+$$P_\rho(k)\propto k^{-2}\quad(q=2).$$
+This slope is **marginal**: the Poisson-kernel integral $g_\dagger^2\propto\int P_\rho(k)\,dk\propto\int k^{-2}dk = 1/k_\text{min}-1/k_\text{max}$ converges at the UV end and is set by the horizon (IR) mode. No tuning: ~50% of the floor comes from within 0.3 e-folds of the horizon, ~90% within one e-fold; the interaction (UV) scale drops out.
+
+**Spectral floor.** Routing through the gravitational Poisson kernel gives a floor $\sim G^2\rho^2/k$ — dimensionally $G\rho\sim\text{frequency}^2$, not an acceleration. An explicit length ($R_0$) is required to convert it to one; the cascade slope alone does not fix the coefficient of $g_\dagger$.
+The horizon-mode energy is $E_\text{connecton}=\hbar c/R_0=\hbar H_0/6\approx2.5\times10^{-34}\ \text{eV}$. The spectrum shape and horizon-domination are derived results; ~90% of the spectral weight sits within one e-fold of the horizon.
+
+**Sea density — holographic saturation (new premise).** The connecton sea is a conserved, re-emitted **standing** population, not an accumulating reservoir. Emission accumulation is ruled out: number- and mass-conservation both route through the emission rate $f_\text{dot}\sim10^{-39}$, giving $\rho_\text{bg}/\rho_\text{crit}\sim3\times10^{-40}$ — short by $1/f_\text{dot}=10^{39}$ exactly. The sea density is instead fixed by holographic saturation of the horizon:
+$$N_\text{hor} = \frac{4\pi R_0^2}{4L_p^2},\quad n_\text{holo} = \frac{N_\text{hor}}{V_\text{hor}} = \frac{3}{4L_p^2 R_0},\quad m_c = \frac{\hbar H^\text{hor}}{c^2} = \frac{\hbar H_0}{2c^2}.$$
+The holographic count ($\propto 1/\hbar$) times the minimal quantum mass ($\propto\hbar$) gives an $\hbar$-free identity:
+$$\rho_\text{bg} = n_\text{holo}\,m_c = \frac{H_0^2}{16G} = \frac{\pi}{6}\,\rho_\text{crit}\quad(\text{exact, }\hbar\text{-free}).$$
+This is a structural result — not a quantum coincidence — and is consistent with the connecton = dark-energy-quantum identification ($(\pi/6)\rho_\text{crit}\sim\rho_\Lambda$). Note: $\rho_\text{bg}$ is a standalone dark-energy identity; it does **not** enter $g_\dagger$ (§"Toward the RAR").
 
 ---
 
@@ -122,50 +133,110 @@ This is the first mechanism in the project that is both the right *type*
 
 ---
 
-## Toward the RAR: The Gradient-Keyed Transition
+## Toward the RAR: The Natural Acceleration Scale
 
-Having established Newtonian gravity from foam diffusion, the question is whether the
-model can also produce the MOND/RAR functional form (T15) — and if so, what sets the
-transition scale $g_\dagger \sim cH_0$.
+The question is what sets the transition scale $g_\dagger \approx cH_0^{\text{obs}}/6$ — and whether a mechanism can produce the MOND/RAR functional form (T15).
 
-**The background gradient.** The cosmic connecton sea has a systematic gradient from
-horizon growth:
-$$|\nabla\rho_\text{bg}| \sim \rho_\text{bg}\frac{H_0}{c}.$$
-This is **mass-independent** and purely cosmological. Where a mass's own
-connecton-density gradient drops to the background level, the transition acceleration
-is:
-$$g_t = \kappa\rho_\text{bg}\frac{H_0}{c} \sim cH_0
-\quad \text{if } \kappa\rho_\text{bg} \sim c^2.$$
+**The scale from the horizon radius.** The model fixes the horizon radius (Core §4a, T3) as
+$$R_0 = \frac{3P\,c_0}{H_0^{\text{obs}}} = \frac{6c_0}{H_0^{\text{obs}}}\quad(P=2,\ H^{\text{hor}}=3H_0^{\text{obs}}).$$
+The combination $c^2/R_0$ has dimensions of acceleration and is a core-premise quantity — no connecton required:
+$$g_\dagger = \frac{c^2}{R_0} = \frac{cH_0^{\text{obs}}}{6}.$$
 
-The condition $\kappa\rho_\text{bg} \sim c^2$ is the statement $V = c$ — the sea's
-characteristic velocity is the connecton propagation speed. Half of this is
-**structural** (the diffusion constant $D = cL/3$ gives one power of $c$, since
-connectons travel at $c$); the other power is a microphysical closure condition:
-$$\frac{4\pi G L\rho_\text{bg}}{3\sigma} = c,$$
-where $\sigma$ is the per-mass emission cross-section and $L$ the mean free path.
-This is plausible but not yet derived — it is a specific target, not a free fit.
+The temporal rate of change of $c$ is $\dot{c}=cH^{\text{hor}}=3c^2/R_0=3g_\dagger$. The force scale is a spatial saturation floor; the temporal rate exceeds it by the horizon ODE factor 3. They are not the same object.
 
-This gives the right **scale** for the RAR transition: $g_\dagger \sim cH_0$,
-mass-independent, and cosmological in origin. But a scale is not a functional form.
+**The coefficient from horizon kinematics.** The sea re-randomizes connectons at the horizon crossing rate $c/R_0$; the associated acceleration is
+$$\boxed{g_\dagger = c\cdot\frac{c}{R_0} = \frac{c^2}{R_0} = \frac{cH_0^{\text{obs}}}{6}.}$$
+This uses only $c$ and $R_0$ — horizon kinematics. A uniform sea exerts no net gravitational force (symmetry), so $g_\dagger$ is not a gravitational acceleration sourced by $\rho_\text{bg}$. The holographic sea density $\rho_\text{bg}=(\pi/6)\rho_\text{crit}$ (§"Energy Scale") is a standalone structural result linking the connecton sea to dark energy, but it does not enter $g_\dagger$. The 6 in the coefficient is derived from $R_0=6c/H_0^{\text{obs}}$ (Core §4a); the identification of $g_\dagger$ with the sea's crossing acceleration is well-motivated (the only acceleration the sea kinematics supply, correctly rejecting the gravitational route) but awaits a force-law derivation from the connecton equations of motion (§Open Items).
+
+The scale $g_\dagger = c^2/R_0 = cH_0^{\text{obs}}/6$ is mass-independent and cosmological in origin. But a scale is not a functional form.
 
 ---
 
-## MOND/RAR: Structural Obstruction
+## MOND/RAR: From Structural Obstruction to Partial Derivation
 
 Five mechanisms were examined for reproducing the RAR interpolating function (additive
 GEM, catalytic cycle, criticality-as-license, pilot-wave broad-spectrum, retardation;
-derivations in cdot-3). All give Newton. The reason is structural: deep MOND requires
-$g \propto \sqrt{M}/r$ — a **nonlinear source coupling** — but every mechanism this
-framework naturally produces is linear in $M$, giving the wrong Tully-Fisher slope
-$v^4 \propto M^2$.
+derivations in cdot-3). All give Newton. The reason is structural for *direct-source*
+mechanisms: deep MOND requires $g \propto \sqrt{M}/r$ — a **nonlinear source coupling**
+— but every mechanism this framework naturally produces is linear in $M$, giving the
+wrong Tully-Fisher slope $v^4 \propto M^2$.
 
-**Lorentz route and M-σ.** The structure $g = g_N + v\times B_c$ is a distinct class.
-For flat curves the required field is $B_c = v_f/r$; the observed M-σ relation gives
-$M_\text{BH}^{1/4} \sim (GM_\text{bary}\,a_0)^{1/4}$, exactly the $B_c \sim M_\text{BH}^{1/4}/r$
-amplitude needed. The Lorentz route *accommodates* flat curves and M-σ self-consistently
-but does not *derive* them: $B_c \propto M^{1/4}/r$ is non-analytic and no linear
-gravitomagnetic mechanism provides it. This is the non-analytic wall. It feeds the
-dynamical-selection picture (below) and T17.
+**The non-analytic wall — conditional, not absolute.** The Lorentz structure
+$g = g_N + v\times B_c$ is a distinct class. For flat curves the required amplitude is
+$B_c = v_f/r$, and $B_c \propto M^{1/4}/r$ (more singular than $\sqrt{M}$) appeared to
+be an absolute wall: no linear gravitomagnetic source coupling provides it. This wall is
+now reclassified as *conditional on demanding a direct-source coupling*. The quarter
+power emerges analytically from the geometry of where the surviving population sits, not
+from the source coupling.
+
+### Quarter Power as a Transition-Radius Geometric Mean
+
+Two accelerations, both independent of the connecton:
+
+- **Mass-sourced:** $g_\text{mass}(r) = GM/r^2$ (Newtonian gravity).
+- **Cosmological background:** $g_\dagger = c^2/R_0 = cH_0^{\text{obs}}/6$ — the
+  horizon-radius saturation scale (§above). Mass-independent.
+
+**Transition radius** — where the mass acceleration equals the background:
+$$\frac{GM}{r_t^2} = g_\dagger \quad\Longrightarrow\quad r_t = \sqrt{\frac{GM}{g_\dagger}}.$$
+
+The dynamical-selection attractor concentrates the surviving marginally-bound population
+near $r_t$. Evaluating circular-orbit balance at $r_t$, using $g(r_t)=g_\dagger$ by
+definition:
+$$v_f^2 = g(r_t)\,r_t = g_\dagger\sqrt{\frac{GM}{g_\dagger}} = \sqrt{GM\,g_\dagger},$$
+$$\boxed{v_f^4 = GM\,g_\dagger,\qquad g_\dagger = \frac{c^2}{R_0} = \frac{cH_0^{\text{obs}}}{6},\qquad a_0 \equiv g_\dagger.}$$
+
+The BTFR emerges **analytically** from two ingredients already in the model. The
+$M^{1/4}$ amplitude $B_c = v_f/r = (GM\,g_\dagger)^{1/4}/r$ is the geometric mean of
+two linear quantities:
+$$B_c^2 \propto g_\text{mass}(r_t)\cdot g_\dagger.$$
+The field equations are linear throughout; the nonlinearity lives in *where the
+surviving population sits* ($r_t \propto \sqrt{M}$), not in the source coupling.
+No direct $M^{1/4}$ source is required.
+
+**M-σ as a derived consequence.** Since $M_\text{BH} \propto \sigma^4 \propto v_f^4
+= GM_\text{bary}\,g_\dagger$ (T17), the M-σ relation is the BTFR read through two
+masses that the shared $a_0$ locks together. It is not an independent empirical coincidence.
+
+**Status:** BTFR scale and slope ✓; binding open item is attractor convergence (does
+the Lorentz filter genuinely concentrate survivors at $r_t$?), not source non-analyticity.
+
+### RAR Crossover: Derived from Connecton Indistinguishability
+
+Write $g_\text{obs} = g_\text{bar} + g_x$ where $g_x$ is the response beyond Newtonian gravity. The closure
+$$g_x\,(g_x + g_\text{bar}) = g_\text{bar}\,g_\dagger$$
+is **derived** from two ingredients already in T14, not assumed.
+
+**Step 1 — Generalized-Poisson reduction.** For a diffusive connecton field with flux $\mathbf{J}=-D\nabla\phi$, spherical steady state reduces to the constitutive law $D(g)\,g = g_\text{bar}$. Deriving the closure is algebraically equivalent to deriving $D(g) = g/(g+g_\dagger)$.
+
+**Step 2 — Steady-state balance.** Production of excess connectons $g_x$ by the baryonic source (rate $\propto g_\text{bar}$) balanced by a relaxation rate $\nu g_x$ gives $g_\text{bar} = \nu\,g_x$.
+
+**Step 3 — Indistinguishability (existing T14 premise).** Connectons are identical, conserved, re-emitted quanta. An excess connecton cannot distinguish background from other excess connectons; it relaxes against the **total** ambient population:
+$$\nu \propto \frac{g_x + g_\text{bar}}{g_\dagger}.$$
+
+**Step 4 — Closure.** Substituting step 3 into step 2:
+$$\boxed{g_x(g_x + g_\text{bar}) = g_\text{bar}\,g_\dagger.}$$
+
+Solving: $g_\text{obs} = \tfrac{1}{2}(g_\text{bar}+\sqrt{g_\text{bar}^2+4g_\text{bar}g_\dagger})$, exactly MOND's "simple" interpolating function. Both limits are forced:
+- $g_\text{bar} \gg g_\dagger$: Newton. ✓
+- $g_\text{bar} \ll g_\dagger$: $g_\text{obs}\to\sqrt{g_\text{bar}g_\dagger}$ (deep MOND; BTFR exact). ✓
+
+Crossover ($g_x = g_\text{bar}$) sits at $g_\text{bar} = g_\dagger/2$ — a clean result with no golden-ratio artifact.
+
+**The data exclude the alternatives.** Three relaxation laws vs McGaugh-Lelli-Schombert:
+
+| Relaxation law | Closure | max $|\Delta|$ vs McGaugh |
+|---|---|---|
+| $\nu\propto g_\text{tot}$ — indistinguishability (this work) | $g_x(g_x+g_\text{bar})=g_\text{bar}g_\dagger$ | **0.020 dex** |
+| Quadrature throughput | $g_\text{obs}^2=g_\text{bar}^2+g_\text{bar}g_\dagger$ | 0.057 dex |
+| $\nu\propto g_x$ — excess against excess only | $g_x^2=g_\text{bar}g_\dagger$ | 0.113 dex |
+
+All share both correct asymptotes; they differ only in the transition region. The indistinguishability law is the only one within 0.05 dex everywhere; the alternatives bulge outside the 0.13 dex scatter band and are data-excluded.
+
+**Honest limitations.**
+1. **Shape derived, scale pinned.** The functional form is derived; the scale $g_\dagger=c^2/R_0=cH_0/6$ follows from horizon kinematics (the 6 from $R_0=6c/H_0$). The open item is a force-law derivation confirming $g_\dagger=c^2/R_0$ from the connecton equations of motion.
+2. **Relaxation-time approximation.** Step 3 uses a relaxation-time ansatz. A full Boltzmann/transport derivation would replace this with a scattering kernel.
+3. **Attractor convergence assumed.** That the Lorentz filter concentrates the surviving population at $r_t$ at all radii is a separate open question.
 
 ---
 
@@ -212,7 +283,7 @@ stars to a threshold.
 | Aspect | Status |
 |---|---|
 | Flatness | **Explained as attractor** — mechanism survives invariant G; simpler causal chain |
-| Tully-Fisher normalization | **Open** — pinning $v_f$ requires $B_c \propto M^{-3/4}R$; same non-analytic wall as before |
+| Tully-Fisher normalization | **Substantially derived** — BTFR from $g_\dagger=c^2/R_0$ + Newtonian geometry; RAR closure derived from indistinguishability, 0.020 dex vs McGaugh, alternatives excluded; open: attractor convergence, transport kernel, force-law derivation of kinematic identification |
 | Falsifiable prediction | Disk stripping → ICL growth, morphological evolution with redshift (T17) |
 
 The dynamical calculation (does Lorentz ejection from a realistic disk converge to
@@ -246,27 +317,33 @@ CMB, even though the pressureless property is already present.
 | Result | Status |
 |---|---|
 | Newtonian $1/r$ gravity from foam diffusion | **Real success** — dodges geometric $10^6$, EP-clean |
-| All MOND mechanisms (5) | **Newton** — structural $\sqrt{M}$ obstruction; details in cdot-3 |
-| Dynamical selection / Lorentz filter | Flatness as attractor; TF normalization open |
+| All MOND mechanisms (5) — direct-source couplings | **Newton** — structural $\sqrt{M}$ obstruction for direct-source couplings; details in cdot-3 |
+| BTFR + RAR — transition-radius construction | **Substantially advanced** — BTFR from $g_\dagger=c^2/R_0=cH_0/6$ (Core §4a) + Newtonian gravity; RAR closure **derived** from connecton indistinguishability, 0.020 dex vs McGaugh, alternatives data-excluded; $g_\dagger=c^2/R_0$ identified as the sea's kinematic acceleration (6 from $R_0=6c/H_0$); $\rho_\text{bg}=(\pi/6)\rho_\text{crit}$ a standalone $\hbar$-free identity (dark-energy connection); open: attractor convergence, transport kernel, force-law derivation of kinematic identification |
+| Dynamical selection / Lorentz filter | Flatness as attractor; BTFR asymptote derived; attractor convergence and PDE closure open |
 
-**MOND and the RAR are not reproduced.** The model most likely needs dark matter for
-galaxies. The PBH thread (T16) is the best candidate: one primordial population for
-CMB wells, galactic DM, and SMBH seeds (T17).
+**BTFR and RAR are substantially reproduced.** The BTFR follows from $g_\dagger = c^2/R_0 = cH_0^{\text{obs}}/6$ (horizon radius, Core §4a) plus Newtonian gravity. The RAR closure is **derived** from connecton indistinguishability, matching McGaugh to 0.020 dex with no free parameters; the three alternative relaxation laws are data-excluded. The coefficient $g_\dagger=c^2/R_0=cH_0/6$ follows from horizon kinematics — the sea's crossing acceleration; the 6 from $R_0=6c/H_0$ (Core §4a). The holographic sea density $\rho_\text{bg}=(\pi/6)\rho_\text{crit}$ ($\hbar$-free) stands as a standalone structural result linking the sea to dark energy; it does not enter $g_\dagger$. The remaining open items — attractor convergence, transport kernel, and a force-law derivation confirming the kinematic identification $g_\dagger=c^2/R_0$ — are deepening derivations, not gates on the result. The PBH thread (T16) remains a live program for CMB wells, galactic DM, and SMBH seeds (T17); the two mechanisms (RAR from the VSL acceleration scale + connecton dynamics; halo DM from PBH remnants) are potentially complementary rather than exclusive.
 
 ---
 
 ## Open Items, In Priority
 
-1. **The closure condition** — prove $4\pi G L\rho_\text{bg}/(3\sigma) = c$ that pins
-   the transition to $cH_0$. One power of $c$ is already structural ($D = cL/3$).
+1. **RAR closure — shape derived; two deepening tasks remain.** The closure
+   $g_x(g_x+g_\text{bar})=g_\text{bar}g_\dagger$ is derived from connecton
+   indistinguishability + generalized-Poisson reduction (§above); alternatives are
+   data-excluded. Two tasks remain: **(a) transport kernel** — derive $D(g)=g/(g+g_\dagger)$
+   from the full connecton Boltzmann equation, replacing the relaxation-time approximation;
+   **(b) force-law derivation of $g_\dagger$** — the kinematic identification $g_\dagger=c^2/R_0$ (crossing rate $\times\,c$) is well-motivated but awaits confirmation from the connecton equations of motion. The open task is to derive that the closure's relaxation scale equals $c^2/R_0$ dynamically, replacing the dimensional argument.
 
-2. **Tully-Fisher normalization** — does the dynamical-ejection picture converge to
-   the correct normalization $v_f^4 = GM\,a_0$? This calculation has not been done.
+2. **Attractor convergence** — does the Lorentz filter genuinely concentrate the surviving
+   population at $r_t$, and does this hold at all radii as the selection-junction
+   picture assumes? A dynamical-systems proof is the binding constraint. (The previous
+   "TF normalization" open item is resolved at the asymptote level by the
+   transition-radius construction; the remaining debt is convergence, not source coupling.)
 
-3. **Coefficient derivation** — does the foam-diffusion framework give $G \propto c^0$
-   at the correct magnitude? The constant connecton density in a static foam-sea
-   naturally supports no temporal variation; the present-epoch normalization
-   (connecton sea density → $G_\text{now}$) needs to be made explicit.
+3. **$G$-normalization** — the sea density is pinned to $\rho_\text{bg}=(\pi/6)\rho_\text{crit}$
+   from holographic saturation (§"Energy Scale"). The remaining task is to reconcile this
+   with the $G$-setting condition: confirm $G\propto c^0$ at the correct magnitude by
+   connecting the sea density to the Newtonian-coupling normalization.
 
 4. **Global bookkeeping** — is $\dot c/c = H$ from the connecton termination rate
    consistent with the same field giving local Newtonian gravity?

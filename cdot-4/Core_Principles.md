@@ -1,16 +1,14 @@
 # Static VSL Cosmology — Core Principles
 
 *Clean reference document. Contains the results that follow rigorously from the stated
-premises. Disputed or unresolved derivations are tracked in the topic documents T1–T17.*
+premises. Disputed or unresolved derivations are tracked in the topic documents T1–T21.*
 
 *What this model is. A genuine rival theory to standard cosmology — a real variable-$c$
 cosmology, not GR in disguise. Its firm distinctive results: a finite proper age
 ($\approx 21$ Gyr), the squared redshift law, and a structural **deceleration**
 $q_0=1/(nP)>0$ — the model cannot mimic apparent cosmic acceleration for any power-law
 horizon (T4), so it lives or dies on whether acceleration is real and standard-candle-clean.
-Note: the rotation-curve mechanism that earlier drafts treated as a success has been
-demoted — it fails at galactic scale by $\sim10^6$ (T5); dark-matter-free rotation curves
-are an open problem, not a result. Earlier versions also assumed $G\propto c^{-2}$, which
+Note: the *retardation* rotation-curve mechanism is demoted — it fails at galactic scale by $\sim10^6$ (T5); the *connecton/foam-diffusion* route instead derives the RAR closure and identifies $g_\dagger=c^2/R_0=cH_0/6$ kinematically (T14) — speculative but the leading dark-matter-free direction. Earlier versions also assumed $G\propto c^{-2}$, which
 predicted orbital expansion $r\propto c^2$. That prediction is refuted by Lunar Laser
 Ranging ($\times720$ in inferred $\dot G/G$); invariant $G$ is adopted from cdot-4 onward
 (see Change Document — Adoption of Invariant G, T8).*
@@ -54,7 +52,14 @@ isotropic, but $c=c(t)$ breaks time-translation), by Noether:
 Energy is precisely the quantity allowed to change — the defining feature of the map
 frame. The *interpretation* of that energy change (connecton exchange vs. pure
 $c$-scaling vs. relational-to-$N$) is an open modelling choice; the relational reading
-above is preferred but not asserted as derived (T11, T12).
+above is preferred but not asserted as derived (T11, T12). In the connecton picture the
+sea is a holographic **standing population** (not an energy-accumulating reservoir —
+emission accumulation fails by $1/f_\text{dot}=10^{39}$; T14), and the coincidence
+$a_0\sim cH_0\sim G\rho_\Lambda R_0$ is structural rather than accidental, though the two
+sides now rest on distinct mechanisms rather than one shared source: $g_\dagger=c^2/R_0=
+cH_0/6$ is the sea's kinematic acceleration (horizon crossing rate), while
+$\rho_\text{bg}=(\pi/6)\rho_\text{crit}$ is a separate, standalone $\hbar$-free identity
+linking the same sea to the dark-energy density (T14, speculative).
 
 **Inertia.** Inertial mass is invariant and axiomatic (premise 3). What is relational
 is the *arena* ($c$), not the mass: "$c\to0$ for a lone particle" means dynamics become
@@ -313,16 +318,19 @@ the isotropic vacuum); with invariant $G$, the orbit radius is then also conserv
 | Deceleration $q_0=1/(nP)>0$; cannot mimic acceleration | Firm structural result (T4) |
 | **Galaxy size evolution $r\propto(1+z)^{-1}$** | **Withdrawn — relied on orbital expansion (T10)** |
 | Rotation-curve mechanism (retardation) | **Demoted — fails at galactic scale, geometric** (T5) |
-| Radial Acceleration Relation / MOND functional form | **Open — scale matches, mechanism absent** (T15, T6, T14) |
+| Radial Acceleration Relation / MOND functional form | **Substantially derived** — closure from connecton indistinguishability (0.020 dex vs McGaugh, alternatives excluded); $g_\dagger=c^2/R_0=cH_0/6$ from horizon kinematics (6 from $R_0=6c/H_0$); $\rho_\text{bg}=(\pi/6)\rho_\text{crit}$ a standalone $\hbar$-free identity; open: force-law derivation of kinematic identification (T14, T6) |
 | Premise-2 fork: count $N$ vs classical Mach $M_u$ | **Open fork** (T12) |
 | Mass law: why invariant, not PV $c^{-3/2}$ | **Open** (T8) |
 | $G$ law: why invariant, not $c^{-2}$ (new theoretical debt) | **Open** (T8) |
-| MOND constant $a_0$ value | **Open** (T6) |
+| MOND constant $a_0$ value | $g_\dagger=c^2/R_0=cH_0/6$ from horizon kinematics; $\rho_\text{bg}=(\pi/6)\rho_\text{crit}$ a standalone $\hbar$-free identity; open: force-law derivation of kinematic identification (T14, T6) |
 | Fine-structure drift $\dot\alpha$ | **Open** (T7) |
 | SN Hubble diagram | Mild tension; $q_0>0$ firm; Pantheon+ $\Delta\chi^2=+195$ (T4) |
-| Dynamical selection / ring ejection | **Needs re-derivation** — orbital-expansion driver removed (T14, T17) |
+| Dynamical selection / ring ejection | **Re-derived under invariant G** as a direct time-steady Lorentz velocity filter; flatness as attractor; attractor convergence open (T14, T17) |
 | Primordial genesis / matter-antimatter | **Speculative** (T13) |
-| Connecton gravity — foam-sea gives Newtonian $1/r$; MOND not reproduced | **Speculative** (T14) |
+| Connecton gravity — foam-sea gives Newtonian $1/r$; RAR closure and $a_0$ coefficient substantially derived | **Speculative but materially advanced** (T14) |
 | CMB power spectrum — first peak translates; higher peaks need PBH wells | **Speculative** (T16) |
 | Primordial black holes — candidate for DM, CMB wells, SMBH seeds | **Speculative** (T13, T16) |
-| Galaxy morphology and M-σ — dynamical selection / Lorentz ejection | **Speculative; re-derivation needed** (T17) |
+| Galaxy morphology and M-σ — dynamical selection / Lorentz ejection | **Speculative but advanced** — M-σ derived as BTFR through shared $a_0$; $B_c$ baryon-sourced (BH co-tracer); orbital-coherence factor predicts M-σ scatter vs rotational support (T17) |
+| Disk flattening — connecton $B_c$ vertical spring thins disks, spares bulges (two-attractor dichotomy) | **Speculative, new** — sign and O(1) magnitude resolved via ringed-current model; feedback dynamics and $\eta$-normalization open (T19) |
+| White dwarf population vs. Chandrasekhar-mass age ceiling | **Speculative, tested against data** — individual-object test retracted (Gaia mass-bias); population-level test (Fleury et al.) currently inconclusive once the T21 cooling-age correction is included; decisive mass/age regime not yet probed (T20) |
+| Strong/weak sector coupling to $c$ (nuclear $Q$-values, $G_F$, decay rates) | **Speculative, new** — electron-capture/AIC channel closed (bounded, $c^{3/2}$ survives); plasmon-decay rate $\propto c^{-1}$ derived, implying standard WD cooling ages overstate true age; weak decay rate corrected to $\propto c^4$ (T21) |

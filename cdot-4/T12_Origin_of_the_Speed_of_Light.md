@@ -1,4 +1,3 @@
----
 
 # T12 — The Origin of the Speed of Light
 

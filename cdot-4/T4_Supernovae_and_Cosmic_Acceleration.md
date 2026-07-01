@@ -305,12 +305,15 @@ $f_\text{KE}$ rise with $\kappa$ (more trapping → more work on ejecta). The cr
 opacity-dependence of the kinetic/radiated energy partition — is not settleable by
 dimensional scaling alone and requires a radiation-hydrodynamics treatment.
 
-A second unspecified input: the $^{56}$Ni weak-decay rate scaling. The model has fixed the
-EM sector ($\epsilon_0\propto c^{-1}$) but not the weak sector. *Provisional working
-assumption:* the weak interaction is intrinsically $c$-invariant except through the
-model's time and energy scales (decay rate $\propto c^2$, energy per decay $\propto c^2$).
-Even under this assumption the peak-luminosity route is gated by $q$; the
-$E_\text{total}\propto c^{7/2}$ bound is independent of it.
+A second input: the $^{56}$Ni weak-decay rate scaling. T21 derives this from an
+"invariant coupling + Compton-wavelength" extension of the model's EM-sector treatment
+(T7) to the strong and weak sectors: invariant $G_F$ (from invariant $g_w,M_W$) plus
+invariant nuclear $Q$-values (from invariant nuclear mass differences) give **energy per
+decay $\propto c^2$** (now derived, confirming the earlier placeholder) and **decay rate
+$\propto c^4$** (correcting the earlier placeholder of $\propto c^2$). Even under this
+scaling the peak-luminosity route is gated by $q$; the $E_\text{total}\propto c^{7/2}$
+bound is independent of the rate and unaffected. See T21 for the derivation and its
+standing caveat (the invariant-coupling premise is natural but not unique).
 
 ### Effect on the fit (honest summary)
 
@@ -335,8 +338,10 @@ invariant $G$, not yet resolved.
   gates SN viability** — it determines whether the $M_\text{Ch}$ systematic improves or
   worsens the fit. Requires a radiation-hydro treatment that floats both dynamics and the
   energy partition simultaneously.
-- **Specify the weak sector's $c$-scaling.** Currently assumed $c$-invariant except
-  via the model's time/energy scales. Needed for the peak-luminosity route and for BBN.
+- ~~Specify the weak sector's $c$-scaling~~ **Addressed (T21):** decay rate
+  $\propto c^4$, energy per decay $\propto c^2$, under an invariant-$G_F$ premise. The
+  peak-luminosity route remains gated by $q$; the ignition-mass question (T21 Part 4) is
+  the live path toward resolving the overcorrection, not the total-energy bound.
 - **Redo the Pantheon+ fit with $M_\text{Ch}$ candle evolution included**, as a function
   of the net Phillips-absorbed fraction, restricted to the well-constrained $0.1 < z < 0.5$
   window where data dominate; quantify whether any plausible $q$ yields a fit competitive
