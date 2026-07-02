@@ -175,10 +175,11 @@ Under invariant $G$ with invariant mass:
 
 The cost: orbital expansion — and the galaxy-size-evolution consistency ($r_e \propto
 (1+z)^{-1}$, T10) that depended on it — is withdrawn. The constant-stellar-flux feature
-is also lost; received flux now drifts as $F \propto c^4$. However, the habitability ratio
-$X = T_\text{eq}/T_\text{mol} \propto c^{-1/2}$ shows the early Earth was warmer relative
-to water's freezing point, converting this apparent problem into a positive prediction
-(Core Principles §6; T9).
+is in fact **restored**, though via a different cancellation than cdot-3's: with the
+corrected mass–luminosity result $L\propto c^0$ (T18) and static orbits ($d=\text{const}$),
+received flux is $c$-invariant, $F \propto c^0$. The habitability ratio
+$X = T_\text{eq}/T_\text{mol} \propto c^{-3/2}$ shows the early Earth was ~30% warmer
+relative to water's freezing point, a positive prediction (Core Principles §6; T9, T18).
 
 The standing **theoretical debt** transfers: $G \propto c^{-2}$ needed a first-principle
 derivation; so now does $G \propto c^0$. Providing a relational-framework derivation of

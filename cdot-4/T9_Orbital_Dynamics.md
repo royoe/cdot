@@ -53,9 +53,10 @@ are therefore consistent with the model (T8).
 
 ## Received Stellar Flux
 
-With static orbits and $L\propto c^4$, received flux drifts as $F\propto c^4$.
-The full derivation of stellar luminosity, the habitability ratio $X=T_\text{eq}/T_\text{mol}
-\propto c^{-1/2}$, and the implications for the faint young Sun paradox are in T18.
+With static orbits and $L\propto c^0$ (T18 corrected), received flux is $c$-invariant:
+$F\propto c^0$. The full derivation of stellar luminosity, the habitability ratio
+$X=T_\text{eq}/T_\text{mol} \propto c^{-3/2}$, and the implications for the faint young
+Sun paradox are in T18.
 
 ---
 

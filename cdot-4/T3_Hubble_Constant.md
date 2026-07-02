@@ -108,15 +108,24 @@ older universe ($\approx 21$ Gyr vs $\approx 13.8$ Gyr). See T1 for full discuss
 The evolution of the Hubble parameter with redshift is a direct observable from baryon
 acoustic oscillations (BAO) and other probes.
 
+**Which $H(z)$?** Two distinct rates exist in this model and must not be conflated
+(see Core §4a). The **horizon rate** $H^{\text{hor}}(z) = H_0^{\text{hor}}(1+z)^{-1/3}$
+falls with $z$ — coordinate time, not the BAO-relevant quantity. What BAO probes
+measure is the expansion rate in the observer's (proper/atomic) time, obtained by
+converting via $d\tau/dt = (c/c_0)^2 = (1+z)^{-1}$:
+$$H_\tau(z) \equiv H^{\text{hor}}(z)\,\frac{dt}{d\tau} = H_0^{\text{hor}}(1+z)^{-1/3}\cdot(1+z)
+= H_0^{\text{hor}}(1+z)^{2/3}
+\;\Longrightarrow\; \frac{H_\tau(z)}{H_\tau(0)} = (1+z)^{2/3}.$$
+This is the proper-time rate and the table below is normalized to it — *note this is a
+definitional choice (which $H(z)$ the model reports for BAO purposes) and should be
+confirmed, not just the arithmetic, before any data comparison (see Open Questions).*
+
 | $z$ | $H(z)$ (model, $P=2$) / $H_0$ | $H(z)$ (ΛCDM) / $H_0$ |
 |---:|---:|---:|
 | 0 | 1 | 1 |
-| 0.5 | $\approx 1.28$ | $\approx 1.32$ |
-| 1 | $\approx 1.59$ | $\approx 1.72$ |
-| 2 | $\approx 2.12$ | $\approx 2.60$ |
-
-*(Model values use $H^{\text{obs}}(z) = H_0^{\text{obs}}(1+z)^{1/(3P)} \cdot 3kR_0^2/H_0^{\text{obs}} \cdot (1+z)^{2/(3P)}$
-— the exact expression requires the coordinate-time conversion.)*
+| 0.5 | $1.5^{2/3}\approx 1.31$ | $\approx 1.32$ |
+| 1 | $2^{2/3}\approx 1.59$ | $\approx 1.72$ |
+| 2 | $3^{2/3}\approx 2.08$ | $\approx 2.60$ |
 
 Both models give $H$ rising with $z$, but the model's rise is shallower at high $z$
 due to deceleration rather than acceleration at late times. BAO data (which essentially
@@ -128,6 +137,11 @@ measure $H(z)/H_0$) could in principle distinguish the two.
 
 - A full BAO-data comparison: does the model's $H(z)$ evolution fit the observed
   $H(z)/H_0$ measurements (from SDSS, eBOSS, DESI) as well as ΛCDM?
+- Confirm $H_\tau(z)=H_0^{\text{hor}}(1+z)^{2/3}$ (§"$H(z)$: Comparison with ΛCDM") is
+  the correct proper-time definition for BAO comparison — this is a modeling choice
+  (which clock BAO line-of-sight/transverse measurements actually track in this
+  framework), not yet argued from first principles, and must be pinned down before the
+  BAO comparison above is attempted.
 - The Hubble tension: could the model's reinterpretation of the CMB acoustic scale
   reduce or eliminate the tension? This requires a full CMB power spectrum calculation
   within the model.

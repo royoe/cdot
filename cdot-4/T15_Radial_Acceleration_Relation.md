@@ -97,6 +97,15 @@ The three problems are related but now at different stages:
 
 These are no longer gated on each other via the retardation route. Progress on T15/T6 via the connecton program is independent of the T5 retardation failure.
 
+**Open tension with PBH dark matter (T5, T13, T16).** This document's RAR closure is
+derived from baryons alone ($g_\text{bar}$) reproducing the observed $g_\text{obs}$ to
+0.020 dex, with no residual halo term — i.e. any significant additional clustered mass
+in the disk-relevant region would spoil the fit. The project simultaneously advances
+PBH dark matter at $\Omega_\text{PBH}\sim0.25$, clustered in galactic halos (T13, T16).
+These two claims are not yet reconciled: either PBHs must not dominate galactic-halo
+mass at $r\lesssim$ tens of kpc, or the PBH programme and this baryon-only closure are
+in tension at galaxy scale. Not resolved here — see T5's discussion.
+
 ---
 
 ## Observational Discriminant: Epoch Dependence
@@ -107,11 +116,19 @@ horizon ODE: $H^{\text{hor}} = 3kR^2 \propto c^{2/3} \propto (1+z)^{-1/3}$), so:
 $$g_\dagger(z) \propto c(z)\,H^{\text{obs}}(z) \propto
 \frac{1}{(1+z)^{1/2}}\cdot\frac{1}{(1+z)^{1/3}} = \frac{1}{(1+z)^{5/6}}.$$
 Since $(1+z)^{5/6} > 1$ for $z > 0$, $g_\dagger(z) < g_\dagger(0)$: the MOND threshold
-was **smaller in the past** and grows over cosmic time. Galaxy rotation curves at
-high $z$ should show a **lower** MOND threshold acceleration — the MOND-like regime
-would kick in at smaller $g_\text{bar}$, making a larger fraction of the disk
-dynamically MOND-like at high $z$. This is observationally testable in principle
-(high-$z$ kinematic surveys), though current data are sparse.
+was **smaller in the past** and grows over cosmic time. With static orbits and invariant
+mass, $g_\text{bar}(r)$ of a given galaxy is time-independent, so a smaller $g_\dagger$
+means the MOND regime ($g_\text{bar}<g_\dagger$) is **smaller**, not larger, at high $z$
+— equivalently $r_t=\sqrt{GM/g_\dagger}\propto(1+z)^{+5/12}$ is larger in the past (T19
+§6 already states this correctly: "Early ($r_t$ large): most radii sit inside $r_t$ →
+Newtonian"). The corrected prediction: **high-$z$ disks are more Newtonian/baryonic**,
+with more steeply declining outer rotation curves and a lower BTFR zero-point at fixed
+$M_\text{bar}$ ($v_f^4=GM\,g_\dagger(z)$) — qualitatively the direction of the reported
+declining rotation curves of $z\sim1$–2.5 star-forming disks (Genzel et al. 2017; Lang
+et al. 2017), a feature constant-$a_0$ MOND finds awkward. This should be claimed
+cautiously (pressure support / high gas dispersions are the mainstream explanation), but
+it is a live, testable, ΛCDM-orthogonal signature: JWST/ELT IFU kinematics can measure
+the RAR transition point as a function of $z$ directly.
 
 ---
 
@@ -120,5 +137,5 @@ dynamically MOND-like at high $z$. This is observationally testable in principle
 - **Force-law derivation of $g_\dagger$:** $g_\dagger=c^2/R_0=cH_0/6$ is identified kinematically (sea's crossing acceleration; the 6 from $R_0=6c/H_0$). The open task is to derive $g_\dagger=c^2/R_0$ from the connecton equations of motion (T14 §Open Items).
 - **Transport kernel:** The RAR closure is derived from a relaxation-time ansatz; replacing it with a full Boltzmann derivation is the deepening task (T14).
 - **Attractor convergence:** Does the Lorentz filter genuinely concentrate the surviving population at $r_t$ at all radii? Dynamical-systems proof is the binding open item (T14, T17).
-- **Epoch dependence:** Does $g_\dagger\propto c(t)H_0(t)$ vary with cosmic epoch? In this model $g_\dagger(z)\propto(1+z)^{-5/6}$ — a lower MOND threshold in the past, giving a larger fraction of high-$z$ disks in the MOND-like regime. Testable with JWST/IFU kinematic surveys.
+- **Epoch dependence:** Does $g_\dagger\propto c(t)H_0(t)$ vary with cosmic epoch? In this model $g_\dagger(z)\propto(1+z)^{-5/6}$ — a lower MOND threshold in the past, giving a *smaller* fraction of high-$z$ disks in the MOND-like regime (more Newtonian, steeper decline, lower BTFR zero-point). Testable with JWST/IFU kinematic surveys.
 - **RAR scatter:** Can the observed 0.13 dex scatter be predicted from the coherence-factor $f=v_\text{rot}/\sigma$ variation across bulges (T17)? The model predicts environmental and morphological residuals; pure MOND predicts zero.

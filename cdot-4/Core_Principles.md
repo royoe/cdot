@@ -33,7 +33,7 @@ The model's premises are facets of a single relational (Machian) principle:
 
 This is *counting*-Machianism (relational about $c$), distinct from Sciama's
 *potential*-Machianism (relational about inertial mass, which this model does **not**
-adopt — and cannot, since it would drift the mass as $c^{-10/3}$ and break invariant
+adopt — and cannot, since it would drift the mass as $c^{-4/3}$ and break invariant
 mass; T12). The principle runs through the whole structure: it is the root of
 premise 2 ($N$ or $M_u$ sets $c$), it makes redshift a comparison of a fixed photon
 energy against a now-larger atomic reference (§2), it sets clock rates
@@ -260,24 +260,30 @@ From the Rydberg energy with $e,h$ invariant, $m_e$ invariant, and $\epsilon_0 \
 $$\nu \propto m_e\,\epsilon_0^{-2} \propto c^{2}.$$
 So $\nu \propto c^2$ under invariant mass. This power governs the proper/coordinate
 time relation $d\tau/dt = (c/c_0)^{2}$, the finite proper age $3/(2H_0^{\text{obs}}) \approx 21$ Gyr (T1),
-and the stellar luminosity scaling $L\propto c^{4}$ (T18).
+and the stellar luminosity scaling $L\propto c^{0}$ (T18, three-way cancellation:
+$a\propto c^{-3}$, explicit $c^{+1}$, $\kappa^{-1}\propto c^{+2}$).
 
 ---
 
 ## 6. Stellar Flux and the Habitability Ratio
 
-With invariant $G$ and $r = \text{const}$ (T9), received stellar flux drifts as
-$F \propto c^4$ (no orbital compensation). The model-native habitability yardstick is
-the ratio $X \equiv T_\text{eq}/T_\text{mol}$: radiative-equilibrium temperature over
-water's molecular energy scale. Since $T_\text{eq} \propto c^{3/2}$ (from radiative
-balance with $L\propto c^4$, $\sigma_\text{SB}\propto c^{-2}$) and
-$T_\text{mol}\propto c^2$ (H-bond binding energies):
-$$X = \frac{T_\text{eq}}{T_\text{mol}} \propto c^{-1/2}.$$
+With invariant $G$ and $r = \text{const}$ (T9) and the corrected mass–luminosity
+result $L\propto c^0$ (T18, three-way cancellation of the radiation constant
+$a\propto c^{-3}$, the explicit $c^{+1}$, and the electron-scattering opacity
+$\kappa^{-1}\propto c^{+2}$), received stellar flux is $c$-invariant:
+$F=L/4\pi d^2\propto c^0$ (constant flux, restored via a different mechanism than
+cdot-3's). The model-native habitability yardstick is the ratio
+$X \equiv T_\text{eq}/T_\text{mol}$: radiative-equilibrium temperature over water's
+molecular energy scale. Since $T_\text{eq} \propto c^{1/2}$ (from radiative balance with
+$L\propto c^0$, $\sigma_\text{SB}\propto c^{-2}$) and $T_\text{mol}\propto c^2$ (H-bond
+binding energies):
+$$X = \frac{T_\text{eq}}{T_\text{mol}} \propto c^{-3/2}.$$
 As $c$ decreases toward the past, $X$ increases: the early Earth was **warmer** relative
 to water's freezing point. At 4.5 Gyr lookback ($c_\text{past}/c_\text{now}\approx0.84$):
-$X_\text{past}/X_\text{now}\approx(0.84)^{-1/2}\approx1.09$ ($\sim$9%, $\sim$20 K).
-This partially eases the faint young Sun paradox in the correct direction. Full derivation,
-caveats, and open questions in T18.
+$X_\text{past}/X_\text{now}\approx(0.84)^{-3/2}\approx1.30$ ($\sim$30%; $T_\text{eq}$
+8% lower, the freezing threshold 29% lower). This is a purely relational easing of the
+faint young Sun paradox — supplementary to the standard composition-driven brightening,
+not a replacement for it. Full derivation, caveats, and open questions in T18.
 
 ---
 
@@ -309,8 +315,8 @@ the isotropic vacuum); with invariant $G$, the orbit radius is then also conserv
 | Frequency scaling $\nu \propto c^2$ | Core; $\epsilon_0\propto c^{-1}$ EM-forced |
 | Proper age $\tau = 3/(2H_0^{\text{obs}}) \approx 21$ Gyr | Resolved (T1) |
 | **Orbits static ($r = \text{const}$) under invariant $G$** | **Adopted (T9); orbital expansion $r\propto c^2$ withdrawn** |
-| Stellar flux drifts $F\propto c^4$; locally unobservable | Consequence of static orbits (T18) |
-| Habitability ratio $X = T_\text{eq}/T_\text{mol} \propto c^{-1/2}$ | Early Earth warmer relative to freezing point; eases faint young Sun (T18) |
+| Stellar flux $F\propto c^0$ (constant); $L\propto c^0$ (T18 three-way cancellation) | Consequence of static orbits + invariant luminosity (T18) |
+| Habitability ratio $X = T_\text{eq}/T_\text{mol} \propto c^{-3/2}$ | Early Earth ~30% warmer relative to freezing point; purely relational easing of faint young Sun (T18) |
 | Transformation table + two $H_0$'s | Core §4a, stable (T3) |
 | Conservation: momentum yes, energy no (symmetric flip) | Core §0 (T11) |
 | Free-particle peculiar-velocity damping $\propto(1+z)^{1/2}$ | Consistency success (T11) |

@@ -183,6 +183,15 @@ what dynamical state* each parcel virialized relative to $r_t(t)$.
 - High-$z$ galaxies more bulge-dominated (larger $r_t$, smaller spring-on zone).
 All in the observed direction (late emergence of settled thin disks; hotter high-$z$ disks).
 
+**Unresolved competition with T17.** The same growing $B_c$ is credited in T17 with a
+*radial* effect (Lorentz-stripping disks into ellipticals, more strongly toward
+$z=0$) — the opposite morphological arrow from the vertical thinning/settling claimed
+here, also strengthening toward $z=0$. Both are individually defensible (radial
+ejection of the fastest stars vs. vertical compression of survivors) and may dominate
+in different regimes ($r/r_t$, $v_\phi/v_f$), but the repository does not yet compute
+which channel wins where. Treat the "thin-disk fraction rising toward $z=0$" claim
+above as provisional until the stripping-vs-thinning timescale ratio (T17) is derived.
+
 ## 7. Falsifiable Predictions
 
 1. **Scale height ↔ rotation-curve flatness** through the shared $B_c$: thinner disks where

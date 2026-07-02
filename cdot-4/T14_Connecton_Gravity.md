@@ -55,8 +55,22 @@ The horizon-mode energy is $E_\text{connecton}=\hbar c/R_0=\hbar H_0/6\approx2.5
 **Sea density — holographic saturation (new premise).** The connecton sea is a conserved, re-emitted **standing** population, not an accumulating reservoir. Emission accumulation is ruled out: number- and mass-conservation both route through the emission rate $f_\text{dot}\sim10^{-39}$, giving $\rho_\text{bg}/\rho_\text{crit}\sim3\times10^{-40}$ — short by $1/f_\text{dot}=10^{39}$ exactly. The sea density is instead fixed by holographic saturation of the horizon:
 $$N_\text{hor} = \frac{4\pi R_0^2}{4L_p^2},\quad n_\text{holo} = \frac{N_\text{hor}}{V_\text{hor}} = \frac{3}{4L_p^2 R_0},\quad m_c = \frac{\hbar H^\text{hor}}{c^2} = \frac{\hbar H_0}{2c^2}.$$
 The holographic count ($\propto 1/\hbar$) times the minimal quantum mass ($\propto\hbar$) gives an $\hbar$-free identity:
-$$\rho_\text{bg} = n_\text{holo}\,m_c = \frac{H_0^2}{16G} = \frac{\pi}{6}\,\rho_\text{crit}\quad(\text{exact, }\hbar\text{-free}).$$
+$$\rho_\text{bg} = n_\text{holo}\,m_c = \frac{H_0^2}{16G} = \frac{\pi}{6}\,\rho_\text{crit}\quad(\text{unhedged}, \hbar\text{-free}).$$
 This is a structural result — not a quantum coincidence — and is consistent with the connecton = dark-energy-quantum identification ($(\pi/6)\rho_\text{crit}\sim\rho_\Lambda$). Note: $\rho_\text{bg}$ is a standalone dark-energy identity; it does **not** enter $g_\dagger$ (§"Toward the RAR").
+
+**Unresolved factor-3 in the quantum definition.** This section's quantum mass
+$m_c=\hbar H^\text{hor}/c^2=\hbar H_0/(2c^2)$ (energy $\hbar H_0/2$) is **not** the same
+object as the "minimal quantum of the observable universe" defined above,
+$E_\text{connecton}=\hbar c/R_0=\hbar H_0/6$ — a factor 3 smaller (since
+$H^\text{hor}=3c/R_0$). Using the horizon-crossing quantum instead would give
+$\rho_\text{bg}=H_0^2/48G=(\pi/18)\rho_\text{crit}\approx0.17\rho_\text{crit}$, not
+$\pi/6$. Nothing in the document argues for $m_c\propto H^\text{hor}$ over
+$m_c\propto c/R_0$ — the choice is presently a free parameter of the construction, not
+a derived result. Until the physical basis for one choice over the other is established
+(e.g. tying the quantum to the *rate* $\dot c/c$ rather than the crossing frequency
+$c/R_0$), the $\rho_\text{bg}=(\pi/6)\rho_\text{crit}$ identity — and the dark-energy
+identification it motivates — should be read as **exact up to this $O(1)$
+quantum-definition choice**, not as an unconditional exact result.
 
 ---
 
@@ -138,7 +152,7 @@ This is the first mechanism in the project that is both the right *type*
 The question is what sets the transition scale $g_\dagger \approx cH_0^{\text{obs}}/6$ — and whether a mechanism can produce the MOND/RAR functional form (T15).
 
 **The scale from the horizon radius.** The model fixes the horizon radius (Core §4a, T3) as
-$$R_0 = \frac{3P\,c_0}{H_0^{\text{obs}}} = \frac{6c_0}{H_0^{\text{obs}}}\quad(P=2,\ H^{\text{hor}}=3H_0^{\text{obs}}).$$
+$$R_0 = \frac{3P\,c_0}{H_0^{\text{obs}}} = \frac{6c_0}{H_0^{\text{obs}}}\quad(P=2,\ H^{\text{hor}}=3c_0/R_0).$$
 The combination $c^2/R_0$ has dimensions of acceleration and is a core-premise quantity — no connecton required:
 $$g_\dagger = \frac{c^2}{R_0} = \frac{cH_0^{\text{obs}}}{6}.$$
 
@@ -348,8 +362,14 @@ CMB, even though the pressureless property is already present.
 4. **Global bookkeeping** — is $\dot c/c = H$ from the connecton termination rate
    consistent with the same field giving local Newtonian gravity?
 
-5. **Light bending** — does the connecton's propagation in a $K$-gradient background
-   give the correct GR prediction for light deflection by the Sun ($1.75''$)?
+5. **Light bending, and the closure's high-acceleration tail — see T22.** T22
+   establishes that PPN alignment (light bending, redshift) is recoverable but requires
+   an explicit local mass dictionary, forced by data but not yet derived from connecton
+   microphysics; and that the RAR closure above ($g_x(g_x+g_\text{bar})=g_\text{bar}
+   g_\dagger$), taken to the solar-system regime, predicts a constant anomalous
+   acceleration excluded by planetary ephemerides by ~3.5 orders of magnitude. This is
+   now the top-priority open item in the program — see T22 §4–5 for the resolution
+   paths (Boltzmann-weighted marginal population; environmental saturation).
 
 6. **Continuous emission** — continuous emission (preferred) gives clean EP and
    negligible energy drain ($\sim 10^{-39}$ of rest energy per Hubble time). Whether

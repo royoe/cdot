@@ -225,6 +225,17 @@ This is distinct from the rotation-curve flatness claim:
   spiral-rich); the elliptical fraction rises toward $z = 0$. ✓ (qualitatively,
   though environment and mergers also contribute)
 
+  **Unresolved competition with T19.** The same growing $B_c$ field is credited here
+  with a *radial* effect (stripping disks toward ellipticals, more so toward $z=0$)
+  and in T19 with a *vertical* effect (thinning and settling disks, more so toward
+  $z=0$) — i.e. the field is claimed to both destroy and perfect disks, both
+  increasingly with time. Both channels are individually defensible (radial ejection
+  of the fastest stars vs. vertical compression of survivors) and could operate in
+  different regimes, but the competition between the stripping timescale (here) and
+  the thinning timescale (T19), as a function of $r/r_t$ and $v_\phi/v_f$, has not been
+  computed. Treat both morphological-evolution claims as provisional until that
+  timescale ratio is derived.
+
 ---
 
 ## Honest Assessment

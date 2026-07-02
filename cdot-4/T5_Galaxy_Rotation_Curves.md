@@ -1,5 +1,12 @@
 # T5 — Galaxy Rotation Curves
 
+*Note: this document's retardation-mechanism failure (§"The Model's Attempts and
+Their Failure") stands and is not revisited. But its "unsolved problem" framing below
+is superseded by T14/T15: the connecton RAR closure (T14) now reproduces the RAR to
+0.020 dex and derives the BTFR asymptote analytically, with no non-analytic $B_c$
+source needed (the quarter power comes from transition-radius geometry). See T15 for
+the current status statement.*
+
 ## Observational Background
 
 The rotation curves of spiral galaxies are among the most important observational
@@ -88,9 +95,12 @@ deprojection).
 
 ### Current status
 
-**Rotation curves are an unsolved problem in this model.** The $\dot{c}/c$ retardation
-route is closed at galactic scales. The model does not currently provide a mechanism
-for dark-matter-free flat rotation curves.
+**The retardation route is closed at galactic scales.** The $\dot{c}/c$ retardation
+mechanism cannot produce flat rotation curves — that failure stands. But the model is
+no longer without a mechanism: the connecton RAR closure (T14/T15) derives the RAR
+functional form from selection-junction closure and reproduces it to 0.020 dex,
+parameter-free, with the BTFR as its deep-MOND limit. See T14/T15 for the current
+mechanism and its open items (PDE derivation of the closure, attractor convergence).
 
 ### Why No Counting Law Variant Rescues the Mechanism
 
@@ -141,19 +151,26 @@ T15 for the RAR diagnostic.
 
 ## What Survives: The Dimensional Coincidence
 
-Even with the mechanism failed, one observation remains: the MOND acceleration scale
-$a_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ is numerically close to $cH_0/2\pi$. The
-model "knows" this scale via $H_0$, even though it cannot produce an order-one
-galactic force from $\dot{c}/c$. This coincidence, and its sharpest form (the Radial
-Acceleration Relation), are discussed in T6 and T15.
+Even with the retardation mechanism failed, one observation remains: the MOND
+acceleration scale $a_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ is numerically close to
+$cH_0/6$, now derived from the horizon radius $R_0=6c/H_0$ (T6) rather than the cruder
+$cH_0/2\pi$ approximation ($2\pi$ is $\sim$10% low and not derived). The model "knows"
+this scale via $H_0$, and — via the connecton RAR closure — now also produces the
+functional form itself (T14/T15), not just the dimensional coincidence.
 
 ---
 
 ## Possible Paths Forward
 
-Four options, in order of current plausibility:
+Four options (not strictly ordered by plausibility — see item 1's note on PBH vs. the
+connecton route):
 
-**1. Primordial black hole dark matter (current leading candidate).** The project has
+**1. Primordial black hole dark matter.** The connecton/foam-diffusion route (item 2
+below) is Core's leading dark-matter-free direction; PBHs are a candidate for the
+CMB/genesis mass budget and are potentially complementary rather than competing (T14) —
+though the two programs are not yet reconciled at galactic scale (see T14's caveat and
+T5/T6's open questions on whether PBH halo mass would double-count the baryon-only RAR).
+The project has
 shifted toward accepting dark matter — but as a specific primordial component, not
 an unspecified particle. PBHs formed at genesis through relic freeze-out (T13,
 Reading 2) are gravitating, pressureless, and clustered by construction — the right
@@ -165,15 +182,18 @@ check of T13.
 
 **2. Dynamical selection — flatness as an evolutionary attractor (most promising
 mechanism-based direction).** Rather than demanding the force law produce flat curves
-as a static solution, the dynamical selection picture (T14) notes that orbits expand
-as $c$ grows ($r \propto c^2$, T9). A velocity-dependent Lorentz-type force acts as
-a velocity selector: rings whose speed makes the term too strong are ejected; the
+as a static solution, the dynamical selection picture (T14) uses a direct, time-steady
+Lorentz-type velocity filter ($v\times B_c$): stars whose tangential velocity makes the
+term too strong are ejected outward on a dynamical timescale, with no orbital expansion
+needed as an intermediate trigger (orbits are static under invariant $G$, T9). The
 flat rotation curve is the marginally-bound surviving population — an evolutionary
 attractor, not a force-balance solution. This dissolves the "static wall" and
 requires no fine-tuning for flatness. The Tully-Fisher normalization ($v_f^4 = GM\,a_0$)
-remains open (it requires a non-analytic $B_c$ source), but flatness itself is
-explained. See T14 for the derivation and T17 for its connection to the M-σ relation
-and galaxy morphology.
+is now derived analytically from the transition-radius geometric mean of $g_\text{mass}$
+and $g_\dagger$ — the quarter power comes from where $r_t\propto\sqrt{M}$ places the
+surviving population, not from a non-analytic $B_c$ source (that wall is superseded).
+See T14 for the derivation and T17 for its connection to the M-σ relation and galaxy
+morphology.
 
 **3. A genuinely new MOND mechanism.** The foam-sea has been exhausted as a MOND
 source: five mechanism classes (retardation, linear diffusion, additive GEM, catalytic

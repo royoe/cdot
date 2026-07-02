@@ -54,8 +54,11 @@ They give two natural accelerations:
 $$\dot{c}_0 = c_0\,H_0^{\text{hor}} \approx 3.4\times10^{-10}\ \text{m/s}^2,
 \qquad
 c_0\,H_0^{\text{obs}} \approx 6.8\times10^{-10}\ \text{m/s}^2.$$
-The observed MOND scale $a_0 \approx 1.2\times10^{-10}$ m/s$^2$ sits within this
-range; the coefficient $cH_0^{\text{obs}}/6$ is derived from $R_0=6c/H_0$ (§"The numerical coincidence"). The model "knows" the MOND scale dimensionally — most theories do not naturally generate an acceleration of this magnitude.
+The observed MOND scale $a_0 \approx 1.2\times10^{-10}$ m/s$^2$ is of the same order
+as both (a factor $\sim3$ below $\dot c_0$, the lower of the two); the exact value is
+not read off this pair but derived as $g_\dagger=cH_0^{\text{obs}}/6$ from the horizon
+radius $R_0=6c/H_0$ (§"The numerical coincidence"). The model "knows" the MOND scale
+dimensionally — most theories do not naturally generate an acceleration of this magnitude.
 
 ### What the model does not have
 
@@ -83,8 +86,9 @@ structurally inevitable (it is the only acceleration formable from $c$ and $H_0$
 shared by MOND and all cosmologically motivated proposals. The RAR closure is now substantially derived from connecton indistinguishability (T14), matching McGaugh to 0.020 dex; $g_\dagger=c^2/R_0=cH_0/6$ from horizon kinematics. See T14 for status and open items (transport kernel, attractor convergence, force-law derivation of kinematic identification).
 
 See T15 for the full RAR discussion. The MOND acceleration scale (T6), rotation
-curves (T5), and RAR (T15) **stand or fall together**: solving any one solves
-all three, and the $\sim10^{-6}$ order problem of T5 must be resolved first.
+curves (T5), and RAR (T15) are related but now stand at different stages: the
+retardation mechanism of T5 is dead ($\sim10^6$ shortfall) and is not a precondition
+for the connecton route; progress on the RAR via T14 is no longer gated on T5 (T15).
 
 ---
 
@@ -156,14 +160,18 @@ mechanism: it must be baryonic mass alone that enters, with no other galaxy prop
 Any mechanism that introduces a dependence on halo size, velocity dispersion, or
 environment is disfavoured.
 
-With PBH dark matter now the leading candidate (T5, T13, T16), the BTFR becomes a
-constraint on that dark component being gravitationally inert with respect to the
-MOND interpolation: PBHs provide mass silently, while baryons source the modified
-coupling. The tight scatter ($\lesssim 0.1$ dex, no residual on halo size or
-environment) then constrains any PBH model — the dark matter must not contribute
-independently to the rotation curve beyond its gravitational pull, or the baryonic
-tightness breaks. The challenge shifts from "no dark matter needed" to "baryons alone
-drive the MOND-like term, PBHs sit inertly below it."
+With PBH dark matter as a live candidate for the CMB/genesis mass budget (T5, T13,
+T16), the BTFR becomes a constraint on that dark component being gravitationally inert
+with respect to the MOND interpolation: PBHs would need to provide mass silently, while
+baryons alone source the modified coupling. The tight scatter ($\lesssim 0.1$ dex, no
+residual on halo size or environment) then constrains any PBH model — the dark matter
+must not contribute independently to the rotation curve beyond its gravitational pull,
+or the baryonic tightness breaks. **This is a statement of the required constraint, not
+a demonstrated mechanism**: "PBHs sit inertly below it" has not been shown from PBH
+clustering physics, and in the connecton picture PBHs gravitate like any other mass and
+would enter $g_\text{bar}$, naively breaking the baryon-only tightness. Quantifying the
+maximum $\Omega_\text{PBH}(r\lesssim30\,\text{kpc})$ compatible with the observed RAR
+scatter is open — see T5's discussion of this tension.
 
 ---
 

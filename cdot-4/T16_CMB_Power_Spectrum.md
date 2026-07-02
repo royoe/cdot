@@ -250,3 +250,9 @@ higher peaks is promising but rests on unproven genesis dynamics. The model is
   $c$-threshold epoch.
 - The PBH merger channel to SMBHs: what is the merger rate and mass buildup in a
   varying-$c$ early universe? Does it produce $10^6$–$10^9 M_\odot$ seeds by $z \sim 10$?
+- **Double-counting with the baryon-only RAR (T15).** This document's galactic-halo
+  PBH clustering and T15's baryon-sourced RAR closure (0.020 dex, no halo residual)
+  are not yet reconciled: quantifying the maximum $\Omega_\text{PBH}(r\lesssim30\,
+  \text{kpc})$ compatible with the RAR scatter is an open, load-bearing question for
+  whether the CMB-motivated PBH population can coexist with the galaxy-scale result
+  (see T5, T6, T15).
