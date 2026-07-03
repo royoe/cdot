@@ -73,17 +73,45 @@ $$c_s = \frac{c}{\sqrt{3(1 + R)}}, \quad R \equiv \frac{3\rho_b}{4\rho_\gamma}.$
 This is a *ratio* — it depends on $c$ only through $c_s/c = 1/\sqrt{3(1+R)}$, which
 is dimensionless and depends only on the baryon-to-photon energy ratio $R$.
 
-**The first peak translates without dark matter.** Since every energy scales as $c^2$
+**The first peak's plasma physics is self-similar — but its angular position is a
+decisive quantitative failure (2026-07-03 update).** Since every energy scales as $c^2$
 (T1, T7, the relational principle), both $\rho_b \propto mc^2 \propto c^2$ and
 $\rho_\gamma \propto h\nu \propto c^2$ scale identically. Therefore $R = 3\rho_b/(4\rho_\gamma)$
-is invariant under the epoch-to-epoch $c$-scaling. The plasma physics — oscillation
-frequency, sound speed structure, Silk damping — is **self-similar** across epochs.
-Recombination at the $c$-threshold is the acoustic analogue of last scattering; the
-first acoustic peak involves the least dark matter dependence, and the self-similarity
-means it translates directly to the model. **No dark matter is needed for the first peak.**
+is invariant under the epoch-to-epoch $c$-scaling, and the plasma physics — oscillation
+frequency, sound speed structure — is **self-similar** across epochs. That part of the
+original claim stands. But *where the resulting peak lands in $\ell$-space* depends on
+the model's own distance geometry, and working that out (see
+`new_tests/Update_2026-07-03_CMB_First_Peak_Angular_Scale.md`) reverses the headline
+conclusion:
 
-This is a significant result: it narrows the hard problem from "explain the whole
-spectrum" to "explain the relative heights of the higher peaks."
+- Using only formulas already adopted as "Core, stable" ($D_p(z)$, $D_A(z)$, Core
+  §4/§4a — verified against Core's own worked table) plus the self-similar sound speed
+  above, the predicted angular scale $\theta_s=r_s/D_A(z_\text{rec})$ falls short of
+  what $\ell_1\approx220$ requires by **9$\times$ (S$'$) to 765$\times$ (volume law,
+  the preferred branch)** at the observationally-labeled $z_\text{rec}\approx1090$.
+- The gap **survives granting the model total freedom over the unresolved
+  $z_\text{rec}$** (item A below): the best achievable $\ell_1$, optimizing over all
+  possible recombination redshifts, is still only 9.5–67 depending on branch, at
+  unphysical $z\sim2$–5 — never within an order of magnitude of 220.
+- The invariant $R$ itself is not small: self-similarity pins it at today's measured
+  value, $R\approx680$ (from $\Omega_bh^2$, $T_0$), at *every* epoch — not the
+  $R\approx0.6$ $\Lambda$CDM needs at recombination, which only arises there because
+  of differential $a^{-3}$ vs. $a^{-4}$ dilution that this static-space model lacks.
+  Tuning $R$ upward to compensate is foreclosed: it would need $R\sim10^4$–$10^8$,
+  inconsistent with the BBN $\eta\approx6\times10^{-10}$ input (T13).
+- **Root cause**: the model's shallow $D_p\propto(1+z)^{-1/(nP)}$ distance law means
+  $z\sim1090$ has already used up ~31% of the total light-travel budget (volume law),
+  unlike $\Lambda$CDM where $a_\text{rec}/a_0\sim10^{-3}$ leaves three decades of
+  expansion to compress the sound horizon to sub-degree scale. There is no comparable
+  compression mechanism here.
+
+This is now the sharpest quantitative, falsification-relevant tension in the model's
+speculative program — on the model's own self-declared hardest test. It is **not**
+treated as a terminal result: it is a leading-order geometric argument (no
+Boltzmann-code line-of-sight treatment), and it remains open whether a static-$c(t)$-
+appropriate redefinition of the sound-horizon-to-angle mapping could recover small
+angular scales, rather than borrowing the FRW-style $D_A$ machinery wholesale. See the
+update document for the full derivation, branch table, and caveats.
 
 **The higher peaks require clustered, pressureless wells.** The third-to-first peak
 height ratio is set by the amplitude of photon driving by pressureless (non-oscillating)
@@ -223,26 +251,43 @@ The CMB is not yet addressed quantitatively by the model. The honest assessment:
 |---|---|
 | (A) Thermal origin | Candidate: $c$-threshold recombination — unworked |
 | (B) Blackbody thermalization | Genuine difficulty — requires genesis density check |
-| (C) First acoustic peak | Translates via self-similarity — **no DM needed** |
-| (C) Higher peak heights | PBH candidate — gated by PBH formation check |
+| (C) First acoustic peak, plasma shape | Self-similar $R$, sound speed — stands |
+| (C) First acoustic peak, angular position | **Decisive quantitative failure — 9$\times$–765$\times$ short of $\ell_1\approx220$, robust to $z_\text{rec}$ and branch (2026-07-03)** |
+| (C) Higher peak heights | PBH candidate — gated by PBH formation check, and by the same heavy ($R\approx680$) baryon-loading problem above |
 | (D) Primordial $n_s$ | Unworked; would come from genesis |
 
-The first peak translation is a genuine positive result. The PBH candidate for
-higher peaks is promising but rests on unproven genesis dynamics. The model is
-"not yet dead on the CMB" rather than "in agreement with the CMB."
+The plasma-shape self-similarity is a genuine partial result, but the angular-position
+calculation (2026-07-03) is a sharp negative one — the sharpest quantitative tension
+in the model's speculative program, on its own hardest test. The PBH candidate for
+higher peaks is promising but rests on unproven genesis dynamics and inherits the same
+baryon-loading concern. The model is no longer merely "not yet dead on the CMB" — the
+first-peak position is actively in tension with data, pending either a fix to the
+static-geometry angle mapping or acceptance as a falsification point.
 
 ---
 
 ## Open Questions
 
+- **Resolved, negative (2026-07-03):** ~~Can the self-similar baryon-photon plasma
+  (first peak) be computed numerically in the model's $c(t)$ background? Is the
+  predicted peak position consistent with the observed $\ell_1 \approx 220$?~~ No —
+  the predicted angular scale is 9$\times$–765$\times$ short of what $\ell_1\approx220$
+  requires, robustly across premise-2 branches and independent of the unresolved
+  recombination redshift. See above and
+  `new_tests/Update_2026-07-03_CMB_First_Peak_Angular_Scale.md`.
+- **New, replacing it:** is there a definition of the sound-horizon-to-angle mapping
+  appropriate to a static, coordinate-fixed $c(t)$ spacetime that differs from the
+  borrowed FRW-style $D_A(z)$ construction — one that could recover small angular
+  scales for early-universe features — or does this stand as a genuine falsification
+  point for the model? This is now the single highest-priority open question for the
+  CMB program, ahead of the PBH questions below (which govern peak *heights*, moot if
+  peak *position* cannot be placed correctly).
 - Does genesis produce PBHs? Does Reading 2's relic-freezeout picture actually
   yield black holes (versus denser patches) as the average goes sub-Schwarzschild?
-  This is the single highest-leverage open question for the speculative program.
+  This remains the single highest-leverage open question for the dark-matter/SMBH
+  side of the speculative program.
 - What is the PBH mass function from genesis? Does it fall in the observationally
   allowed window ($\sim 10^{17}$–$10^{23}$ g for $\Omega_\text{PBH} \sim 0.25$)?
-- Can the self-similar baryon-photon plasma (first peak) be computed numerically
-  in the model's $c(t)$ background? Is the predicted peak position consistent with
-  the observed $\ell_1 \approx 220$?
 - What sets the primordial power spectrum $n_s$ in this model? Is there a mechanism
   analogous to inflation that produces a nearly scale-invariant spectrum?
 - Can the blackbody thermalization requirement be met by the model's genesis density

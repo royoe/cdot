@@ -3,7 +3,7 @@
 
 *Note: This topic is speculative and unfinished — it checks whether the model's local
 (solar-system-scale) gravity survives confrontation with PPN data (light bending, Shapiro
-delay, gravitational redshift) and with planetary ephemerides. Three sessions feed this
+delay, gravitational redshift) and with planetary ephemerides. Four sessions feed this
 topic. The first pass assumed symmetry with Polarizable Vacuum (PV) theory and concluded
 that alignment requires an explicit new local premise (a "Two-Regime Dictionary": mass
 locally dressed as $m\propto K_\text{grav}^{3/2}$, distinct from its cosmological
@@ -11,21 +11,30 @@ invariance) forced by two data points. A second pass reconsidered the force sect
 the gravitoelectromagnetic (GEM) correspondence and exposed a serious, independent
 crisis: the derived RAR closure (T14/T15), taken to the solar-system regime, predicts an
 anomalous acceleration excluded by planetary ephemerides by ~3.5 orders of magnitude. A
-third pass — prompted by re-examining the second pass's own derivation for
-overcomplication — replaced the Two-Regime Dictionary entirely with a much simpler
-picture: gravity as a coherent inflow ("river") of a free-streaming fraction of the
-connecton sea, falling at the classical escape velocity $w=\sqrt{2GM/r}$. This is the
-Gullstrand–Painlevé form of the Schwarzschild metric, and if the medium carrying it also
-carries light (a natural reading of an existing premise, T12), the model reproduces exact
-GR light bending, Shapiro delay, redshift, and perihelion precession **without any new
-mass-dressing premise, and with mass strictly invariant everywhere** — resolving the T8
-invariant/PV mass fork by dissolving it rather than regime-splitting it. **The Two-Regime
-Dictionary is superseded and withdrawn from this topic.** The river construction also
-gives the tail crisis a derived target (an exact identity linking the closure's exponent
-to a speed ratio) and a named, well-posed open calculation, in place of the two vaguer
-"resolution paths" first recorded. Nothing here is adopted into Core Principles — the one
-premise the whole picture rests on (light is advected by the sea's bulk flow) is flagged
-explicitly in §2 as underived.*
+third pass — prompted by the author's own correction that a flat, static space with
+uniform constants was never the intended picture; the design intent was always a local
+c-field, lower in wells, composing additively with the cosmological $c(t)$ — found that
+the *flow* implementation (the sea's rest frame itself falling inward, the
+Gullstrand–Painlevé "river" of GR) is *uniquely forced* once strict $m,G$ invariance is
+required alongside the bending/redshift data: a three-channel pincer (index $A$, flow
+$\xi$, dressing $\sigma$) has the unique solution $A=0,\xi=1$ under $\sigma=0$, with the
+withdrawn Two-Regime Dictionary recovered as the *other* branch ($\xi=0\Rightarrow
+A=2,\sigma=3/2$). This session supplied the uniqueness theorem but not a derivation of
+the flow profile itself from connecton microphysics. A fourth pass attempted that
+derivation via a full superfluid/quantum-hydrodynamics treatment (Madelung transform,
+condensate order parameter); this document instead re-derives the same result, $w=
+\sqrt{2GM/r}$, from plain energy conservation (a pressureless population free-falling
+from rest at cosmological infinity) — recovering the third session's own lighter-weight
+suggestion rather than the fourth session's heavier machinery, and avoiding a
+manufactured circulation-quantization/frame-dragging tension that only the superfluid
+reading produced (§2.2). **The Two-Regime Dictionary is superseded and withdrawn from
+this topic; mass and $G$ remain strictly invariant, with no local exception.** The river
+construction also gives the ephemeris tail crisis a derived target (an exact identity
+linking the closure's exponent to a speed ratio, §4) in place of the two vaguer
+"resolution paths" first recorded. Nothing here is adopted into Core Principles — the
+uniqueness theorem itself depends on emergent local Lorentz invariance (§3), which is
+not yet derived, and on the flow's functional form, which is not yet derived from
+connecton microphysics (§2.2, §5).*
 
 ---
 
@@ -88,6 +97,17 @@ such quantization, so that tension simply does not arise. Whether/how it carries
 momentum for frame dragging is still open — §3 — but it is now an ordinary kinetic-theory
 question, not a manufactured no-go.)
 
+**Ontology flag (2026-07-02) — resolved, category distinction.** This derivation treats
+the ballistic fraction as ordinary matter with mechanical (kinetic) energy. T12
+§"What Is a Connecton?" argues a connecton is better read as a conserved unit of
+connection — a relation, not a particle — with "no kinetic energy of its own." $w$ here
+is the velocity of the network's *collective configuration*, not of an individual link,
+exactly as phonons or water waves carry well-defined energy without their underlying
+constituents translating — T12's statement is about links, this derivation is about the
+pattern. Separately, for a non-dissipative (isentropic) population the ordinary first
+law reduces to $d(w^2/2)=-d\phi$, i.e. $\tfrac12w^2+\phi=E$ *is* what non-dissipative
+thermodynamics gives, not a rival assumption to it. See T14 Open Item 8.
+
 **Newton recovered.** For steady radial flow, a comoving parcel's acceleration is the
 convective derivative $w\,dw/dr = \tfrac12\,d(w^2)/dr = -GM/r^2$ — Newton's law, exactly,
 as the material derivative of the flow. Free fall is comoving with the ballistic
@@ -96,35 +116,72 @@ equivalence principle is structural rather than assumed.
 
 **A horizon, if light rides the same flow.** $w(r)=c$ at $r=2GM/c^2$ — the Schwarzschild
 radius. The metric this flow defines,
-$$ds^2 = -c^2dt^2 + (dr - w\,dt)^2 + r^2 d\Omega^2,$$
-is the Gullstrand–Painlevé form — a standard, exact rewriting of the Schwarzschild
-solution in different coordinates (Painlevé 1921; Gullstrand 1922; popularized as the
-"river model" by Hamilton & Lisle 2008), valid outside any static spherical mass by
-Birkhoff's theorem, not just for black holes. Being the same spacetime, it reproduces
+$$ds^2 = -c^2dt^2 + (dr + w\,dt)^2 + r^2 d\Omega^2,$$
+(the ingoing/physical patch, with $w>0$ the inward flow speed — the sign is opposite for
+the outgoing, white-hole patch) is the Gullstrand–Painlevé form — a standard, exact
+rewriting of the Schwarzschild solution in different coordinates (Painlevé 1921;
+Gullstrand 1922; popularized as the "river model" by Hamilton & Lisle 2008), valid
+outside any static spherical mass by Birkhoff's theorem, not just for black holes. Being the same spacetime, it reproduces
 GR's light bending, Shapiro delay, gravitational redshift, and perihelion precession
 exactly, automatically, with **no separate index law and no local mass dictionary** —
 *provided* light is actually carried by this flow.
 
-**The one premise this rests on.** That proviso is not free. In laboratory analog-gravity
-systems (e.g. BEC black-hole analogs), the acoustic metric governs phonons in the fluid,
-not light, which is external to the medium and indifferent to its flow. Here the
-situation is more favorable, because light is not external: T12 already identifies the
-model's global light speed $c(t)$ with the connecton sea's own signal speed. Extending
-that identification locally — light propagates as an excitation of the same medium whose
-bulk flow is $w(r)$, and is advected by it exactly as the medium's own signals would be —
-is a single, physically motivated assumption, not an independently new one. Call it the
-**Flow-Coupling Premise**: *light is advected by the connecton sea's local bulk flow
-$w(r)$, because light already shares the sea's signal speed globally (T12).* Granting it
-delivers the full PPN success above from a Newtonian potential (T14) plus energy
-conservation (undergraduate mechanics) — no coefficients to fit. This is considerably
-lighter than the withdrawn Two-Regime Dictionary, which needed two independently-tuned
-exponents ($A=2$, $\sigma=3/2$) with no first-principles source. But the premise is not
-yet derived, and one input this construction leans on — a "uniqueness theorem" said to
-show strict $m,G$ invariance forces pure-flow behavior with $A=0,\xi=1$ — comes from a
-prior session whose write-up is not present anywhere in this repository. Until that
-theorem is reconstructed and checked, or an equivalent argument is made from scratch,
-this section's headline claim ("exact Schwarzschild phenomenology, no dressing needed")
-should be read as promising and well-motivated, not established. See §4 open items.
+**The Flow-Coupling Premise, and why it is forced rather than assumed.** Whether light is
+actually advected by $w(r)$ is not free-standing: it follows from requiring strict $m,G$
+invariance together with the observed bending and redshift, via a uniqueness argument
+(recovered 2026-07-02; the prior write-up citing this theorem had gone missing from the
+repository — reconstructed here and checked). Generalize §2's setup with three possible
+local channels a mass could source in the sea: an **index** channel $A$
+($K-1=A|\Phi|/c^2$, light index $n=K$ — §2's withdrawn route), a **flow** channel $\xi$
+(sea rest frame falls inward at $w$, $w^2=2\xi|\Phi|$; $\xi=1$ is the escape-velocity
+normalization of §2), and a **dressing** channel $\sigma$ ($m\propto K^\sigma$, §2's
+withdrawn route). Requiring emergent Lorentz invariance in the local sea frame (§3, still
+itself a derivation target, not yet proven) so that SR time dilation applies to a clock
+held static against the flow, and using that the flow field with general $\xi$ is exactly
+the Gullstrand–Painlevé form of Schwarzschild with mass $\xi M$ (so its bending
+contribution is $4\xi\,GM/bc^2$, matching §2's horizon-at-$w=c$ construction), the
+redshift and bending constraints become
+$$\text{(R)}\ \ \xi+(2-\sigma)A=1, \qquad \text{(B)}\ \ \xi+\tfrac{A}{2}=1.$$
+**Theorem:** imposing $\sigma=0$ (strict local mass invariance, already the model's
+standing commitment — T8/T21) forces the *unique* solution
+$$\boxed{A=0,\quad \xi=1}$$
+— zero index coupling, pure flow at exactly the escape-velocity normalization used in
+§2. The withdrawn Two-Regime Dictionary is recovered as the *other* branch: forbidding
+flow ($\xi=0$, i.e. assuming a static sea) uniquely forces $(A,\sigma)=(2,3/2)$ instead.
+The two sessions that produced §2's approach and the original PV dictionary are the two
+branches of one system; requiring invariant mass selects the flow branch.
+
+**Independent cross-check (no relativity needed).** A test body's acceleration from the
+flow's material derivative is $\xi\,GM/r^2$ (§2.2). This must equal the ordinary
+Newtonian acceleration already fixed by Cavendish/Kepler measurements with the model's
+own invariant $G$ — no rescaling permitted — which forces $\xi=1$ directly, independent
+of the bending/redshift pincer above. Two independent routes to the same $\xi=1$ is a
+genuine consistency success.
+
+**What this theorem does and does not establish.** It is a **constraint-satisfaction**
+result: *given* that the flow takes the Gullstrand–Painlevé/Schwarzschild-$\xi M$
+functional form, invariance plus data pick out $A=0,\xi=1$ uniquely. It does not, by
+itself, derive that connecton dynamics *produces* exactly this functional form — that is
+§4's entrainment/depletion calculation and T14 open item 5, unchanged. It also inherits
+the emergent-Lorentz-invariance dependency from §3: the redshift constraint (R) used SR
+dilation of a clock moving through the sea, which presupposes the very premise §3 flags
+as an unproven derivation target. So the chain is: (invariant $m,G$, already adopted) +
+(emergent local Lorentz invariance, **not yet derived**) + (GP functional-form ansatz,
+**not yet derived from microphysics**) $\Rightarrow$ $A=0,\xi=1$ uniquely, matching all
+solar-system data. This is tighter and more economical than the withdrawn Two-Regime
+Dictionary (one physically-motivated ansatz plus one shared premise, rather than two
+independently-tuned exponents with no mechanism), but two explicit debts remain before
+"exact Schwarzschild phenomenology" is established rather than uniquely selected among
+consistent options.
+
+**Structural bonus, conditional on the same debts: frame dragging.** Because GP($\xi M$)
+is exactly Schwarzschild, its rotating generalization (the Doran/river form of Kerr) is
+exactly Kerr — so if the flow-functional-form ansatz holds for a spinning mass, frame
+dragging with the correct GR spin-2 normalization (the factor 4 flagged in §3 as a
+two-sided test) comes structurally, not as a separate derivation. This would answer §3's
+Lense–Thirring item outright, *conditional on* the same open microphysical derivation of
+$w(r)$ from connecton dynamics — it is a scope gain to bank once that derivation exists,
+not a result to claim yet.
 
 **Mass stays invariant, full stop.** Because no local dressing is needed, the T8 fork
 between invariant mass (cosmology) and PV mass (the withdrawn local dictionary) is
@@ -207,6 +264,17 @@ which is exactly the exponent of the MLS/RAR exponential function. This is an ex
 algebraic identity (independent of the ballistic-vs-superfluid framing question in §2 —
 it only uses $w=\sqrt{2GM/r}$ and $g_\dagger=c^2/R_0$), not a conjecture.
 
+**A bridge to T14's own marginally-bound population.** T14's transition radius
+$r_t=\sqrt{GM/g_\dagger}$ is where its dynamical-selection mechanism concentrates the
+surviving, marginally-bound population, giving $v_f^4=GM g_\dagger$ (T14 §"Toward the
+RAR"). Evaluating the river's escape speed there gives the exact identity
+$w(r_t)=\sqrt2\,v_f$ — the two populations coincide in speed, up to a fixed factor, at
+exactly the radius T14 already singles out independently. This raises the entrainment
+calculation from a standalone conjecture to a plausible restatement of T14's own binding
+open item (attractor convergence, T14 Open Item 2): the "fraction not entrained in the
+coherent river" and the "surviving marginally-bound population" may be one object.
+Suggestive, not yet proven — see T14 §"Toward the RAR" for the identity and its caveat.
+
 **What remains conjectural is the suppression law.** If the closure's anomalous
 component $g_x$ is carried specifically by the fraction of the sea *not* entrained in
 the coherent river — suppressed as $e^{-w/v_c}$, on the physical picture that deep in a
@@ -231,36 +299,55 @@ boundary.
 
 ## 5. Status and Open Items, In Priority
 
-1. **[Top priority] The entrainment/depletion law, §4.** One law, $e^{-w/v_c}$ or
-   equivalent, would simultaneously (a) shift the RAR closure from simple to the
-   empirically-preferred MLS exponential and (b) dissolve the ephemeris exclusion
-   identically. The target identity is derived and exact; only the suppression kinetics
-   remain open.
-2. **The Flow-Coupling Premise and its "uniqueness theorem," §2.2.** The claim that light
-   is advected by $w(r)$ (giving exact GR phenomenology for free) is well-motivated by
-   T12 but not derived, and leans on a "uniqueness theorem" from a session not recorded
-   anywhere in this repository. Reconstruct or re-derive it before treating §2's headline
-   result as established.
-3. **Amplitude normalization** (inherited from T14): $\delta n\to\phi$ must reproduce $G$
-   at the correct magnitude from connecton microphysics. The river construction inherits
-   this unchanged — it does not add a new dependency, but does not resolve the old one.
-4. **Preferred-frame $\alpha_1,\alpha_2$ (§3).** Raw scale $(v/c)^2\approx1.5\times10^{-6}$
+1. **[Top priority] Derive $w(r)=\sqrt{2GM/r}$ (equivalently, the entrainment/depletion
+   law) from connecton microphysics, §2.2 and §4.** One derivation would (a) establish
+   the Flow-Coupling Premise's functional-form ansatz, completing the uniqueness theorem
+   into an actual derivation; (b) shift the RAR closure from simple to the
+   empirically-preferred MLS exponential; (c) dissolve the ephemeris exclusion
+   identically. T14's own attractor-convergence open item (marginally-bound population
+   at $r_t$) may be the same calculation — see the bridge identity $w(r_t)=\sqrt2\,v_f$,
+   §4 and T14 §"Toward the RAR." This is now the single most consequential calculation
+   in the program, merging what were three previously-separate open items.
+2. **Emergent local Lorentz invariance (§3).** Load-bearing in three places at once:
+   $\alpha_1=\alpha_2=0$; the redshift mechanism itself (§2.2's SR-dilation argument);
+   and the exactness of the river-equals-GR correspondence. A transport-level derivation
+   is now the single most important underived assumption in the local sector.
+3. **Two-population coexistence — open, with quantified candidates (T14 Open Item 6).**
+   The river needs a non-scattering ("ballistic") fraction of the sea coexisting with
+   the scattering ("diffusive") fraction T14 says fills all of space. Two candidates now
+   quantified (endpoint-only interaction; illustrative Rayleigh-type cross-section) —
+   see T14 §"One Sea, Two Descriptions." Neither yet derived from an explicit
+   re-anchoring rate equation.
+4. **Momentum/inertia consistency of the river — RESOLVED (T14 Open Item 7).** The
+   restored ram-pressure budget ($2\pi\rho_\text{bg}R_b^2r/m\sim10^{-26}$ of gravity for
+   any bound body) shows comoving with the flow is necessarily geometric, not a
+   disguised momentum-transfer push — see T14 §"The Inertia No-Go Result."
+5. **De-double-counting — RESOLVED (T14 Open Item 9).** $(\mathbf w\cdot\nabla)\mathbf
+   w=\nabla(w^2/2)=-\nabla\phi$ identically, given Bernoulli — the river's force and
+   T14's diffusion force are the same $-\nabla\phi$ by construction, not two additive
+   contributions; see T14's Open Items list.
+6. **Amplitude normalization** (inherited from T14): $\delta n\to\phi$ must reproduce $G$
+   at the correct magnitude from connecton microphysics. Unchanged by the river.
+7. **Preferred-frame $\alpha_1,\alpha_2$ (§3).** Raw scale $(v/c)^2\approx1.5\times10^{-6}$
    sits an order of magnitude above the $\alpha_2$ bound ($<4\times10^{-7}$); the
-   emergent-Lorentz-invariance argument is a candidate zero, not a proof.
-5. **Angular-momentum transport / Lense–Thirring (§3).** Now an ordinary collisionless
-   kinetic-theory question for the ballistic population (the superfluid-vortex framing
-   and its manufactured quantization mismatch are withdrawn, §2.2) — still uncalculated.
-6. **Quadrupole radiation coefficient (§3)** — well-posed, uncalculated.
-7. **Two-population origin.** Why does the sea partition into a diffusive (scattering)
-   fraction and a ballistic (free-streaming) fraction at all, and what sets the split?
-   Parallel theoretical debt to invariant $G$/invariant $m$ (T8).
+   emergent-Lorentz-invariance argument (item 2) is a candidate zero, not a proof.
+8. **Quadrupole radiation coefficient (§3)** — well-posed, uncalculated. (Lense–Thirring
+   normalization is now a structural consequence of item 1, §2.2 "Structural bonus.")
 
-**Cross-references.** T14 open item 5 (light bending) points here. T8 §"Why Mass is
-Invariant" — no edit needed; mass remains invariant everywhere, the local dressing this
-topic once proposed is withdrawn (§2). T17/T19 — the two-gravitomagnetic-regimes
-requirement (§3) is a consistency constraint on $B_c$, not yet built into either topic.
-T15 — once the entrainment law (item 1) is resolved one way or the other, the RAR
-comparison should be re-run with the MLS form alongside simple; the transition-region
-difference (≤4.5%) is close to current data resolution. Core Principles — no premise
-addition proposed; §2's Flow-Coupling assumption is recorded here, pending item 2, rather
-than promoted to Core.
+**Cross-references.** T14 §"One Sea, Two Descriptions" now states explicitly that the
+global cosmological $c(t)$ and this topic's local flow $w(r)$ are two regimes of one
+connecton density/velocity field, not two mechanisms — see there for the single-field
+statement and its own consistency flags (items 3–5 above are T14 Open Items 6, 7, and 9
+respectively, cross-posted; T14 Open Item 8, the connecton-ontology reconciliation, is
+resolved per T12 and noted in §2.2 above). T14 open item 5 points here for the
+flow-profile derivation. T8 §"Why
+Mass is Invariant" — no edit needed; mass remains invariant everywhere, the local
+dressing this topic once proposed is withdrawn (§2). T17/T19 — the
+two-gravitomagnetic-regimes requirement (§3) is a consistency constraint on $B_c$, not
+yet built into either topic. T15 — once the entrainment law (item 1) is resolved one way
+or the other, the RAR comparison should be re-run with the MLS form alongside simple;
+the transition-region difference (≤4.5%) is close to current data resolution. Core
+Principles — no premise addition proposed; premises 2 and 4 could eventually be sharpened
+to state the single-field picture and "stationary, not static" frequency conservation
+explicitly (T14's new section anticipates this wording), but that edit is deferred, not
+made here.

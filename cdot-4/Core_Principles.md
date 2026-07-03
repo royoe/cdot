@@ -334,7 +334,7 @@ the isotropic vacuum); with invariant $G$, the orbit radius is then also conserv
 | Dynamical selection / ring ejection | **Re-derived under invariant G** as a direct time-steady Lorentz velocity filter; flatness as attractor; attractor convergence open (T14, T17) |
 | Primordial genesis / matter-antimatter | **Speculative** (T13) |
 | Connecton gravity — foam-sea gives Newtonian $1/r$; RAR closure and $a_0$ coefficient substantially derived | **Speculative but materially advanced** (T14) |
-| CMB power spectrum — first peak translates; higher peaks need PBH wells | **Speculative** (T16) |
+| CMB power spectrum — first-peak plasma self-similarity stands; angular *position* is a decisive quantitative failure (9×–765× short of ℓ₁≈220, robust to branch and recombination redshift, 2026-07-03); higher peaks need PBH wells | **Speculative, sharpest open tension in the program** (T16) |
 | Primordial black holes — candidate for DM, CMB wells, SMBH seeds | **Speculative** (T13, T16) |
 | Galaxy morphology and M-σ — dynamical selection / Lorentz ejection | **Speculative but advanced** — M-σ derived as BTFR through shared $a_0$; $B_c$ baryon-sourced (BH co-tracer); orbital-coherence factor predicts M-σ scatter vs rotational support (T17) |
 | Disk flattening — connecton $B_c$ vertical spring thins disks, spares bulges (two-attractor dichotomy) | **Speculative, new** — sign and O(1) magnitude resolved via ringed-current model; feedback dynamics and $\eta$-normalization open (T19) |

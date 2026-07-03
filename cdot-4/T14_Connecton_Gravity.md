@@ -18,15 +18,19 @@ bulges — see T19.*
 ## The Idea
 
 Gravity may share the same substrate that drives $c(t)$. The proposal is to posit a
-field quantum — the **connecton** — that embodies the relational principle (T12)
-physically: it is the carrier of the "connection" between particles that the counting
-rule $c \propto N$ requires.
+**connecton** that embodies the relational principle (T12) physically: it is the carrier
+of the "connection" between particles that the counting rule $c \propto N$ requires.
+*(What kind of thing a connecton is — not a standard field quantum, per T12
+§"What Is a Connecton?" — is addressed there; the properties below are unchanged by that
+discussion, only their interpretation is.)*
 
 A connecton has the following properties:
 - **Massless**, zero rest energy.
-- **Near-zero but finite energy**: its wavelength is of order the horizon distance
-  $R_0 = 6c/H_0$, giving frequency $\sim H_0/6$ and energy $\hbar H_0/6 \approx
-  2.5 \times 10^{-34}$ eV — the minimal quantum of the observable universe.
+- **Near-zero but finite energy**: characteristic extent of order the horizon distance
+  $R_0 = 6c/H_0$, energy of order $\hbar H_0/6 \approx 2.5\times10^{-34}$ eV — the
+  minimal scale of the observable universe. *(This is a fixed thermodynamic scale, not
+  a de Broglie relation $E=\hbar\omega$ applied to that extent as a wavelength — see
+  §"Energy Scale" and T12 §"What Is a Connecton?"; normalization still open.)*
 - **Propagates at the local speed of light** $c(t)$ at the time of propagation.
 - **Conserved in number**: never destroyed. Momentarily absorbed by a massive particle
   (in a brief virtual $e^+e^-$ pair creation and re-emission), then re-emitted.
@@ -41,9 +45,78 @@ gravity.
 
 ---
 
+## One Sea, Two Descriptions: Density and Flow (2026-07-02)
+
+The connecton sea is a **single** physical population, described — like any medium —
+by a local number-density field $n(\mathbf{x},t)$ and a local bulk-velocity field
+$\mathbf{u}(\mathbf{x},t)$. Both the cosmological role (premise 2) and the local
+gravitational role (this document) are properties of this one field, not two different
+mechanisms:
+
+- **Global background.** Far from any mass, $n$ is spatially uniform and
+  $\mathbf{u}=0$ in the cosmological rest frame. The slow, horizon-scale secular growth
+  of the total count $N\propto R^3$ (Core premise 2) sets the cosmological signal speed
+  $c(t)$ — a property of the density field's *global integral*, not of any local value.
+- **Local perturbation.** Near a mass, continuous net emission (§"Scorecard," item 4)
+  perturbs the same field in two ways: a density perturbation $\delta n\propto1/r$
+  (short-mean-free-path, "diffusive" fraction — §"Resolving the Dilemma," below) sources
+  the Newtonian potential $\phi=-GM/r$; a distinguishable, long-mean-free-path
+  ("ballistic") fraction of the *same* sea develops a nonzero coherent bulk velocity
+  $w(r)$ toward the mass, free-falling under that same $\phi$ — this is the **river**,
+  derived in T22 §2.
+
+**There is one $c$, set once, globally.** The connectons' propagation speed relative to
+the sea's own local rest frame is always $c(t)$ — it is not separately modulated by
+local density perturbations (T22's uniqueness theorem: the index/density-coupling
+channel is forced to zero, $A=0$, once $m$ and $G$ are required to stay strictly
+invariant). This is what the design intuition behind "light travels slower in a well"
+(gravitational shadowing lowering the local light speed) actually means: not a second,
+locally-varying value of $c$ itself, but ordinary advection — the *coordinate* speed of
+light in the static map is $c(t)\mp w(\mathbf{x})$, the cosmological and local-flow
+effects composing exactly as originally intended, with no separate local-index field
+bolted onto the density mechanism. See T22 for the full derivation and its open items.
+
+**An unresolved tension this creates (flagged, not resolved).** §"Resolving the
+Dilemma" below states that foam-scattering gives a sub-Compton mean free path and hence
+diffusion "everywhere, including empty space" — full stop, no exception. The river needs
+a *non*-scattering, long-mean-free-path fraction to exist alongside that diffusive
+population (T22 §2.1: pure Fickian drift is $10^{24}\times$ too slow to be the river).
+These two statements, as currently written, are in tension: nothing in the diffusion
+argument below currently explains why any fraction of the sea would fail to scatter.
+Resolving this — is it a genuine two-population structure (like a mean-free-path
+spectrum with a rare unscattered tail, cf. the atmosphere/exosphere transition), or does
+it require revising the "diffusion everywhere" claim itself? — is now an open item
+(§"Open Items," below), not an assumption already justified by the diffusion mechanism.
+*(2026-07-02: T12 §"What Is a Connecton?" proposes a qualitative candidate — if
+interactions occur only at a connection's endpoints, interaction likelihood per unit
+extent falls as $1/L$, so short/local and long/horizon-anchored connections naturally
+behave differently without a separate cross-section assumption. A second, illustrative
+candidate: no cross-section is flat across the sea's ~89-e-fold cascade, so even an
+ordinary Rayleigh-type $\sigma\propto\lambda^{-4}$ scattering law gives mean free path
+$\ell\propto\lambda^4$ — horizon-scale modes would be many orders more ballistic than
+Compton-scale ones on general grounds, not a special pleading. With $n(k)\propto1/k$
+guaranteeing comparable number in every decade, both a diffusive and a ballistic
+population are then present automatically. Both candidates are plausible; neither is
+yet derived from an explicit re-anchoring/scattering rate equation — status upgraded
+from "unexplained" to "open, with quantified candidates.")*
+
+---
+
 ## Energy Scale: The Minimal Quantum
 
 Connectons are re-emitted at every interaction point, so the horizon $R_0 = 6c/H_0^{\text{obs}}$ is the **IR cutoff** — the longest accessible wavelength — not a monochromatic line. The fluctuation floor that competes with local baryonic gravity is a spectral integral over the re-emission cascade.
+
+**Consistency flag (2026-07-02): this section's fixed energy scale and the cascade
+below are only compatible if "wavelength" here is not a de Broglie wavelength.** The
+cascade (below) has flat number density per $\ln k$ across ~89 e-folds; if each mode
+carried the standard $E=\hbar ck$, the implied energy density overshoots
+$\rho_\Lambda$ by ~25–37 orders of magnitude depending on band (verified: ~$8\times
+10^{18}$ J/m³ in the mm decade alone). This is only consistent with every connecton
+carrying the *same* fixed energy ($m_cc^2$ or $\hbar H_0/6$, as used throughout this
+document) if that energy is not $\hbar\omega$ at all — see T12 §"What Is a Connecton?"
+for the resolution (the connecton is not a standard field quantum; "wavelength" in the
+cascade is a correlation/link length). Nothing computed below changes; the
+*interpretation* of what disperses does.
 
 **The cascade slope is derived.** In steady state, conserved-number cascade with constant number flux $\epsilon_N = n(k)/\tau_k$ and ballistic transfer time $\tau_k \sim 1/(ck)$ gives $n(k)\propto 1/k$ (number per $\ln k$), hence
 $$P_\rho(k)\propto k^{-2}\quad(q=2).$$
@@ -55,7 +128,7 @@ The horizon-mode energy is $E_\text{connecton}=\hbar c/R_0=\hbar H_0/6\approx2.5
 **Sea density — holographic saturation (new premise).** The connecton sea is a conserved, re-emitted **standing** population, not an accumulating reservoir. Emission accumulation is ruled out: number- and mass-conservation both route through the emission rate $f_\text{dot}\sim10^{-39}$, giving $\rho_\text{bg}/\rho_\text{crit}\sim3\times10^{-40}$ — short by $1/f_\text{dot}=10^{39}$ exactly. The sea density is instead fixed by holographic saturation of the horizon:
 $$N_\text{hor} = \frac{4\pi R_0^2}{4L_p^2},\quad n_\text{holo} = \frac{N_\text{hor}}{V_\text{hor}} = \frac{3}{4L_p^2 R_0},\quad m_c = \frac{\hbar H^\text{hor}}{c^2} = \frac{\hbar H_0}{2c^2}.$$
 The holographic count ($\propto 1/\hbar$) times the minimal quantum mass ($\propto\hbar$) gives an $\hbar$-free identity:
-$$\rho_\text{bg} = n_\text{holo}\,m_c = \frac{H_0^2}{16G} = \frac{\pi}{6}\,\rho_\text{crit}\quad(\text{unhedged}, \hbar\text{-free}).$$
+$$\rho_\text{bg} = n_\text{holo}\,m_c = \frac{H_0^2}{16G} = \frac{\pi}{6}\,\rho_\text{crit}\quad(\hbar\text{-free; see the factor-3 caveat below}).$$
 This is a structural result — not a quantum coincidence — and is consistent with the connecton = dark-energy-quantum identification ($(\pi/6)\rho_\text{crit}\sim\rho_\Lambda$). Note: $\rho_\text{bg}$ is a standalone dark-energy identity; it does **not** enter $g_\dagger$ (§"Toward the RAR").
 
 **Unresolved factor-3 in the quantum definition.** This section's quantum mass
@@ -131,7 +204,11 @@ requires no new ontology; the quantum foam already exists.
 Connectons scatter off the quantum foam. The foam density
 $\sim 1/\lambda_\text{Compton}^3 \sim 10^{37}\ \text{m}^{-3}$ gives a sub-Compton
 mean free path → **diffusion everywhere, including "empty" space**, while ordinary
-matter is only a weak perturbation (gravity remains weak and EP-clean).
+matter is only a weak perturbation (gravity remains weak and EP-clean). *(This
+statement now needs a qualifier: the river mechanism, §"One Sea, Two Descriptions"
+above, requires a distinguishable non-scattering fraction to coexist with this
+diffusive majority. Whether "diffusion everywhere" admits such a minority ballistic
+tail, or must itself be revised, is an open item.)*
 
 **Consequences:**
 - The diffusion equation holds in "empty" space → $\nabla^2\phi = -S\delta^3 \Rightarrow
@@ -214,6 +291,18 @@ masses that the shared $a_0$ locks together. It is not an independent empirical 
 
 **Status:** BTFR scale and slope ✓; binding open item is attractor convergence (does
 the Lorentz filter genuinely concentrate survivors at $r_t$?), not source non-analyticity.
+
+**Possible link to the river's ballistic population (hint, not yet derived).** T22's
+river construction identifies its free-falling ("ballistic") sea fraction by an escape
+velocity $w(r)=\sqrt{2GM/r}$. Evaluated at this section's transition radius
+$r_t=\sqrt{GM/g_\dagger}$, it satisfies the exact identity $w(r_t)=\sqrt{2}\,v_f$ (using
+$v_f^4=GM g_\dagger$ above) — the river's zero-energy population and the RAR's
+marginally-bound surviving population coincide in speed, up to the fixed factor
+$\sqrt2$, at exactly the radius this section already singles out. This is suggestive
+that the two open mechanisms — attractor convergence here, and the frame-flow profile
+derivation in T22 — may be the same underlying population viewed two ways, which would
+merge two of the program's standing open items into one. It is an algebraic coincidence
+worth taking seriously, not yet a derivation that they are the same population.
 
 ### RAR Crossover: Derived from Connecton Indistinguishability
 
@@ -318,6 +407,30 @@ This explains at a mechanism level **why inertial mass must be axiomatic** (prem
 rather than emergent. It is consistent with the failure of Sciama-type inertia
 (T11, T12).
 
+**Consistency flag against the river (T22, added 2026-07-02) — RESOLVED (restored
+check, below).** This no-go, and the Drag resolution above, both rest on connectons
+carrying negligible momentum individually. The river (§"One Sea, Two Descriptions")
+posits a *coherent* bulk flow of a sea fraction at km/s-to-$c$ speeds; free-falling
+matter is proposed to move by **comoving with this flow geometrically** (as in GR's own
+river model, where geodesic motion follows from the metric, not from literal collisions
+with flowing material), *not* by momentum-transfer collisions with it.
+
+**Restored ram-pressure budget (closes the flag, and T14 Open Item 7).** The maximum
+momentum flux the flow could deliver by full absorption, relative to gravity, for a body
+of mass $m$ and radius $R_b$ at distance $r$ from mass $M$ (using $w^2=2GM/r$ and
+$\rho_\text{bg}=(\pi/6)\rho_\text{crit}=4.8\times10^{-27}$ kg/m³), is
+$$\frac{F_\text{ram}}{F_\text{grav}} = \frac{\rho_\text{bg}\,w^2\,\pi R_b^2}{GMm/r^2}
+= 2\pi\,\rho_\text{bg}\,\frac{R_b^2\,r}{m}$$
+— independent of $M$ (verified). For Earth at 1 AU this is $3.1\times10^{-26}$
+($F_\text{ram}=1.1\times10^{-3}$ N vs $F_\text{grav}=3.5\times10^{22}$ N); for Mercury,
+$3.2\times10^{-26}$; even a 1 km comet at $10^5$ AU, $9\times10^{-19}$. Maximum possible
+heating of the entire Earth, if the flow's kinetic energy were fully absorbed: 23 W.
+**Comoving is necessarily geometric** — the sea falls short of a collisional push by
+~26 orders of magnitude for any bound body, so the drag/thermal objections stay closed
+for the ballistic fraction quantitatively, not just by the assumption of small
+individual momentum. This is a restatement of the Inertia No-Go with a number attached,
+not a new assumption.
+
 **Cross-link to T16 (CMB):** the connecton field is pressureless (momentum-neutral).
 This is exactly the trait needed to gravitationally drive CMB acoustic peaks without
 oscillating. But the foam sea is horizon-smooth — it does not provide the *clustered*
@@ -334,6 +447,7 @@ CMB, even though the pressureless property is already present.
 | All MOND mechanisms (5) — direct-source couplings | **Newton** — structural $\sqrt{M}$ obstruction for direct-source couplings; details in cdot-3 |
 | BTFR + RAR — transition-radius construction | **Substantially advanced** — BTFR from $g_\dagger=c^2/R_0=cH_0/6$ (Core §4a) + Newtonian gravity; RAR closure **derived** from connecton indistinguishability, 0.020 dex vs McGaugh, alternatives data-excluded; $g_\dagger=c^2/R_0$ identified as the sea's kinematic acceleration (6 from $R_0=6c/H_0$); $\rho_\text{bg}=(\pi/6)\rho_\text{crit}$ a standalone $\hbar$-free identity (dark-energy connection); open: attractor convergence, transport kernel, force-law derivation of kinematic identification |
 | Dynamical selection / Lorentz filter | Flatness as attractor; BTFR asymptote derived; attractor convergence and PDE closure open |
+| Local gravity as coherent flow (the "river," T22) | **New, 2026-07-02** — if the sea's ballistic fraction free-falls at $w=\sqrt{2GM/r}$, PPN/lensing follow with $m,G$ strictly invariant (no local dressing needed). Momentum/inertia consistency, de-double-counting, and the connecton-ontology reconciliation are now resolved (Open Items 7–9); the two-population split (item 6) and the profile's derivation from microphysics (item 5) remain open |
 
 **BTFR and RAR are substantially reproduced.** The BTFR follows from $g_\dagger = c^2/R_0 = cH_0^{\text{obs}}/6$ (horizon radius, Core §4a) plus Newtonian gravity. The RAR closure is **derived** from connecton indistinguishability, matching McGaugh to 0.020 dex with no free parameters; the three alternative relaxation laws are data-excluded. The coefficient $g_\dagger=c^2/R_0=cH_0/6$ follows from horizon kinematics — the sea's crossing acceleration; the 6 from $R_0=6c/H_0$ (Core §4a). The holographic sea density $\rho_\text{bg}=(\pi/6)\rho_\text{crit}$ ($\hbar$-free) stands as a standalone structural result linking the sea to dark energy; it does not enter $g_\dagger$. The remaining open items — attractor convergence, transport kernel, and a force-law derivation confirming the kinematic identification $g_\dagger=c^2/R_0$ — are deepening derivations, not gates on the result. The PBH thread (T16) remains a live program for CMB wells, galactic DM, and SMBH seeds (T17); the two mechanisms (RAR from the VSL acceleration scale + connecton dynamics; halo DM from PBH remnants) are potentially complementary rather than exclusive.
 
@@ -362,15 +476,68 @@ CMB, even though the pressureless property is already present.
 4. **Global bookkeeping** — is $\dot c/c = H$ from the connecton termination rate
    consistent with the same field giving local Newtonian gravity?
 
-5. **Light bending, and the closure's high-acceleration tail — see T22.** T22
-   establishes that PPN alignment (light bending, redshift) is recoverable but requires
-   an explicit local mass dictionary, forced by data but not yet derived from connecton
-   microphysics; and that the RAR closure above ($g_x(g_x+g_\text{bar})=g_\text{bar}
-   g_\dagger$), taken to the solar-system regime, predicts a constant anomalous
-   acceleration excluded by planetary ephemerides by ~3.5 orders of magnitude. This is
-   now the top-priority open item in the program — see T22 §4–5 for the resolution
-   paths (Boltzmann-weighted marginal population; environmental saturation).
+5. **Derive the frame-flow profile $w=\sqrt{2GM/r}$ from connecton dynamics — see T22.**
+   Updated 2026-07-02: light bending/redshift are no longer thought to need a local mass
+   dictionary (that proposal, the Two-Regime Dictionary, is withdrawn — T22). Instead,
+   $m,G$ invariance plus the bending and redshift data uniquely force a pure coherent-flow
+   implementation (T22 §2: the "river"), and the RAR closure's ephemeris-excluded tail
+   (item 1 above's force-law question, and T22 §4) reduces to the *same* calculation:
+   deriving $w(r)$ (equivalently, the entrainment/depletion law of the ballistic
+   fraction) from connecton microphysics. This is now the single highest-priority
+   calculation in the program, merging what were previously two separate open items.
+   The suggestive identity $w(r_t)=\sqrt2\,v_f$ (§"Toward the RAR," above) is a hint,
+   not yet a derivation, that the river's ballistic population and the RAR's
+   marginally-bound surviving population are the same object.
 
-6. **Continuous emission** — continuous emission (preferred) gives clean EP and
+6. **Two-population coexistence — open, with quantified candidates (updated
+   2026-07-02).** The river requires a non-scattering ("ballistic") fraction of the sea
+   alongside the scattering ("diffusive") fraction that §"Resolving the Dilemma" says
+   fills *all* of space. Two candidates now quantified — see §"One Sea, Two
+   Descriptions": endpoint-only interaction ($\propto1/L$, parameter-free) and an
+   illustrative Rayleigh-type cross-section ($\ell\propto\lambda^4$). Both plausible;
+   neither derived from an explicit re-anchoring rate equation, which remains the open
+   task. Logically prior to item 5.
+
+7. **Momentum/inertia consistency of the river — RESOLVED (2026-07-02).** See the
+   restored ram-pressure budget in §"The Inertia No-Go Result": the maximum possible
+   momentum flux from the flow is $2\pi\rho_\text{bg}R_b^2r/m\sim10^{-26}$ of gravity
+   for any bound body (Earth, Mercury, and a 1 km comet at $10^5$ AU all checked).
+   Comoving with the flow is necessarily geometric, not a disguised collisional push;
+   the drag/thermal objections stay closed quantitatively, not just by assumption.
+
+8. **Reconcile the river's derivation with the connecton ontology — RESOLVED
+   (2026-07-02), residual folded into item 5.** T22 §2.2 derives $w=\sqrt{2GM/r}$ from
+   mechanical energy conservation; T12 holds that a connecton-as-relation has "no
+   kinetic energy of its own." Resolution: $w$ is the velocity of the network's
+   *collective configuration*, not of individual links — exactly as phonons or water
+   waves carry well-defined energy/momentum without their underlying constituents
+   translating; T12's statement is about links, T22's Bernoulli is about the pattern.
+   Separately, for a non-dissipative (isentropic, $\delta Q=0,\,dS=0$) population, the
+   ordinary first law reduces to $d(w^2/2)=-d\phi$ — i.e. mechanical energy conservation
+   *is* what the general thermodynamic bookkeeping gives in the no-dissipation limit;
+   no contradiction, and no exotic derivation was needed to see this (a looser "Jacobson
+   -style" framing was proposed for this step in the source material, but the argument
+   used is ordinary non-dissipative fluid thermodynamics, not Jacobson's specific
+   entanglement-horizon method — that deeper, first-principles derivation of the
+   profile remains item 5's task, not this item's). Bonus, unverified but suggestive:
+   this reframes the two-population split (item 6) as an isentropic/dissipative split —
+   the diffusive fraction thermalizes the released energy into $\delta n$ instead of
+   rivering — one distinction doing double duty, not two unrelated facts. The residual
+   (deriving the pattern's effective inertia $\rho_\text{eff}$, which cancels out of
+   Bernoulli and so does not gate this item) is folded into item 5.
+
+9. **De-double-counting — RESOLVED (2026-07-02).** For the same $\phi$ realized in the
+   diffusive fraction's $\delta n$, the flow's convective acceleration is
+   $(\mathbf w\cdot\nabla)\mathbf w=\nabla(w^2/2)=-\nabla\phi$ (irrotational-flow
+   identity, using Bernoulli $\tfrac12w^2=-\phi$) — identical to, not additive with,
+   the force per unit mass on matter. A body resisting free fall in the map frame feels
+   $-m\nabla\phi$ once; a comoving body feels zero (the accelerating boost cancels it
+   exactly). Double-counting would require treating $(\mathbf w\cdot\nabla)\mathbf w$ as
+   a *second*, independently-sourced force — excluded here because $w$ is constructed
+   from $\phi$ via Bernoulli in the first place, not sourced independently. The sole
+   condition is that the flow falls under the same $\phi$ as matter, i.e. the
+   equivalence principle for the sea.
+
+10. **Continuous emission** — continuous emission (preferred) gives clean EP and
    negligible energy drain ($\sim 10^{-39}$ of rest energy per Hubble time). Whether
    emission only at creation is allowed, and what it would imply, is open.

@@ -179,6 +179,148 @@ move" and "there is nothing to move relative to or measure with."
 
 ---
 
+## What Is a Connecton? Neither Photon Nor Graviton (2026-07-02)
+
+T14 introduces the connecton as the physical carrier of the relational principle above,
+but never pins down what *kind* of thing it is. Since it must propagate at $c$, the
+natural first guess is that it is photon-like or graviton-like — the only two massless
+species physics already has. This section argues that guess is wrong, on the model's
+own terms, and proposes a coherent alternative.
+<!-- (Two independent sessions — one internal,
+one an independent cross-check by another instance given the same question — converged
+on "neither"; this write-up merges and tempers both.) -->
+
+Masslessness plus motion at $c$ does not imply "photon or graviton." Physics already
+has a third, well-precedented category: new, weakly-coupled massless or near-massless
+bosons that are neither (quintessence fields, dilatons, "dark photons," axion-like
+particles in their massless limit). Nothing about $E=pc$ forces a species to be one of
+the two forces we happen to have quantized.
+
+### A sharper, model-internal argument: connectons cannot obey $E=\hbar\omega$
+
+T14's own results go further than the general point and **exclude** both identifications
+quantitatively, via a tension not previously flagged. T14 derives a conserved-number
+cascade $n(k)\propto1/k$ (constant number per $\ln k$, §"Energy Scale") spanning roughly
+$\ln(R_0/\lambda_\text{Compton})\approx89$ e-folds, and separately fixes the *total* sea
+count via holographic saturation, $n_\text{holo}=3/(4L_p^2R_0)$, with every unit
+contributing a single fixed energy scale ($m_cc^2=\hbar H^\text{hor}$, giving
+$\rho_\text{bg}=(\pi/6)\rho_\text{crit}$). These two results are only consistent with
+each other if the connecton's energy is the **same** at every point in the cascade. But
+if a connecton were a standard field quantum, mode $k$ would carry $E=\hbar ck$, and the
+flat-per-$\ln k$ number density ($\sim4\times10^{40}\,\text{m}^{-3}$ per e-fold) would
+then give wildly excessive energy density at any wavelength shorter than the horizon —
+verified: $\sim8\times10^{18}$ J/m³ in the mm decade alone, some $10^{28}\times\rho_\Lambda$
+(and $10^{33}\times$ the actual CMB energy density). A connecton cannot simultaneously
+have a fixed, position-independent energy $\sim\hbar H_0$ and obey $E=\hbar\omega$ across
+an 89-e-fold spectrum — the two T14 results are incompatible under the standard
+dispersion relation.
+<!-- This was not previously flagged and is a genuine internal
+consistency finding, independently checked here (the mm-band number above was
+recomputed and confirmed). -->
+
+This excludes the two standard candidates for reasons beyond the dispersion tension
+itself: a **photon** couples to charge, not count (would break the mass-independent,
+composition-clean sourcing T14 already relies on for the equivalence principle); photon
+number is not conserved (violates T14's absorption/re-emission conservation law); and a
+real population at the required densities in the mm–m bands would already be excluded by
+CMB/radio backgrounds. A **graviton** is a quantum of the metric — but this model has no
+metric prior to the connecton sea's state (its density and flow perturbations, $\delta n$
+and $w$, *are* the effective metric, T14/T22). A quantum of gravity cannot be the
+substrate gravity is built from without circularity; graviton number is also not
+conserved. Both exclusions hold independently of the dispersion argument, and the
+dispersion argument independently rules out treating the connecton as *any* standard
+on-shell quantum, photon or otherwise.
+
+### The alternative: a unit of connection, not a particle
+
+The coherent reading is that a connecton is not a field quantum but a **conserved unit
+of relation** between a local degree of freedom and the cosmological horizon — closer to
+a bit of holographic/entanglement structure than to a particle. Concretely:
+
+- Its fixed energy scale ($\sim\hbar H_0$) is a **thermodynamic bit cost** (a Landauer-type
+  cost of one unit of horizon information, $k_BT_\text{dS}\ln2$ with the de Sitter
+  temperature $T_\text{dS}=\hbar H_0/2\pi k_B$), not a de Broglie energy — this is why it
+  does not scale with $k$. The audit's standing factor-3 ambiguity in $m_c$ (T14) is
+  thereby recast as *which* thermodynamic normalization is correct, with a derivation
+  path (compute the bit cost properly), rather than a free parameter. Candidate values in
+  units of $\hbar H_0$: Landauer, $\ln2/2\pi\approx0.110$; T14's existing
+  $\hbar c/R_0=1/6\approx0.167$; T14's existing $m_c=\hbar H^\text{hor}/c^2=0.5$. Not yet
+  resolved.
+- "Wavelength" in the T14 cascade is a **correlation/link length**, not a de Broglie
+  wavelength — resolving the dispersion tension by removing the premise that forced it
+  ($E=\hbar\omega$ never applied in the first place).
+- "Propagates at $c$" describes how **disturbances along the connection** move — $c$ is
+  the network's causal update speed (already this section's own claim), not the
+  translational speed of a traveling particle. Momentum-neutrality (T14's Inertia No-Go
+  and Drag resolution) is then definitional for a relation, rather than a fine-tuned
+  property of a particle that happens to carry negligible momentum.
+- Holographic saturation, $n_\text{holo}=3/(4L_p^2R_0)$, is T14's own application of the
+  standard "one bit per $4L_p^2$" holographic entropy count — the same counting rule used
+  across holography generally (Bekenstein–Hawking; also, in a different formalism, the
+  Freedman–Headrick "bit thread" reformulation of entanglement entropy). **This is a
+  consistency point, not a new independent confirmation**: T14's $n_\text{holo}$ already
+  used the standard holographic count, so of course it matches other frameworks built on
+  the same count. It supports reading the connecton as a generic *holographic degree of
+  freedom*; it does not specifically establish the bit-thread formalism's additional
+  structure (flow-line duality with extremal surfaces) as physically realized here. An
+  earlier draft of this section overstated this as "the exact identity that clinches
+  it" — that framing is not supported and is corrected here.
+- Photons and gravitons are then **derived, collective excitations** of the same
+  substrate — EM as the network's polarizability (already this model's premise, $c=
+  1/\sqrt{\epsilon_0\mu_0}$), gravity as $\delta n,w$'s coarse-grained state. Shared $c$
+  because of a shared substrate, not a shared species. This directly answers the
+  "photonic or gravitonic" question at its root: neither, because both are one level
+  *above* the connecton, not the same level.
+
+### What this does not yet establish
+
+This is a proposed ontology, not a completed derivation:
+
+1. **The missing "QC session" source has been located and redone (2026-07-02).** The
+   scattering cross-section and momentum/"ram-pressure" budget claims referenced above
+   were flagged as absent from the repository and unverified. They have since been
+   restored in closed form: the maximum possible momentum flux the flow could deliver to
+   a body, relative to gravity, is $2\pi\rho_\text{bg}R_b^2r/m\sim10^{-26}$ for any bound
+   body checked (Earth, Mercury, a 1 km comet at $10^5$ AU) — comoving with the flow is
+   necessarily geometric, not a disguised collisional push, closing this concern
+   quantitatively (see T14 §"The Inertia No-Go Result" and Open Item 7). The
+   wavelength-dependent cross-section claim is confirmed as explicitly illustrative
+   (an ordinary Rayleigh-type $\sigma\propto\lambda^{-4}$), not a derived requirement —
+   see T14's two-population item.
+2. **Tension with the river derivation (T22 §2.2) — resolved as a category
+   distinction.** T22 derives $w=\sqrt{2GM/r}$ by treating the ballistic sea fraction as
+   ordinary free-falling matter conserving *mechanical* energy, $\tfrac12w^2+\phi=0$. A
+   "unit of connection" has, by this section's own account, "no kinetic energy of its
+   own." Resolution: $w$ is the velocity of the network's *collective configuration*, not
+   of an individual link — collective modes of a medium routinely carry energy and
+   momentum without their underlying constituents translating (phonons; water waves).
+   Separately, for the ballistic fraction specifically — dissipationless by construction
+   (no mid-body interactions) — the ordinary first law with $\delta Q=0,\,dS=0$ reduces
+   exactly to $d(w^2/2)=-d\phi$: mechanical energy conservation *is* what non-dissipative
+   thermodynamics gives here, not a competing assumption. This is a more modest
+   observation than a Jacobson-style (entanglement-horizon) derivation of the profile
+   itself — that deeper task, deriving $w(r)$'s functional form and the pattern's
+   effective inertia $\rho_\text{eff}$ from connecton microphysics, remains open (T14
+   Open Item 5). A suggestive bonus: this reframes the two-population split as an
+   isentropic/dissipative split — the diffusive fraction thermalizes the released energy
+   into $\delta n$ instead of rivering — one distinction doing double duty, unverified
+   but worth pursuing.
+3. **A candidate, qualitative (not derived) resolution to T14's open "two-population
+   coexistence" problem**, now with a second candidate alongside the first: if
+   interactions occur only at a connection's endpoints, interaction likelihood per unit
+   spatial extent falls as $\sim1/L$ (parameter-free); separately, an ordinary
+   Rayleigh-type cross-section ($\sigma\propto\lambda^{-4}$, illustrative) gives mean
+   free path $\propto\lambda^4$, so horizon-scale connections would be many orders more
+   ballistic than Compton-scale ones on general grounds. Both plausible; neither derived
+   from an explicit re-anchoring rate equation, which remains the open task (T14 Open
+   Item 6, upgraded from "unexplained" to "open, with quantified candidates").
+
+This section changes the connecton's category, not any downstream number: the
+diffusion mathematics, the cascade slope, the holographic count, and the river's
+kinematics are all unchanged under reinterpretation.
+
+---
+
 ## Open Questions
 
 - A derivation of $c \propto N$ from more fundamental principles — is there a
