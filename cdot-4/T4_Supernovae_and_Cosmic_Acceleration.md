@@ -353,7 +353,20 @@ invariant $G$, not yet resolved.
   of $\mu(z)$ is sensitive to $P = s+2$; a MCMC fit could constrain $s$.
 - If the SN data firmly require $q_0 < 0$ even after model-native analysis, the model
   is definitively excluded — this outcome should be pursued, not avoided.
-- The Etherington reciprocity relation $D_A = D_L/(1+z)^2$ is satisfied exactly by the
-  model (the model sits on the Etherington line). This means it makes the same
-  angular-diameter–luminosity-distance connection as ΛCDM, providing a consistency
-  check between SN distances and angular-size measurements (e.g. BAO).
+- ~~The Etherington reciprocity relation $D_A = D_L/(1+z)^2$ is satisfied exactly by
+  the model (the model sits on the Etherington line)... providing a consistency check
+  between SN distances and angular-size measurements.~~ **Flagged as likely
+  inapplicable (T16, 2026-07-03):** Etherington's theorem is general (not restricted to
+  expanding cosmologies) but requires the observed redshift to be a genuine
+  null-geodesic effect — whatever produces it must live in the metric's null-cone
+  structure, since the proof rests on the geodesic-deviation/focusing equations. This
+  model's redshift is explicitly not that: premise 4 states photon frequency is
+  literally conserved in flight; $(1+z)$ comes from comparing against a drifting local
+  atomic reference standard, not from any propagation effect. The theorem's hypotheses
+  are not met here, independent of the model's lack of expansion. $D_A$ should instead
+  be built directly from the model's static geometry: $D_A\equiv D_p$ (no $(1+z)$
+  suppression) — see T16's CMB first-peak calculation
+  (`cdot-4/new_tests/Update_2026-07-03_CMB_Etherington_Correction.md`) for the
+  derivation and its consequences. This does not affect $D_L=(1+z)D_p$ above, which is
+  independently derived from clock-rate/flux bookkeeping, not from Etherington
+  reciprocity.

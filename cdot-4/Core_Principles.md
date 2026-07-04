@@ -1,7 +1,19 @@
 # Static VSL Cosmology — Core Principles
 
 *Clean reference document. Contains the results that follow rigorously from the stated
-premises. Disputed or unresolved derivations are tracked in the topic documents T1–T21.*
+premises. Disputed or unresolved derivations are tracked in the topic documents T1–T22.*
+
+***cdot-4 closing note (2026-07-04): the cosmological sector, as constituted by premises
+1+2+4 below, is excluded.*** *The DESI DR2 BAO Alcock–Paczyński test, combined with a
+family-level scan over every horizon-counting law (any exponent, count or mass reading,
+coordinate or proper time), shows no member of this family can reproduce the
+data — because premises 1+2+4 force a single function $c(t)$ to fix both the redshift
+clock and the distance ruler simultaneously (the $D_H=dD_p/dz$ "lock"), and DESI's shape
+cannot be tracked by any one-function model. This is a premise-level exclusion, not a
+parameter problem. See T23 — The Failed Tests for the full record and what survives
+(the connecton local-gravity program, T14/T22, is separable and unaffected). cdot-5
+starts from the task of replacing premise 2 with a structurally different, most likely
+multi-channel mechanism.*
 
 *What this model is. A genuine rival theory to standard cosmology — a real variable-$c$
 cosmology, not GR in disguise. Its firm distinctive results: a finite proper age
@@ -305,12 +317,12 @@ the isotropic vacuum); with invariant $G$, the orbit radius is then also conserv
 
 | Element | Status |
 |---|---|
-| Premises 1, 2, 4 (static geometry, $c\propto N$, quantization) | Core, stable |
+| Premises 1, 2, 4 (static geometry, $c\propto N$, quantization) | **Combination excluded (BAO Alcock–Paczyński, family-level, T23) — the $D_H=dD_p/dz$ lock cannot track DESI DR2. Premise-level, not a parameter fix.** |
 | Premise 3 (invariant $m$ and $G$, both $\propto c^0$) | Core; empirical premises; origins open (T4, T8) |
 | **Invariant $G$ ($G\propto c^0$)** | **LLR-forced; $c^{-2}$ refuted $\times720$ (T8)** |
-| Redshift $1+z = (c_\text{now}/c_\text{emit})^2$ (squared law) | Core, derived (T2) |
-| Horizon law $c(u) = c_0(1+2kR_0^2 u)^{-3/2}$ | Core, stable |
-| Distance $D_{z=1} = 0.1091\,R_\text{now}$ | Core, stable |
+| Redshift $1+z = (c_\text{now}/c_\text{emit})^2$ (squared law) | Core, derived (T2); the redshift *law* itself is not what BAO excludes — see T23 |
+| Horizon law $c(u) = c_0(1+2kR_0^2 u)^{-3/2}$ | **Excluded as sole driver of $D_p(z)$ — DESI DR2 BAO, $\Delta\chi^2=+140$; family-level scan finds no rescuing exponent (T23)** |
+| Distance $D_{z=1} = 0.1091\,R_\text{now}$ | Formula stable; the underlying horizon law it depends on is excluded (T23) |
 | $H^{\text{hor}} \equiv \dot c/c$, $H^{\text{hor}}(u) = H_0^{\text{hor}}/(1+2kR_0^2 u)$ | Core, stable |
 | Frequency scaling $\nu \propto c^2$ | Core; $\epsilon_0\propto c^{-1}$ EM-forced |
 | Proper age $\tau = 3/(2H_0^{\text{obs}}) \approx 21$ Gyr | Resolved (T1) |
@@ -334,7 +346,7 @@ the isotropic vacuum); with invariant $G$, the orbit radius is then also conserv
 | Dynamical selection / ring ejection | **Re-derived under invariant G** as a direct time-steady Lorentz velocity filter; flatness as attractor; attractor convergence open (T14, T17) |
 | Primordial genesis / matter-antimatter | **Speculative** (T13) |
 | Connecton gravity — foam-sea gives Newtonian $1/r$; RAR closure and $a_0$ coefficient substantially derived | **Speculative but materially advanced** (T14) |
-| CMB power spectrum — first-peak plasma self-similarity stands; angular *position* is a decisive quantitative failure (9×–765× short of ℓ₁≈220, robust to branch and recombination redshift, 2026-07-03); higher peaks need PBH wells | **Speculative, sharpest open tension in the program** (T16) |
+| CMB power spectrum — first-peak plasma self-similarity stands; angular *position* projection error fixed ($D_A\equiv D_p$, 1.4× near miss); but the projection fix cannot repair the underlying $c(t)$ history, which BAO independently excludes; the frozen-large cross-check finds $L_\text{CMB}\ne L_\text{BAO}$ by 51% on the model's own mapping | **Superseded by the BAO exclusion — see T23** (T16) |
 | Primordial black holes — candidate for DM, CMB wells, SMBH seeds | **Speculative** (T13, T16) |
 | Galaxy morphology and M-σ — dynamical selection / Lorentz ejection | **Speculative but advanced** — M-σ derived as BTFR through shared $a_0$; $B_c$ baryon-sourced (BH co-tracer); orbital-coherence factor predicts M-σ scatter vs rotational support (T17) |
 | Disk flattening — connecton $B_c$ vertical spring thins disks, spares bulges (two-attractor dichotomy) | **Speculative, new** — sign and O(1) magnitude resolved via ringed-current model; feedback dynamics and $\eta$-normalization open (T19) |
