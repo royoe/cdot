@@ -167,14 +167,55 @@ not a constructed $H(z)$.
 
 ---
 
+## Redshift Drift (Sandage–Loeb) — Recomputed, an Exact Null Result
+
+*From cdot-4's deferred test battery (T23 Part III), which quoted an old-law formula
+that does not carry over. Redone here from scratch for the connectivity law.*
+
+For a source at fixed proper distance $D_p$ (static map — the source does not move),
+light continuously emitted arrives at the observer at coordinate time $t_o$; the
+emission time $t_e(t_o)$ is fixed by $D_p=\int_{t_e}^{t_o}c(t')\,dt'=$const. Using the
+closed form $c(t)=L/(t_*-t)$ (Core Principles §3):
+$$D_p=L\ln\!\left(\frac{t_*-t_e}{t_*-t_o}\right)\quad\Longrightarrow\quad
+\frac{t_*-t_e}{t_*-t_o}=e^{D_p/L}\equiv K\ \ (\text{a constant, independent of }t_o).$$
+The redshift is $1+z(t_o)=(c(t_o)/c(t_e))^2=\left(\frac{t_*-t_e}{t_*-t_o}\right)^2=K^2$
+— **exactly constant in $t_o$**, for any fixed source. Hence
+$$\boxed{\,\dot z\equiv\frac{dz}{dt_o}=0\ \text{identically, at every redshift}\,}$$
+not an approximation and not restricted to low $z$ — a direct, exact consequence of the
+hyperbolic form $c(t)=L/(t_*-t)$ (verified independently via the general Sandage-Loeb
+identity $\dot z=(1+z)H_0^\text{obs}-H_\text{obs}(z)$, which vanishes identically given
+this document's own $H_\text{obs}(z)=H_0^\text{obs}(1+z)$ above — both routes agree).
+
+**A much sharper, cleaner prediction than cdot-4's version.** cdot-4's occupancy law
+gave $\dot z=H_0^\text{obs}(1+z)[1-(1+z)^{1/6}]$ — always negative, no zero crossing,
+but a nonzero magnitude requiring a sensitivity comparison against instrument noise.
+cdot-5's prediction is not "small" or "a different sign" — it is **exactly zero, at
+every redshift, to all orders**. Any confirmed nonzero redshift drift, of either sign,
+at any $z$, directly falsifies this branch of the model; conversely, a null result
+(indistinguishable from zero within instrument error) is a clean pass, distinguishable
+in principle from $\Lambda$CDM's own predicted sign-changing drift (zero crossing near
+$z\approx2.5$) at any redshift where the two differ by more than instrument noise.
+Instruments: ELT-ANDES (2030s–2040s, optical), CHIME/HIRAX 21cm ($z\lesssim2$).
+
+**Caveat.** This result is specific to the post-percolation branch's exact functional
+form; it says nothing about drift measurements reaching past $z_*\approx1.2$ into the
+undetermined pre-percolation regime (T23) — not addressed here.
+
+---
+
 ## Open Questions
 
-- **The cosmic-chronometer clock-choice question**, restated above rather than
-  resolved: which of $H_\tau(z)$ or some other proper-time construction is what a
-  direct $H(z)$ measurement via differential stellar ages (cosmic chronometers) would
-  actually recover in this model? This is a genuinely different observable from BAO's
-  $D_M,D_H$ and needs its own dedicated treatment — not yet done, carried over from
-  cdot-4 without progress.
+- **The cosmic-chronometer clock-choice question — partially resolved.** Using the
+  already-derived $H_\tau(z)/H_\tau(0)=(1+z)^{1/2}$ and $H_\text{obs}(z)/H_\text{obs}(0)
+  =(1+z)$ above: **if** a direct cosmic-chronometer measurement (differential stellar
+  ages) actually recovers $H_\tau(z)$ rather than $H_\text{obs}(z)$ — itself still the
+  open, unresolved half of this question — then chronometer-$H$ and BAO-$H$ must
+  disagree by exactly
+  $$\frac{H_\text{obs}(z)}{H_\tau(z)}=(1+z)^{1/2},$$
+  a distinctive, falsifiable split with no $\Lambda$CDM analogue (there the two agree
+  by construction). This closes the "what's the predicted split" half of the deferred
+  test-battery item (T23 Part III) but not the "which clock does a chronometer actually
+  measure" half, which remains exactly as open as stated above.
 - **A full BAO-data comparison at the level of individual $H(z)$ points** (as opposed
   to the $D_M,D_H$-level fit already done, T23) has not been attempted; whether it
   would sharpen or complicate the clock-choice question above is unknown.

@@ -1,5 +1,15 @@
 # T16 — The CMB Power Spectrum
 
+*Closed 2026-07-05 — see `T24_The_Cosmological_Sector_Closed.md` for the verdict. The
+$R_\text{rec}$/$z_\text{rec}$ split found below (no single photon-sector convention
+gives both a sensible baryon-loading value and a sensible recombination redshift) was
+traced to premises 1/3/4 (static geometry, invariant mass, photon-frequency
+conservation) — not to the counting law — meaning it recurs under every premise-2
+variant tried, including cdot-4's. The cosmological sector is closed pending a
+foundational rethink; this document's content below (through the recombination-physics
+investigation) remains the accurate detailed record and is not edited further, but its
+Open Questions should be read as closed, not as a live to-do list.*
+
 *This is the model's hardest observational constraint. **Session 2026-07-04 update:**
 the "$R\approx680$, self-similar at all epochs" claim below is **retracted** — its
 derivation ("$\rho_b,\rho_\gamma\propto c^2$ identically, so $R$ is epoch-invariant") is
@@ -19,14 +29,14 @@ support) — and **substantially closes both gaps**: the first-peak position mis
 from $7.6\times$ to $\approx1.35\times$, and the peak-height miss drops from
 $\sim400\times$ to $\approx13.5\times$. Still a failure, but a far smaller one, and one
 now built on the model's own established physics rather than an ad hoc analogy or an
-imported $\Lambda$CDM kinematic relation. Full details in §C.*
+imported $\Lambda\text{CDM}$ kinematic relation. Full details in §C.*
 
 ---
 
 ## Observational Background
 
 The Cosmic Microwave Background (CMB) angular power spectrum is the tightest
-quantitative success of $\Lambda$CDM. A six-parameter fit accounts for thousands of
+quantitative success of $\Lambda\text{CDM}$. A six-parameter fit accounts for thousands of
 multipoles at sub-percent residuals. For a static $c(t)$ model with $a=1$, the CMB is
 the hardest test on the table — harder than rotation curves, because the
 baryon-photon acoustic physics is tightly quantitative and cannot be fudged.
@@ -39,11 +49,11 @@ The key features to explain:
    last-scattering surface). The *relative heights* of the peaks encode the
    baryon-to-photon ratio and, crucially, whether pressureless dark matter is present
    before recombination.
-3. **The third-to-first peak height ratio** is $\Lambda$CDM's cleanest argument for
+3. **The third-to-first peak height ratio** is $\Lambda\text{CDM}$'s cleanest argument for
    cold dark matter: photons oscillate; DM does not. The third peak being of
    comparable height to the first requires $\Omega_\text{DM}\approx5\Omega_b$.
 4. **The primordial power spectrum** ($n_s\approx0.96$, nearly scale-invariant),
-   attributed to inflation in $\Lambda$CDM.
+   attributed to inflation in $\Lambda\text{CDM}$.
 
 ---
 
@@ -52,7 +62,7 @@ The key features to explain:
 ### (A) Thermal Origin
 
 **Unaffected by the counting-law change; sharpened by §C's corrected derivation.** In
-$\Lambda$CDM the CMB is hot because $a$ (the scale factor) was small; in this model
+$\Lambda\text{CDM}$ the CMB is hot because $a$ (the scale factor) was small; in this model
 $a=1$ always, so there is no "the universe was smaller and hotter" story available, and
 none is needed. **Recombination is a $c$-threshold-crossing event, not a
 temperature-drop event** — this was cdot-4's original candidate translation, and it
@@ -103,12 +113,12 @@ unchanged, at recombination.
 *Baryon number density $n_b\approx$ const* — forced by $a=1$. Baryon number is
 conserved, and on a static map the proper volume of a comoving region never changes, by
 definition of premise 1. There is no mechanism in this model for $n_b$ to dilute the way
-$n_b\propto(1+z)^3$ does in $\Lambda$CDM (that dilution *is* the definition of volume
+$n_b\propto(1+z)^3$ does in $\Lambda\text{CDM}$ (that dilution *is* the definition of volume
 expansion). So $\rho_b(t)=n_bm_pc(t)^2$ with $n_b,m_p$ genuinely constant — this part of
 the old argument survives, on solid ground.
 
 *Photon temperature $T_\text{eff}(t)\propto c(t)$ — derived, not $T\propto c^2$ and not
-the imported $\Lambda$CDM kinematic relation $T\propto(1+z)^1$.* Two candidates were
+the imported $\Lambda\text{CDM}$ kinematic relation $T\propto(1+z)^1$.* Two candidates were
 considered and rejected before reaching this one:
 
 - **$T\propto c^2$ (the old, retracted convention)** treats a photon's characteristic
@@ -117,11 +127,11 @@ considered and rejected before reaching this one:
   relation $n_\gamma\propto(k_BT/\hbar c)^3$ (from the same mode-density integral that
   gives the radiation constant $a$) means $n_\gamma$ and $T$ are not independent — you
   cannot hold $n_\gamma$ fixed while also imposing $T\propto c^2$ without contradiction.
-- **$T\propto(1+z)^1$ (the standard $\Lambda$CDM "hot bath cooling" relation)** was
+- **$T\propto(1+z)^1$ (the standard $\Lambda\text{CDM}$ "hot bath cooling" relation)** was
   tried and rejected in an earlier pass at this problem (session
   `recombination_radius/`): it correctly diagnoses that the old $T\propto c^2$
   convention gives a *colder* past (backwards — no threshold-crossing possible), but its
-  own fix imports $\Lambda$CDM's adiabatic-expansion argument (phase-space dilution
+  own fix imports $\Lambda\text{CDM}$'s adiabatic-expansion argument (phase-space dilution
   $\propto a^{-3}$ combined with wavelength stretch $\propto a$), a mechanism this
   static ($a=1$) model does not have and does not need. There is no "cooling from a hot
   early bath" here — there is no expansion to cool into.
@@ -149,7 +159,7 @@ either the counting law or anything in this section):
 $$\boxed{\,R_\text{rec}=R_0\,(1+z_\text{rec})^{-1/2}\,}\qquad\Longrightarrow\qquad
 R_\text{rec}=679.8\times(1091)^{-1/2}\approx20.6\quad(z_\text{rec}=1090).$$
 **Neither $680$ nor $\sim5\times10^{-10}$** — a third, distinct, better-grounded value,
-roughly $34\times$ the $\Lambda$CDM-like value real recombination needs ($R\sim0.6$),
+roughly $34\times$ the $\Lambda\text{CDM}$-like value real recombination needs ($R\sim0.6$),
 compared to the old claim's $\sim1130\times$ miss or the rejected relic-cooling
 alternative's $\sim10^9\times$ miss in the other direction.
 
@@ -196,7 +206,7 @@ unchanged by this section) from the **sound speed** ($c_s/c$, set by $R$):
 
 | $R$ | $c_s/c$ | $\ell_1$ |
 |---:|---:|---:|
-| $0.6$ ($\Lambda$CDM-like) | $0.456$ | $81$ |
+| $0.6$ ($\Lambda\text{CDM}$-like) | $0.456$ | $81$ |
 | $6$ | $0.218$ | $170$ |
 | $20.6$ (this document, corrected) | $0.1243$ | $\mathbf{298}$ |
 | $68$ | $0.070$ | $533$ |
@@ -221,7 +231,7 @@ result's own improvement closely (both come from the same corrected $R$).
 **Reframing the verdict.** The corrected $R_\text{rec}\approx20.6$ is derived from this
 model's own established Stefan-Boltzmann $c$-dependence (T18) plus baryon- and
 photon-number conservation (both forced by $a=1$) — not from an ad hoc atomic-transition
-analogy (the retracted $c^2$ convention) and not from an imported $\Lambda$CDM
+analogy (the retracted $c^2$ convention) and not from an imported $\Lambda\text{CDM}$
 adiabatic-cooling relation (the rejected $(1+z)^1$ alternative, `recombination_radius/`
 session). It closes most, though not all, of both the position gap ($7.6\times\to
 1.35\times$) and the height gap ($\sim400\times\to\sim13.5\times$). **The CMB no longer
@@ -242,7 +252,7 @@ recomputed here, flagged as the natural next calculation (Open Questions).
 **The higher-peak requirement, unaffected in statement.** The third-to-first peak
 height ratio still needs a clustered, pressureless component present before
 recombination — gravitating, pressureless, present before recombination, and
-clustered. In $\Lambda$CDM this is cold dark matter. What does this model offer? (See
+clustered. In $\Lambda\text{CDM}$ this is cold dark matter. What does this model offer? (See
 below — unaffected by this section's finding, since it concerns peak heights, not
 position.)
 
@@ -322,7 +332,7 @@ this document.
 **Both headline CMB failures shrank by roughly an order of magnitude** once $R$ was
 rederived from the model's own established physics (T18's Stefan-Boltzmann scaling,
 baryon/photon number conservation) instead of the void "$\rho_b,\rho_\gamma\propto c^2$"
-self-similarity argument or an imported $\Lambda$CDM relic-cooling relation. The
+self-similarity argument or an imported $\Lambda\text{CDM}$ relic-cooling relation. The
 remaining $1.35\times$ (position) and $13.5\times$ (height) misses are real, unresolved
 tensions — the CMB is still the hardest test on the table — but they are no longer the
 $\sim7.6\times$/$\sim400\times$ order-of-magnitude failures that made this look like a
@@ -371,6 +381,31 @@ one still-unclosed subtlety (the mode-density/thermalization reconciliation flag
   \propto c$ replaces the kinematic $T\propto(1+z)$ relation; the $c$-threshold
   crossing condition of §A needs its own, not-yet-worked-out numerical check against
   $z_\text{rec}=1090$).
+- **From cdot-4's deferred test battery (T23 Part III) — CMB temperature-redshift
+  relation ($\beta$ test), needs reconciling with this document's own new result.**
+  cdot-4 claimed the model predicts $T(z)=T_0(1+z)$ exactly ($\beta=0$, matching the
+  observational bound $\beta=0.022\pm0.018$) via an "absorber-transition-frequency"
+  argument — molecular/atomic absorption-line clouds at intermediate redshift measure
+  the *local* CMB radiation field using their *own* epoch-local transition energies,
+  then interpreted through today's lab constants; this could make a physically
+  *constant* bath appear to redshift like $(1+z)$ under the standard drifting-standard
+  mechanism (T2), independent of whether the bath's actual energy content evolves. This
+  is a **different quantity** from what §C above derives ($T_\text{eff}(t)\propto c(t)$,
+  the plasma's own state *at the moment of recombination* — an emission-epoch quantity,
+  not a statement about the bath's temperature at some later intermediate redshift/
+  location as light propagates past an absorber). Whether the absorption-line
+  technique actually probes $T_\text{eff}$ (§C's derived quantity), a genuinely
+  constant bath temperature (if premise 4 + $a=1$ implies photon energy content never
+  changes after decoupling), or the "apparent-redshift-via-drifting-standard" reading
+  cdot-4 assumed, has not been sorted out. **Not resolved here — flagged as this
+  document's own open item, separate from the redshift-drift and PBH questions below.**
+- **From the same battery — Bullet Cluster (1E 0657-56) lensing-baryon offset.**
+  Requires the PBH component to dominate cluster potentials, creating a forced division
+  of labor with the RAR closure's baryon-only fit (T15) that is not reconciled anywhere
+  in T5/T6/T15/T16 — the same structural PBH-halo-vs-baryon-only-RAR tension already
+  flagged (below, "Double-counting with the baryon-only RAR"), now with a specific,
+  checkable observational target (the cluster's measured mass/lensing offset) attached.
+  Not evaluated quantitatively.
 - Does genesis produce PBHs? (T13's own top open question, unaffected in status,
   compounded by the same extrapolation uncertainty noted there.)
 - What is the PBH mass function from genesis? Unaffected, unchanged from cdot-4.

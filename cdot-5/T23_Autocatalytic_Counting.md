@@ -1,5 +1,14 @@
 # T23 — Autocatalytic Counting
 
+*Superseded 2026-07-05 — see `T24_The_Cosmological_Sector_Closed.md` for the verdict.
+The mechanism this document rests on (§3's transitive-reachability $dN/dR=N/L$) was
+subsequently found to be geometrically impossible in flat 3-space at fixed density; the
+proposed replacement (hyperbolic-holographic geometry) fits DESI far worse and does not
+resolve the CMB failure §7 already flagged. This document remains the accurate detailed
+record of what was tried and why (§§0–9) and is not edited below; treat its Open
+Questions (§10) as closed for prioritization purposes, not as a live to-do list — the
+cosmological sector is closed pending a foundational (not premise-2) rethink, per T24.*
+
 *This is premise 2's dedicated home for cdot-5, gathering what was previously scattered
 across four working sessions (`autocatalytic_counting/`, `cz_inversion/`,
 `percolation_break/`) into one document, in the same style as T1–T14. Core Principles

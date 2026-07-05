@@ -234,7 +234,11 @@ standard BBN remains unknown, more clearly so than in cdot-4.
   budget) what the pre-percolation branch's $c(t)$ history actually is at BBN epochs,
   before attempting the abundance calculation. Use T21's $\Gamma_\text{weak}\propto c^4$
   and deuteron-binding $\propto c^2$ scalings as the weak/nuclear inputs once that
-  history is in hand — those inputs themselves are unaffected and ready to use.
+  history is in hand — those inputs themselves are unaffected and ready to use. **This
+  is the same "BBN D/H" item flagged in cdot-4's deferred test battery (T23 Part III):
+  a real light-element-yield calculation (D/H$\approx2.5\times10^{-5}$ observed, the
+  sharpest baryon-density-sensitive abundance) using T21's scalings as inputs. Still
+  undone — the prerequisite above is the reason, not a separate blocker.**
 - **Retired**: the premise-2 fork discriminator (count vs. mass) — moot, the fork
   itself is retired (T12).
 - **New**: does the genesis bootstrap dynamics, worked out explicitly, reach the

@@ -148,6 +148,24 @@ counting-law change.
 
 ---
 
+## The Proton-to-Electron Mass Ratio $\mu$ — A Free, Already-Passed Test
+
+*From cdot-4's deferred test battery (T23 Part III), never previously recorded as a
+passed test anywhere in the repository.*
+
+$\mu\equiv m_p/m_e$ is independently constrained by molecular (ammonia, methanol)
+absorption-line spectroscopy and by laboratory optical-clock comparisons, at the
+$|\Delta\mu/\mu|\lesssim10^{-6}$–$10^{-7}$ level over cosmological baselines and
+$\lesssim10^{-16}$/yr in the lab. In this model, $m_p$ and $m_e$ are **both invariant**
+(premise 3, unchanged since cdot-3), so $\mu=m_p/m_e$ is invariant identically —
+$\Delta\mu/\mu=0$, exactly, at every epoch, trivially inside every existing bound. This
+costs nothing beyond premise 3 (already adopted for other reasons, T4/T8) and is
+unaffected by the counting-law change, the same present-value-physics pattern as every
+other result in this document. Not a derivation exercise — recorded here simply because
+it was never written down anywhere before.
+
+---
+
 ## Open Questions
 
 Unchanged from cdot-4 — none of these are counting-law-sensitive:

@@ -292,8 +292,48 @@ reopens.
 
 ---
 
+## Tolman Surface-Brightness Test — Reclassified from "Non-Discriminating" to Real
+
+*From cdot-4's deferred test battery (T23 Part III), which filed this under "explicitly
+non-discriminating" on the assumption that Etherington reciprocity holds here and the
+result therefore automatically matches $\Lambda$CDM. **That assumption is wrong** —
+Etherington does not apply to this model's non-geodesic redshift (T16/Core Principles
+§4, already adopted), and using the model's own actual $D_A\equiv D_p$, $D_L=(1+z)D_p$
+relations instead of the borrowed $\Lambda$CDM ones gives a different, genuinely
+discriminating prediction.*
+
+Surface brightness of a standard-sized object scales as $\text{SB}\propto
+L/(D_L^2\,\Omega)$ where the subtended solid angle $\Omega\propto(\text{size}/D_A)^2$,
+so $\text{SB}\propto(D_A/D_L)^2$ (size and $L$ cancel for a population of standard
+rulers/candles). In $\Lambda$CDM, Etherington reciprocity ($D_L=(1+z)^2D_A$) gives the
+classic Tolman result $\text{SB}\propto(1+z)^{-4}$.
+
+**In this model**, using $D_A\equiv D_p$ and $D_L=(1+z)D_p$ (both already established,
+Core Principles §4, unaffected by the counting-law change):
+$$\left(\frac{D_A}{D_L}\right)^2=\left(\frac{D_p}{(1+z)D_p}\right)^2=(1+z)^{-2}
+\quad\Longrightarrow\quad\boxed{\,\text{SB}\propto(1+z)^{-2}\,}$$
+— **half the exponent of $\Lambda$CDM's $(1+z)^{-4}$, not the same law "by
+construction."** This is a clean, falsifiable, model-native prediction: standard
+rulers (well-resolved cluster galaxies, e.g. Lubin & Sandage 2001-style programs) should
+show markedly *less* surface-brightness dimming with redshift than $\Lambda$CDM
+predicts, growing to a factor of $(1+z)^2$ difference by $z\sim1$–$2$. Not yet compared
+against any actual measured Tolman-test dataset.
+
+**What remains genuinely non-discriminating** (unaffected by this correction): SN
+light-curve time dilation (any standard redshift mechanism predicts observed-duration
+$\propto(1+z)$, matching data, and does not discriminate this model from $\Lambda$CDM)
+and laboratory $\dot c$-drift searches (the real drift rate is far below any
+achievable lab sensitivity). See `To_Do.md` for the short list of tests not worth
+re-deriving.
+
+---
+
 ## Open Questions
 
+- **New, actionable:** compare the corrected Tolman prediction ($\text{SB}\propto
+  (1+z)^{-2}$, above) against an actual surface-brightness-vs-redshift dataset — not
+  yet done. This is now a real, standalone discriminating test, not a "passes by
+  construction" bookkeeping item.
 - ~~A direct Pantheon+ fit under the connectivity-counting law~~ **Done (2026-07-04):**
   $\Delta\chi^2=+78.8$ on diagonal errors, down from cdot-4's $+195.4$. Next: repeat with
   the full stat+sys covariance matrix (`data/Pantheon+SH0ES_STAT+SYS.cov`) to obtain a

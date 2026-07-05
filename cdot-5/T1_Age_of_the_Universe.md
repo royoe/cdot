@@ -221,3 +221,13 @@ superseded by the connectivity counting law (Core Principles §1).
   itself)? If $L$ runs or a second component enters at high $z$, the age integral above
   would need revisiting for its high-$z$ contribution, which is currently the dominant
   share of the total.
+- **The "old-object" two-sided test (from cdot-4's deferred test battery, T23 Part
+  III), updated.** Any single object robustly dated older than $\Lambda$CDM's $13.8$
+  Gyr total age would falsify $\Lambda$CDM while remaining consistent with this model —
+  the only probe in the program where the model predicts a positive anomaly rather
+  than defending against one. cdot-4 quoted this against its own $21$ Gyr ceiling;
+  cdot-5's ceiling is **$27.9$ Gyr**, an even larger margin. Not yet connected to T20's
+  actual white-dwarf age-ceiling work (a different, unrelated use of "age" in this
+  model — T20 bounds how *young* a massive white dwarf must be; this item is about
+  whether any object is *older* than $\Lambda$CDM allows). No candidate object
+  identified or checked.

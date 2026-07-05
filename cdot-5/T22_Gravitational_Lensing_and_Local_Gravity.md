@@ -352,6 +352,15 @@ boundary.
 7. **Preferred-frame $\alpha_1,\alpha_2$ (§3).** Raw scale $(v/c)^2\approx1.5\times10^{-6}$
    sits an order of magnitude above the $\alpha_2$ bound ($<4\times10^{-7}$); the
    emergent-Lorentz-invariance argument (item 2) is a candidate zero, not a proof.
+   **From cdot-4's deferred test battery (T23 Part III), not yet connected here**: the
+   Secrest et al. quasar-number-count dipole ($\sim4$–$5\sigma$ excess over the
+   kinematic expectation from the solar system's motion) is an independent,
+   observational probe of the *same* preferred-frame question — a genuine excess would
+   need a source, and this model's ontological preferred frame (the static connecton
+   sea, item 2's emergent-Lorentz-invariance candidate notwithstanding) is a natural
+   place to look, in principle a place this model could *outperform* $\Lambda$CDM rather
+   than merely match it. Not evaluated — no quantitative link between the sea's
+   properties and a predicted quasar-dipole amplitude has been worked out.
 8. **Quadrupole radiation coefficient (§3)** — well-posed, uncalculated. (Lense–Thirring
    normalization is now a structural consequence of item 1, §2.2 "Structural bonus.")
 
