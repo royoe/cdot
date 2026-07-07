@@ -31,7 +31,7 @@ relation holds over five decades in baryonic mass with remarkably small scatter
 The MOND acceleration is numerically very close to several combinations of fundamental
 constants:
 $$a_0 \approx \frac{cH_0}{6} \approx 1.2 \times 10^{-10}\ \text{m/s}^2.$$
-Using $H_0 = 70$ km/s/Mpc $= 2.27 \times 10^{-18}$ s$^{-1}$:
+Using $H_0 = 70$ km/s/Mpc $= 2.27 \times 10^{-18}$ $\text{s}^{-1}$:
 $$\frac{cH_0}{6} = \frac{3 \times 10^8 \times 2.27 \times 10^{-18}}{6} \approx 1.14 \times 10^{-10}\ \text{m/s}^2,$$
 which is within $\sim5\%$ of the observed $a_0$. The coefficient $6=3P$ is not a
 numerical near-miss: it is derived from the horizon radius $R_0=6c/H_0$ (Core §4a).
@@ -54,7 +54,7 @@ They give two natural accelerations:
 $$\dot{c}_0 = c_0\,H_0^{\text{hor}} \approx 3.4\times10^{-10}\ \text{m/s}^2,
 \qquad
 c_0\,H_0^{\text{obs}} \approx 6.8\times10^{-10}\ \text{m/s}^2.$$
-The observed MOND scale $a_0 \approx 1.2\times10^{-10}$ m/s$^2$ is of the same order
+The observed MOND scale $a_0 \approx 1.2\times10^{-10}\ \text{m/s}^2$ is of the same order
 as both (a factor $\sim3$ below $\dot c_0$, the lower of the two); the exact value is
 not read off this pair but derived as $g_\dagger=cH_0^{\text{obs}}/6$ from the horizon
 radius $R_0=6c/H_0$ (§"The numerical coincidence"). The model "knows" the MOND scale

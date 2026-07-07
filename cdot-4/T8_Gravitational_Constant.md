@@ -152,6 +152,42 @@ as $G$ varies — it conserves the Moon's angular momentum and does NOT slow Ear
 are therefore genuinely additive, and the tidal contribution cannot be re-attributed to
 cosmological origin without violating Earth-rotation timing.
 
+### Robustness Check: Fully PV-Consistent Mass ($s=-3/2$)
+
+The computation above pairs $G\propto c^{-2}$ (borrowed from PV) with **invariant mass**
+($s=0$) — the model's own adopted premise, not PV's. PV's self-energy scaling actually
+gives $m\propto c^{-3/2}$ ($s=-3/2$). Since a reader could reasonably ask whether the
+$\times720$ tension is an artifact of this mixing rather than a property of $G\propto
+c^{-2}$ itself, here is the fully PV-consistent version, using Core Principles' general
+exponents ($r\propto c^{-(3s+g)}$, §6; $\nu\propto c^{s+2}$, §5a; $H_0^\text{hor} =
+H_0^\text{obs}/(s+2)$, §4a) with $g=-2$:
+
+| Quantity | $s=0$ (as adopted) | $s=-3/2$ (PV mass) |
+|:---------|:-----:|:-----:|
+| Orbital exponent $a=-(3s+g)$ | $2$ | $6.5$ |
+| Clock exponent $b=s+2$ | $2$ | $0.5$ |
+| $H_0^\text{hor}=H_0^\text{obs}/b$ | $35$ km/s/Mpc | $140$ km/s/Mpc |
+| LLR range-rate exponent $(a+b-1)$ | $3$ | $6$ |
+| $T_\text{atomic}$ exponent | $6$ | $12$ |
+
+Two effects compound in the same direction: the exponents roughly double, **and**
+$H_0^\text{hor}$ itself quadruples (since $P=s+2$ shrinks from $2$ to $1/2$). Every
+LLR observable therefore scales up by a factor $2\times4=8$ relative to the $s=0$
+computation:
+
+| Observable | $s=0$ | $s=-3/2$ | Bound | Tension ($s=-3/2$) |
+|:-----------|------:|------:|------:|:-------:|
+| Non-tidal LLR range rate | $41.4$ mm/yr | $331$ mm/yr | $<0.058$ mm/yr | $\times5{,}700$ |
+| Inferred $\dot G/G$ | $-1.08\times10^{-10}$/yr | $-8.6\times10^{-10}$/yr | $<1.5\times10^{-13}$/yr | $\times5{,}760$ |
+
+**Varying mass does not rescue $G\propto c^{-2}$ — it makes the refutation ~8× sharper.**
+The invariant-mass version analyzed above is in fact the *most generous* reading of the
+legacy hypothesis. This is also moot independently: T1 shows $s=-3/2$ gives redshift
+power $P=1/2<2/3$, for which the cosmic-age integral diverges ($\tau_\infty=\infty$) —
+a separate, fatal defect regardless of LLR. So the fully PV-consistent pairing was never
+a live alternative; it is recorded here only as a completeness/robustness check on the
+$\times720$ result.
+
 ---
 
 ## The Model's Choice: Invariant $G$
@@ -218,6 +254,8 @@ required.
 - **Theoretical derivation of invariant mass** — same class of standing debt (T11).
 - ~~**Self-consistent LLR computation** — Done (June 2026)~~: tension was $\times720$ under
   $G \propto c^{-2}$; this result motivated the adoption of invariant $G$.
+- ~~**Robustness check: fully PV-consistent mass ($s=-3/2$)** — Done~~: makes the LLR
+  tension ~8× worse ($\times5{,}760$), not better; independently moot per T1 (diverges).
 - ~~**Local screening mechanism**~~ — **Moot**: $G$ is constant; no variation to screen.
 - ~~**BBN constraint on $G$ at $z \sim 10^{10}$**~~ — **Resolved**: $G_\text{BBN} = G_0$
   under invariant $G$; the $\times10^{10}$ amplification does not occur.
