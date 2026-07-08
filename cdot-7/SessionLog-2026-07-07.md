@@ -475,3 +475,75 @@ msigma/` (ATLAS3D, van de Sande, Belli 2014/2017 tables downloaded), `cdot-7/
 Foundation.md` (§0, §5.7, §6 rewritten; two stale cross-references fixed),
 `cdot-7/ResearchNotes.md` (new §15; Open Threads renumbered to §16; §13/§14 subsection
 numbering bug fixed), this log entry.
+
+---
+
+## Entry 11 — External review triaged and partially incorporated
+
+**Prompt (verbatim):**
+> I have uploaded advice from an unbiased agent having only access to the latest two
+> versions. Found in cdot-7/Advice-1
+> The recommendation to publish outside the VSL framework is something we can
+> consider, but I want to proceed inside the current framework as far as we can before
+> making that decision. Please read the assessment carefully and see if there is
+> something we can incorporate here to further improve later reviews.
+
+**Summary.** Read `Advice-1/CdotRecommendations.md`, an independent review by a
+separate agent with access only to `Foundation.md`/`ResearchNotes.md` as of the
+four-term fit and the first M-σ test — no access to this session's own reasoning.
+Checked the one independently-verifiable claim before trusting anything else: the
+MUSE-DARK III/MIGHTEE-HI citations the reviewer cited (flagging them itself as past its
+knowledge cutoff) match this project's own already-verified citations exactly,
+confirming the reviewer read the real documents rather than inventing specifics.
+
+**Adopted directly into `Foundation.md`:** (1) a "hot dark matter" framing preemption
+in §0 — naming the exact phrase ("this is dark matter, just hot, at the laboratory
+limit") a referee would likely coin given Σmν≈40% of the closure's matter budget,
+plus the honest acknowledgment this inherits HDM's own structure-formation exposure;
+(2) a sharpened one-sentence synthesis in §5.6 of the RAR-vs-mass-census tension
+already implicit in the existing text — Σmν=1.374 eV is where the tug-of-war between
+the two pulls on a0 settles, not a free-standing prediction; (3) a concrete, testable
+hypothesis for §5.7's naive-vs-full-AQUAL M-σ puzzle (R_e cancels exactly in the deep-
+MOND limit but only partially in the full treatment, so R_e measurement noise could
+make the naive formula win by variance alone, not correctness) — with the reviewer's
+proposed mock-catalog test recorded as the concrete next M-σ step, not yet run.
+
+**One independent cross-check performed**: the reviewer's own re-derivation of
+a0(t)=(2λ/3)cH(t) matches `four_term_fit.py`'s `CH0 = (2./3.)*C0*H0` exactly — the same
+coefficient this session's own validation step had caught a bug in (Entry 9). An
+independent derivation landing on the same 2/3 is a genuine secondary confirmation the
+earlier fix was correct.
+
+**One item flagged as dangerous, deliberately not acted on.** The reviewer ranks a BAO
+relative-shape confrontation of the already-fitted late-time H(z) above all remaining
+four-term-fit refinements, arguing it doesn't obviously require the still-missing
+radiation-era closure the way CMB/structure-formation work does. Given this project's
+documented history of catastrophic BAO failures in earlier iterations (cdot-4/cdot-5,
+under a different framework), this was recorded as a real, high-priority, but
+*explicitly not yet authorized* item (`Foundation.md` §6 item 6) pending the author's
+decision, rather than attempted unilaterally.
+
+**The publication-strategy recommendation (classical/FRW-equivalent framing as the
+lead vehicle) was read in full, found coherent, and explicitly deferred per direct
+instruction** — recorded verbatim as `Foundation.md` §6 item 12 so the recommendation
+and the decision to defer it both survive to the next review round, with the
+underlying "does the closure's own dynamics conserve something sensible" question
+reframed into static-frame-native language as a separate item (§6 item 10) answerable
+independent of the presentation decision. Also added §6 item 11 (external-anchor
+re-verification: MUSE-DARK III/MIGHTEE-HI reception, current KATRIN timeline, DESI
+evolving-DE status) as a stated, not-yet-performed to-do.
+
+**Full merge executed.** `Foundation.md` §0, §5.6, §5.7 extended with the three
+adopted items above; §6 gained three new items (10: continuity check, 11:
+external-anchor re-verification, 12: classical-frame presentation, deferred) and item
+6 (perturbation sector) was split to separate the narrower, possibly-tractable BAO
+shape question from the full radiation-era-dependent structure-formation question.
+`ResearchNotes.md` gained new §16 (full triage record: what was checked, what was
+adopted, what was flagged-but-deferred, and why) inserted before "Open Threads"
+(renumbered §16→17, keeping that section last per this project's convention).
+Verified programmatically (no gaps/duplicates) that both documents' section numbering
+remains clean after the insertion.
+
+**Files updated:** `cdot-7/Foundation.md` (§0, §5.6, §5.7, §6 extended — items 10–12
+added, item 6 split), `cdot-7/ResearchNotes.md` (new §16; Open Threads renumbered to
+§17), this log entry.

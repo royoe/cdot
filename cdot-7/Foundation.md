@@ -25,7 +25,14 @@ measured baryon content *only* if relic neutrinos sit at essentially the current
 laboratory mass bound ($\Sigma m_\nu\approx1.37$ eV, right at KATRIN's edge) — a real,
 quantified, externally time-limited escape, not a comfortable one. This is stated here,
 in the opening scope statement, rather than left for §5.6 alone to carry, because it
-bears directly on the document's central claim.
+bears directly on the document's central claim. **Stated plainly rather than left for a
+reader to name first: at that mass, the closure's "no dark matter" claim survives only
+by admitting roughly 40% of its matter budget as hot dark matter in classical-frame
+language** (three quasi-degenerate neutrinos at $\approx0.46$ eV each) — a materially
+weaker claim than "no dark matter at all," and one inheriting hot-dark-matter's own
+historical exposure on structure formation (free-streaming erasure of small-scale
+power), a test this framework cannot yet pose (§0's radiation-era scope limit below;
+§6 item 5).
 
 **Scope reduction from earlier attempts, stated plainly.** This document does not
 attempt to reproduce General Relativity's relativistic predictions (light deflection,
@@ -717,7 +724,15 @@ the joint optimum, and $\Delta\chi^2\approx13$ if $\lambda$ is instead forced to
 own preference. This is a second, separate pull on the same mass-budget conclusion:
 part of why the neutrino escape lands so close to viable is that the fit is choosing a
 higher $a_0$ (hence higher $\rho_0\propto a_0^2$) than the local dynamics data alone
-would pick.
+would pick. **Stated as one sentence, since it is the mechanism behind both numbers
+above, not two coincidences**: the mass census and the local RAR data pull the fit's
+$a_0$ in opposite directions ($\rho_0\propto a_0^2$ rewards a *higher* $a_0$ to close
+the mass budget; RAR alone prefers a *lower* one), and $\Sigma m_\nu=1.374$ eV is where
+that tug-of-war happens to settle — meaning the fitted neutrino mass is not a
+free-standing prediction but partly an artifact of exactly how hard RAR is allowed to
+pull, which the current $\div17.6$ downweighting only approximates (a real per-galaxy
+RAR covariance would change that pull, and therefore could move $\Sigma m_\nu$ off its
+current value in either direction — see §6 item 1).
 
 **Caveats on this specific result, stated so it isn't over-trusted**: a point estimate
 (Nelder-Mead), not a posterior — no confidence interval on $\Sigma m_\nu=1.374$ eV yet;
@@ -821,7 +836,24 @@ deep-MOND asymptotic formula — which the regime check above says should *not* 
 this transition-regime population — nonetheless gives the single lowest raw scatter of
 the three models tried ($0.1185$ dex), better than the theoretically-correct full-AQUAL
 treatment. Not resolved; flagged as a real non-robustness rather than quietly using
-whichever number looks best. (iii) Known, uncorrected systematics: ATLAS3D's
+whichever number looks best. **A concrete, testable hypothesis for it (external
+review, not yet run):** in the deep-MOND limit $\sigma^2=\Gamma\sqrt{GMa_0}$, $R_e$
+cancels out of the prediction exactly; the full-AQUAL treatment reintroduces $R_e$
+twice ($g_\text{bar}=GM/R_e^2$ and $\sigma^2=\Gamma_\text{geo}g_\text{obs}R_e$) with
+only partial cancellation, so if the high-$z$ $R_e$ measurements carry their own
+non-trivial noise (plausible at $\sim0.1$ dex), the naive formula could simply be
+winning by being immune to the noisiest input, not by being more physically correct —
+a lower-variance predictor beating a more-correct one, ordinary behavior when the
+comparison metric is raw scatter. Directly testable without new data: generate mock
+catalogs under the full-AQUAL model, inject realistic $R_e$ measurement noise, and
+check whether the naive formula wins on the mocks too; if so, the puzzle dissolves and
+*supports*, rather than undermines, the full treatment. Recommended as the concrete
+next M-σ step, ahead of IMF cross-normalization or enlarging the $z>1.6$ tail (§6 item
+1). **On the bootstrap significance claimed above**: the $+0.0078$ dex gap it
+certifies is an order of magnitude smaller than the $\sim0.1$–$0.2$ dex IMF systematic
+in (iii) below — the bootstrap measures the gap's internal stability under resampling,
+not its survival against that uncorrected systematic, and should not be read as
+stronger evidence than that. (iii) Known, uncorrected systematics: ATLAS3D's
 stellar-population $M/L$ and the high-$z$ papers' SED-fit $M_\ast$ may not share an
 identical IMF normalization (a plausible $\sim0.1$–$0.2$ dex relative mass offset,
 uncorrected); the three high-$z$ surveys are heterogeneous in instrument, filter, and
@@ -880,9 +912,24 @@ archived with `ResearchNotes.md` §15.)
    (presumably $u_\gamma/c^2$, itself epoch-dependent in coordinate units, raising its
    own questions) — prerequisite to posing BBN, $z_\text{eq}$, or any CMB-era physics.
    Every result in this document is currently scope-limited to $z\ll z_\text{eq}$.
-6. **The perturbation/structure sector** — BAO, CMB anisotropies, growth of structure.
+6. **The perturbation/structure sector** — CMB anisotropies, growth of structure.
    Depends on item 5. The larger early $\hat a_0$ (§5.5) is a helpful direction for
-   early massive-galaxy formation, motivation only, not a result.
+   early massive-galaxy formation, motivation only, not a result. **A narrower,
+   separable question flagged by external review (2026-07-08), not yet acted on**:
+   a BAO *relative-shape* confrontation — comparing the already-fitted late-time
+   $H(z)$/$d_A(z)$ (§2.2, valid to $z\lesssim1.4$ where Pantheon+ reaches) against real
+   BAO distance/expansion-rate measurements out to $z\approx2.33$ (Ly-$\alpha$) — does
+   *not* obviously require the radiation-era closure (item 5) the way CMB anisotropies
+   or a full growth-of-structure treatment do, since it only tests the shape of an
+   already-built late-time trajectory, the same kind of test the SN fit already passes.
+   Deliberately not attempted yet in this document: this project's earlier iterations
+   (cdot-4/cdot-5) suffered decisive, structural BAO failures under different premises
+   (a fixed horizon-counting law unable to track DESI's two-channel shape), and this
+   framework's own late-time $H(z)$ is EdS-shaped to high precision before $z\sim5$ and
+   departs only recently — whether that shape survives contact with real BAO data
+   out to $z\approx2.33$ is genuinely unknown, not pre-judged safe by analogy to the SN
+   result. Recorded as a real, high-priority, but *not yet authorized* next step,
+   pending an explicit decision given that history (see SessionLog Entry 11).
 7. **Relativistic completion.** This framework currently makes no relativistic-level
    predictions (light bending, PPN parameters, perihelion advance) at all — a real
    scope reduction from an earlier iteration, and now more urgent: the lensing-RAR
@@ -896,6 +943,41 @@ archived with `ResearchNotes.md` §15.)
    channel for a choice previously fixed only by galaxy dynamics.
 9. **Justify or replace the homogeneity assumption** (§2.1: particle number density $n$
    constant).
+10. **An internal energy-continuity check of the closure's own dynamical system —
+    flagged by external review (2026-07-08), not yet performed.** The reviewer's
+    framing used a classical-frame Friedmann/continuity-equation language (§3 below),
+    but the underlying question is static-frame-native and does not require adopting
+    that presentation: does the $(\dot R_h,\dot c)$ system of §2.2, together with the
+    effective $\rho_x(z)\equiv$ whatever sources the instability's late-time
+    acceleration, obey *some* sensible energy-bookkeeping relation, or does the
+    instability mechanism silently violate one? This has not been checked in either
+    frame; a referee will ask it in the first paragraph, and it is answerable now,
+    independent of any decision on item 11 below.
+11. **External-anchor re-verification, flagged by external review (2026-07-08), not
+    yet re-checked.** The $a_0(z)$ sector's discriminating power over a free linear
+    law rests on MUSE-DARK III (Ciocan et al. 2026) and MIGHTEE-HI (Vărăşteanu et al.
+    2025) — both already verified by search when first incorporated (§5.5,
+    `ResearchNotes.md` §9), but not re-checked since for subsequent literature
+    reception, and their still-unresolved mutual zero-point discrepancy (§5.5) may
+    have acquired a published resolution. The KATRIN bound's current value and
+    projected tightening timeline (the framework's own stated expiry mechanism, §5.6)
+    and current DESI evolving-dark-energy constraints (a natural comparison point for
+    the instability's transient-phantom behavior, should item 12 below ever be acted
+    on) should also be re-confirmed before any of these numbers are used in a
+    submission-facing document.
+12. **A classical-frame (FRW-equivalent) presentation — received via external review
+    (2026-07-08), explicitly deferred, not rejected.** The reviewer's strongest
+    publication-strategy recommendation is to lead with a classically-framed,
+    phenomenological restatement of this same physics (flat matter-only FRW, an AQUAL
+    condition at the particle horizon replacing the Friedmann constraint,
+    $a_0=\tfrac{2\lambda}{3}cH(t)$, the EdS fixed point's instability as dark energy)
+    as the primary publication vehicle, with the static, varying-$c$ ontology riding
+    behind as a foundations-oriented preprint. **Per explicit author decision
+    (2026-07-08): this framework is to be pursued as far as it will go on its own
+    terms first; the classical-frame presentation question is deferred, not settled,
+    and revisited only once the technical items above are further along.** Recorded
+    here so the recommendation and the decision to defer it are both on record, not
+    lost between review rounds.
 
 **Resolved, recorded for the ledger, not restated as open:** the flux/luminosity sector
 (built, §5.5); the tension between premise 3's mass law and the auxiliary EM assumption

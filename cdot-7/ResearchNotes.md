@@ -927,7 +927,89 @@ directly from the raw ATLAS3D/van de Sande/Belli tables.
 
 ---
 
-## 16. Open Threads Not Yet Reflected in the Foundation
+## 16. External Review Received and Triaged (Advice-1, 2026-07-08)
+
+The author obtained an independent review (`cdot-7/Advice-1/CdotRecommendations.md`),
+prepared by a separate agent with access only to `Foundation.md`/`ResearchNotes.md` as
+of the four-term fit (§14) and the first M-σ test (§15) — no access to this session's
+own reasoning, a genuinely independent read. Triaged rather than merged wholesale:
+checked the one verifiable claim first (the MUSE-DARK III/MIGHTEE-HI citations, which
+the reviewer itself flagged as past its knowledge cutoff and unverifiable) — they
+match this project's own already-verified citations exactly, confirming the reviewer
+read and correctly echoed the existing documents rather than fabricating new specifics.
+
+**Overall assessment, independently confirming rather than merely praising the
+project's own stated practices**: called out the validation-step discipline, the
+adopted-vs-derived flagging, and the CH0-coefficient-bug catch specifically as
+"process quality [that] is itself a publication asset" — useful because it is an
+outside confirmation that the verify-before-merge discipline this project has followed
+throughout is legible to a genuinely fresh reader, not just self-congratulation.
+
+**Three technical contributions adopted directly into `Foundation.md` this round:**
+1. **A "hot dark matter" framing preemption** (§0): the reviewer named the exact
+   phrase a referee would likely coin ("this is dark matter, just hot, at the
+   laboratory limit") given $\Sigma m_\nu=1.374$ eV is $\approx40\%$ of the closure's
+   matter budget — added directly to §0 rather than let a future reader discover it
+   unprompted, along with the honest acknowledgment that this inherits HDM's own
+   historical structure-formation exposure, a test this framework cannot yet pose.
+2. **The RAR/mass-census tension synthesis** (§5.6): the project's own text already
+   contained the pieces (RAR prefers lower $a_0$, the mass term rewards higher $a_0$)
+   but had not stated the mechanism as one sentence — sharpened per the reviewer's
+   exact framing: $\Sigma m_\nu=1.374$ eV is *where the tug-of-war settles*, not a
+   free-standing prediction, and is exactly as reliable as the current $\div17.6$ RAR
+   downweighting approximation that sets how hard RAR is allowed to pull.
+3. **A concrete, testable hypothesis for the M-σ naive-vs-full-AQUAL puzzle** (§5.7):
+   in the deep-MOND limit $R_e$ cancels out of the prediction exactly; the full-AQUAL
+   treatment reintroduces it twice with only partial cancellation, so if high-$z$
+   $R_e$ measurements carry $\sim0.1$ dex of their own noise, the naive formula could
+   simply be winning by being immune to the noisiest input — a lower-variance
+   predictor beating a more-correct one on a scatter metric, not evidence the naive
+   formula is right. Directly testable (mock catalogs under the full model, with
+   injected $R_e$ noise, checked for the same naive-wins artifact) without new data;
+   recorded as the concrete next M-σ step in `Foundation.md` §6 item 1, not yet run.
+
+**One number reused correctly, worth recording as a genuine independent check**: the
+reviewer's own derivation of $a_0(t)=\tfrac{2\lambda}{3}cH(t)$ from this project's
+$a_0=\lambda\dot c_0$ and the already-established $H_0^\text{obs}=\tfrac32\dot
+c_0/c_0$ identity is algebraically consistent with `four_term_fit.py`'s own `CH0 =
+(2./3.) * C0 * H0` — the same coefficient this session's own validation step caught
+a sign/magnitude bug in (§14.2). An independent re-derivation landing on the same
+$\tfrac23$ is a genuine (if secondary) confirmation that the earlier bug fix was
+correct, not merely self-consistent.
+
+**One item flagged as dangerous, deliberately not acted on this round.** The reviewer
+ranks a BAO relative-shape confrontation of the already-fitted late-time $H(z)$ above
+all remaining four-term-fit refinements in danger level, arguing (correctly, on
+inspection) that a *shape* test against BAO distance/expansion-rate data does not
+obviously require the still-missing radiation-era closure the way CMB anisotropies or
+full structure formation do. This project's own history (cdot-4/cdot-5, recorded in
+persistent memory, not restated here) includes a decisive, structural BAO failure
+under a *different* horizon-counting framework — not automatically informative about
+this AQUAL-based framework's own late-time $H(z)$, but reason enough that this was not
+attempted unilaterally. Recorded in `Foundation.md` §6 item 6 as a real, high-priority,
+explicitly *not yet authorized* next step, pending the author's decision.
+
+**One recommendation received and explicitly deferred, per direct author
+instruction, not silently dropped.** The reviewer's primary publication-strategy
+advice — lead with a classically-framed (FRW-equivalent) phenomenological paper rather
+than the static, varying-$c$ ontology — was read in full and is a coherent, well-argued
+case (§3/§7 of the review), but the author's explicit instruction was to pursue the
+current framework as far as it will go on its own terms before making that call.
+Recorded verbatim as `Foundation.md` §6 item 12, with the dictionary and the
+"second Friedmann equation" continuity question reframed there into a static-frame-
+native form (item 10) so the underlying physics question can be checked independent
+of the presentation decision.
+
+**Items from the review not yet actioned, in the reviewer's own priority order**: the
+MCMC posterior on $(\varepsilon_0,\kappa\lambda,\lambda,\Sigma m_\nu)$ (already this
+project's own top item, §6 item 1(i) — the review independently converged on the same
+ranking); a real per-galaxy RAR covariance (§6 item 1(ii)); $H_0$ propagated as a
+systematic (§6 item 1(iii)); the M-σ mock-catalog test above; external-anchor
+re-verification (§6 item 11).
+
+---
+
+## 17. Open Threads Not Yet Reflected in the Foundation
 
 **Resolved by the Fable-1 session (§6–§10 above), retained here only as a record of
 what happened to them, not restated as open:** the flux/luminosity sector (was open
