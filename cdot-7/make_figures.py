@@ -17,8 +17,11 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Fab
 from joint_fit import load_pantheon, SNLike, trajectory, setup, CH0
 
 FIGDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'figures')
-KL, EPS0, MUFORM = 0.307, -0.0678, 'simple'   # real Pantheon+ joint-fit central values
-A0_LOC = 1.2  # SPARC local anchor, 1e-10 m/s^2
+# Four-term joint fit (SN + a0(z) + local RAR + mass census), simple mu:
+KL, EPS0, MUFORM = 0.4355, -0.0909, 'simple'
+LAM = 0.3056                 # -> a0(0) = lambda*CH0
+A0_LOC = LAM * CH0 * 1e10    # the fit's own predicted local a0, in 1e-10 m/s^2 units
+A0_SPARC = 1.20              # SPARC's own canonical value, shown separately for comparison
 
 plt.rcParams.update({'font.size': 10, 'axes.grid': True, 'grid.alpha': 0.3})
 
@@ -102,8 +105,8 @@ ax.set_xscale('log')
 ax.set_xlabel('redshift $z$ (log scale)')
 ax.set_ylabel(r'binned $m_b^\mathrm{corr}$ residual (mag)')
 ax.set_title('cdot-7 vs. real Pantheon+ (1701 SNe, full STAT+SYS covariance)\n'
-             f'joint fit: $\\varepsilon_0={EPS0}$, $\\kappa\\lambda={KL}$, {MUFORM} $\\mu$ '
-             f'($\\Delta\\chi^2=+1.6$ vs $\\Lambda$CDM)')
+             f'four-term fit: $\\varepsilon_0={EPS0}$, $\\kappa\\lambda={KL}$, {MUFORM} $\\mu$ '
+             f'(SN sector $\\Delta\\chi^2=+2.0$ vs $\\Lambda$CDM)')
 ax.legend(loc='upper left', fontsize=8.5, framealpha=0.9)
 fig.tight_layout()
 fig.savefig(os.path.join(FIGDIR, 'cdot7_hubble_diagram.svg'))
@@ -122,7 +125,7 @@ fig, ax = plt.subplots(figsize=(6.5, 4.5))
 ax.plot(zg2, a0_const, color='0.5', lw=1.8, ls=':', label='constant $a_0$ (standard MOND) — excluded')
 ax.plot(zg2, a0_fixed, color='#d62728', lw=1.8, ls='--',
         label=r'naive fixed-point law $\propto(1+z)^{3/2}$ — excluded')
-ax.plot(zg2, a0_traj, color='#1f77b4', lw=2.4, label='joint-fit trajectory (this framework)')
+ax.plot(zg2, a0_traj, color='#1f77b4', lw=2.4, label='four-term joint-fit trajectory (this framework)')
 
 # MUSE-DARK III (Ciocan et al. 2026): quantile bins + global point
 z1, z2, zmid = 0.33, 1.44, 0.885
@@ -136,14 +139,18 @@ ax.plot([z1, z2], [1.99, 2.71], 'x', color='#2ca02c', ms=9,
 ax.errorbar([0.05], [1.69], yerr=[[0.13], [0.13]], fmt='s', color='#9467bd', ms=7,
             capsize=4, zorder=5, label=r'MIGHTEE-HI, $z<0.08$ (Varasteanu et al. 2025)')
 
-# SPARC local anchor
-ax.errorbar([0.0], [A0_LOC], yerr=0.26, fmt='*', color='black', ms=12, zorder=5, capsize=4,
-            label='SPARC local anchor ($z\\approx0$)')
+# SPARC canonical value (independent RAR-based local calibration) vs. this fit's own
+# predicted local a0 -- shown as two distinct points, since they now visibly differ
+ax.errorbar([0.0], [A0_SPARC], yerr=0.26, fmt='*', color='0.4', ms=11, zorder=4, capsize=4,
+            label='SPARC canonical value ($z\\approx0$, independent of this fit)')
+ax.errorbar([0.0], [A0_LOC], yerr=0.0, fmt='*', color='#1f77b4', ms=13, zorder=5,
+            label='this fit\'s own predicted $a_0(0)$')
 
 ax.set_xlabel('redshift $z$')
 ax.set_ylabel(r'$a_0(z)$  [$10^{-10}\ \mathrm{m/s^2}$]')
 ax.set_title('cdot-7: evolving MOND scale $a_0(t)=\\lambda\\dot c(t)$ vs. observation\n'
-             f'(joint Pantheon+ / $a_0(z)$ fit: $\\kappa\\lambda={KL}$, $\\varepsilon_0={EPS0}$)')
+             f'(four-term fit: $\\kappa\\lambda={KL}$, $\\varepsilon_0={EPS0}$, '
+             f'$\\lambda={LAM}$, incl. real SPARC RAR + mass census)')
 ax.legend(loc='upper left', fontsize=8, framealpha=0.9)
 ax.set_xlim(-0.03, 1.6)
 ax.set_ylim(0, 3.2)

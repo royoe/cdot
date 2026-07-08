@@ -18,12 +18,14 @@ Milgrom's AQUAL, with the modification's characteristic acceleration scale tied 
 same cosmological quantity. The goal remains a framework capable of producing MOND-like
 dynamics (flat rotation curves, the radial acceleration relation, the M-σ relation) and
 late-time cosmic acceleration without separate dark-matter or dark-energy sectors.
-**This "no dark matter" claim is currently conditional, not settled**: §5.6 finds the
-cosmological closure itself demands a mass density $2$–$3\times$ the directly measured
-baryon content, with only a narrow, externally time-limited escape (laboratory-bound
-relic neutrino mass) currently available. This is stated here, in the opening scope
-statement, rather than left for §5.6 alone to carry, because it bears directly on the
-document's central claim.
+**This "no dark matter" claim is currently conditional, not settled**: §5.6's four-term
+fit against real data (Pantheon+, local RAR, and published $a_0(z)$ measurements) finds
+the cosmological closure demands a mass density that closes against the directly
+measured baryon content *only* if relic neutrinos sit at essentially the current
+laboratory mass bound ($\Sigma m_\nu\approx1.37$ eV, right at KATRIN's edge) — a real,
+quantified, externally time-limited escape, not a comfortable one. This is stated here,
+in the opening scope statement, rather than left for §5.6 alone to carry, because it
+bears directly on the document's central claim.
 
 **Scope reduction from earlier attempts, stated plainly.** This document does not
 attempt to reproduce General Relativity's relativistic predictions (light deflection,
@@ -46,7 +48,7 @@ $a_0$ to arbitrarily clumped, structured systems are not in tension — they do 
 jobs. Homogeneity is used *only* to compute the single background number $a_0(t)$ from
 the horizon-scale closure; premise 4 then imports that number as an external constant
 into ordinary, local equilibrium dynamics, exactly as standard MOND uses $a_0$,
-regardless of how anisotropic the local mass distribution is. RAR, BTFR, and M-σ (§5.5)
+regardless of how anisotropic the local mass distribution is. RAR, BTFR, and M-σ (§5.7)
 are consequently all **equilibrium-dynamics tests of already-formed, virialized
 systems**: each takes $a_0(z)$ as given and asks how one system's internal dynamics
 respond to it. This is categorically different from asking how density perturbations
@@ -199,51 +201,71 @@ $j\equiv c\ddot c/\dot c^2$; the fixed point gives $j=\tfrac54,\ q_0=+\tfrac12$
 (consistent with the EdS correspondence, §5.5), and at linear order
 $q_0=\tfrac12+\varepsilon_0(\nu_*+2)/\nu_*^2$.
 
-**Result against real data (the working cosmology of this document).** Fit jointly
-against the actual Pantheon+ compilation (1701 SNe, full published STAT+SYS covariance,
+**First pass against real data: SN + $a_0(z)$ only, $\kappa=1$.** Fit jointly against
+the actual Pantheon+ compilation (1701 SNe, full published STAT+SYS covariance,
 $z_\text{HD}>0.01$ cut leaving 1590 SNe, absolute-magnitude/$H_0$ offset analytically
-marginalized so only the shape is tested) and the published $a_0(z)$ constraints (§5.5)
-jointly, with $\kappa=1$ (simple interpolating function):
-$$\varepsilon_0=-0.0678,\qquad \kappa\lambda=0.307,\qquad q_0=-0.56,\qquad
-\text{age}=12.8\ \text{Gyr (up from 9.3 on the fixed point)}.$$
-The pipeline was validated first: run on flat $\Lambda$CDM alone, it returns
-$\Omega_m=0.331\pm0.018$, $\chi^2=1403.7$ — reproducing the published Pantheon+ SN-only
-result ($0.334\pm0.018$) to a third of a sigma. At the joint best fit, the framework's
-own SN shape costs only $\Delta\chi^2_\text{SN}=+1.6$ relative to that $\Lambda$CDM
-fit (equal parameter count on the SN side), while the $a_0(z)$ sector — rigid, sharing
-the same $\varepsilon_0,\kappa\lambda$ with no per-survey freedom — is described at
+marginalized so only the shape is tested) and the published $a_0(z)$ constraints (§5.5),
+with $\kappa=1$ (simple interpolating function): $\varepsilon_0=-0.0678$,
+$\kappa\lambda=0.307$, $q_0=-0.56$, age $=12.8$ Gyr. The pipeline was validated first:
+run on flat $\Lambda$CDM alone, it returns $\Omega_m=0.331\pm0.018$, $\chi^2=1403.7$ —
+reproducing the published Pantheon+ SN-only result ($0.334\pm0.018$) to a third of a
+sigma. At this joint best fit, the SN shape costs only $\Delta\chi^2_\text{SN}=+1.6$
+relative to that $\Lambda$CDM fit, while the $a_0(z)$ sector is described at
 $\chi^2=6.5$ for four constraints, against $\chi^2=20.0$ for the best *free linear*
-$a_0(z)$ law fit to the same points. The history is EdS to $0.1\%$ before $z\sim5$ and
-departs recently; today's operating point has slid from $x_*=2.44$ to $x_0\approx1.5$–
-$1.6$. (Reproduced end-to-end by `joint_fit.py`, archived with `ResearchNotes.md`;
-pipeline validation and every fit number independently re-run before merging.) The
-standard interpolating function fits distinctly worse once the $a_0$ sector is included
-($\Delta\chi^2=42$ jointly) — on the SN data alone the two $\mu$-forms are nearly
-degenerate, so it is the $a_0$ data, not the SN shape by itself, that discriminates
-$\mu$ (§6 item 8).
+$a_0(z)$ law. This result is superseded by the four-term fit below, which folds in two
+more real datasets rather than leaving them for later.
 
-**Freeing the local amplitude measures $\kappa$ directly.** Letting the $a_0$
-normalization float rather than fixing $\kappa=1$, the joint data prefer a local
-$a_0=1.39\times10^{-10}$ m/s² — between SPARC's canonical $1.20\pm0.26$ and MIGHTEE-HI's
-$1.69\pm0.13$, i.e. arbitrating that zero-point dispute rather than being tuned to
-either — giving $\kappa\approx1.01$: the coefficient assumed unity by fiat above comes
-out empirically unity. This is not fully self-consistent yet with §5.5's mass-census
-check below, which anchors $a_0$ to SPARC's value specifically for that comparison;
-reconciling which $a_0$ anchor is correct is part of the still-open decisive fit
-(§6 item 1).
+**The decisive four-term fit: adding the real local RAR shape and the mass census.**
+Extending the same trajectory machinery with two more likelihoods — the actual SPARC
+radial-acceleration-relation data (McGaugh, Lelli & Schombert 2016, *PRL* 117, 201101;
+2693 points from 153 galaxies, downloaded directly, not a summary statistic) and the
+mass-census term of §5.6, with $\Sigma m_\nu$ a bounded nuisance parameter — and fitting
+$(\varepsilon_0,\kappa\lambda,\lambda,\Sigma m_\nu)$ jointly gives, for the simple
+interpolating function (still preferred over the standard one, $\Delta\chi^2\approx13$):
+$$\varepsilon_0=-0.0909,\quad\kappa\lambda=0.4355,\quad\lambda=0.3056\ (\kappa\approx1.43),
+\quad\Sigma m_\nu=1.374\ \text{eV},$$
+giving $a_0(0)=1.39\times10^{-10}$ m/s², $q_0=-0.44$, age $=12.9$ Gyr. This is now the
+framework's working cosmology, superseding the SN+$a_0(z)$-only numbers above. **Validated
+before being trusted**: switching the two new terms off exactly reproduces the SN+$a_0(z)$
+result above (to numerical precision); the optimum is identical from four widely
+different starting points (a genuine minimum, not an artifact); an intermediate sign
+error of the author's own ($a_0=\lambda\dot c_0$ requires the coefficient $\tfrac23$,
+not $\tfrac32$) was caught by the first check failing and fixed before any number below
+was trusted. Full breakdown, and what the $\Sigma m_\nu=1.374$ eV finding actually means,
+is in §5.6 — it is the single most consequential number this fit produces. (Reproduced
+end-to-end by `four_term_fit.py`, archived with `ResearchNotes.md` §14.)
+
+**A caveat that matters as much as the headline number.** RAR data alone prefers
+$a_0\approx1.26\times10^{-10}$ m/s² — lower than the joint fit's $1.39$. Forcing
+$\lambda$ to RAR's own preference costs $\Delta\chi^2=+13.4$; the RAR sector's own
+excess at the joint optimum over its unconstrained best is $+7.0$. The four sectors
+(SN shape, $a_0(z)$ evolution, local RAR, mass census) are not in perfect mutual
+agreement — a real, quantified tension, not hidden by quoting only the best-fit point.
+This fit is also a **point estimate, not a posterior** (no MCMC yet), and RAR's 2693
+points are treated as statistically independent when they are not (multiple radii per
+galaxy share systematics) — downweighted by the point-to-galaxy ratio ($\approx17.6$)
+as an approximate correction, not a full per-galaxy covariance treatment. $H_0$ remains
+fixed at 70 km/s/Mpc throughout, not fit.
+
+The standard interpolating function fits distinctly worse once the $a_0$ sector is
+included ($\Delta\chi^2=42$ at the SN+$a_0(z)$ level, $\approx13$ once RAR and the mass
+census are added too) — on the SN data alone the two $\mu$-forms are nearly degenerate,
+so it is the $a_0$-sector and RAR data, not the SN shape by itself, that discriminates
+$\mu$ (§6 item 8). The history is EdS to within a fraction of a percent before $z\sim5$
+and departs recently; today's operating point has slid from $x_*=1.72$ to $x_0\approx1.10$.
 
 ![](../figures/cdot7_hubble_diagram_data.svg)
-*Figure: the raw Hubble diagram — real Pantheon+ magnitudes (binned) and both model
-curves together, before looking at residuals. The joint-fit trajectory and the exact-EdS
-fixed point are visually close over most of the range; the next figure shows where and
-by how much they actually differ. Generated by `cdot-7/make_figures.py`, built on
-`joint_fit.py`.*
+*Figure: the raw Hubble diagram (four-term fit) — real Pantheon+ magnitudes (binned) and
+both model curves together, before looking at residuals. The joint-fit trajectory and
+the exact-EdS fixed point are visually close over most of the range; the next figure
+shows where and by how much they actually differ. Generated by `cdot-7/make_figures.py`,
+built on `four_term_fit.py`'s trajectory.*
 
 ![](../figures/cdot7_hubble_diagram.svg)
 *Figure: the same comparison in residual form — binned differences against the real
 Pantheon+ compilation (1701 SNe, full covariance), not a smooth proxy curve. The
-framework's joint fit (zero line, by construction of the fit) tracks the data at
-$\Delta\chi^2=+1.6$ relative to $\Lambda$CDM; the exact-EdS fixed point (dashed)
+framework's four-term fit (zero line, by construction of the fit) tracks the data at
+$\Delta\chi^2=+2.0$ (SN sector) relative to $\Lambda$CDM; the exact-EdS fixed point (dashed)
 diverges at high $z$, reproducing EdS's own well-known SN Ia failure — the divergence
 visible here is easy to miss in the raw magnitudes above. Generated by
 `cdot-7/make_figures.py`, built on `joint_fit.py`.*
@@ -430,19 +452,21 @@ a local coupling in premise 3's sense — it is cosmological data ($\dot c$) imp
 local dynamics. Every genuinely distinguishable prediction this framework makes flows
 through $a_0(t)$: the evolving radial-acceleration-relation scale
 $\hat a_0(z)$ (§5.5, now confronted with data), the resulting evolution of the BTFR and
-M-σ zero points (§5.5), and (§2.2) the late-time cosmic acceleration itself, once the
+M-σ zero points (§5.7), and (§2.2) the late-time cosmic acceleration itself, once the
 closure is built self-consistently with this same $a_0$.
 
-**Numerically**, $\kappa$ and $\lambda$ are no longer independently free: the joint
-Pantheon+/$a_0(z)$ fit (§2.2) pins $\kappa\lambda=0.307$, and $a_0$'s empirical value
-then fixes the split. Two conventions have both been used and need to be told apart
-(§5.3 states the rule): letting $a_0$ float in the fit gives $a_0=1.39\times10^{-10}$
-m/s², $\kappa\approx1.01$ — the coefficient assumed unity by fiat comes out essentially
-unity, unforced; anchoring $a_0$ instead to SPARC's own local value ($1.20\pm0.26$,
-used specifically for the mass-census check in §5.5) gives $\lambda\approx0.265$,
-$\kappa\approx1.16$. The two differ because SPARC alone is not the fit's own preferred
-global value — reconciling which anchor is correct is explicitly part of the still-open
-decisive fit (§6 item 1), not yet settled.
+**Numerically**, $\kappa$ and $\lambda$ are no longer independently free, and — unlike
+an earlier pass through this document — no longer split across two competing
+conventions either. The four-term fit (§2.2) fits $(\kappa\lambda,\lambda)$ jointly
+against the real SN, $a_0(z)$, local RAR, and mass-census data all at once, rather than
+anchoring $a_0$ to any single external number after the fact: $\kappa\lambda=0.4355$,
+$\lambda=0.3056$, giving $\kappa\approx1.43$ and a predicted local
+$a_0=1.39\times10^{-10}$ m/s² — close to, but a genuine $\sim16\%$ above, the SPARC RAR
+data's own preferred value ($\approx1.26\times10^{-10}$) when that data is fit on its
+own. This is not a discrepancy hidden by the joint fit; it is a real, quantified tension
+(§5.6) between what the local RAR data wants and what the combination of SN shape,
+$a_0(z)$ evolution, and the mass budget wants — the price of using every constraint at
+once instead of picking a convention.
 
 **What this does not yet do.** AQUAL is a non-relativistic theory. It does not, by
 itself, guarantee correct relativistic-level predictions (light bending, PPN
@@ -500,23 +524,23 @@ $H_0^\text{obs}=\tfrac32\dot c_0/c_0$ holds exactly on any solution of the dynam
 system, $a_0=\tfrac23\lambda c_0H_0^\text{obs}$ regardless of $\varepsilon_0$ — a
 calibration made anywhere on the trajectory survives the closure rebuild untouched.
 
-**Two conventions for $\lambda$ are in use and must be kept straight (§4).** Fit
-directly (letting the joint fit's own local-$a_0$ normalization float): $a_0=1.39\times
-10^{-10}$ m/s², $\kappa\approx1.01$ — arbitrating between SPARC and MIGHTEE-HI rather
-than being anchored to either. Anchored instead to SPARC's own value specifically (used
-for the mass-census check below, §5.5, where comparing against an independent baryon
-census makes it important not to use a number this same fit re-derives): $\lambda
-\approx0.265$, $\kappa\approx1.16$. **Both are legitimate readings of the same fit; they
-are not yet reconciled**, and the gap between them (a factor of $\sim1.15$ in $a_0$) is
-exactly the kind of thing the decisive four-term fit (§6 item 1) needs to settle,
-by carrying $a_0$ as a properly marginalized parameter with its own empirical prior
-rather than fixed to either single number.
+**The earlier two-convention ambiguity is resolved by the four-term fit (§2.2, §5.6),
+not by picking one.** Carrying $a_0$ as a genuine fit parameter, marginalized jointly
+against the real SN, $a_0(z)$, local RAR, and mass-census data at once, gives a single
+number: $\lambda=0.3056$, $\kappa\approx1.43$, $a_0(0)=1.39\times10^{-10}$ m/s². This
+happens to sit close to what an earlier pass's "let $a_0$ float, SN+$a_0(z)$ only" fit
+found ($1.39\times10^{-10}$, $\kappa\approx1.01$) — reassuring, since the two are
+different calculations sharing only the SN and $a_0(z)$ data — but it is *not* the same
+as the local RAR data's own preferred value fit on its own ($\approx1.26\times10^{-10}$,
+§5.6): the four-term fit sits $\sim16\%$ above what RAR alone wants, at a cost of
+$\Delta\chi^2\approx7$ above RAR's own minimum. That gap is real and reported, not
+smoothed over by quoting only the joint number.
 
 Numerically, without leaning on it: $\lambda\approx\tfrac32\cdot\tfrac1{2\pi}\approx0.24$
 — i.e. $a_0\approx c_0H_0^\text{obs}/2\pi$, the long-standing MOND numerology — sits
-within the spread above. Recorded as numerology, not a result; §2.2's closure gives
-$\lambda$ a genuine mechanism to attach to, but does not itself derive its value
-(§6 item 4).
+close to, but below, the fitted value. Recorded as numerology, not a result; §2.2's
+closure gives $\lambda$ a genuine mechanism to attach to, but does not itself derive its
+value (§6 item 4).
 
 ### 5.4 The lockstep shrinkage is unobservable locally — but only in the Newtonian sector
 
@@ -562,15 +586,18 @@ negative only for $s>2$, which contradicts the kinematic $\dot R_h=c>0$. The fai
 structural to a pure power-law closure, not a tunable artifact — which is exactly what
 motivated §2.2's AQUAL-consistent repair.
 
-**The working cosmology (§2.2's fitted trajectory) is fit against real data.** With
-$\varepsilon_0=-0.0678,\ \kappa\lambda=0.307$ (simple $\mu$, real Pantheon+ joint fit):
-$q_0=-0.56$, age $=12.8$ Gyr (marginally consistent with globular-cluster ages,
-$\approx12.5$–13 Gyr, still below $\Lambda$CDM's 13.8), costing only
-$\Delta\chi^2_\text{SN}=+1.6$ relative to $\Lambda$CDM at equal parameter count on the
-SN side. **This supersedes an earlier pass's fit to a theoretical $\Lambda$CDM proxy
-curve** — the pipeline was validated first by reproducing the published Pantheon+
-SN-only result exactly (§2.2). The remaining empirical work is the four-term extension
-(local RAR shape plus the mass census, §5.6) — the framework's top open item (§6 item 1).
+**The working cosmology (§2.2's fitted trajectory) is fit against real data.** The
+current working numbers are the four-term fit's — $\varepsilon_0=-0.0909,\
+\kappa\lambda=0.4355,\ \lambda=0.3056$ ($\kappa\approx1.43$), simple $\mu$, real
+Pantheon+ joint fit together with the local RAR shape and the mass census (§2.2, §5.6):
+$q_0=-0.44$, age $=12.9$ Gyr (consistent with globular-cluster ages, $\approx12.5$–13
+Gyr, still below $\Lambda$CDM's 13.8), costing only $\Delta\chi^2_\text{SN}=+2.0$
+relative to $\Lambda$CDM at equal parameter count on the SN side. **This supersedes both
+an earlier pass's fit to a theoretical $\Lambda$CDM proxy curve and the SN+$a_0(z)$-only
+three-term pass** ($\varepsilon_0=-0.0678,\ \kappa\lambda=0.307$) — the pipeline was
+validated at each stage by reproducing, first, the published Pantheon+ SN-only result
+exactly, and second, the three-term result exactly before trusting the two new terms
+(§2.2). What remains is tightening this fit, not extending it further — see §6 item 1.
 
 **Standard candles are exactly standard — no astrophysical escape from the EdS
 degeneracy.** The Chandrasekhar mass, $M_\text{Ch}\propto(\hbar c/G)^{3/2}/m_H^2\propto
@@ -596,52 +623,47 @@ and molecular-absorber measurements), $\hat n_\gamma\propto(1+z)^3$,
 $\hat u_\gamma\propto(1+z)^4$ — the complete background thermal phenomenology of an
 expanding universe, reproduced by a static, shrinking-ruler description.
 
-**A falsifiable, near-parameter-free prediction: the RAR scale evolves.** In local
-units, $\hat a_0(z)$ is computed directly from §2.2's real-data joint-fit trajectory
-(not the naive fixed-point $(1+z)^{3/2}$, which the trajectory's own slide toward
-deep-MOND suppresses):
-$$\hat a_0(z)/\hat a_0(0) = 1.44,\ 2.03,\ 2.24,\ 2.91\quad\text{at } z=0.33,\ 0.85,\ 1.00,\ 1.44,$$
-fixed by the *same* $\varepsilon_0,\kappa\lambda$ already fitted jointly to the SN
-Hubble diagram and this same $a_0(z)$ data (this is now a fit result, not an
-independent prediction checked afterward — see the caveat below). **The measurement
-this curve is fit against**: MUSE-DARK III (Ciocan et al. 2026, *A&A* 709, L16; 79
-star-forming galaxies, $0.33<z<1.44$) finds $a_0(z\sim1)=2.38^{+0.12}_{-0.10}\times
-10^{-10}$ m/s² and a global slope $a_1=1.59^{+0.11}_{-0.10}\times10^{-10}$ m/s² (95%
-CI) — a detected evolution that by itself excludes standard (constant-$a_0$) MOND, and
-which the joint fit above describes at $\chi^2=6.5$ for four constraints against
-$\chi^2=20.0$ for the best free linear law. An independent measurement at $z<0.08$
-(Vărăşteanu et al. 2025, MIGHTEE-HI, $a_0=1.69\pm0.13\times10^{-10}$) is itself
-inconsistent with *any* smooth evolution anchored to the local (SPARC) value, including
-MUSE-DARK's own fit extrapolated backward — indicating $\gtrsim0.3$–$0.5\times10^{-10}$
-zero-point offsets between surveys and methodologies, which the joint fit's own
-residuals (SPARC $0.7\sigma$, MIGHTEE $2.1\sigma$, MUSE amplitude/slope
-$\approx1\sigma$) sit inside.
+**A falsifiable prediction: the RAR scale evolves — now a four-term fit result, not a
+blind check.** In local units, $\hat a_0(z)$ is computed from the four-term fit's own
+trajectory (§2.2; not the naive fixed-point $(1+z)^{3/2}$, which the trajectory's slide
+toward deep-MOND suppresses):
+$$\hat a_0(z)/\hat a_0(0) = 1.69,\ 2.35,\ 2.57,\ 3.30\quad\text{at } z=0.33,\ 0.85,\ 1.00,\ 1.44,$$
+fixed by the *same* $(\varepsilon_0,\kappa\lambda,\lambda)$ already fitted jointly to
+the SN diagram, the local RAR, and the mass census — this curve is a fit result across
+all four datasets at once, not an independent prediction checked afterward. **The
+measurement this is fit against**: MUSE-DARK III (Ciocan et al. 2026, *A&A* 709, L16;
+79 star-forming galaxies, $0.33<z<1.44$) finds $a_0(z\sim1)=2.38^{+0.12}_{-0.10}\times
+10^{-10}$ m/s² and slope $a_1=1.59^{+0.11}_{-0.10}\times10^{-10}$ m/s² (95% CI) — a
+detected evolution excluding standard constant-$a_0$ MOND outright. An independent
+measurement at $z<0.08$ (Vărăşteanu et al. 2025, MIGHTEE-HI, $a_0=1.69\pm0.13\times
+10^{-10}$) is itself inconsistent with *any* smooth evolution anchored to the local
+(SPARC) value, including MUSE-DARK's own fit extrapolated backward — indicating
+$\gtrsim0.3$–$0.5\times10^{-10}$ zero-point offsets between surveys, which the fit's own
+$a_0(z)$-sector residual ($\chi^2=11.5$ for three constraints — MIGHTEE and the two
+MUSE points, SPARC's own summary point now retired in favor of fitting the full RAR
+dataset directly, §5.6) sits inside without strain.
 
-**Caveat, stated plainly.** Because $\varepsilon_0,\kappa\lambda$ are now fit to the
-$a_0(z)$ data directly rather than fixed by the SN diagram alone, this is a
-*joint description*, not the independent, blind confirmation an earlier pass through
-this document reported (where the SN-only $\varepsilon_0$ was checked against $a_0(z)$
-data not used to fit it, and landed at $\approx85\%$ of the measured amplitude with the
-naive law overshooting to $a_1^\text{eff}=2.46$ — the same qualitative story, less
-tightly coupled). Both are legitimate; the earlier, blind version is the more
-conservative claim, and the current joint fit is the more decisive one, since it is the
-version the four-term extension below builds on directly.
-
-The decisive test — a joint fit of the SN compilation, binned $a_0(z)$ across surveys
-with zero-point nuisances, the local RAR shape (not just its amplitude), and the mass
-census (§5.6), over $(\varepsilon_0,\kappa\lambda,\lambda)$ jointly with $\Sigma m_\nu$
-as a bounded nuisance — has not yet been run (§6 item 1); after the SN+$a_0$ fit this
-framework retains essentially one shape degree of freedom, so that test can genuinely
-fail it.
+**What changed from an earlier pass through this document, stated so the earlier,
+more conservative claim isn't lost.** An earlier three-term fit (SN+$a_0(z)$ only,
+$\S2.2$) reported the *same qualitative result* — $\approx85\%$ of the measured
+amplitude, with the naive unsuppressed law overshooting to $a_1^\text{eff}=2.46$ — as a
+genuinely blind check, since that fit never saw the $\hat a_0(z)$ data it was compared
+against. The four-term number above is not blind in that sense (RAR and the $a_0(z)$
+data are now both inputs to the same fit), but it is the more complete and decisive
+description, since it is self-consistent with the local RAR shape and the mass budget
+at the same time — which the three-term fit was not required to be.
 
 ![](../figures/cdot7_a0_evolution.svg)
 *Figure: the evolving MOND scale, three hypotheses vs. data. Constant $a_0$ (dotted)
 is excluded outright by the detected evolution; the naive, unsuppressed fixed-point law
-(dashed) overshoots badly; the joint-fit trajectory (solid) describes the data at
-$\chi^2=6.5$ for four constraints. Data: MUSE-DARK III (Ciocan et al. 2026, circle and
-global-fit crosses) and MIGHTEE-HI (Vărăşteanu et al. 2025, square), whose mutual
-inconsistency at low $z$ indicates the cross-survey systematic floor discussed in the
-text. Generated by `cdot-7/make_figures.py`, built on `joint_fit.py`.*
+(dashed) overshoots badly; the four-term joint-fit trajectory (solid) — now including
+the real local RAR shape and the mass census, not just the SN diagram — sits above the
+data at low-to-mid $z$ because the fit is pulled upward by the mass-budget requirement
+(§5.6). Data: MUSE-DARK III (Ciocan et al. 2026, circle and global-fit crosses) and
+MIGHTEE-HI (Vărăşteanu et al. 2025, square); the two star markers show the fit's own
+predicted $a_0(0)$ against SPARC's independent canonical value, whose gap is the RAR
+tension discussed in §5.3/§5.6. Generated by `cdot-7/make_figures.py`, built on
+`four_term_fit.py`'s trajectory.*
 
 ### 5.6 The closure density problem — the framework's sharpest current internal tension
 
@@ -659,62 +681,82 @@ value, $(x_0,\mu_0)$ by the SN+$a_0$ joint fit. **$\Omega_\text{closure}$ is the
 an output with zero remaining freedom, not a quantity that can be tuned to match the
 baryon census after the fact.**
 
-Stated as $F\equiv\rho_0/\rho_b$ (using the primordial-deuterium/BBN value
-$\Omega_bh^2=0.0224$, chosen specifically because it does not depend on CMB/$\Lambda$CDM
-fitting — the point of this check is precisely to avoid smuggling in an
-already-model-dependent number): at the joint-fit $\kappa\lambda=0.307$,
-$$F \approx 2.5\text{–}2.9,$$
-depending on which of §4's two $a_0$ conventions is used (SPARC-anchored vs. the fit's
-own preferred local value — not yet reconciled, see above). **This is not the same
-problem as needing dark matter**: $F$ sits robustly *below* $\Lambda$CDM's own
-$\Omega_m/\Omega_b\approx6.4$ — the closure is not quietly reproducing the standard
-matter budget through a back door. But it is robustly *above* baryons alone: forcing
-$\Omega_\text{closure}=\Omega_b$ at fixed SN-fit shape requires $\kappa\approx2.5$,
-which drives $a_0$ off its empirical value by a factor of $\sim2$. **The correct
-statement of the problem: three independent measurements ($a_0$'s value, the SN shape,
-the baryon census) over-determine two parameters $(\lambda,\kappa)$, and at central
-values they fail to close by a factor of $1.6$–$2.9$.**
+**This has now been tested directly by the four-term fit (§2.2), not just scoped in
+advance — and it comes within a hair of closing, at the current laboratory edge.**
+Fitting $(\varepsilon_0,\kappa\lambda,\lambda,\Sigma m_\nu)$ jointly against real SN,
+$a_0(z)$, local RAR, and this mass-census term at once (using the BBN/primordial-
+deuterium value $\Omega_bh^2=0.02166\pm0.00019$, Cooke, Pettini & Steidel 2018 —
+deliberately not a CMB/$\Lambda$CDM-derived number, since the point of this check is
+to avoid smuggling in an already-model-dependent budget), the fit lands at
+$$\Sigma m_\nu=1.374\ \text{eV},\qquad \Omega_\text{closure}=0.074\approx\Omega_b+\Omega_\nu,$$
+with the mass-census term contributing almost nothing to the total $\chi^2$ ($0.06$) —
+**the fit found a genuine, nearly-exact simultaneous solution, not a forced one.**
+Confirmed, not assumed: fixing $\Sigma m_\nu=0$ costs $\Delta\chi^2=+8.9$, so the
+neutrino channel is doing real, substantial work, not padding a number that was already
+close. $\Omega_\text{closure}=0.074$ sits, as expected, robustly below $\Lambda$CDM's
+own $\Omega_m\approx0.315$ — the closure is not reproducing the standard matter budget
+through a back door — while very nearly matching $\Omega_b+\Omega_\nu$ at the
+laboratory bound specifically.
 
-**The one escape within known physics, and why it is only marginal.** Relic neutrino
-rest mass is Standard-Model mass not counted in $\Omega_b$ — the one form of additional
-mass that does not concede the "no dark matter" claim. With the current direct
-laboratory bound (KATRIN, $m_\beta<0.45$ eV at 90% CL, 2025) and the standard
-(degenerate-hierarchy) conversion $\Sigma m_\nu\approx3m_\beta\lesssim1.35$ eV:
-$\Omega_\nu\lesssim0.030$. This closes the budget only at the most favorable corner of
-the fit (low-end $a_0$, high-end $\kappa\lambda$, $F\approx1.4$–$1.6$) and requires
-$\Sigma m_\nu\approx1.3$–$1.5$ eV — at or just beyond the current laboratory edge.
-**This escape has an external expiry date**: KATRIN's bound is expected to tighten
-toward $\sim0.3$ eV; any meaningful improvement closes this option regardless of
-anything internal to this framework. (Standard cosmological neutrino-mass bounds,
-$\Sigma m_\nu<0.12$ eV, are $\Lambda$CDM/CMB results this framework has no perturbation
-sector to inherit — they do not automatically apply here, but by the same token this
-framework cannot yet claim the perturbation-level consistency those bounds encode
-either.)
+**But this exact resolution requires $\Sigma m_\nu$ essentially at today's KATRIN
+edge** ($1.35$ eV), not comfortably inside it — the fit needed $1.374$ eV, already
+slightly past the central 90%-CL value, paying a small penalty for it. **This escape
+has an external expiry date, now attached to a concrete number rather than a general
+warning**: KATRIN is expected to tighten toward $\sim0.3$ eV; a bound anywhere near
+that would eliminate this resolution outright, independent of anything internal to this
+framework. (Standard cosmological neutrino-mass bounds, $\Sigma m_\nu<0.12$ eV, are
+$\Lambda$CDM/CMB results this framework has no perturbation sector to inherit — they do
+not automatically apply here, but by the same token this framework cannot yet claim the
+perturbation-level consistency those bounds encode either.)
+
+**A second, independent tension the same fit surfaces: local RAR data does not
+straightforwardly agree with the rest.** The joint fit's own $a_0(0)=1.39\times
+10^{-10}$ m/s² is $\sim16\%$ above the value the real SPARC RAR data prefer on their
+own ($\approx1.26\times10^{-10}$) — costing $\Delta\chi^2\approx7$ in the RAR sector at
+the joint optimum, and $\Delta\chi^2\approx13$ if $\lambda$ is instead forced to RAR's
+own preference. This is a second, separate pull on the same mass-budget conclusion:
+part of why the neutrino escape lands so close to viable is that the fit is choosing a
+higher $a_0$ (hence higher $\rho_0\propto a_0^2$) than the local dynamics data alone
+would pick.
+
+**Caveats on this specific result, stated so it isn't over-trusted**: a point estimate
+(Nelder-Mead), not a posterior — no confidence interval on $\Sigma m_\nu=1.374$ eV yet;
+RAR's 2693 points treated as statistically independent and downweighted only
+approximately (by the point-to-galaxy ratio, $\approx17.6$) to correct for shared
+per-galaxy systematics; $H_0$ fixed at 70 km/s/Mpc, not fit — a $\sim9\%$ lever on
+$\rho_0$ not reflected in the numbers above. None of these caveats are expected to
+change the qualitative picture (a near-exact but laboratory-edge-dependent resolution,
+with a real RAR tension underneath it), but the precise $\Sigma m_\nu$ value should be
+treated as indicative, not final, until they are addressed.
 
 **Resolution space, ranked, none of it free:** (i) a Machian-source amendment — should
 the horizon's own field/binding energy also source the closure? Order-of-magnitude
 plausible, but the coefficient of gravitational field energy is notoriously
 convention-dependent and must come from a principled accounting, not be tuned to close
-the gap; (ii) a closure-form revision — the one place a factor of $2$–$3$ could
+the gap; (ii) a closure-form revision — the one place a residual factor could
 legitimately live, but any change must preserve the fixed-point-plus-instability
 structure that already fits the SN diagram and $\hat a_0(z)$; (iii) new non-baryonic
 rest mass beyond neutrinos — this is precisely MOND's own historical retreat at cluster
 scales, and if ever adopted, §0's "no dark matter" claim must be rewritten to "no dark
 matter in galactic dynamics," stated plainly, not left implicit; (iv) acceptance as this
 framework's own version of the real, unresolved MOND cluster-mass residual
-($\sim2$–$3\times$, suggestively close to the $F$ found here) — legitimate only as a
-labeled, standing failure, never treated as background noise.
+($\sim2$–$3\times$, suggestively close to $F$ found in an earlier pass through this
+analysis) — legitimate only as a labeled, standing failure, never treated as background
+noise.
 
-**Standing falsification condition.** If the decisive four-term fit (SN + $\hat
-a_0(z)$ + local RAR + mass census, with $\Sigma m_\nu$ a bounded nuisance) cannot close
-the mass budget within $a_0$'s own $\pm20\%$ uncertainty and the laboratory neutrino
-bound, the "no unaccounted mass" claim fails at cosmological scales, and this framework
-survives only in the weakened form real MOND itself already occupies. Seed-origin work
-on $\varepsilon_0$ (§6 item 3) is frozen until this triage completes — the seed's
-amplitude is not a meaningful target while the closure's own normalization is in
-question.
+**Standing falsification condition, now testable rather than merely stated.** This
+framework's "no unaccounted mass" claim currently survives only because relic neutrinos
+can be pushed to the edge of what KATRIN allows. If KATRIN's bound tightens
+meaningfully below $\sim1.35$ eV (equivalently $m_\beta$ meaningfully below $0.45$ eV)
+without a compensating resolution from items (i)–(iv) above, this specific resolution
+fails and the framework survives only in the weakened form real MOND itself already
+occupies at cluster scales — stated here as a concrete, externally-adjudicated
+condition, not a hypothetical one. Seed-origin work on $\varepsilon_0$ (§6 item 3)
+remains frozen: with the mass budget now shown to close only marginally, the seed's
+own amplitude is even less of a priority until this is on firmer ground (proper
+posteriors, a real per-galaxy RAR covariance, and $H_0$ properly propagated).
 
-### 5.7 The M-σ goal of §0: derived qualitatively, honestly short of RAR's decisiveness
+### 5.7 The M-σ goal of §0: a first real discriminating test, modest and non-decisive
 
 For a pressure-supported (dispersion-, not rotation-supported) system in deep-MOND,
 virial balance ($M\sigma^2\sim M\times g\times r$ with $g=\sqrt{GMa_0}/r$) gives
@@ -723,59 +765,109 @@ where $M$ is the system's *bulge/stellar* mass. **Unlike the rotation-curve BTFR
 relation, $\Gamma$ is not fixed at exactly 1 by this argument** — a flat rotation curve
 has an exact asymptotic deep-MOND value, but a dispersion-supported system's virial
 balance depends on its density/velocity-anisotropy profile, so $\Gamma=O(1)$ but
-structure-dependent, not universal. This mirrors exactly why the observed Faber-Jackson
-relation has more scatter than the BTFR. **This relation is about stellar/bulge mass,
-not black hole mass** — this framework, like the AQUAL/MOND program generally, treats
-$M_\text{BH}$ as an external correlate of $M_\text{bulge}$ (via the empirical, non-MOND
-$M_\text{BH}/M_\text{bulge}$ ratio), not something the modified force law itself
-determines; the well-known "$M$-$\sigma$ relation" in the black-hole literature is
-therefore not a direct test of this section.
+structure-dependent, not universal. **This relation is about stellar/bulge mass, not
+black hole mass** — this framework, like the AQUAL/MOND program generally, treats
+$M_\text{BH}$ as an external correlate of $M_\text{bulge}$, not something the modified
+force law determines; the black-hole "$M$-$\sigma$" literature is not a direct test here.
 
-The zero-point-evolution prediction, $\Delta\log\hat\sigma=\tfrac14\Delta\log\hat
-a_0(z)$ at fixed bulge mass, is $\Gamma$-independent and in principle as clean a test as
-the RAR's — but **no clean confrontation is currently available, for a specific,
-checked reason, not merely because it hasn't been run.** Two literature findings: (i)
-the dramatic $M_\text{BH}$-$\sigma$ evolution reported at $z\sim1$–2 (JWST/ALMA
-quasar-host observations, black holes up to $10\times$ overmassive at fixed $\sigma$
-relative to the local relation) is on the black-hole channel just excluded above — the
-standard interpretation attributes it to black-hole assembly history (heavy seeds,
-super-Eddington growth), not bulge dynamics, so it neither supports nor excludes this
-section; (ii) the correct channel — stellar-mass-vs-$\sigma$ for quiescent galaxies,
-no black hole involved — shows no significant evolution at $z<0.7$ and only mild
-evolution at $0.9<z<1.7$, and the existing literature already attributes that mild
-evolution to ordinary galaxy size evolution (more compact progenitors at higher $z$), a
-completely conventional explanation degenerate in sign with this section's own
-prediction. Distinguishing the two requires checking whether the *observed* amount of
-evolution exceeds what size evolution alone predicts — a real, well-posed analysis, but
-one this document has not performed. Recorded as a genuinely open, tractable item
-(§6), distinct in kind from the BTFR/RAR confrontation, which had a ready-made,
-already-decisive dataset.
+**The discriminating test previously flagged as unattempted has now been run once,
+against real data, with a real (not decisive) result.** The question: does this
+framework's prediction — $\sigma$ set by mass and the evolving $a_0(z)$, with *no*
+explicit size dependence — fit real quiescent-galaxy dynamics from $z\approx0$ to
+$z\approx2.4$ better than the conventional, purely Newtonian explanation (ordinary
+virial balance, $\sigma^2\sim GM/R_e$, using each galaxy's own measured size, no
+cosmology)? Real data assembled for this: **ATLAS3D** (Cappellari et al. 2013, Papers
+XV+XX, plus distances from Paper I — 258 usable nearby early-type galaxies with
+$\sigma$, $R_e$, and stellar $M_\ast$) as the $z\approx0$ calibration anchor, and a
+combined, position-cross-matched, deduplicated sample of **135 unique quiescent
+galaxies at $z=0.82$–$2.44$** from van de Sande et al. (2013, 55 unique after removing
+18 objects also measured by the sources below), Belli, Newman & Ellis (2014, 56
+galaxies) and Belli, Newman & Ellis (2017, the 24 objects with a real dispersion
+measurement per the paper's own note) — three independent HST/ground-based dynamical
+surveys, each with individually measured $\sigma$, $R_e$, and $M_\ast$.
+
+**A regime check caught an error before it was made.** The naive deep-MOND asymptote
+above assumes $g\ll a_0$. Checked directly: both the $z\approx0$ anchor and the high-$z$
+sample sit at median $g/a_0\approx1.7$ and $\approx3.0$ respectively (16–84th
+percentile $0.9$–$3.7$ and $1.3$–$6.3$) — a *transition-regime* population, not deep-MOND
+ellipticals. Using the pure asymptotic formula here would not be self-consistent with
+the framework's own regime of validity. The correct treatment reuses the RAR fit's own
+machinery (§5.6/`four_term_fit.py`'s `mu_force_inv`, solving $\mu(x)x=y$ for the AQUAL
+force law) to compute the true interpolated $g_\text{obs}$ from each galaxy's own
+Newtonian $g_\text{bar}=GM/R_e^2$ and $a_0(z)$, then calibrates one $O(1)$ geometry
+constant $\Gamma_\text{geo}$ via $\sigma^2=\Gamma_\text{geo}\,g_\text{obs}\,R_e$ against
+the ATLAS3D anchor ($\Gamma_\text{geo}=0.211$, 0.120 dex scatter — tighter than either
+the naive deep-MOND asymptote, 0.333 dex, or the pure-Newtonian virial constant $K=0.245$
+alone, 0.148 dex, confirming the full interpolation is the right functional form for
+this population).
+
+**Result: a real, bootstrap-robust, but modest preference for the evolving-$a_0$
+picture.** Applying the two calibrated models to the 135-galaxy high-$z$ sample: RMS
+residual scatter is $0.1266$ dex for the full-AQUAL, $a_0(z)$-evolving model versus
+$0.1345$ dex for the pure-Newtonian, static virial model — AQUAL fits *better*, and a
+2000-resample bootstrap puts this at $+0.0078\pm0.0015$ dex, with **100% of resamples**
+favoring AQUAL. The preference holds separately in both redshift halves of the sample
+(z$\in[0.8,1.6)$, $N=111$: better by $0.0080$ dex; z$\in[1.6,2.5)$, $N=24$: better by
+$0.0050$ dex) — not an artifact of the small high-$z$ tail. The pure-Newtonian model
+also leaves a real residual trend with redshift (slope $-0.123$ dex/z, $R^2=0.107$) that
+the full-AQUAL model only partially reduces (slope $-0.111$, $R^2=0.098$) — evidence the
+data wants *something* beyond fixed-normalization virial dynamics, only partially
+captured by this framework's specific $a_0(z)$.
+
+**Honestly not decisive, for three stated reasons.** (i) The effect size is small (a
+~6% scatter reduction, not RAR's $\times10$-level discrimination) and the residual-$z$
+trend is reduced, not removed. (ii) A puzzle, reported rather than hidden: the naive
+deep-MOND asymptotic formula — which the regime check above says should *not* apply to
+this transition-regime population — nonetheless gives the single lowest raw scatter of
+the three models tried ($0.1185$ dex), better than the theoretically-correct full-AQUAL
+treatment. Not resolved; flagged as a real non-robustness rather than quietly using
+whichever number looks best. (iii) Known, uncorrected systematics: ATLAS3D's
+stellar-population $M/L$ and the high-$z$ papers' SED-fit $M_\ast$ may not share an
+identical IMF normalization (a plausible $\sim0.1$–$0.2$ dex relative mass offset,
+uncorrected); the three high-$z$ surveys are heterogeneous in instrument, filter, and
+aperture-correction convention; the $z\approx0$ calibration itself is unweighted
+(no published per-object ATLAS3D $\sigma$/$M_\ast$ errors in these tables).
+
+**Net verdict**: this is real progress — from "no confrontation attempted, for a
+checked reason" to a genuine, reproducible discriminating calculation against 135 real
+galaxies — and the sign of the result favors this framework, consistently across
+redshift bins and at high bootstrap confidence. But it is a suggestive first pass, not
+a decisive test: the effect is small, the naive-vs-full-AQUAL sensitivity is an open
+puzzle, and the IMF/heterogeneity systematics are real and uncorrected. Weaker than
+RAR, stronger than "not yet attempted." (Reproduced end-to-end by `msigma_fit.py`,
+archived with `ResearchNotes.md` §15.)
 
 ---
 
 ## 6. Status and Open Items, In Priority
 
-1. **Extend the real-data joint fit to four terms, and reconcile the two $a_0$
-   conventions.** The SN+$a_0(z)$ joint fit (§2.2) is done against real Pantheon+ data
-   and real published $a_0(z)$ constraints — no longer a proxy. What remains: add the
-   local RAR *shape* (SPARC point-by-point, Lelli/McGaugh/Schombert 2016, not just its
-   single $a_0$ value) and the mass census (§5.6) as two more likelihood terms, fit
-   jointly over $(\varepsilon_0,\kappa\lambda,\lambda)$ with $\Sigma m_\nu$ a bounded
-   nuisance parameter and $a_0$ carried as a properly marginalized parameter with its
-   own empirical prior rather than fixed to either the SPARC value or the fit's own
-   emergent one — the split between those two conventions ($a_0=1.20$ vs. $1.39\times
-   10^{-10}$ m/s², §4/§5.3) is exactly what this resolves. This is now the framework's
-   single highest-priority open item, ahead of the seed question, since §5.6 shows the
-   mass-budget tension depends on it directly. Secondary channels once it exists:
+1. **The four-term fit's first pass is done (§2.2, §5.6); make it rigorous.** Real SN,
+   $a_0(z)$, local RAR (SPARC, Lelli/McGaugh/Schombert 2016), and mass-census data are
+   now fit jointly over $(\varepsilon_0,\kappa\lambda,\lambda,\Sigma m_\nu)$, resolving
+   the earlier two-$a_0$-convention split into one number ($a_0=1.39\times10^{-10}$
+   m/s²) and finding the mass budget closes only if $\Sigma m_\nu$ sits at the KATRIN
+   edge (§5.6). What remains, in order of how much it could change the headline result:
+   (i) proper posteriors (MCMC) in place of a single point estimate — $\Sigma
+   m_\nu=1.374$ eV needs a confidence interval before it means anything precise; (ii) a
+   real per-galaxy RAR covariance, replacing the point-count/galaxy-count downweighting
+   approximation; (iii) $H_0$ propagated as a systematic rather than fixed at 70;
+   (iv) the RAR-vs-rest tension found here ($\Delta\chi^2\approx7$–$13$) investigated
+   directly rather than merely reported. Secondary channels once this is tighter:
    low-acceleration lensing RAR by lens redshift; SKA-era BTFR zero-point evolution.
-   **M-σ specifically needs a different kind of work first, not just more data**
-   (§5.7): its evolution channel is degenerate with ordinary galaxy size evolution in
-   the existing literature — the open task is a joint analysis that separates the two.
-2. **The closure density problem (§5.6).** A live, quantified, three-way
-   over-constraint ($a_0$, SN shape, baryon census) failing by $\times1.6$–$2.9$ at
-   central values, with one narrow, externally time-limited escape (laboratory-bound
-   relic neutrino mass). Not a byproduct — this bears directly on the "no dark matter"
-   claim in §0. Resolution ranked in §5.6; adjudicated by item 1's four-term fit.
+   **M-σ's discriminating test has now been run once, real but not decisive** (§5.7):
+   against 135 real quiescent galaxies ($z=0.8$–$2.4$, ATLAS3D-calibrated), the
+   evolving-$a_0$ picture beats pure Newtonian virial dynamics by a small,
+   bootstrap-robust margin (0.127 vs 0.135 dex scatter, 100% of resamples favor
+   AQUAL) — but a regime-inappropriate naive formula fits even better (a real,
+   unresolved puzzle), and IMF/survey-heterogeneity systematics are not yet
+   corrected. Next: resolve the naive-vs-full-AQUAL discrepancy, correct for IMF
+   normalization across catalogs, and enlarge the high-$z$ tail ($N=24$ at $z>1.6$).
+2. **The closure density problem (§5.6) — quantified precisely, resolved only at the
+   laboratory edge.** The four-term fit finds a genuine, nearly-exact solution
+   ($\chi^2_\text{mass}=0.06$) but only by placing $\Sigma m_\nu=1.374$ eV essentially
+   at KATRIN's current bound — a real, dated, externally-adjudicated falsification
+   condition (§5.6), not a hypothetical one. This bears directly on the "no dark
+   matter" claim in §0 and remains the framework's most consequential open number.
 3. **Origin and amplitude of the seed $\varepsilon_0$ — frozen pending item 2.** Not a
    constant like $\Lambda$ — a transient, growing instability, so "why now" becomes "why
    does the seed's amplitude put the few-percent-deviation epoch at stellar-age epochs
@@ -815,7 +907,10 @@ $36\sigma$ margin in this framework's favor over the corrected law's predecessor
 $\Lambda$CDM-proxy SN fit (superseded by the real Pantheon+ joint fit, §2.2); the
 three-way numerical discrepancy in $\Omega_\text{closure}$ (0.134 vs. 0.115 vs. 0.104 —
 reconciled exactly as three stated conventions applied to the same formula, §5.6;
-`ResearchNotes.md` §14).
+`ResearchNotes.md` §13); the two competing $a_0$-anchoring conventions of an earlier
+pass (superseded by the four-term fit's single, jointly-fit value, §2.2/§4/§5.3); the
+decisive four-term fit itself (first pass run against real data, §2.2/§5.6;
+`ResearchNotes.md` §14) — not fully resolved, but no longer merely proposed.
 
 [^1]: J. D. Bekenstein and M. Milgrom, "Does the missing mass problem signal the breakdown
 of Newtonian gravity?" *Astrophysical Journal* 286, 7–14 (1984). AQUAL's modified Poisson

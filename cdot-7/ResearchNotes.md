@@ -594,7 +594,7 @@ data. This should not be presented with RAR's confidence in any write-up.
 
 ---
 
-## 13. The Real Pantheon+ Joint Fit (Fable-2 Session, 2026-07-07)
+## 12. The Real Pantheon+ Joint Fit (Fable-2 Session, 2026-07-07)
 
 A second sub-session ("Fable-2") executed `Foundation.md` §6 item 1 at first-pass level
 against **real data**, replacing the $\Lambda$CDM-proxy fit of §8. Verified directly by
@@ -627,7 +627,7 @@ returned $19.98$, confirming it rather than assuming it.
 (not assumed by fiat) is a real, unforced success. But the local-$a_0$ value that
 achieves it ($1.39$) is *not* the same number used elsewhere in the document as the
 "empirical" SPARC anchor ($1.20$) — checked directly: using $1.39$ instead of $1.20$ in
-the §14 mass-census calculation shifts $F$ from $2.52$ to $2.92$, a real, not
+the §13 mass-census calculation shifts $F$ from $2.52$ to $2.92$, a real, not
 cosmetic, difference. This is exactly the kind of thing a properly marginalized $a_0$
 prior in the eventual four-term fit needs to settle, not something to paper over by
 picking whichever number reads better.
@@ -639,13 +639,13 @@ build directly on `joint_fit.py`'s trajectory and the real, binned Pantheon+ res
 
 ---
 
-## 14. The Closure Density Problem: Elevated, Quantified, and Reconciled
+## 13. The Closure Density Problem: Elevated, Quantified, and Reconciled
 
 Prompted directly by the main session's pushback on an earlier seed-analysis update,
 which had filed $\Omega_\text{closure}=0.134$ (vs. baryon census $\Omega_b=0.049$) as a
 "byproduct" rather than a first-class finding. Two follow-up rounds resulted.
 
-### 14.1 First response: quantifying the over-constraint
+### 13.1 First response: quantifying the over-constraint
 
 Verified the closure's own demand for a density is exact, not approximate: from the
 AQUAL horizon condition $\mu(x_0)g_h=GM_h/R_{h,0}^2$ with $g_h=c_0^2/(\kappa R_{h,0})$,
@@ -662,7 +662,7 @@ known-physics escape — relic neutrino mass, $\Omega_\nu\lesssim0.030$ at the K
 bound ($m_\beta<0.45$ eV, $\Sigma m_\nu\lesssim1.35$ eV) — closes the budget only at the
 SN-shape-preferred edge ($\kappa\lambda=0.35$) and only marginally.
 
-### 14.2 Second response: exact reconciliation, no refit needed
+### 13.2 Second response: exact reconciliation, no refit needed
 
 The main session's own independent recomputation gave $\Omega_\text{closure}=0.115$ at
 the joint-fit central values — a three-way spread (0.134 / 0.115 / 0.104) that needed
@@ -685,7 +685,7 @@ $$\rho_0=\frac{3}{4\pi}\,\kappa\,\mu(x_0)\,x_0^2\,\frac{a_0^2}{Gc_0^2}$$
 — $H_0$ cancels entirely, tying the required density to the measured MOND scale alone
 (main session re-derived this by direct substitution and confirmed it algebraically,
 independent of the code). In this form, $F\equiv\rho_0/\rho_b\approx2.3$–$2.5$
-(SPARC-anchored) or $\approx2.9$ (fit's-own-value-anchored, §13) — the dominant
+(SPARC-anchored) or $\approx2.9$ (fit's-own-value-anchored, §12) — the dominant
 sensitivity is $a_0$'s own $\pm20\%$ empirical uncertainty ($F\propto a_0$ linearly,
 since $\kappa\propto1/a_0$ at fixed $\kappa\lambda$), not which $\varepsilon_0$ or
 $\Omega_b$ convention is used (each $\lesssim5\%$). $\Omega_bh^2=0.0224$ was used
@@ -700,9 +700,9 @@ jointly with the SN and $a_0(z)$ sectors already built) was not run — it requi
 SPARC RAR data (not yet in the repository) and a properly marginalized $a_0$ prior, both
 flagged as the necessary next steps rather than skipped silently. The reconciliation
 closes the *merge blocker*; the tension itself ($F\approx2.4$–$2.9$) stands, unresolved,
-exactly where §14.1 left it.
+exactly where §13.1 left it.
 
-### 14.3 Precise specification handed to the next attempt
+### 13.3 Precise specification handed to the next attempt
 
 Given the reconciliation, the main session wrote a complete implementation spec for the
 decisive four-term fit before the author's next round with Fable-1, covering: the
@@ -716,11 +716,218 @@ held fixed at 70 km/s/Mpc for this pass (not fit, since Pantheon+ alone is
 $H_0$-degenerate once the offset is marginalized), and a validation requirement that
 switching the two new likelihood terms off must exactly reproduce the existing
 three-term result before anything new is trusted. This spec is what the next round
-executed against (§14.2) — the four-term fit itself remains open.
+executed against (§13.2) — the four-term fit itself remains open.
 
 ---
 
-## 15. Open Threads Not Yet Reflected in the Foundation
+## 14. The Decisive Four-Term Fit: First Real Execution (Main Session, 2026-07-08)
+
+Executed directly, not handed to a sub-session, since most of the infrastructure
+(§12's real-data machinery) was already in hand and verified. Full record below,
+including a real bug caught and fixed mid-build — kept in, per this project's standing
+practice of showing the derivation trail rather than only the polished result.
+
+### 14.1 Acquiring the real SPARC RAR data
+
+Located and downloaded directly: `https://astroweb.case.edu/SPARC/RAR.mrt`, the "Data
+Behind Figure 2" table of McGaugh, Lelli & Schombert 2016, *PRL* 117, 201101 — 2693
+points ($\log_{10}g_\text{bar}$, error, $\log_{10}g_\text{obs}$, error, in m/s²) from
+153 SPARC galaxies. This is the actual published compilation, not a re-derived or
+approximated version. Saved to `Fable-1/data/RAR.mrt`.
+
+**Validated in isolation before use.** Implemented the AQUAL force-law inversion
+(solving $\mu(x)x=y$ for $x$, given $y=g_\text{bar}/a_0$ — a *different* equation from
+the closure-context inversion already in `joint_fit.py`, which solves $\mu(x)=m$; the
+two must not be conflated, and were kept as separate functions to avoid exactly that
+mistake) and scanned $a_0$ against the real data alone: best fit
+$a_0\approx1.1$–$1.3\times10^{-10}$ m/s², intrinsic scatter $0.089$ dex once combined
+with the reported point errors — matching the literature's own well-known $\approx0.13$
+dex total scatter almost exactly. This is a strong, independent sign the data was
+parsed and the likelihood implemented correctly, not merely plausible-looking.
+
+**A real, load-bearing caveat, kept explicit rather than absorbed silently**: the 2693
+points are not statistically independent (multiple radii per galaxy share
+distance/inclination/$M$-$L$ systematics), and this table carries no per-galaxy
+grouping information to correct for it properly. Downweighted the RAR $\chi^2$
+contribution by the point-to-galaxy ratio ($2693/153\approx17.6$) as a standard,
+approximate correction for clustered data — real precision on $a_0$ from RAR could
+differ from what this implies, and a proper per-galaxy covariance (from the full SPARC
+mass-models table, not just this Figure-2 compilation) is listed as follow-up work
+(`Foundation.md` §6 item 1).
+
+### 14.2 The mass-census term, and a bug caught by the validation step
+
+Implemented $\chi^2_\text{mass}$ directly from `Foundation.md` §5.6's $H_0$-free form,
+$\rho_0=(3/4\pi)\kappa\mu_0x_0^2a_0^2/(Gc_0^2)$, compared against $\Omega_b+\Omega_\nu
+(\Sigma m_\nu)$ with $\Omega_bh^2=0.02166\pm0.00019$ (Cooke, Pettini & Steidel 2018) and
+a half-normal penalty on $\Sigma m_\nu$ above the KATRIN edge ($3\times0.45=1.35$ eV).
+
+**The bug**: the first version defined the $a_0$-at-$\lambda{=}1$ constant as
+$\tfrac32c_0H_0$ instead of $\tfrac23c_0H_0$ — the coefficient inverted. This silently
+inflated every derived $a_0$ by a factor of $\sim2.25$ and, propagating through, pulled
+$\lambda$ far too low ($0.138$ instead of $\sim0.3$) to compensate. **Caught by the
+validation step, exactly as it is supposed to work**: switching the RAR and mass terms
+off is required to exactly reproduce the already-verified three-term result
+($\varepsilon_0=-0.0678$, $\kappa\lambda=0.307$, $\chi^2=1411.8$) — the first run
+returned $\varepsilon_0=-0.0295$, $\kappa\lambda=0.146$, $\chi^2=1447.2$, an unambiguous
+failure. Traced to the $\tfrac32$-vs-$\tfrac23$ error, fixed, re-validated
+($\varepsilon_0=-0.0682$, $\kappa\lambda=0.3081$, $\chi^2=1411.24$ — matching to the
+precision Nelder-Mead's convergence tolerance allows) before trusting anything
+downstream. Recorded here specifically so the same slip isn't made again: $a_0=\lambda
+\dot c_0$ with $\dot c_0=(2/3)c_0H_0^\text{obs}$, not $(3/2)$.
+
+### 14.3 The fit, and the robustness/sensitivity checks run before reporting it
+
+Fit $(\varepsilon_0,\kappa\lambda,\lambda,\Sigma m_\nu)$ jointly (Nelder-Mead) against
+all four likelihoods at once. **Robustness, checked, not assumed**: identical optimum
+($\varepsilon_0=-0.0909$, $\kappa\lambda=0.4355$, $\lambda=0.3056$, $\Sigma m_\nu=1.374$)
+from four widely separated starting points, including ones far from the eventual
+answer — a genuine minimum of this 4-parameter objective, not an artifact of one lucky
+initial guess.
+
+**Diagnostics run to characterize the result properly, not just report the best fit:**
+- Fixing $\Sigma m_\nu=0$: $\chi^2=1589.1$ ($\Delta\chi^2=+8.9$ over the free-$\Sigma
+  m_\nu$ fit) — confirms the neutrino channel is doing real work, not a free lunch.
+- RAR $\chi^2$ at the joint best $a_0=1.386\times10^{-10}$: $163.0$; at RAR's own
+  unconstrained best $a_0=1.264\times10^{-10}$: $156.0$ — an excess of $7.0$, the size
+  of the RAR-vs-rest tension.
+- Forcing $\lambda$ to RAR's own preferred value and refitting the rest: $\chi^2=1593.6$
+  ($\Delta\chi^2=+13.4$ over the free-$\lambda$ fit) — the cost of insisting on RAR's
+  own number rather than the joint one.
+- Standard $\mu$: total $\chi^2=1593.5$ vs. simple $\mu$'s $1580.2$ — simple continues
+  to win, by a smaller margin than at the SN+$a_0(z)$-only level ($\Delta\chi^2=42$
+  there vs. $\approx13$ here), since the RAR and mass terms partially reward standard
+  $\mu$'s different $x_0,\mu_0$ trade-off.
+- Cosmography at the new best fit: $q_0=-0.44$, age $=12.93$ Gyr, $x_0=1.10$ (down from
+  the fixed point's $x_*=1.72$) — computed with the same finite-difference/ODE methods
+  as `closure_dynamics.py`, for consistency.
+
+### 14.4 What this changes in the Foundation, and what it doesn't
+
+Supersedes, not merely supplements: the SN+$a_0(z)$-only fit's numbers (§2.2), the
+two-convention $a_0$-anchoring ambiguity (§4/§5.3, now one number), and the pre-fit
+$F\approx2.5$–$2.9$ estimate (§5.6, now a direct fit result, $\chi^2_\text{mass}=0.06$
+at $\Sigma m_\nu=1.374$ eV). Does *not* resolve: whether this is the *correct* $a_0$
+given RAR's own, lower preference (a live, quantified tension, not swept under the
+joint number); whether $1.374$ eV of relic neutrino mass is itself plausible pending
+independent cosmological/laboratory cross-checks; or the point-estimate-vs-posterior
+gap. All three are now first-class, precisely-stated follow-ups (`Foundation.md` §6
+item 1), not vague future work.
+
+**Code archive.** `four_term_fit.py` (this session, archived in `Fable-1/`, alongside
+`Fable-1/data/RAR.mrt`) reproduces every number in this section directly from the raw
+Pantheon+ and SPARC data — re-run this file first if any number here is ever in doubt.
+
+---
+
+## 15. M-σ: A First Real Discriminating Test (Main Session, 2026-07-08)
+
+Asked to attempt M-σ next. Before gathering data, stated the current status honestly:
+Foundation.md §5.7 had a derived relation ($\sigma^4\sim\Gamma GMa_0$, $\Gamma$
+undetermined) and one clean, $\Gamma$-independent prediction (a $\tfrac14$-power
+zero-point evolution with $a_0(z)$), but zero contact with real data — the literature's
+own explanation for observed high-$z$ dispersion evolution (ordinary galaxy size
+evolution, $\sigma^2\sim GM/R_e$) is degenerate in sign with this framework's own
+prediction, and nobody has tried to separate the two, because the second hypothesis is
+specific to this project's evolving-$a_0$ premise. Chose to attempt the harder,
+discriminating version rather than just a local $\Gamma$ calibration.
+
+### 15.1 Finding real, downloadable data
+
+Delegated a literature search (general-purpose agent, required to verify every URL by
+actually fetching it, not recall from training) for: a real $z\approx0$ anchor sample
+with $\sigma$, $M_\ast$, $R_e$ for quiescent/early-type galaxies, and a real high-$z$
+($z\sim1$–2) sample with the same three quantities per galaxy (not just plots),
+ideally covering enough of the sample to separate the standard "galaxies were more
+compact" explanation from any new evolution this framework predicts. Confirmed
+real and fetchable: **ATLAS3D** (Cappellari et al. 2013a/b, Papers XV+XX, plus
+distances from Cappellari et al. 2011a Paper I) for the $z\approx0$ anchor — a
+genuinely public, plain-text table archive at
+`groups.physics.ox.ac.uk/atlas3d/tables/` (found by following the actual site's own
+navigation after several stale/redirected URLs, not guessed); and three independent
+high-$z$ compilations with real per-galaxy tables: van de Sande et al. 2013 (ApJ 771,
+85, VizieR `J/ApJ/771/85`), Belli, Newman & Ellis 2014 (ApJ 783, 117) and 2017 (ApJ
+834, 18), both with IOP machine-readable supplementary tables (the correct URLs needed
+the journal's `0004-637X` path segment and a `?doi=` query parameter — the agent's
+recalled `1538-4357`-prefixed URLs returned HTTP 200 with an empty body, a real
+almost-miss caught by checking `wc -c` on every downloaded file rather than trusting a
+200 status code alone).
+
+### 15.2 Parsing pitfalls caught before they became silent errors
+
+Two real mistakes, both caught by directly inspecting the raw files rather than
+trusting a first parse: (1) van de Sande's Table 4, fetched first as fixed-width
+`asu-txt`, has several *blank* optional columns (axis ratio $q$/$e_q$) for many rows —
+blank fields vanish as tokens under naive whitespace-splitting, silently shifting every
+later column left for exactly those rows. Re-fetched as tab-delimited `asu-tsv`
+instead, where blank fields remain as empty (but present) tokens, making positional
+parsing safe. (2) Belli et al. 2017's table has 35 rows but explicitly states in its
+own footnote that only the first 24 have a real velocity-dispersion measurement (the
+rest are `cdots` placeholders, and several are cross-flagged as "presented in Belli et
+al. (2014b)," a companion paper); the code filters on the literal `cdots` string rather
+than trusting the row count.
+
+**Cross-catalog duplication, checked, not assumed absent.** Position-matched (3")
+across all three high-$z$ tables: 18 of van de Sande's 73 objects coincide with
+Belli+2014/2017 targets (both groups' surveys overlap in COSMOS/EGS/UDS), traced to
+van de Sande's compilation pulling in Newman et al. 2010 measurements for objects the
+Belli/Newman/Ellis group later re-measured with dedicated spectroscopy. Kept the more
+recent Belli values and dropped the duplicated van de Sande rows, leaving 135 unique
+galaxies at $z=0.82$–$2.44$.
+
+### 15.3 A regime check that changed the calculation
+
+Before fitting anything, computed the characteristic acceleration $g=\sigma^2/R_e$ for
+both the $z\approx0$ anchor and the high-$z$ sample relative to $a_0$: median
+$g/a_0\approx1.7$ (anchor) and $\approx3.0$ (high-$z$), i.e. these are massive
+early-type galaxies sitting in the **transition regime**, not deep-MOND systems
+($g/a_0\ll1$). Using the paper's own naive asymptotic formula
+($\sigma^4=\Gamma GMa_0$) here would not be self-consistent with the framework's own
+stated regime of validity. Fixed by reusing `four_term_fit.py`'s own AQUAL
+force-law inversion (`mu_force_inv`, solving $\mu(x)x=y$) to compute the true
+interpolated $g_\text{obs}$ from each galaxy's Newtonian $g_\text{bar}=GM/R_e^2$ and
+$a_0(z)$, then calibrating a single geometry constant
+$\Gamma_\text{geo}=0.211$ (0.120 dex scatter at $z\approx0$) via
+$\sigma^2=\Gamma_\text{geo}\,g_\text{obs}\,R_e$ — tighter locally than either the naive
+deep-MOND formula (0.333 dex) or a pure-Newtonian virial constant $K=0.245$ (0.148
+dex), confirming the full interpolation is the right functional form for this
+particular population.
+
+### 15.4 Result: real, bootstrap-robust, modest — and one open puzzle
+
+Applying the calibrated full-AQUAL model (with this session's own fitted $a_0(z)$
+trajectory, §14) and a pure-Newtonian virial model (fixed normalization, each galaxy's
+own measured $R_e$, no cosmology) to the 135-galaxy high-$z$ sample: RMS scatter
+$0.1266$ dex (AQUAL) vs. $0.1345$ dex (virial) — AQUAL wins. A 2000-resample bootstrap
+puts the gap at $+0.0078\pm0.0015$ dex with **100% of resamples** favoring AQUAL, and
+the preference holds independently in both redshift halves ($z<1.6$, $N=111$: better
+by $0.0080$ dex; $z\geq1.6$, $N=24$: better by $0.0050$ dex) — not an artifact of the
+small high-$z$ tail. The pure-virial model's residuals also trend with redshift
+(slope $-0.123$ dex/z, $R^2=0.107$) more than AQUAL's do (slope $-0.111$, $R^2=0.098$),
+consistent with the data wanting something beyond fixed-normalization virial dynamics.
+
+**Not swept under the rug**: the naive deep-MOND asymptotic formula — which the regime
+check above says should *not* even apply to this population — gives the single lowest
+raw scatter of the three models tried (0.1185 dex), *beating* the theoretically-correct
+full-AQUAL treatment. This is reported as an open, unresolved puzzle rather than
+silently switching to whichever formula looks best; it is a real non-robustness, not
+a footnote to bury.
+
+**What this doesn't establish.** IMF normalization between ATLAS3D's stellar-population
+$M/L$ and the high-$z$ papers' SED-fit $M_\ast$ is not cross-checked or corrected (a
+plausible $\sim0.1$–$0.2$ dex systematic); the three high-$z$ surveys differ in
+instrument/filter/aperture-correction convention; the $z\approx0$ calibration is
+unweighted (no published per-object ATLAS3D errors in these particular tables). The
+effect size itself is small — a ~6% scatter reduction, nothing like RAR's decisive
+$\times10$-level discrimination.
+
+**Code archive.** `msigma_fit.py` (this session, `Fable-1/`), with all downloaded
+tables in `Fable-1/data/msigma/` — re-run to reproduce every number in this section
+directly from the raw ATLAS3D/van de Sande/Belli tables.
+
+---
+
+## 16. Open Threads Not Yet Reflected in the Foundation
 
 **Resolved by the Fable-1 session (§6–§10 above), retained here only as a record of
 what happened to them, not restated as open:** the flux/luminosity sector (was open

@@ -316,3 +316,162 @@ look close and points to the residual figure for where they actually differ).
 **Files updated:** `cdot-7/make_figures.py` (new `dl_shape_curve` helper and Figure 0),
 `figures/cdot7_hubble_diagram_data.svg` (created), `cdot-7/Foundation.md` (§2.2: new
 figure embedded before the residual one, both captions updated), this log entry.
+
+---
+
+## Entry 9 — The decisive four-term fit: recommended, executed, and merged
+
+**Prompt (verbatim):**
+> Ok. What next? Attempt the four-term fit or try to bring in the MSigma relation?
+> Ok, very well. Go ahead!
+> Please merge it all in.
+
+**Summary.** Asked to choose the next priority, recommended the four-term fit (SN +
+$a_0(z)$ + local RAR + mass census, with $\Sigma m_\nu$ as a bounded nuisance
+parameter) over pursuing M-σ, since it directly adjudicates the "closure density
+problem" — whether the framework's core "no dark matter" claim survives contact with
+its own mass budget. Told to go ahead, executed it directly rather than handing it to
+Fable-1.
+
+**Execution.** Downloaded the real SPARC RAR master table ("Data Behind Figure 2" of
+McGaugh, Lelli & Schombert 2016, *PRL* 117, 201101 — 2693 points, 153 galaxies) from
+`astroweb.case.edu/SPARC/RAR.mrt`. Built `four_term_fit.py` on top of `joint_fit.py`'s
+SN/trajectory machinery, adding two new likelihood terms: the real RAR shape (with a
+second, distinct inversion of $\mu$ — solving $\mu(x)x=y$ for the AQUAL force law,
+not the closure-context inversion used elsewhere) and the mass-census term of §5.6,
+downweighting RAR points by the point-to-galaxy ratio ($2693/153\approx17.6$) as an
+approximate correction for their non-independence. Omega_b taken from BBN (Cooke,
+Pettini & Steidel 2018), deliberately not the CMB/$\Lambda$CDM value, to avoid
+circularity; $\Sigma m_\nu$ given a soft half-normal edge at the KATRIN bound
+($m_\beta<0.45$ eV, 2025, converted via $\Sigma m_\nu\approx3m_\beta$).
+
+**A real bug, caught by the validation discipline.** The first run's built-in check —
+switching the two new terms off must exactly reproduce the previously-verified
+three-term result — failed badly ($\varepsilon_0=-0.0295,\ \kappa\lambda=0.146$ instead
+of the expected $-0.0678,\ 0.307$). Traced to an independent redefinition of the
+$a_0$-at-$\lambda=1$ constant using the wrong coefficient ($\tfrac32c_0H_0$ instead of
+$\tfrac23c_0H_0$, since $a_0=\lambda\dot c_0$ needs $\dot c_0=\tfrac23c_0H_0^\text{obs}$,
+not $\tfrac32$). Fixed, re-validated exactly, then re-ran the four-term optimization.
+Robustness checked before trusting any number: four widely different starting points
+converged to the identical optimum.
+
+**Result (simple $\mu$, preferred over standard by $\Delta\chi^2\approx13$):**
+$\varepsilon_0=-0.0909,\ \kappa\lambda=0.4355,\ \lambda=0.3056$ ($\kappa\approx1.43$),
+$\Sigma m_\nu=1.374$ eV, $a_0(0)=1.386\times10^{-10}$ m/s², $q_0=-0.44$, age $=12.9$
+Gyr. $\chi^2$: SN $=1405.7$, $a_0(z)=11.45$, RAR $=163.0$, mass $=0.06$, total
+$=1580.2$. Two honest tensions reported alongside the headline result rather than
+hidden: (i) RAR data alone prefers $a_0\approx1.26\times10^{-10}$ — forcing it to the
+joint value costs $\Delta\chi^2\approx13$; (ii) the mass budget only closes by placing
+$\Sigma m_\nu$ essentially at the current KATRIN laboratory edge — a real,
+externally-adjudicated, near-term falsification condition, not a comfortable margin.
+
+**Full merge executed.** `Foundation.md`: §0 (dark-matter claim now cites $\Sigma
+m_\nu\approx1.37$ eV at the KATRIN edge specifically); §2.2 (three-term result kept as
+an explicitly-superseded "first pass," four-term result presented as the working
+cosmology, with the RAR-tension and point-estimate caveats stated inline); §4 and §5.3
+(the two-$a_0$-convention split resolved by the single fitted $\lambda$); §5.5 ($\hat
+a_0(z)$ ratios and figure updated to the four-term numbers, both the SPARC anchor and
+the fit's own predicted $a_0(0)$ shown as distinct markers since they now visibly
+differ); §5.6 (comprehensively rewritten: the actual resolution, the RAR tension as a
+second independent finding, all caveats, a sharpened falsification condition tied to
+the KATRIN bound); §6 (items 1–2 rewritten from "attempt the fit" to "tighten the fit
+that now exists"); a stale, still-unqualified three-term "working cosmology" paragraph
+found in §5.5 during a final consistency sweep and updated to the four-term numbers.
+All three figures (`cdot7_hubble_diagram_data.svg`, `cdot7_hubble_diagram.svg`,
+`cdot7_a0_evolution.svg`) regenerated with `make_figures.py` updated to the four-term
+parameters. `ResearchNotes.md` gained new §14 (the full derivation trail: RAR
+acquisition, the mass-census term and the CH0 bug, the fit and its diagnostics, what it
+supersedes). Along the way, discovered and fixed a section-numbering gap (§12 missing
+in both documents, traced to an earlier renumbering pass) via a scripted remap
+(13→12, 14→13, 16→14, 17→15) applied to both files with placeholder substitution to
+avoid double-transformation; verified clean 1–15 numbering and correct cross-references
+by grep afterward.
+
+**Files updated:** `cdot-7/Fable-1/four_term_fit.py` (created), `cdot-7/Fable-1/data/
+RAR.mrt` (downloaded), `cdot-7/make_figures.py` (four-term parameters, dual $a_0$
+markers), `figures/cdot7_hubble_diagram_data.svg`, `figures/cdot7_hubble_diagram.svg`,
+`figures/cdot7_a0_evolution.svg` (regenerated), `cdot-7/Foundation.md` (§0, §2.2, §4,
+§5.3, §5.5, §5.6, §6 rewritten; full section renumbering 13→12/14→13/16→14/17→15),
+`cdot-7/ResearchNotes.md` (new §14; same renumbering applied), this log entry.
+
+---
+
+## Entry 10 — M-σ: the first real discriminating test against data
+
+**Prompt (verbatim):**
+> Let's make an attempt at adding MSigma now.
+> Before trying to get the data, what is the current approach for comparing the M-sigma relation to the current model?
+> So this has not been attempted in the literature before?
+> Ok, you have convinced me. Go for (b) and continue to probe available data.
+
+**Summary.** Before gathering any data, explained the standing approach (Foundation.md
+§5.7): a derived relation $\sigma^4\sim\Gamma GMa_0$ with $\Gamma$ left explicitly
+undetermined, one clean $\Gamma$-independent prediction (a $\tfrac14$-power zero-point
+evolution with $a_0(z)$), and zero contact with real data. Asked whether this had been
+tried before in the literature; answered honestly that the raw ingredients (σ, M, R_e
+evolution for quiescent galaxies) are well-studied, but the *specific* comparison this
+framework needs — its size-independent, $a_0(z)$-driven prediction against the standard
+Newtonian, size-driven explanation — could not have been attempted by anyone else,
+since it tests a premise unique to this project (a cosmologically evolving $a_0$).
+Given the choice between a smaller local-only calibration and the harder discriminating
+test, was told to attempt the harder one.
+
+**Finding real data.** Delegated a literature search requiring every URL to be verified
+by actual fetch, not recalled from training. Confirmed real and downloadable: ATLAS3D
+(Cappellari et al. 2013a/b + 2011a for distances, 258 usable $z\approx0$ early-type
+galaxies) as the local anchor, and three independent high-z compilations — van de Sande
+et al. 2013 (73 galaxies, VizieR), Belli, Newman & Ellis 2014 (56 galaxies) and 2017
+(24 galaxies with real σ, per the paper's own note that the rest are placeholders) —
+covering $z=0.82$–$2.44$. Two real download near-misses caught by checking file sizes
+rather than trusting HTTP 200: the ATLAS3D site had moved domains (old URLs redirected
+to a frameset index, not the actual table), and the Belli IOP suppdata URLs needed the
+journal's `0004-637X` path segment plus a `?doi=` query parameter — the initially
+recalled URLs returned empty 200 responses.
+
+**Two real parsing bugs caught before they became silent errors.** Van de Sande's
+Table 4 has blank optional columns (axis ratio) for many rows; naive whitespace
+splitting silently shifts later columns for exactly those rows — refetched as
+tab-delimited TSV instead, where blank fields survive as empty tokens. Cross-matched
+all three high-z catalogs by position (3") and found 18 duplicate objects between van
+de Sande and Belli's tables (shared COSMOS/EGS/UDS fields); kept the more recent Belli
+measurements, leaving 135 unique galaxies.
+
+**A regime check that changed the calculation.** Computed the characteristic
+acceleration $g=\sigma^2/R_e$ for both samples relative to $a_0$: median $g/a_0\approx
+1.7$ (anchor) and $\approx3.0$ (high-z) — these are transition-regime systems, not
+deep-MOND. The naive asymptotic formula from Foundation.md §5.7 would not be
+self-consistent here. Reused the RAR fit's own AQUAL force-law inversion
+(`mu_force_inv`) to compute the true interpolated $g_\text{obs}$ at any regime, and
+calibrated a geometry constant $\Gamma_\text{geo}=0.211$ from the ATLAS3D anchor
+(0.120 dex scatter — tighter locally than either the naive deep-MOND formula, 0.333
+dex, or a pure-Newtonian virial constant, 0.148 dex).
+
+**Result: real, bootstrap-robust, modest.** Applying the calibrated full-AQUAL model
+(with this session's own fitted $a_0(z)$ trajectory) to the 135-galaxy high-z sample
+gives smaller scatter (0.1266 dex) than a pure-Newtonian virial model (0.1345 dex) — a
+gap a 2000-resample bootstrap puts at $+0.0078\pm0.0015$ dex, 100% of resamples
+favoring AQUAL, robust in both redshift halves separately (not driven by the small
+high-z tail). One puzzle reported rather than hidden: the naive, regime-inappropriate
+asymptotic formula actually gives the single lowest raw scatter of the three models
+tried (0.1185 dex) — an unresolved non-robustness, not swept under the rug. Real,
+uncorrected caveats stated plainly: no IMF cross-check between ATLAS3D and the SED-fit
+high-z masses; three heterogeneous surveys; unweighted local calibration.
+
+**Also found and fixed, incidentally**: a leftover bug from an earlier renumbering
+pass — §13 and §14's subsection headings were still labeled "14.1–14.3" and
+"16.1–16.4" respectively (the renumbering script had only matched top-level `##`
+headings, not `###` subsections). Fixed to "13.1–13.3" and "14.1–14.4". Also fixed two
+stale `§5.5` cross-references to M-σ (now correctly §5.7).
+
+**Full merge executed.** `Foundation.md` §5.7 rewritten in full with the real result,
+caveats, and the open puzzle; §6 item 1's M-σ line updated to reflect the completed
+first pass; two stale `§5.5→§5.7` cross-references fixed elsewhere. `ResearchNotes.md`
+gained new §15 (the full derivation trail: data provenance, parsing pitfalls, the
+regime check, the result, the puzzle) inserted before "Open Threads" (renumbered
+§15→16, following this project's established convention of keeping that section last).
+
+**Files updated:** `cdot-7/Fable-1/msigma_fit.py` (created), `cdot-7/Fable-1/data/
+msigma/` (ATLAS3D, van de Sande, Belli 2014/2017 tables downloaded), `cdot-7/
+Foundation.md` (§0, §5.7, §6 rewritten; two stale cross-references fixed),
+`cdot-7/ResearchNotes.md` (new §15; Open Threads renumbered to §16; §13/§14 subsection
+numbering bug fixed), this log entry.
