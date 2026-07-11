@@ -547,3 +547,173 @@ remains clean after the insertion.
 **Files updated:** `cdot-7/Foundation.md` (§0, §5.6, §5.7, §6 extended — items 10–12
 added, item 6 split), `cdot-7/ResearchNotes.md` (new §16; Open Threads renumbered to
 §17), this log entry.
+
+---
+
+## Entry 12 — Two more Fable-1 sessions merged: the trajectory constant's identity, a verified sign-selection result, a notation fix, and momentum conservation (2026-07-11)
+
+**Prompt (verbatim):**
+> There are small sessions that are new to this project in the folder Fable-1 that
+> needs to be consolidated into the project's Foundation and ResearchNotes. They are
+> named as Update-SeedOriginAndNotation and Note-MomentumConservation with
+> corresponding session logs. Please consider the details in these files carefully and
+> see how they best can be merged into the project files in cdot-7.
+
+**Summary.** Read both update documents and their session-log entries in full. The
+first responds to the author's question about the origin of "$\varepsilon_0$" (the
+trajectory constant) and its symbol collision with the vacuum permittivity; the second
+responds to a question about whether AQUAL's known momentum non-conservation conflicts
+with this framework's own momentum-conserving cosmology. The second document's own
+notation already assumes the first's rename table, confirming the merge order (notation
+first, momentum second).
+
+**Notation fix applied globally before anything else, per the update's own
+recommendation.** Audited and confirmed a threefold, not single, symbol collision (two
+load-bearing): the deviation constant $\varepsilon_0$ vs. vacuum permittivity
+(premise 3); bare $\mu_0$ vs. vacuum permeability; bare $\lambda$ for photon wavelength
+vs. the AQUAL prefactor. Renamed throughout `Foundation.md` and `ResearchNotes.md`:
+$\varepsilon(t),\varepsilon_0\to\delta(t),\delta_0$ (17 and 27 occurrences
+respectively); bare $\mu_0\to\mu(x_0)$; bare $\lambda\to\lambda_\gamma$ for photon
+wavelength (one instance, §3.3); bare $\nu\to\nu_\text{atom}$ for clock/atomic
+frequency (three instances); bare $F\to F_\rho$ for the mass-census density ratio (six
+instances, `F` for bolometric flux retained per the update's own minor-collision
+verdict). Added the resulting table to `Foundation.md`'s front matter, as recommended,
+so future sessions inherit it. **Deliberately not** applied to the archived Python
+scripts' own `eps0`-style identifiers — an ASCII name doesn't collide with anything in
+Python, and renaming validated, already-reproduced numerical code for a purely
+cosmetic reason risks a transcription bug for no benefit; recorded as a judgment call,
+not an oversight.
+
+**The trajectory constant's identity, merged into `Foundation.md` §2.2.** Added the
+precise statement the update supplied — $\delta_0$ is initial data of the dynamical
+system's one-parameter solution family, not a law parameter, with the epistemic status
+of $\Omega_\Lambda$ or $A_s$ — and the invariant, epoch-independent label
+$A_\delta\equiv\delta(t)[c(t)/c_0]^{-3/2\nu_*}$.
+
+**The sign-selection candidate result: verified before merging as a claim, exactly as
+the update itself asked for.** The update flagged, but did not itself confirm, that
+global regularity might force $\delta_0<0$ (the observed sign): the $\delta>0$ branch
+drives $x\to\infty$ ($\mu\to1$) where the Machian condition has no continuation. Checked
+two ways before trusting it: (1) re-derived the quoted $\dot\mu/\mu$ flow formula by
+hand from the closure's own definitions — matches exactly; (2) wrote
+`Fable-1/separatrix_check.py`, reusing `closure_dynamics.py`'s exact dynamical system,
+and directly integrated forward in coordinate time for both interpolating-function
+forms this document uses. Confirmed: every $\delta_0>0$ trial checked ($0.005$–$0.05$)
+hits a genuine finite-coordinate-time $\mu\to1$ breakdown with $R_h,c$ still finite (so
+proper time to it is finite too); every $\delta_0<0$ trial shows no such crossing over
+the same horizon, consistent with the already-established globally-regular branch.
+One honest limit found and recorded, not smoothed over: at $\delta_0=+0.05$ under the
+`standard` (not `simple`) interpolating function, the breakdown did not occur within the
+coordinate-time window checked — the result is merged as confirmed for `simple` (the
+form every fitted number in this document uses) at all sizes checked, and for
+`standard` at smaller sizes, not as a fully general theorem. Merged into `Foundation.md`
+§2.2 (full statement) and §6 item 3 (sign no longer open; amplitude restated in its
+sharpest over-excitation form, with a forward-pointer attached to item 5's radiation-era
+closure as a success criterion).
+
+**Momentum conservation note merged directly — no verification blocker, since it
+resolves rather than opens a question.** Confirmed the history independently
+(Bekenstein & Milgrom 1984 built AQUAL specifically to repair Milgrom's original 1983
+algebraic MOND's momentum non-conservation) matches the note's account. Merged: a
+unifying sentence into `Foundation.md` §3.3 (the redshift law read as $\hbar k$
+conservation against growing local units); two new correspondence rows into §5.5
+(peculiar-velocity decay $\propto(1+z)^{-1}$ and gas adiabatic cooling
+$\propto(1+z)^2$, both derived from $p=m(t)v$ conservation, no new assumptions).
+
+**Full merge executed.** `Foundation.md`: new front-matter notation table; §2.2 (two
+new paragraphs: the constant's identity and $A_\delta$; the verified sign-selection
+result); §3.3 (unifying momentum sentence); §5.5 (two new correspondence rows); §6
+(item 3's sign resolved and amplitude sharpened; item 5 gained a success criterion);
+global $\delta$/$\mu(x_0)$/$\lambda_\gamma$/$\nu_\text{atom}$/$F_\rho$ renaming.
+`ResearchNotes.md`: new §17 (full derivation trail: the constant's identity, the
+sign-selection verification with its honest caveat, the full notation audit) and new
+§18 (the momentum-conservation clarification in full); Open Threads renumbered
+§17→§19. Verified clean 1–19 section numbering and correct cross-references by grep
+afterward.
+
+**Files updated:** `cdot-7/Foundation.md` (front matter, §2.2, §3.3, §5.5, §6; global
+notation rename), `cdot-7/ResearchNotes.md` (new §17, §18; Open Threads renumbered to
+§19), `cdot-7/Fable-1/separatrix_check.py` (created), this log entry.
+
+---
+
+## Entry 13 — The radiation era: two Radiation-1 sessions (two-fluid closure, then the Planck-unit census) reviewed, verified, and merged (2026-07-11)
+
+**Prompt (verbatim):**
+> Now to the more interresting and challenging merge. I have had two agents work at a
+> first attempt at addressing the open item on how to approach the radiation era in
+> the new framework. The results are very encouraging, and I think they are ready for
+> merge. Please assess the two sessions in Radiation-1 and assess how to consolidate
+> it into the project. If no significant issues are found, please proceed with the
+> consolidation.
+
+**Summary.** Read both sessions in full (`SessionLog-2026-07-10.md`,
+`SessionLog-2026-07-11.md`, both update documents, both archived scripts). The first
+(2026-07-10) opened §6 item 5 directly: extended §2.1's Machian source with a
+radiation term, found a second AQUAL fixed point ($x_*^\text{rad}=2x_*^\text{matter}$,
+exactly), located and numerically integrated through this framework's own
+$z_\text{eq}$ analog, and resolved the AQUAL sourcing-prefactor question ($\eta=1$,
+argued from AQUAL's literal non-relativistic structure) — flagging a needed neutrino
+third term as not yet built. The second (2026-07-11), prompted by the author's direct
+challenge that the counting law looked arbitrary, reframed the whole construction as a
+**Planck-unit census** ($\mathcal N=\sum E_i/E_P$) — arithmetically identical to the
+07-10 law for matter and photons, but forcing $\eta=1$ from principle rather than
+scope, and forcing the missing neutrino term as an exact relativistic Fermi–Dirac
+energy density with zero free parameters.
+
+**Verified before merging, not taken on either sub-session's authority alone.** Ran
+`radiation_closure.py` and `census_closure.py` directly (via `uv run --with numpy
+--with scipy --with matplotlib`) and reproduced every headline number in both update
+documents to the stated precision: both fixed points (1.720/3.440, ratio exactly 2);
+$z_\text{eq}$ across all convention/$\eta$ combinations; $x(z_\text{recomb})$ ranges
+for the two-fluid ($[2.14,2.37]$ at $\eta=1$) and census ($[2.32,2.61]$) trajectories;
+the FD integral's two analytic limits ($F(0)=7\pi^4/120$, $F(a)/a\to\tfrac32\zeta(3)$,
+both to 6 digits); $\Omega_\nu^\text{census}=0.0298$ against the naive
+$\Sigma m_\nu/(93.14h^2)=0.0301$; $\Omega_b+\Omega_\nu^\text{census}=0.0740$ against
+$\Omega_\text{closure}=0.074$; all three neutrino-transition markers; the late-time
+agreement between the two-fluid and census trajectories to 4 digits at $z\le10$.
+Independently re-derived, not merely pattern-matched: the general fixed-point formula
+$x_*(n)=(1-n/2)/(\kappa\lambda)$, from the self-similar ansatz plus the closure's own
+$\dot c$ equation; the census identity $E_i/E_P=m_i/m_P=\sqrt{\alpha_{G,i}}$ for
+matter (epoch-invariant by premise 3, exactly); the coordinate-local dictionary's
+$c^{p-7}$ exponent, traced to local-energy ($c^{5/2}$) plus local-volume ($c^{9/2}$)
+scaling, independently reproducing both of the two exponents it was checked against.
+Viewed the generated figure (`census_trajectory.png`) directly to confirm it shows
+what the text claims.
+
+**Assessment: no significant issues found.** The scope discipline is exactly right —
+background-history only, no acoustic oscillations, no BAO, no CMB anisotropies (§6
+item 6 stays fully gated, consistent with this project's own cdot-4/cdot-5 history);
+the $\eta=1$ argument is correctly reasoned (AQUAL's literal Poisson equation has no
+pressure term to express, unlike GR's Tolman mass); the census's forced-neutrino-term
+agreement with the already-fitted $\Sigma m_\nu=1.374$ eV is a genuine (if modest)
+consistency check, not a circular one (the naive estimate was already close by
+construction of the four-term fit; the exact FD treatment could have disagreed
+enough to force a refit, and did not); every late-time, already-published result in
+this document is confirmed untouched. Caveats the sub-sessions themselves flagged
+(post-diction, the $\eta=2$ systematic, census continuity as an unproven assumption,
+$N_\text{eff}=3$ vs. $3.044$) are carried into the merge at the same strength, not
+smoothed over.
+
+**Full merge executed.** `Foundation.md`: §0 (scope-limit paragraph rewritten — the
+late-universe restriction is now lifted for background history only, through
+$z\sim10^6$, with the perturbation sector explicitly still gated); §2.1 (new
+Planck-unit-census paragraph, added alongside, not replacing, the existing
+particle-number derivation, which it subsumes as the matter special case); new §2.4
+(the combined, current-state radiation-era closure: coordinate scaling, the
+sourcing-prefactor argument, both fixed points, the census-forced neutrino term, the
+crossover and integrated trajectory, embedded figure); §5.6 (addendum: the exact
+census neutrino weight confirms $\Sigma m_\nu=1.374$ eV survives without a refit);
+§6 (items 4, 5, 9, 10 rewritten — item 5 now "substantially advanced, resolved at the
+background level," items 4/9/10 updated to reflect the census reframing).
+`ResearchNotes.md`: new §19 (full 07-10 derivation trail) and §20 (full 07-11
+derivation trail, including the retracted $z_{\nu,\text{nr}}$ suspicion), Open Threads
+renumbered §19→§21; one Open Threads bullet updated to note the radiation-era
+extension is no longer missing at the background level. Copied
+`Radiation-1/census_trajectory.svg` into the shared `figures/` directory as
+`cdot7_radiation_era.svg` and embedded it in `Foundation.md` §2.4.
+
+**Files updated:** `cdot-7/Foundation.md` (§0, §2.1, new §2.4, §5.6, §6 items 4/5/9/10),
+`cdot-7/ResearchNotes.md` (new §19, §20; Open Threads renumbered to §21; one Open
+Threads bullet updated), `figures/cdot7_radiation_era.svg` (created, copied from
+`Radiation-1/census_trajectory.svg`), this log entry.

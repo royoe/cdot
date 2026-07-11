@@ -5,6 +5,19 @@ attempted for this variable-$c$ program (see `ResearchNotes.md` for why the firs
 were superseded). This document is self-contained — no cross-references to earlier
 iterations. History and cross-references live in `ResearchNotes.md`.*
 
+**Notation table** (fixed 2026-07-07, after a threefold symbol collision was caught —
+full account in `ResearchNotes.md` §17): several quantities in this program collide
+with standard symbols already load-bearing elsewhere in the same equations. The
+resolution adopted throughout this document:
+
+| Symbol here | Meaning | Distinct from |
+|---|---|---|
+| $\delta(t),\ \delta_0$ | fixed-point deviation (§2.2); invariant amplitude $A_\delta$ | vacuum permittivity $\epsilon_0$ (§3) |
+| $\mu(x_0)$ (never bare) | interpolating function at today's operating point | vacuum permeability $\mu_0$ |
+| $\lambda$ | AQUAL prefactor, $a_0=\lambda\dot c$ (§4) | photon wavelength, always $\lambda_\gamma$ here |
+| $\nu_\text{atom}$ | atomic/clock transition frequency (§3.1) | $\nu_*$ ($\mu$'s log-slope at $x_*$, §2.2) |
+| $F_\rho\equiv\rho_0/\rho_b$ | mass-census density ratio (§5.6) | bolometric flux $F$ (§5.5, minor, retained) |
+
 ---
 
 ## 0. Purpose and Scope
@@ -41,13 +54,21 @@ closure; the mechanism adopted here is explicitly Newtonian-level, matching the 
 program it draws from. A relativistic completion, if one is needed, is future work
 (§6 item 7).
 
-**Scope limit, newly identified and stated plainly.** The Machian closure (§2) sources
-$c(t)$ from rest mass only. Radiation energy density, relative to rest-mass energy
-density, grows into the past ($\hat u_\gamma/\hat\rho_mc^2\propto(1+z)$, exactly as in
-standard cosmology) and must eventually dominate, at the analog of $z_\text{eq}$. Until
-the closure is extended to include radiation energy, every result in this document is a
-**late-universe result** ($z\ll z_\text{eq}$); BBN- and CMB-era physics cannot yet be
-posed (§6 item 5).
+**Scope limit, partially lifted.** The Machian closure (§2) originally sourced $c(t)$
+from rest mass only, making every result in this document a **late-universe result**
+($z\ll z_\text{eq}$). §2.4 now extends the closure through matter-radiation equality
+and recombination out to $z\sim10^6$, using the **Planck-unit census** (§2.1) as the
+counting law — a genuinely dimensionless inventory that reduces to particle-counting
+for matter (via premise 3) and *forces* a relativistic neutrino term with no new
+freedom. This lifts the scope limit for **background history only**: the trajectory
+$x(z)=g_h(z)/a_0(z)$ through recombination, and the location of this framework's own
+$z_\text{eq}$ analog, are now computed and checked against the four-term fit's own
+mass budget (§2.4, §5.6). It does **not** touch the perturbation/structure sector —
+no acoustic oscillations, no CMB anisotropies, no BAO (§6 item 6, still explicitly
+gated by this project's own cdot-4/cdot-5 history) — nor does it yet include
+$e^+e^-$ annihilation or the QCD transition ($z\gtrsim10^9$). Everything through
+recombination is a smooth trajectory with a quantified kink, not an oscillation in
+one.
 
 **A deliberate scope boundary, stated as a standing test for what belongs in this
 document.** Premise 2's homogeneity assumption and premise 4's local application of
@@ -152,6 +173,26 @@ $$M_h(t) = N_h(t)\,m(t) = \frac43\pi R_h(t)^3\, n\, m_0\!\left(\frac{c(t)}{c_0}\
 where $\rho_0\equiv nm_0$ is today's rest-mass density. This counts rest mass only —
 radiation energy is not yet included (§0's scope limit; §6 item 5).
 
+**Restated as a single counting principle: the Planck-unit census.** The paragraph
+above counts massive particles; extended to the radiation era (§2.4), the natural
+generalization is a genuinely dimensionless inventory of *everything* within the
+horizon, measured in the instantaneous Planck unit:
+$$\mathcal N(t)\;\equiv\;\sum_{i\,\in\,R_h}\frac{E_i(t)}{E_P(t)},\qquad
+M_h(t)\;\equiv\;\mathcal N(t)\,m_P(t),\qquad E_P\equiv\sqrt{\frac{\hbar c^5}{G}},\quad
+m_P\equiv\sqrt{\frac{\hbar c}{G}}.$$
+**This is not a new assumption layered on top of the paragraph above — it is
+arithmetically identical to it, term by term, for matter.** Since $E_P=m_Pc^2$
+exactly, a massive particle's census weight is $E_i/E_P=m_i/m_P=\sqrt{\alpha_{G,i}}$
+— **epoch-invariant by premise 3** ($\alpha_G$-invariance, §3) — so $\mathcal N m_P$
+reduces exactly to $\sum m_i$, and "just counting mass" is not a separate simplifying
+choice but the matter-only special case of this same census, forced by the identical
+symmetry that fixes $s=+\tfrac12$ (§3.4): **the counting law is the Machian face of
+Planck-unit invariance** (§6 item 4 now carries both debts as one). For a photon,
+$E_\gamma/E_P=\hbar kc/E_P\propto c^{-3/2}$ relative to matter's constant weight —
+this is exactly §2.4's radiation term, derived there directly; the census is
+introduced here because it is the principle underlying both the matter-only count
+above and the radiation extension, not a change to either.
+
 ### 2.2 The working closure: an AQUAL-consistent dynamical system
 
 **The naive Newtonian closure is inconsistent with premise 4, at its own operating
@@ -193,26 +234,64 @@ every value of $\lambda$, so the earlier hope that self-consistency would pin it
 recorded here as dead (`ResearchNotes.md` §8).
 
 **The fixed point is unstable — and that instability is this framework's analog of
-$\Lambda$.** Linearizing $R_h=B\sqrt{\mu_*}\,c^{3/4}(1+\varepsilon)$:
-$$\dot\varepsilon=\frac{3}{2\nu_*}\frac{\dot c}{c}\,\varepsilon,\qquad
+$\Lambda$.** Linearizing $R_h=B\sqrt{\mu_*}\,c^{3/4}(1+\delta)$:
+$$\dot\delta=\frac{3}{2\nu_*}\frac{\dot c}{c}\,\delta,\qquad
 \nu_*\equiv\left.\frac{d\ln\mu}{d\ln x}\right|_{x_*}\in(0,1)
 \quad\Longrightarrow\quad
-\varepsilon(z)=\varepsilon_0\,(1+z)^{-1/\nu_*}.$$
+\delta(z)=\delta_0\,(1+z)^{-1/\nu_*}.$$
 Deviations from the scale-free history are negligible in the past and grow at late
 times — exactly $\Lambda$'s characteristic phenomenology, produced here by an
 instability rather than a constant. The sign of the one new integration constant
-$\varepsilon_0$ sets the branch: $\varepsilon_0<0$ (the horizon sliding *below*
+$\delta_0$ sets the branch: $\delta_0<0$ (the horizon sliding *below*
 scale-free growth, into the deep-MOND regime) gives late-time acceleration and an older
 universe. Cosmography, using the redshift law of §3.3: $q_0=(4-2j)/3$ with
 $j\equiv c\ddot c/\dot c^2$; the fixed point gives $j=\tfrac54,\ q_0=+\tfrac12$
 (consistent with the EdS correspondence, §5.5), and at linear order
-$q_0=\tfrac12+\varepsilon_0(\nu_*+2)/\nu_*^2$.
+$q_0=\tfrac12+\delta_0(\nu_*+2)/\nu_*^2$.
+
+**What $\delta_0$ is, precisely — initial data, not a law parameter.** The Newtonian-era
+closure (an earlier pass through this document) was algebraic and rigid, a
+zero-parameter history; promoting it to the dynamical system above added exactly one
+genuine integration constant. $\delta_0$ is the coordinate labeling *which* member of
+the resulting one-parameter trajectory family our universe sits on — the premises,
+$\mu$, $\lambda$, $\kappa$ are all trajectory-independent, so this is data about our
+particular history, not physics. Its epistemic slot is exactly that of $\Omega_\Lambda$
+or the primordial amplitude $A_s$ in standard cosmology: a measured constant, not yet
+explained by a generation mechanism (§6 item 3). Because "the deviation today" is
+epoch-dependent bookkeeping, the epoch-independent label is the growing-mode amplitude
+$$A_\delta\equiv\delta(t)\left[\frac{c(t)}{c_0}\right]^{-3/2\nu_*}\qquad(\text{constant
+along the trajectory, linear regime}),$$
+and any quoted "seed value" of the deviation must state its reference epoch — the
+$\delta_0$ values quoted throughout this document are specifically today's value,
+$A_\delta$ at $z=0$.
+
+**The fixed point is a separatrix, and the observed sign is derived from global
+regularity, not merely fitted.** The two branches are not symmetric. **$\delta<0$**
+(deep-MOND-ward, the observed branch): globally regular, extending for infinite proper
+time into the exponential-$c$, de Sitter-analog future (above). **$\delta>0$**
+(Newtonian-ward): along the flow,
+$$\frac{\dot\mu}{\mu}=\frac{2a}{r}\left(1-\frac{x_*}{x}\right)\ \longrightarrow\ \frac{2a}{r}>0\quad\text{as }x\to\infty$$
+(bounded away from zero, using $d\ln\mu/dt=d\ln[\mu_*r^2a^{-3/2}]/dt$ and $x_*=3/(4\kappa\lambda)$),
+so $x$ diverges — $\mu$ approaches its asymptote $1$ — in *finite* coordinate time, at
+which point the Machian condition $\mu(x)g_h=GM_h/R_h^2$ has no continuation: the
+horizon's implied Newtonian binding exceeds what any admissible interpolating function
+can supply. **Checked directly, not merely derived**: forward integration of the exact
+dynamical system above, for both interpolating-function forms this document considers
+(`simple`, `standard`), confirms a genuine finite-coordinate-time breakdown for every
+$\delta_0>0$ trial at the perturbative scale checked, with $R_h,c$ still finite at the
+point $\mu\to1$ — so the proper time to it is finite too, unlike the $\delta<0$ branch's
+own forward singularity (above), whose proper time diverges. Only $\delta<0$
+trajectories persist indefinitely: **the observed sign is therefore forced by global
+regularity, reducing the constant's remaining initial-data content to a single positive
+amplitude, $|\delta_0|$** — flagged, not yet promoted further, since the check was run
+at perturbative $\delta_0$ and did not exhaustively map every interpolating function or
+amplitude (`ResearchNotes.md` §17, `Fable-1/separatrix_check.py`).
 
 **First pass against real data: SN + $a_0(z)$ only, $\kappa=1$.** Fit jointly against
 the actual Pantheon+ compilation (1701 SNe, full published STAT+SYS covariance,
 $z_\text{HD}>0.01$ cut leaving 1590 SNe, absolute-magnitude/$H_0$ offset analytically
 marginalized so only the shape is tested) and the published $a_0(z)$ constraints (§5.5),
-with $\kappa=1$ (simple interpolating function): $\varepsilon_0=-0.0678$,
+with $\kappa=1$ (simple interpolating function): $\delta_0=-0.0678$,
 $\kappa\lambda=0.307$, $q_0=-0.56$, age $=12.8$ Gyr. The pipeline was validated first:
 run on flat $\Lambda$CDM alone, it returns $\Omega_m=0.331\pm0.018$, $\chi^2=1403.7$ —
 reproducing the published Pantheon+ SN-only result ($0.334\pm0.018$) to a third of a
@@ -227,9 +306,9 @@ Extending the same trajectory machinery with two more likelihoods — the actual
 radial-acceleration-relation data (McGaugh, Lelli & Schombert 2016, *PRL* 117, 201101;
 2693 points from 153 galaxies, downloaded directly, not a summary statistic) and the
 mass-census term of §5.6, with $\Sigma m_\nu$ a bounded nuisance parameter — and fitting
-$(\varepsilon_0,\kappa\lambda,\lambda,\Sigma m_\nu)$ jointly gives, for the simple
+$(\delta_0,\kappa\lambda,\lambda,\Sigma m_\nu)$ jointly gives, for the simple
 interpolating function (still preferred over the standard one, $\Delta\chi^2\approx13$):
-$$\varepsilon_0=-0.0909,\quad\kappa\lambda=0.4355,\quad\lambda=0.3056\ (\kappa\approx1.43),
+$$\delta_0=-0.0909,\quad\kappa\lambda=0.4355,\quad\lambda=0.3056\ (\kappa\approx1.43),
 \quad\Sigma m_\nu=1.374\ \text{eV},$$
 giving $a_0(0)=1.39\times10^{-10}$ m/s², $q_0=-0.44$, age $=12.9$ Gyr. This is now the
 framework's working cosmology, superseding the SN+$a_0(z)$-only numbers above. **Validated
@@ -295,7 +374,7 @@ runaway maps onto a de Sitter phase.
 $H_0^\text{hor}\equiv(\dot c/c)|_{t_0}$ (not a global ratio $c_0/R_{h,0}$, which held only
 under the earlier, simpler closure). Exactly on *any* trajectory of this dynamical
 system, $H_0^\text{obs}=\tfrac32\dot c_0/c_0$ (§5.5), so today's $a_0=\lambda\dot
-c_0=\tfrac23\lambda c_0H_0^\text{obs}$ regardless of $\varepsilon_0$ — the calibration of
+c_0=\tfrac23\lambda c_0H_0^\text{obs}$ regardless of $\delta_0$ — the calibration of
 §4 survives this section's closure rebuild untouched.
 
 ### 2.3 $c_0$ and $c_z$ are relational, not measured
@@ -309,6 +388,128 @@ against the *receiving* observer's own local reference, not a universal standard
 observers at different epochs intercepting the same photons infer different $z$, not
 because the photons changed or either observer's own $c$ reads differently on their own
 instruments, but because the local reference each compares against differs.
+
+### 2.4 Extending the closure to the radiation era
+
+**Scope, stated first.** This section extends §2.2's closure with a radiation term and
+a census-forced neutrino term, checked numerically from today through matter-radiation
+equality and recombination out to $z\sim10^6$. It is **background-history only**: a
+smooth trajectory and where it kinks, not a coupled photon-baryon fluid's acoustic
+oscillations. The perturbation/structure sector (§6 item 6) remains untouched and
+explicitly gated, for the reasons already stated there.
+
+**The radiation term's coordinate scaling.** The census of §2.1 gives each photon's
+weight $E_\gamma/E_P=\hbar kc(t)/E_P(t)\propto c(t)^{-3/2}$ (conserved coordinate
+wavenumber $k$, §3.3's Noether argument; $E_P\propto c^{5/2}$) — equivalently, since
+every photon present at time $t$ has coordinate energy $\propto c(t)$ regardless of
+emission time, $u_\gamma(t)\propto c(t)^{+1}$ and $\rho_\gamma^\text{eff}(t)\equiv
+u_\gamma(t)/c(t)^2\propto c(t)^{-1}$ — the **opposite sign** from matter's
+$\rho_m\propto c^{+1/2}$. Toward genesis ($c\to0$) matter's contribution vanishes while
+radiation's diverges, so a crossover epoch — this framework's own analog of
+$z_\text{eq}$ — must exist. **Cross-checked independently**: a general
+coordinate$\to$local dictionary (built from §3.1's local length $\propto c^{-3/2}$ and
+frequency $\propto c^{5/2}$ scalings: a coordinate density $\propto c^p$ maps to a local
+density $\propto c^{p-7}$) applied to $u_\gamma\propto c^1$ predicts
+$\hat u_\gamma\propto(1+z)^4$ — matching §5.5's already-established result exactly —
+and applied to $\rho_mc^2\propto c^{5/2}$ predicts $\hat\rho_m\propto(1+z)^3$, the
+standard matter-dilution law, not previously stated in this document. Two independent
+hits on exponents not fitted to produce them.
+
+**The sourcing prefactor: no pressure term.** Radiation sources the AQUAL closure as
+$\rho_\gamma^\text{eff}=u_\gamma/c^2$, not the GR-motivated $\rho+3p/c^2=2u_\gamma/c^2$
+a $w=\tfrac13$ fluid carries in the Friedmann equations. This is not a simplifying
+choice: AQUAL's field equation (premise 4) is a literal, non-relativistic Poisson
+equation, $\nabla^2\Phi=4\pi G\rho$ in the $\mu\to1$ limit, sourced by mass density
+alone — it has no structure to express a pressure term, which is a feature of GR's
+field equations specifically (visible already in GR's weak-field Tolman-mass limit,
+not only the cosmological acceleration equation). No internal conservation law forces a
+value here either (the Bianchi-identity route that fixes this in standard cosmology
+needs an expanding volume doing work against pressure, with no analog under premise 1's
+static space). **Adopted as $\eta=1$**, the value actually licensed by what premise 4
+says as written — revisit only if a relativistic completion (§6 item 7) is ever built.
+The census (§2.1) makes this principled rather than merely scope-argued: an inventory
+has no pressure term to express in the first place.
+
+**The extended closure and its two fixed points.** With
+$\rho_\text{tot}(c)=\rho_0(c/c_0)^{1/2}+\rho_{\gamma,0}(c/c_0)^{-1}$ (plus the neutrino
+term below), §2.2's argument becomes a sum of differently-scaling terms, so its
+$x=$const solution survives only as an asymptote on either side. Repeating §2.2's own
+method for a general source $\rho\propto c^n$: kinematics ($\dot R_h=c$) force
+$R_h\propto c^{1-n/2}$, and matching against the closure's own $\dot c$ pins
+$$x_*(n)=\frac{1-n/2}{\kappa\lambda},$$
+independent of $\mu$'s functional form. Matter ($n=\tfrac12$) reproduces §2.2's
+$x_*=3/(4\kappa\lambda)$ exactly (validation). Radiation ($n=-1$) gives a **second
+fixed point**,
+$$x_*^{(\text{rad})}=\frac{3}{2\kappa\lambda}=2\,x_*^{(\text{matter})},$$
+exactly double, also $\mu$-independent. Using the four-term fit's $\kappa\lambda=
+0.4355$: $x_*^\text{(matter)}=1.72$ (as in §2.2), $x_*^\text{(rad)}=3.44$ — still
+squarely in AQUAL's transition zone, not deep-Newtonian. **This framework's own
+self-similar structure means the early universe does not automatically simplify the
+way it does in standard cosmology**: $a_0=\lambda\dot c$ is tied to the same
+self-similar solution as $g_h$, so $g_h/a_0$ need not grow large just because $c$ is
+small.
+
+**The neutrino term, forced by the census with zero free functions.** Premise 1's
+Noether argument conserves each relic neutrino's coordinate wavenumber $k$ exactly as
+it does for photons; premise 3 gives $m_\nu(t)\propto c^{1/2}$. The census weight per
+neutrino is therefore
+$$w_\nu=\frac1{c^2}\sqrt{\big(m_\nu(t)c(t)^2\big)^2+\big(\hbar k\,c(t)\big)^2},$$
+interpolating between census-radiation ($\propto c^{-1}$, deep past) and census-matter
+($\propto c^{+1/2}$, today), with the transition where $\hbar k\approx m_\nu c$.
+Translated to local units, this is exactly the standard relativistic Fermi–Dirac
+energy density of massive relic neutrinos ($\hat p\propto(1+z)$, $\hat m$ const, frozen
+occupation) — the genuine third term a two-fluid treatment lacks, derived here with no
+new free parameter. **Verified numerically**: with the four-term fit's own
+$\Sigma m_\nu=1.374$ eV (§5.6, three quasi-degenerate states at $0.458$ eV),
+$$\Omega_\nu^\text{census}(t_0)=0.0298,\qquad\Omega_b+\Omega_\nu^\text{census}=0.0740,$$
+matching the closure's demanded $\Omega_\text{closure}=0.074$ to $0.1\%$ — the exact
+FD treatment closes the four-term fit's mass census without any adjustment to
+$\Sigma m_\nu$ (the naive $\Sigma m_\nu/(93.14h^2)$ estimate used in §5.6 differs from
+the exact value by $\sim1\%$; both close the budget).
+
+**The crossover and the trajectory, integrated through it.** Setting the census
+radiation-like and matter-like components equal gives, at the current working
+convention ($\Omega_\text{closure}=0.074$), a crossover at $z\approx1080$ —
+essentially *at* recombination — versus $z\approx1466$ for the simpler two-fluid
+(matter+photon only) treatment; across all four standing $\Omega_\text{closure}$
+conventions (§6 item 1, §5.6), the crossover ranges over $z\approx870$–$2650$.
+Integrating the full three-component system backward from today's actual operating
+point ($x_0=1.10$, §5.5/§5.6) to $z\sim10^6$: **the census and two-fluid trajectories
+agree to 4 digits for $z\le10$ (identical, since neutrinos are fully non-relativistic
+there — every late-time result in this document, including the four-term fit itself,
+is untouched), diverge by $<1\%$ below $z\approx190$, and depart systematically above
+it**, with both fixed points ($1.72$, $3.44$) exactly unchanged in either treatment
+(neutrinos asymptote to census-radiation in the deep past). **At recombination
+($z=1100$), $x=2.61$ at the primary convention** ($[2.32,2.61]$ across all four
+conventions; $2.67$ under the standard, not simple, interpolating function) — roughly
+$50\%$ above the matter-only fixed point, and a systematic $\sim10\%$ above the
+simpler two-fluid estimate ($[2.14,2.37]$). At $z=1100$ the neutrinos are genuinely
+mid-transition ($40\%$ of their census energy is kinetic). **Any future treatment of
+recombination-era dynamics in this framework should use this census value, not
+$x_*=1.72$.**
+
+![](../figures/cdot7_radiation_era.svg)
+*Figure: the AQUAL operating point $x=g_h/a_0$ through the radiation era. The
+three-component Planck-unit census (solid red, $\Omega_\text{closure}=0.074$) departs
+above the simpler two-fluid treatment (blue) before recombination, converging with it
+at both ends (matter fixed point $1.72$, past; radiation fixed point $3.44$, future).
+Dashed red shows the $\Omega_\text{closure}=0.134$ convention for comparison.
+Generated by `Radiation-1/census_closure.py`, independently re-run before merging.*
+
+**What this does not yet do.** Coordinate photon-number conservation (used above to
+derive $u_\gamma\propto c$) is not itself the deepest statement available — §2.1's
+census reframes it as census continuity through energy-conserving conversions, which
+is weaker and more defensible (per-species number conservation is known false at
+$e^+e^-$ annihilation and other particle-creating processes; census continuity is not).
+$e^+e^-$ annihilation and the QCD transition are real, sized kinks confirmed to require
+**no correction to anything computed here** (standard entropy-transfer bookkeeping
+puts $e^+e^-$ at $1+z\approx2.2\times10^9$, boosting $u_\gamma$ by
+$(11/4)^{4/3}\approx3.85\times$ relative to naive extrapolation — far past everything
+tested above) but are not themselves computed in census form (§6 item 5). The
+census-continuity assumption itself rests on instantaneous coordinate-frame energy
+conservation at conversions — plausible given premise 3, but an assumption, on §6 item
+10's desk, not smuggled in. Full derivation trail, caveats, and the two-session history
+(a first two-fluid pass, then the census refinement) are in `ResearchNotes.md` §19–20.
 
 ---
 
@@ -351,7 +552,7 @@ $\alpha$, in $\mu=m_p/m_e$, or in any laboratory dimensionless constant, at ever
 ### 3.1 Immediate consequence: atomic scales
 
 The Bohr radius $a_\text{Bohr}\propto\epsilon_0/m_e\propto c^{-1}\cdot c^{-1/2}=c^{-3/2}$.
-The Rydberg-type atomic transition frequency $\nu\propto m_e\epsilon_0^{-2}\propto
+The Rydberg-type atomic transition frequency $\nu_\text{atom}\propto m_e\epsilon_0^{-2}\propto
 c^{1/2}\cdot c^2=c^{5/2}$.
 
 ### 3.2 Immediate consequence: orbital dynamics
@@ -385,8 +586,8 @@ stretch it, which is exactly the structure this framework dropped. The old
 conserved-frequency law is recorded, and the reasons it fails, in `ResearchNotes.md` §6.
 
 **The corrected law.** A photon emitted at $t_e$ (epoch $c_z$) matches the emitter's
-local atomic standard, $\nu_e\propto c_z^{5/2}$ (§3.1); its wavelength,
-$\lambda=c(t_e)/\nu_e\propto c_z^{-3/2}$, is conserved in flight. At reception it
+local atomic standard, $\nu_\text{atom}(t_e)\propto c_z^{5/2}$ (§3.1); its wavelength,
+$\lambda_\gamma=c(t_e)/\nu_\text{atom}(t_e)\propto c_z^{-3/2}$, is conserved in flight. At reception it
 oscillates at $\omega_\text{rec}=c_0k\propto c_0c_z^{3/2}$, compared against the
 receiver's own standard $\nu_\text{atom}(t_0)\propto c_0^{5/2}$:
 $$\boxed{\;1+z=\frac{\nu_\text{atom}(t_0)}{\omega_\text{rec}}=\left(\frac{c_0}{c_z}\right)^{3/2}\quad\Longleftrightarrow\quad c_z=c_0(1+z)^{-2/3}.\;}$$
@@ -407,6 +608,14 @@ $b=1.003\pm0.005\,(\text{stat})\pm0.010\,(\text{sys})$ — consistent with this
 framework's $b=1$ at $0.3\sigma$, and excluding the old law's $b=3/5$ at $\sim36\sigma$.
 **This correction was empirically mandatory, not merely a matter of internal
 consistency.**
+
+**Read in terms of conservation, not only kinematics.** The quantity conserved in
+flight is the photon's momentum $\hbar k$ (premise 1's exact spatial-translation
+invariance, above) — the redshift law is this conservation read against the
+receiver's own growing local units, not a statement about light "losing energy."
+This is the photon-sector instance of a general fact checked in full in
+`ResearchNotes.md` §18: in this framework nothing propagating ever loses momentum —
+observers' units outgrow it.
 
 ### 3.4 Why $s=+\frac12$ specifically — from a fitted number to a symmetry statement
 
@@ -488,10 +697,10 @@ urgent — see §5.5's lensing-RAR discussion).
 ### 5.1 LLR safety — checked exactly, by construction, in the Newtonian sector
 
 Round-trip ranging time in coordinate time is $\Delta t_\text{coord}=2r/c(t)$. With
-$r\propto c^{-3/2}$ (§3.2) and the atomic clock ticking at $\nu\propto c^{5/2}$ (§3.1):
-$$\Delta t_\text{coord}\propto c^{-3/2-1}=c^{-5/2},\qquad \Delta\tau=\nu\,\Delta t_\text{coord}\propto c^{5/2}\cdot c^{-5/2}=c^0=\text{const}.$$
+$r\propto c^{-3/2}$ (§3.2) and the atomic clock ticking at $\nu_\text{atom}\propto c^{5/2}$ (§3.1):
+$$\Delta t_\text{coord}\propto c^{-3/2-1}=c^{-5/2},\qquad \Delta\tau=\nu_\text{atom}\,\Delta t_\text{coord}\propto c^{5/2}\cdot c^{-5/2}=c^0=\text{const}.$$
 The number of clock ticks recorded for a round trip does not depend on $c(t)$ at all,
-hence a data-reduction pipeline assuming constant $c,\nu$ infers a constant range:
+hence a data-reduction pipeline assuming constant $c,\nu_\text{atom}$ infers a constant range:
 $$\frac{\dot r_\text{LLR}}{r_\text{LLR}} = 0,\qquad\text{exactly, at every epoch.}$$
 This is not a fitted cancellation checked once at today's epoch — the exponents cancel
 identically, for the same reason at any $t$, and (§3.4) it is the same statement as
@@ -528,7 +737,7 @@ research line, not new here), though the tension factor without a derived prefac
 now $\approx3.8$, not the $\approx2.3$ an earlier pass through this document quoted
 before the redshift-law correction. **This value is trajectory-invariant** (§2.2): since
 $H_0^\text{obs}=\tfrac32\dot c_0/c_0$ holds exactly on any solution of the dynamical
-system, $a_0=\tfrac23\lambda c_0H_0^\text{obs}$ regardless of $\varepsilon_0$ — a
+system, $a_0=\tfrac23\lambda c_0H_0^\text{obs}$ regardless of $\delta_0$ — a
 calibration made anywhere on the trajectory survives the closure rebuild untouched.
 
 **The earlier two-convention ambiguity is resolved by the four-term fit (§2.2, §5.6),
@@ -594,14 +803,14 @@ structural to a pure power-law closure, not a tunable artifact — which is exac
 motivated §2.2's AQUAL-consistent repair.
 
 **The working cosmology (§2.2's fitted trajectory) is fit against real data.** The
-current working numbers are the four-term fit's — $\varepsilon_0=-0.0909,\
+current working numbers are the four-term fit's — $\delta_0=-0.0909,\
 \kappa\lambda=0.4355,\ \lambda=0.3056$ ($\kappa\approx1.43$), simple $\mu$, real
 Pantheon+ joint fit together with the local RAR shape and the mass census (§2.2, §5.6):
 $q_0=-0.44$, age $=12.9$ Gyr (consistent with globular-cluster ages, $\approx12.5$–13
 Gyr, still below $\Lambda$CDM's 13.8), costing only $\Delta\chi^2_\text{SN}=+2.0$
 relative to $\Lambda$CDM at equal parameter count on the SN side. **This supersedes both
 an earlier pass's fit to a theoretical $\Lambda$CDM proxy curve and the SN+$a_0(z)$-only
-three-term pass** ($\varepsilon_0=-0.0678,\ \kappa\lambda=0.307$) — the pipeline was
+three-term pass** ($\delta_0=-0.0678,\ \kappa\lambda=0.307$) — the pipeline was
 validated at each stage by reproducing, first, the published Pantheon+ SN-only result
 exactly, and second, the three-term result exactly before trusting the two new terms
 (§2.2). What remains is tightening this fit, not extending it further — see §6 item 1.
@@ -630,12 +839,26 @@ and molecular-absorber measurements), $\hat n_\gamma\propto(1+z)^3$,
 $\hat u_\gamma\propto(1+z)^4$ — the complete background thermal phenomenology of an
 expanding universe, reproduced by a static, shrinking-ruler description.
 
+**Two more correspondence rows, from momentum conservation applied to massive
+particles (full derivation in `ResearchNotes.md` §18).** The photon row above is not
+the only place conserved momentum, read against growing local units, reproduces
+standard cosmological phenomenology with no new assumption: (i) a free massive
+particle's Lagrangian $L=\tfrac12m(t)v^2$ conserves canonical momentum $p=m(t)v$ (the
+$m(t)$ dependence breaks energy, not momentum — the familiar situation for any
+time-dependent background), giving $v\propto c^{-1/2}$ and, against the local velocity
+unit ($\propto c$), $\hat v_\text{pec}\propto(1+z)^{-1}$ — exactly the standard
+peculiar-velocity decay of free-streaming matter; (ii) decoupled gas then cools as
+$\hat T_\text{gas}\propto(1+z)^2$, versus the photon sector's $(1+z)$ above — the
+standard adiabatic pair ($a^{-2}$ vs. $a^{-1}$), reproduced with no new assumptions.
+Together with the photon row, these support one sentence this document owns: *nothing
+propagating ever loses momentum in this framework — observers' units outgrow it.*
+
 **A falsifiable prediction: the RAR scale evolves — now a four-term fit result, not a
 blind check.** In local units, $\hat a_0(z)$ is computed from the four-term fit's own
 trajectory (§2.2; not the naive fixed-point $(1+z)^{3/2}$, which the trajectory's slide
 toward deep-MOND suppresses):
 $$\hat a_0(z)/\hat a_0(0) = 1.69,\ 2.35,\ 2.57,\ 3.30\quad\text{at } z=0.33,\ 0.85,\ 1.00,\ 1.44,$$
-fixed by the *same* $(\varepsilon_0,\kappa\lambda,\lambda)$ already fitted jointly to
+fixed by the *same* $(\delta_0,\kappa\lambda,\lambda)$ already fitted jointly to
 the SN diagram, the local RAR, and the mass census — this curve is a fit result across
 all four datasets at once, not an independent prediction checked afterward. **The
 measurement this is fit against**: MUSE-DARK III (Ciocan et al. 2026, *A&A* 709, L16;
@@ -684,13 +907,13 @@ $$\Omega_\text{closure}\equiv\frac{\rho_0}{\rho_\text{crit}}=\frac89(\kappa\lamb
 right one to use for a mass-budget statement, since it ties the required density
 directly to the measured MOND scale rather than to $H_0$ and $\lambda$ separately.
 Every factor on the right is already fixed by the fits above: $a_0$ by its empirical
-value, $(x_0,\mu_0)$ by the SN+$a_0$ joint fit. **$\Omega_\text{closure}$ is therefore
+value, $(x_0,\mu(x_0))$ by the SN+$a_0$ joint fit. **$\Omega_\text{closure}$ is therefore
 an output with zero remaining freedom, not a quantity that can be tuned to match the
 baryon census after the fact.**
 
 **This has now been tested directly by the four-term fit (§2.2), not just scoped in
 advance — and it comes within a hair of closing, at the current laboratory edge.**
-Fitting $(\varepsilon_0,\kappa\lambda,\lambda,\Sigma m_\nu)$ jointly against real SN,
+Fitting $(\delta_0,\kappa\lambda,\lambda,\Sigma m_\nu)$ jointly against real SN,
 $a_0(z)$, local RAR, and this mass-census term at once (using the BBN/primordial-
 deuterium value $\Omega_bh^2=0.02166\pm0.00019$, Cooke, Pettini & Steidel 2018 —
 deliberately not a CMB/$\Lambda$CDM-derived number, since the point of this check is
@@ -755,7 +978,7 @@ rest mass beyond neutrinos — this is precisely MOND's own historical retreat a
 scales, and if ever adopted, §0's "no dark matter" claim must be rewritten to "no dark
 matter in galactic dynamics," stated plainly, not left implicit; (iv) acceptance as this
 framework's own version of the real, unresolved MOND cluster-mass residual
-($\sim2$–$3\times$, suggestively close to $F$ found in an earlier pass through this
+($\sim2$–$3\times$, suggestively close to $F_\rho$ found in an earlier pass through this
 analysis) — legitimate only as a labeled, standing failure, never treated as background
 noise.
 
@@ -766,10 +989,22 @@ meaningfully below $\sim1.35$ eV (equivalently $m_\beta$ meaningfully below $0.4
 without a compensating resolution from items (i)–(iv) above, this specific resolution
 fails and the framework survives only in the weakened form real MOND itself already
 occupies at cluster scales — stated here as a concrete, externally-adjudicated
-condition, not a hypothetical one. Seed-origin work on $\varepsilon_0$ (§6 item 3)
+condition, not a hypothetical one. Seed-origin work on $\delta_0$ (§6 item 3)
 remains frozen: with the mass budget now shown to close only marginally, the seed's
 own amplitude is even less of a priority until this is on firmer ground (proper
 posteriors, a real per-galaxy RAR covariance, and $H_0$ properly propagated).
+
+**A more careful neutrino treatment confirms this, rather than reopening it.** §2.4's
+Planck-unit census gives an *exact* relativistic Fermi–Dirac neutrino energy density,
+in place of the naive $\Sigma m_\nu/(93.14h^2)$ estimate used above. At the same
+$\Sigma m_\nu=1.374$ eV, the two agree to $\sim1\%$ ($\Omega_\nu^\text{census}=0.0298$
+vs. $0.0301$ naive), and $\Omega_b+\Omega_\nu^\text{census}=0.0740$ still matches
+$\Omega_\text{closure}=0.074$ to $0.1\%$ — **the fitted $\Sigma m_\nu$ survives the more
+exact treatment without needing to be refit.** This is a consistency check, not a new
+independent confirmation (the naive formula was already close by construction of the
+four-term fit); it belongs on record because it could have gone the other way. The
+exact census weight should replace the naive formula in any future refit of this mass
+census (§6 item 1).
 
 ### 5.7 The M-σ goal of §0: a first real discriminating test, modest and non-decisive
 
@@ -875,7 +1110,7 @@ archived with `ResearchNotes.md` §15.)
 
 1. **The four-term fit's first pass is done (§2.2, §5.6); make it rigorous.** Real SN,
    $a_0(z)$, local RAR (SPARC, Lelli/McGaugh/Schombert 2016), and mass-census data are
-   now fit jointly over $(\varepsilon_0,\kappa\lambda,\lambda,\Sigma m_\nu)$, resolving
+   now fit jointly over $(\delta_0,\kappa\lambda,\lambda,\Sigma m_\nu)$, resolving
    the earlier two-$a_0$-convention split into one number ($a_0=1.39\times10^{-10}$
    m/s²) and finding the mass budget closes only if $\Sigma m_\nu$ sits at the KATRIN
    edge (§5.6). What remains, in order of how much it could change the headline result:
@@ -900,18 +1135,51 @@ archived with `ResearchNotes.md` §15.)
    at KATRIN's current bound — a real, dated, externally-adjudicated falsification
    condition (§5.6), not a hypothetical one. This bears directly on the "no dark
    matter" claim in §0 and remains the framework's most consequential open number.
-3. **Origin and amplitude of the seed $\varepsilon_0$ — frozen pending item 2.** Not a
+3. **Origin and amplitude of the seed $\delta_0$ — frozen pending item 2.** Not a
    constant like $\Lambda$ — a transient, growing instability, so "why now" becomes "why
    does the seed's amplitude put the few-percent-deviation epoch at stellar-age epochs
    regardless of when it started." The amplitude is not a meaningful target while the
    closure's own mass normalization is in question (§5.6); do not resume this until
-   item 2 triages.
+   item 2 triages. **The sign half of this item is no longer open** (§2.2): global
+   regularity, not a free choice, selects $\delta_0<0$, so what remains is a single
+   positive amplitude. Restated in its sharpest form: because the instability amplifies
+   any disturbance by $(1+z)^{1/\nu_*}$ — a factor $\sim10^{12}$ from $z_\text{eq}$ to
+   today — the puzzle inverts from "why does the universe deviate" to **"why is it still
+   so close to the fixed point?"** A disturbance as small as $\sim5\times10^{-14}$ at
+   $z_\text{eq}$ suffices to produce today's deviation; anything larger, earlier, or
+   generic overshoots and completes the slide long ago — every candidate mechanism must
+   therefore be late-acting or exquisitely weak. One forward-pointer, not itself
+   unfreezing this item: item 5's radiation$\to$matter handoff at $z_\text{eq}$ is a
+   natural, in-principle-*calculable* seeding event, and whether it deposits the required
+   $\sim5\times10^{-14}$ or catastrophically overshoots turns on whether the (unbuilt)
+   radiation-era closure has a scale-free attractor continuously connected to the
+   matter-era one — attached to item 5 as one of its success criteria.
 4. **A mechanism for Planck-unit invariance** (successor to "derive $s$"), which would
-   also fix $\lambda$ and $\kappa$ independently of any fit.
-5. **Radiation-era closure.** Extend §2.1's Machian source to include radiation energy
-   (presumably $u_\gamma/c^2$, itself epoch-dependent in coordinate units, raising its
-   own questions) — prerequisite to posing BBN, $z_\text{eq}$, or any CMB-era physics.
-   Every result in this document is currently scope-limited to $z\ll z_\text{eq}$.
+   also fix $\lambda$ and $\kappa$ independently of any fit. **Now also carries the
+   counting law** (§2.1): the Machian census and premise 3 are two faces of the same
+   symmetry (matter's census weight is $\sqrt{\alpha_{G,i}}$, epoch-invariant exactly
+   because premise 3 says so) — a mechanism for one is a mechanism for the other, a
+   single debt where there were two.
+5. **Radiation-era closure — substantially advanced (§2.4), resolved at the background
+   level; the perturbation sector remains fully gated.** The Planck-unit census extends
+   §2.1's Machian source through matter-radiation equality and recombination
+   ($z\lesssim10^6$), with both fixed points ($1.72$, $3.44$, exactly double) derived
+   and numerically verified, and the neutrino third term flagged by an earlier pass
+   through this item now *forced* by the census with zero free parameters (§2.4),
+   closing the loop with the mass census (§5.6) to $0.1\%$. Remaining, explicitly
+   flagged: (a) **reframed, materially weakened as a debt** — per-species number
+   conservation (known false at particle-creating transitions) is replaced by census
+   continuity through energy-conserving conversions plus kinematic evolution between
+   them (§2.1); what remains is the instantaneous coordinate-frame energy-conservation
+   assumption underlying that continuity (cross-linked to item 10), and actually
+   computing the $e^+e^-$/QCD kinks in census form (order-of-magnitude only so far,
+   §2.4); (b) $N_\text{eff}=3$ was used, not $3.044$ (sub-percent effect, noted not
+   propagated); (c) the census's exact neutrino weight should replace the naive
+   $\Sigma m_\nu/(93.14h^2)$ estimate in any future refit of the four-term fit (item 1),
+   rather than only being checked post hoc (§5.6). **Success criterion for item 3
+   still open**: does this closure possess a scale-free attractor continuously
+   connected to the matter-era fixed point, as needed for a calculable seed mechanism?
+   Not yet checked against the census-extended system.
 6. **The perturbation/structure sector** — CMB anisotropies, growth of structure.
    Depends on item 5. The larger early $\hat a_0$ (§5.5) is a helpful direction for
    early massive-galaxy formation, motivation only, not a result. **A narrower,
@@ -941,8 +1209,11 @@ archived with `ResearchNotes.md` §15.)
    fits the real Pantheon+ SN data alone comparably to the standard one, but the joint
    $a_0(z)$ sector prefers it by $\Delta\chi^2=42$ — an independent, cosmological data
    channel for a choice previously fixed only by galaxy dynamics.
-9. **Justify or replace the homogeneity assumption** (§2.1: particle number density $n$
-   constant).
+9. **Justify or replace the homogeneity assumption** (§2.1: particle/census density
+   homogeneous). **Narrowed by §2.1's census reframing**: the item is no longer about
+   per-species number conservation specifically (replaced by census continuity through
+   energy-conserving conversions, item 5(a)) — what remains is the homogeneity of the
+   census density itself.
 10. **An internal energy-continuity check of the closure's own dynamical system —
     flagged by external review (2026-07-08), not yet performed.** The reviewer's
     framing used a classical-frame Friedmann/continuity-equation language (§3 below),
@@ -952,7 +1223,10 @@ archived with `ResearchNotes.md` §15.)
     acceleration, obey *some* sensible energy-bookkeeping relation, or does the
     instability mechanism silently violate one? This has not been checked in either
     frame; a referee will ask it in the first paragraph, and it is answerable now,
-    independent of any decision on item 11 below.
+    independent of any decision on item 11 below. **Now also the natural venue for
+    §2.1's census-continuity assumption** (instantaneous coordinate-frame energy
+    conservation at species conversions) — the same kind of statement this check
+    should adjudicate, not a separate question.
 11. **External-anchor re-verification, flagged by external review (2026-07-08), not
     yet re-checked.** The $a_0(z)$ sector's discriminating power over a free linear
     law rests on MUSE-DARK III (Ciocan et al. 2026) and MIGHTEE-HI (Vărăşteanu et al.
