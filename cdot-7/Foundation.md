@@ -45,7 +45,16 @@ language** (three quasi-degenerate neutrinos at $\approx0.46$ eV each) — a mat
 weaker claim than "no dark matter at all," and one inheriting hot-dark-matter's own
 historical exposure on structure formation (free-streaming erasure of small-scale
 power), a test this framework cannot yet pose (§0's radiation-era scope limit below;
-§6 item 5).
+§6 item 5). **Re-derived, not merely re-checked, once the closure is properly sourced
+by the full Planck-unit census (§2.1, §2.4) rather than a today-only snapshot: the
+demanded density $\Omega_\text{closure}=0.074$ does not change** — it is fixed
+entirely by today's dynamical fit ($\kappa,\lambda,x_0$) and is independent of the
+radiation-era extension, since relic neutrinos are already $>99.99\%$ non-relativistic
+today. What the exact census sharpens is the particle-physics side: solving it exactly
+(rather than via the naive $\Sigma m_\nu/(93.14h^2)$ estimate) gives the neutrino mass
+that closes the budget as $\Sigma m_\nu=1.373$ eV, a $-0.05\%$ shift from the
+originally fitted $1.374$ eV — confirming, to five significant figures, not resolving,
+the same laboratory-edge tension (§5.6; full re-derivation in `ResearchNotes.md` §21).
 
 **Scope reduction from earlier attempts, stated plainly.** This document does not
 attempt to reproduce General Relativity's relativistic predictions (light deflection,
@@ -994,17 +1003,32 @@ remains frozen: with the mass budget now shown to close only marginally, the see
 own amplitude is even less of a priority until this is on firmer ground (proper
 posteriors, a real per-galaxy RAR covariance, and $H_0$ properly propagated).
 
-**A more careful neutrino treatment confirms this, rather than reopening it.** §2.4's
+**Re-derived, not merely re-checked, against the exact census (§2.4).** §2.4's
 Planck-unit census gives an *exact* relativistic Fermi–Dirac neutrino energy density,
-in place of the naive $\Sigma m_\nu/(93.14h^2)$ estimate used above. At the same
-$\Sigma m_\nu=1.374$ eV, the two agree to $\sim1\%$ ($\Omega_\nu^\text{census}=0.0298$
-vs. $0.0301$ naive), and $\Omega_b+\Omega_\nu^\text{census}=0.0740$ still matches
-$\Omega_\text{closure}=0.074$ to $0.1\%$ — **the fitted $\Sigma m_\nu$ survives the more
-exact treatment without needing to be refit.** This is a consistency check, not a new
-independent confirmation (the naive formula was already close by construction of the
-four-term fit); it belongs on record because it could have gone the other way. The
-exact census weight should replace the naive formula in any future refit of this mass
-census (§6 item 1).
+in place of the naive $\Sigma m_\nu/(93.14h^2)$ estimate used above. At the four-term
+fit's own $\Sigma m_\nu=1.374$ eV, the exact treatment gives
+$\Omega_\nu^\text{census}=0.02981$ against the naive formula's $0.03011$ ($\sim1\%$
+apart) — and **closes the mass budget tighter than the fit itself did**:
+$\Omega_b+\Omega_\nu^\text{census}=0.07401$ against $\Omega_\text{closure}=0.074000$
+($0.02\%$ residual), versus the naive formula's own $0.07431$ ($0.4\%$ residual,
+consistent with the fit's small but nonzero $\chi^2_\text{mass}=0.06$). **Solving the
+exact census for the $\Sigma m_\nu$ that closes $\Omega_\text{closure}$ exactly**
+(holding $\Omega_b$ and $\Omega_\text{closure}$ fixed at their stated values) gives
+$\Sigma m_\nu=1.3733$ eV — a $-0.05\%$ shift from the four-term fit's own $1.374$ eV,
+utterly negligible. **This is the precise sense in which the radiation-era work
+changes this claim: it does not.** $\Omega_\text{closure}=0.074$ is a $z=0$ quantity,
+fixed entirely by today's dynamical fit ($\kappa,\lambda,x_0$, from SN+RAR+$a_0(z)$)
+and independent of the radiation-era extension, because relic neutrinos are already
+$>99.99\%$ non-relativistic today (§2.4's own check: the census and matter-only
+trajectories agree to 4 digits at $z\le10$). What changes is precision, not the
+tension: the KATRIN-edge mass required to close the budget is now known to the fifth
+significant figure rather than approximated, and it is unchanged in substance. **This
+is also the only epoch at which an independent check is currently possible**: without
+a perturbation/CMB sector (§6 item 6), there is no independent measurement of
+$\Omega_\text{closure}$ at recombination or earlier to test the census against — the
+extended trajectory of §2.4 is this framework's own prediction there, not yet a
+cross-check. Full re-derivation and the exact-vs-naive $\Sigma m_\nu$ comparison are
+in `ResearchNotes.md` §21.
 
 ### 5.7 The M-σ goal of §0: a first real discriminating test, modest and non-decisive
 
@@ -1174,9 +1198,12 @@ archived with `ResearchNotes.md` §15.)
    assumption underlying that continuity (cross-linked to item 10), and actually
    computing the $e^+e^-$/QCD kinks in census form (order-of-magnitude only so far,
    §2.4); (b) $N_\text{eff}=3$ was used, not $3.044$ (sub-percent effect, noted not
-   propagated); (c) the census's exact neutrino weight should replace the naive
-   $\Sigma m_\nu/(93.14h^2)$ estimate in any future refit of the four-term fit (item 1),
-   rather than only being checked post hoc (§5.6). **Success criterion for item 3
+   propagated); (c) **done at the single-parameter level (§5.6, `ResearchNotes.md`
+   §21)**: solving the exact census (not the naive $\Sigma m_\nu/(93.14h^2)$ estimate)
+   for the $\Sigma m_\nu$ that exactly closes $\Omega_\text{closure}$ shifts it by only
+   $-0.05\%$ ($1.374\to1.373$ eV) — negligible, but a full *joint* refit of
+   $(\delta_0,\kappa\lambda,\lambda,\Sigma m_\nu)$ using the exact formula throughout
+   has still not been run (item 1). **Success criterion for item 3
    still open**: does this closure possess a scale-free attractor continuously
    connected to the matter-era fixed point, as needed for a calculable seed mechanism?
    Not yet checked against the census-extended system.

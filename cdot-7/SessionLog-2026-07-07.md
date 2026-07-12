@@ -717,3 +717,49 @@ extension is no longer missing at the background level. Copied
 `cdot-7/ResearchNotes.md` (new §19, §20; Open Threads renumbered to §21; one Open
 Threads bullet updated), `figures/cdot7_radiation_era.svg` (created, copied from
 `Radiation-1/census_trajectory.svg`), this log entry.
+
+---
+
+## Entry 14 — The closure density re-derived against the full radiation-era census
+
+**Prompt (verbatim):**
+> Let's revisit the "no dark matter" conditional claim as currently introduced. Take
+> into account that all matter inside the horizon contributes to our current c,
+> including the radiation era particles goverened by the newly introduced counting
+> rule.
+
+**Summary.** Three candidate readings were offered (reframe the claim's tone without
+recomputing; audit the census for a previously-missed contribution that might ease the
+KATRIN tension; re-derive $\Omega_\text{closure}$ itself against the full census
+history rather than checking today's $\Omega_b+\Omega_\nu$ against an unchanged
+target) — author chose the third.
+
+**Result: $\Omega_\text{closure}=0.074$ does not change, for a precise, statable
+reason — the AQUAL horizon condition is local in time, fixed entirely by today's
+$(\kappa,\lambda,x_0,a_0)$ (from the SN+RAR+$a_0(z)$ fit, none of which reaches the
+radiation era), and relic neutrinos are already $>99.99\%$ non-relativistic today, so
+the exact census and the matter-only treatment of *today's* budget coincide to high
+precision (already shown in §19–20: agreement to 4 digits at $z\le10$). What *does*
+change: solved the exact Fermi–Dirac census directly (not the naive $\Sigma m_\nu/
+(93.14h^2)$ estimate used in the original four-term fit) for the neutrino mass that
+closes $\Omega_\text{closure}$ against $\Omega_b$ with zero residual —
+$\Sigma m_\nu=1.3733$ eV, a $-0.05\%$ shift from the fit's own $1.374$ eV. Also found:
+using the fit's own $\Sigma m_\nu$, the exact census closes the budget *tighter*
+than the naive formula did ($0.02\%$ residual vs. $0.4\%$, consistent with the fit's
+small nonzero $\chi^2_\text{mass}=0.06$) — the naive-vs-exact $1\%$ discrepancy found
+in §20 was mostly already absorbed into that residual, not hidden slack. Stated
+explicitly, as a scope limit rather than an oversight: $z=0$ is currently the *only*
+epoch where $\Omega_\text{closure}$ can be checked against independent particle
+content (BBN, KATRIN); the extended trajectory through recombination is this
+framework's own prediction there, not yet an independent cross-check, since the
+perturbation/CMB sector remains out of scope.
+
+**Full merge executed.** `Foundation.md` §0 and §5.6 both sharpened with the exact,
+zero-residual $\Sigma m_\nu=1.373$ eV figure and the explicit "why $\Omega_\text{closure}$
+is unaffected" argument, replacing the earlier, softer "the naive formula differs by
+$\sim1\%$" addendum; §6 item 5(c) updated to record this as done at the
+single-parameter level, with a full joint refit still open. `ResearchNotes.md` gained
+new §21 (the full re-derivation and ledger), Open Threads renumbered §21→§22.
+
+**Files updated:** `cdot-7/Foundation.md` (§0, §5.6, §6 item 5(c)), `cdot-7/
+ResearchNotes.md` (new §21; Open Threads renumbered to §22), this log entry.

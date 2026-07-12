@@ -1391,7 +1391,74 @@ if any number is ever in doubt.
 
 ---
 
-## 21. Open Threads Not Yet Reflected in the Foundation
+## 21. The Closure Density Re-Derived Against the Full Census (Main Session, 2026-07-11)
+
+Prompted directly by the author, after §19–20 were merged: revisit the "no dark
+matter" conditional claim (§0, §5.6), taking into account that *all* matter within the
+horizon sources today's $c$ — including radiation-era particles, now governed by the
+Planck-unit census (§2.1, §2.4) — rather than treating $\Omega_\text{closure}$ as a
+snapshot checked only against a naive neutrino estimate. Offered three candidate
+readings; the author chose: check whether $\Omega_\text{closure}$ itself changes once
+the closure is properly sourced from the full census history, rather than only
+checking today's $\Omega_b+\Omega_\nu$ against an unchanged target.
+
+**Finding: $\Omega_\text{closure}=0.074$ does not change, and it is worth stating
+precisely why.** The AQUAL horizon condition is local in time — $\mu(x_0)g_h=
+GM_h(t_0)/R_{h,0}^2$ constrains $\rho_0\equiv M_h(t_0)/[(4/3)\pi R_{h,0}^3]$ using only
+today's $(\kappa,\lambda,x_0,a_0)$, all fixed by the SN+RAR+$a_0(z)$ fit — data that
+never reaches the radiation era. The radiation-era extension changes *how $M_h(t)$
+evolves at high $z$*, not what it equals at $t_0$. Checked directly (already recorded
+in §20): the census and matter-only trajectories agree to 4 digits at $z\le10$,
+because relic neutrinos are $>99.99\%$ non-relativistic today ($a\equiv m_\nu/
+(k_BT_{\nu,0})\approx2725\gg1$) — the exact and naive treatments of "matter" coincide
+at $z=0$ to far better precision than any other uncertainty in this budget.
+
+**What does change: the particle-physics side can now be solved exactly instead of
+approximately.** The naive $\Sigma m_\nu/(93.14h^2)$ estimate used in the original
+four-term fit's mass-census term is replaced by the exact relativistic Fermi–Dirac
+census weight (§20's $F(a)$ machinery). At the fit's own $\Sigma m_\nu=1.374$ eV:
+$$\Omega_\nu^\text{naive}=0.03011,\qquad\Omega_\nu^\text{census}=0.02981\quad(\sim1\%
+\text{ apart, as already found in §20}).$$
+**New for this session**: solved the exact census directly for the $\Sigma m_\nu$ that
+closes $\Omega_\text{closure}=0.074000$ against $\Omega_b=0.044204$ (BBN) with zero
+residual (`brentq` root-find on $\Omega_\nu^\text{census}(\Sigma m_\nu)=\Omega_
+\text{closure}-\Omega_b$):
+$$\Sigma m_\nu^{(\text{exact, zero-residual})}=1.3733\text{ eV},$$
+a $-0.05\%$ shift from the four-term fit's own $1.374$ eV — utterly negligible.
+(For comparison, solving the same equation with the *naive* formula instead gives
+$1.3598$ eV, a $-1.03\%$ shift — showing that essentially all of the naive-vs-exact
+$1\%$ discrepancy found in §20 was already absorbed into the four-term fit's small
+nonzero $\chi^2_\text{mass}=0.06$, not hidden slack that the census then reveals.)
+Using the fit's own $\Sigma m_\nu$, the exact census closes the budget *tighter* than
+the naive formula did: $\Omega_b+\Omega_\nu^\text{census}=0.07401$ ($0.02\%$ residual)
+versus the naive $0.07431$ ($0.4\%$ residual, consistent with $\chi^2_\text{mass}=
+0.06$ being small but not exactly zero).
+
+**A scope limit worth being explicit about.** $z=0$ is currently the *only* epoch
+where an independent check of $\Omega_\text{closure}$ against particle content is
+possible: $\Omega_b$ comes from BBN, $\Sigma m_\nu$ is bounded by KATRIN, both
+independent of this framework's own dynamics. At recombination or earlier, §2.4's
+trajectory is this framework's own prediction ($x(1100)=2.61$, etc.), not yet checked
+against any independent density measurement, since the perturbation/CMB sector
+(§6 item 6) remains out of scope. The re-derivation in this section therefore
+sharpens the precision of an existing, already-independent check — it does not add a
+new one.
+
+**Ledger.** Derived and verified numerically (`census_closure.py`'s own $F(a)$
+machinery, called directly for this check, not a new script): the exact-vs-naive
+$\Omega_\nu$ comparison at the fit's $\Sigma m_\nu$; the zero-residual $\Sigma m_\nu$
+solve, both exact and naive. Confirmed by direct argument, not computation: $\Omega_
+\text{closure}$'s independence from the radiation extension follows from the
+closure's own local-in-time structure plus today's neutrino non-relativistic
+fraction, both already established in §2.2/§2.4. Not attempted: propagating the
+exact neutrino formula through a full refit of $(\delta_0,\kappa\lambda,\lambda,
+\Sigma m_\nu)$ jointly (the expected shift, given the $-0.05\%$ single-parameter
+result above, is negligible, but a joint refit has not actually been run — `Foundation.md`
+§6 item 1).
+
+---
+
+## 22. Open Threads Not Yet Reflected in the Foundation
 
 **Resolved by the Fable-1 session (§6–§10 above), retained here only as a record of
 what happened to them, not restated as open:** the flux/luminosity sector (was open
