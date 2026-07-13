@@ -124,15 +124,22 @@ gap between code and prose is what let WP1 (reading only the prose) miss it.**
   build a standard covariant distance formula on the wrong clock ($t_\text{coord}$),
   not from any error in cdot-7's own fit. **No re-run needed — the four-term fit was
   never exposed to this issue.**
-- **(c) $\hat a_0(z)$ comparison**: the exact fixed point predicts $\hat a_0(z)\propto
-  (1+z)^{3/2}$ (§2's cross-check chain). Against Foundation §5.5's quoted *fitted*
-  values (which sit on the perturbed $\delta_0\ne0$ trajectory, off the fixed point):
-  $$\hat a_0(z)/\hat a_0(0):\quad\text{fixed-point }(1+z)^{3/2} = 1.53,\,2.52,\,2.83,\,3.81
-  \quad\text{vs. fitted } 1.69,\,2.35,\,2.57,\,3.30$$
-  at $z=0.33,0.85,1.00,1.44$ — ratios $1.10,\,0.93,\,0.91,\,0.87$. Reasonably close, with
-  the fitted values falling increasingly below the pure fixed-point law at higher $z$ —
-  expected, since the actual trajectory sits at $x_0=1.10$ (deep-MOND-ward of $x_*=1.72$),
-  not exactly on it. Not a red flag; recorded as a sanity check, not a precision test.
+- **(c) $\hat a_0(z)$ comparison — CORRECTED 2026-07-12, see
+  `cdot-8/WP3/Update-WP3-ReconstructionResolved-2026-07-12.md`.** The figures below
+  were computed from Foundation §5.5's quoted values taken at face value as ratios;
+  the third WP3 escalation found those values are actually *absolute* $\hat a_0(z)$
+  in $10^{-10}$ m/s² (anchor $a_0(0)=1.39\times10^{-10}$), not ratios — a labeling bug
+  in Foundation itself, independently confirmed against the source text. **Original
+  (wrong) figures, struck through for the record**: ~~fixed-point $(1+z)^{3/2}=1.53,
+  2.52,2.83,3.81$ vs. "fitted" $1.69,2.35,2.57,3.30$, ratios $1.10,0.93,0.91,0.87$,
+  "reasonably close"~~. **Corrected**: true fitted ratios are $1.22,1.70,1.86,2.38$ at
+  $z=0.33,0.85,1.00,1.44$; fixed-point/fitted ratios are $1.26,1.48,1.52,1.60$ — a
+  real, *growing* suppression, not a marginal one. The qualitative direction (fitted
+  values increasingly suppressed below the pure fixed-point law at higher $z$, expected
+  since the actual trajectory sits at $x_0=1.10$, deep-MOND-ward of $x_*=1.72$)
+  survives and is in fact sharper than originally reported. Not a red flag; recorded
+  as a sanity check, not a precision test — but the numbers above are the correct
+  ones, not the struck-through originals.
 - **(d) The $\tfrac32$ factor / $H_0$ identification**: at $t_0$ ($c=c_0$), $(c/c_0)^{5/2}
   =1$ exactly, so $\dot c_\text{coord}(t_0)=\dot c_\tau(t_0)$ — the two clocks coincide
   *at* calibration, so Foundation's $H_0^\text{obs}=\tfrac32\dot c_0/c_0$ is unambiguous

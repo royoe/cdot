@@ -210,6 +210,83 @@ needed beyond noting the check was done.
 
 ---
 
+## Item 8 — Foundation §5.5's $\hat a_0(z)$ equation is mislabeled: absolute values
+presented as a ratio (HIGH confidence, MEDIUM priority)
+
+**Source**: `cdot-8/proposal/Advisory-WP3-InverseReconstruction-2026-07-12.md` §3,
+`inverse_reconstruction_check.py` part 1; independently confirmed in
+`cdot-8/WP3/Update-WP3-ReconstructionResolved-2026-07-12.md` §1 against the actual
+Foundation.md source (not merely the advisory's script).
+
+**The finding**: Foundation.md line 869 states
+$$\hat a_0(z)/\hat a_0(0)=1.69,\ 2.35,\ 2.57,\ 3.30\quad\text{at }z=0.33,\ 0.85,\ 1.00,\ 1.44$$
+explicitly labeled as a ratio. Recomputing the true ratio from the four-term-fit
+trajectory (`Fable-1/a0_confrontation.py`'s own formula) gives $1.22,\,1.70,\,1.86,\,
+2.38$ — the quoted values are these true ratios multiplied by $1.385$–$1.386$
+uniformly across all four points, matching the fit's own anchor $a_0(0)=1.39\times
+10^{-10}$ m/s² (Foundation §2.2) to three digits. Independently corroborated: the
+same section's own figure (Foundation.md lines 895–902) plots this quantity directly
+against MUSE-DARK's and MIGHTEE-HI's *absolute* measurements ($2.38\times10^{-10}$,
+$1.69\times10^{-10}$ m/s²) on one consistent axis — only coherent if Foundation's own
+numbers are also absolute, not a dimensionless ratio.
+
+**Proposed action**: relabel the equation (or divide the displayed values by $1.39$
+and state that explicitly); one line. True ratios for the corrected display:
+$1.22,\,1.70,\,1.86,\,2.38$.
+
+---
+
+## Item 9 — An exact identity: $\hat a_0(z)=\tfrac23\lambda c_0H_{\hat\tau}(z)$, on any
+trajectory (HIGH confidence, LOW–MEDIUM priority, optional)
+
+**Source**: same advisory §4(i); independently re-derived from scratch in
+`cdot-8/WP3/Update-WP3-ReconstructionResolved-2026-07-12.md` §1 (checked algebraically
+at five arbitrary points, not just the fixed point or today).
+
+**The finding**: from $a_0=\lambda\dot c$ (Foundation's own definition), $H_t=\tfrac32
+\dot c/c$ (exact, from the redshift law alone), the acceleration Planck-unit exponent
+$7/2$ (dimensional analysis), and the two-clock dictionary's $H_\tau=H_t(c/c_0)^{-5/2}$
+— $\hat a_0(z)=\tfrac23\lambda c_0H_\tau(z)$ follows as a three-line algebraic identity,
+holding *exactly*, on *every* trajectory, not merely as a fixed-point coincidence. The
+long-noted "$a_0\sim cH_0$" MOND numerology is, in this framework, not an
+approximate coincidence to be explained — it is enforced exactly by construction.
+
+**A consequence worth flagging alongside it (from the same advisory pair's audit,
+`Addendum-ThirdEscalation-Assessment-2026-07-12.md` Flag 1)**: this identity means
+Foundation §5.5's $\hat a_0(z)$ data confrontation and the four-term SN Hubble-diagram
+fit are *the same prediction* ($H_\tau(z)$'s shape) tested against two different
+datasets — not two independent successes, which is how the evidence currently reads.
+This is a genuine strengthening (one function, two data channels, both passing) but a
+bookkeeping correction the evidence ledger owes itself. The sharpest surviving,
+genuinely independent discriminator against parameter-$a_0$ theories is the *locking*
+itself: measure $\hat a_0(z)$ and $H(z)$ separately from independent data; this
+framework demands their ratio be constant, which no parameter-$a_0$ theory is obliged
+to satisfy.
+
+**Proposed action**: add the identity as a one-line remark in Foundation §5.3/§5.5
+(costs nothing, strengthens existing prose); separately, adjust the evidence-ledger
+language wherever $\hat a_0(z)$ agreement and the SN fit are cited as independent
+confirmations, to note they share one underlying prediction.
+
+---
+
+## Item 10 — Canonical value request: is $x_0=1.10$ exact-by-convention or rounded?
+(LOW priority, reproducibility hygiene)
+
+**Source**: `Addendum-ThirdEscalation-Assessment-2026-07-12.md` Flag 5.
+
+**The finding**: cross-script comparison this session found `cdot-7/Fable-1/*.py`
+scripts using the quoted $x_0=1.10$, while a cdot-8 advisory's independent
+re-fit used the evidently-unrounded $x_0=1.0958$. Three-digit agreement in all
+downstream comparisons survives either choice, so this is not urgent, but future
+scripts would benefit from Foundation stating which is canonical.
+
+**Proposed action**: one line in Foundation §2.2/§5.5 stating whether $1.10$ is the
+adopted, rounded display value or whether a more precise value should be used in
+scripts going forward.
+
+---
+
 ## Priority summary for the consolidator
 
 | Item | Priority | Action needed before merge |
@@ -221,10 +298,13 @@ needed beyond noting the check was done.
 | 5 — Etherington as standing tool | Low | Ready to merge as-is; one-line methodology note |
 | 6 — item 9 re-examination | Low | **Not ready** — needs a fresh, cdot-7-native pass |
 | 7 — $\Delta N_\text{eff}\approx-0.5$ marker | Medium | Gated on the queued $e^+e^-$/QCD kink calculation |
+| 8 — §5.5 labeling bug | **High confidence, Medium priority** | Ready to merge; one-line relabel |
+| 9 — $\hat a_0=\tfrac23\lambda c_0H_\tau$ identity + evidence-ledger note | Low–Medium | Ready to merge as-is |
+| 10 — canonical $x_0$ value | Low | Ready to merge as-is; one line |
 
-None of these seven items require cdot-8 to succeed, use AeST-specific content, or
+None of these ten items require cdot-8 to succeed, use AeST-specific content, or
 depend on WP2/WP3's census/closure machinery — they stand on cdot-7's own terms (Items
-1–2, 6–7) or on this session's historical research alone (Items 4–5), with Item 3 the
+1–2, 6–10) or on this session's historical research alone (Items 4–5), with Item 3 the
 only one genuinely mixed (derived using cdot-7's own definitions, discovered while
 building cdot-8's covariant census). If cdot-8 is killed at any later work package,
 this log should be handed to the consolidator unchanged.

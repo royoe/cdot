@@ -1,0 +1,281 @@
+# Session Log — cdot-8/WP3 (2026-07-13)
+
+*New calendar date, new file, continuing from `SessionLog-2026-07-12.md` (eleven
+entries). Same per-prompt logging convention.*
+
+---
+
+## Entry 12 — Adjoint invariant verified; quadrature redo surfaces a second constant (2026-07-13)
+
+**Prompt (verbatim):**
+> Please check for proposal update advisory and addendum.
+
+(Reference: `Advisory-WP3-AdjointInvariant-2026-07-12.md` — the future-growing
+radiation mode found in Entry 11 is real but aimed at the wrong object: the
+multiplier and the census component it constrains obey mirrored equations, so
+$p_{\mathcal N,i}\mathcal N_i$ is exactly conserved per species; the mode is marginal,
+not unstable, and the escalation gate closes subject to a coupling audit. Plus
+`Addendum-AdjointRound-CoupledInvariant-2026-07-13.md` — sharpening the coupling
+audit to the full coupled symplectic spectrum (since M5's closure makes every $g_i$
+depend on the background), pre-verifying one audit row, and noting the program now
+has two coexisting priors — corrections-on-second-read, and alarms-dissolving-into-
+identities — with neither entitled to decide a round on its own.)
+
+**Summary of work performed:**
+
+1. **Independently verified the adjoint identity** $\frac{d}{dt}(p_{\mathcal N,i}
+   \mathcal N_i)=0$ before accepting it: built $\mathcal N_\text{rad}(s)$ and
+   $p_{\mathcal N,\text{rad}}^\text{hom}(s)$ from the same shared $g_\text{rad}(s)$
+   independently and checked their product directly — constant to $2\times10^{-16}$
+   across the whole forward trajectory. Entry 11's "instability" is confirmed to be
+   the bare multiplier's adjoint growth exactly compensating the census component's
+   decay, not a physical runaway — the escalation gate closes as both advisors found.
+
+2. **Proceeded to the cleared quadrature redo**: solved $\tfrac12QF_Q-\tfrac13F=
+   \Omega_s(a)$ (the corrected, coefficient-$\tfrac12$, $C_1=0$ constraint) as a
+   linear ODE for $F(Q)$. Caught and fixed a numerical-integration error along the
+   way (naive trapezoidal integration directly in $Q$, which spans ten orders of
+   magnitude, produced spurious noise at high $z$; redone properly on the uniform,
+   well-resolved $s$-grid). Matter-era power law comes out $F\propto Q^{1.77}$,
+   close to but not exactly the prior round's $Q^{9/5}$.
+
+3. **Found a second, previously undiscussed integration constant.** With the
+   arbitrary choice of anchoring the integral at today, $F(Q)$ changes sign and
+   diverges in the deep radiation era — traced to the invoice's own small-negative
+   radiation-era value, weighted by $Q^{-2/3}$, giving a genuinely divergent
+   integrand ($\propto a^{-26/9}$), not a numerical artifact. This constant ($C_2$,
+   the homogeneous solution $F\propto Q^{2/3}$ of *this* corrected ODE) is distinct
+   from $C_1$ (which entered the earlier, different integrated $\phi$-equation and
+   was resolved by past regularity acting on its $a^{-3}$ dust-like scaling) — $C_2$
+   only appears once the quadrature is actually solved, which no prior round had
+   done.
+
+4. **Did not fix $C_2$ by convenient assumption.** Flagged that its milder
+   ($a^{-10/9}$) scaling might look subdominant by a naive comparison to radiation,
+   but the $C_1$ episode already showed "looks subdominant" is not the same as
+   "harmless" once correctly weighted — the same disciplined treatment ($C_1$'s
+   past-regularity derivation, or the Maggiore-Mancarella deep-RD anchor) is needed
+   here too, not yet attempted.
+
+**Files produced:** `Update-WP3-QuadratureRedo-2026-07-13.md`, this entry.
+
+**Open items handed forward:** determine $C_2$ properly (past-regularity scaling
+argument or deep-RD anchor, per the established discipline) before trusting the
+reconstructed $F(Q)$'s radiation-era behavior; the coupling audit (three items from
+the adjoint-invariant round, one pre-seeded) still pending, to be discharged when the
+action is closed over dynamical variables; WP2 finalization still hard-blocks.
+cdot-7's own priority queue, above all the KATRIN clock, remains unstarved and
+untouched — nothing in `cdot-7/` was edited.
+
+---
+
+## Entry 13 — $C_2$ is the kernel, not another $C_1$: confirmed (2026-07-13)
+
+**Prompt (verbatim):**
+> Review uploaded.
+
+(Reference: `Advisory-WP3-C2Kernel-2026-07-13.md`, a sole-advisor round — the
+stand-in was unavailable this round. Resolution: $C_2$ multiplies the kernel of the
+*corrected* Hamiltonian constraint operator, $\tfrac12QF_Q-\tfrac13F$; it carries
+identically zero background energy density and is subdominant in both time
+directions, so no past-regularity or anchor argument applies or is needed — the
+"divergence" Entry 12 reported is the particular solution correctly tracking the
+invoice's own zero-crossing, with closed-form coefficients. $C_2$ is to be carried
+symbolically into the still-pending step-5 confrontation, not zeroed now. A
+three-slot constant taxonomy — current/kernel/multiplier, each with its own correct
+treatment — was recorded for reuse.)
+
+**Summary of work performed:**
+
+1. **Independently verified every load-bearing claim before accepting the
+   resolution** — did not treat the advisory's own thorough verification as a
+   substitute for doing it myself: re-derived the closed-form attractor ratios from
+   scratch ($30/17$ matter, $15/13$ radiation, both matching to all digits shown);
+   confirmed the kernel property ($Q^{2/3}$ solves the corrected homogeneous
+   equation, residual $2.3\times10^{-10}$); and, on my own independent trajectory
+   computation (not the advisory's script), confirmed $C_2$'s background
+   invisibility by varying it from $-500$ to $+100$ and finding the deep-past
+   $F(z=2\times10^6)$ unchanged to 8 decimal places.
+
+2. **Corrected my own prior document in place**: the $\rho\propto a^{-10/9}$ figure
+   in `Update-WP3-QuadratureRedo-2026-07-13.md` was the old, $\phi$-sector-only
+   accounting; under the corrected accounting this construction actually uses, the
+   mode's constraint contribution is zero, not merely small — noted explicitly
+   rather than silently amended.
+
+3. **Adopted the constant taxonomy** (current constants → regularity; kernel
+   constants → step-5 audit; multiplier constants → adjoint pairing + anchor) as a
+   standing classification tool for this construction.
+
+**Files produced:** `Update-WP3-C2KernelConfirmed-2026-07-13.md`, this entry;
+correction applied in place to `Update-WP3-QuadratureRedo-2026-07-13.md`.
+
+**Open items handed forward:** the coupling audit (three items, one pre-seeded,
+from the adjoint-invariant round) and the step-5 confrontation itself — the
+$(C_2,\Lambda_M)$ invariance check, now the last unexamined slot in the whole
+construction — both substantial, not yet attempted. WP2 finalization still
+hard-blocks. cdot-7's own priority queue, above all the KATRIN clock, remains
+unstarved and untouched.
+
+---
+
+## Entry 14 — Action closed over dynamical variables; coupling audit discharged; a new back-reaction on the Hamiltonian constraint (2026-07-13)
+
+**Prompt (verbatim):**
+> Go for open WP3 items...
+
+(Authorization to proceed with the two standing WP3 items: the coupling audit and
+the step-5 confrontation.)
+
+**Summary of work performed:**
+
+1. **Closed the action over dynamical variables for the first time in the
+   program**: species-resolved census pairs $(\mathcal N_i,p_i)$, $R_h$ promoted
+   to a dynamical variable with its own multiplier $p_R$ via $\dot R_h=Nc$, $c$
+   expressed through the WP1 dictionary rather than as an external function. Stated
+   the lapse-covariance convention explicitly before varying (per flag-3/flag-6
+   practice) and showed it is the *unique* choice reproducing both WP2's $N=1$
+   formula and the addendum's independently pre-verified row — not an arbitrary
+   pick among options.
+
+2. **Verified every new equation of motion against an actual solved coupled
+   system** (not paper algebra alone, per this program's established discipline):
+   $\delta S/\delta N$'s new terms (residual $1.3\times10^{-9}$), $\delta S/\delta
+   R_h$ (residual $3.3\times10^{-11}$), the sourced identity $\dot\pi_i=-\Lambda_M
+   q'(\mathcal N_\text{tot})\mathcal N_i$ with $\pi_i\equiv p_i\mathcal N_i$ (on an
+   actual integrated trajectory, residuals $\sim10^{-10}$), and $p_R$'s own
+   sourcing equation $\dot p_R=(Nc/R_h^2)\sum_i\pi_i$ (full six-variable coupled
+   solve, residuals $\sim10^{-11}$).
+
+3. **Discharged all three coupling-audit items with concrete answers, not
+   assumptions**: item 1 (no bare-multiplier couplings) passes for the species
+   multipliers $p_i$ by a general structural argument, but **fails for $p_R$**,
+   which appears bare in the Hamiltonian constraint — flagged as a genuinely
+   different kind of check (boundedness of $p_R(t)$ itself, not adjoint-pairing
+   protection). Item 2 (coupled symplectic spectrum, per the addendum's
+   sharpening): confirmed the species multipliers couple to each other through
+   $S_{M5}$'s shared source term exactly as anticipated, with no hidden
+   $g_i(\mathcal N)$ dependence and no pairing-breaking term found. Item 3
+   ($(R_h,p_R)$, explicitly not by analogy): resolved as a **pure sourced
+   integral**, structurally unlike the species pairs (no homogeneous mode for
+   either $R_h$ or $p_R$), needing its own past-regularity anchor.
+
+4. **Found a new back-reaction on the Hamiltonian constraint**: the newly-closed
+   $S_{\mathcal N}$ and $S_{R_h}$ sectors add a term $\frac{8\pi G}{3a^3}[\sum_i
+   \pi_i\,c/R_h+p_Rc]$ to the same boxed constraint the $S_{M5}$ back-reaction
+   already modified once (LapseBackreaction round). This term has never appeared
+   in any prior round's Friedmann-constraint derivation, including the
+   just-confirmed $C_2$-kernel quadrature. **Deliberately did not attempt a
+   from-memory numerical magnitude estimate** — doing so with recalled-but-
+   unverified AQUAL machinery risked manufacturing a false reading; flagged
+   instead as the concrete next numerical step, to be done with the actual
+   `census_closure.py`/`quadrature_c2.py` machinery.
+
+**Files produced:** `Update-WP3-ClosedActionCouplingAudit-2026-07-13.md`, this
+entry; verification script in session scratchpad (not part of the permanent
+record).
+
+**Open items handed forward:** the magnitude of the new $\pi_i,p_R$ back-reaction
+term — this determines whether the quadrature needs re-solving a third time
+before the razor/total-Bianchi confrontation (step 5 proper) is meaningful.
+Recommend a check-in before attempting step 5, mirroring the LapseBackreaction
+precedent: building the razor check on a constraint that might shift again would
+repeat the mistake the checkpoint discipline exists to catch. WP2 finalization
+still hard-blocks. cdot-7's own priority queue, above all the KATRIN clock,
+remains unstarved and untouched — nothing in `cdot-7/` was edited.
+
+---
+
+## Entry 15 — The back-reaction magnitude advisory has a normalization bug: corrected, effect roughly doubles (2026-07-13)
+
+**Prompt (verbatim):**
+> Response uploaded to proposal
+
+(Reference: `Advisory-WP3-BackreactionMagnitude-2026-07-13.md` +
+`backreaction_magnitude.py`, sole-advisor round. Endorsed the closed action and
+all three coupling-audit dispositions; computed the deferred magnitude with the
+real trajectory machinery — claimed $D/E^2$ peaking at $-4.85\%$ at $z=0$,
+negligible at recombination and beyond, one perturbative iteration sufficing.)
+
+**Summary of work performed:**
+
+1. **Did not accept the magnitude figure without an independent cross-check**,
+   per standing protocol. Re-derived the advisory's own working relation
+   ($q'(\mathcal N_\text{tot})\mathcal N_\text{tot}=(dQ/ds)/\bar g$) from my own
+   verified equations and confirmed it is exactly right — a genuinely elegant,
+   parametrization-free trick. But traced the equation it feeds
+   ($\dot\pi_\text{tot}=\tfrac52\Lambda_MQ/\bar g$) back to its source and found
+   it is a $d/dt$ equation, not $d/ds$ as the advisory's script integrates it —
+   missing one factor of $\dot s=\tfrac23NE$.
+
+2. **Verified this three independent ways** before reporting it: (a) careful
+   hand tracking of every $d/dt\leftrightarrow d/ds$ conversion; (b) built a
+   genuine coordinate-time axis by numerically integrating $dt=ds/\dot s$ on the
+   actual trajectory and re-integrated the unambiguous $dt$-form directly,
+   confirmed against the $\dot s$-corrected $ds$-integration to $10^{-6}$
+   relative precision; (c) confirmed the separate algebraic step (converting
+   $\tilde\pi,P$ into constraint contributions) is untouched — the bug is
+   isolated to the time-integration of $\tilde\pi,P$ alone, not the audit
+   dispositions or the closed-action validations.
+
+3. **Corrected magnitude**: peak (still at $z=0$) is $D/E^2\approx-9.5\%$ to
+   $-10.3\%$ after iteration — roughly double the advisory's $-4.85\%$. Ran the
+   perturbative iteration with the corrected formula: converges within two
+   passes ($7.4\%$ then $0.4\%$ relative shifts), confirming the "perturbative,
+   not structural" verdict survives even though the absolute size roughly
+   doubles. WP4a/WP4b remain untouched at $10^{-7}$ and $10^{-11}$ respectively —
+   the correction does not reopen either promoted check.
+
+**Files produced:** `Update-WP3-BackreactionMagnitudeCorrected-2026-07-13.md`,
+this entry; verification scripts in session scratchpad.
+
+**Open items handed forward:** requested the advisor independently re-check the
+$\dot s=\tfrac23NE$ factor and the $t(s)$ cross-check before this correction is
+taken as final — a factor-of-2 discrepancy feeding step 5 deserves a second
+confirmation, per the same courtesy every prior correction in this program has
+received in both directions. Pending that: proceed to step 5 on the
+twice-iterated $\Omega_s^\text{corr}$. WP2 discharge-by-incorporation proposal
+not yet assessed. WP2 finalization still hard-blocks; the KATRIN clock remains
+the program's most time-critical item; nothing in `cdot-7/` was edited.
+
+---
+
+## Entry 16 — Correction confirmed bilaterally; step 5 formally cleared (2026-07-13)
+
+**Prompt (verbatim):**
+> Check for update.
+> Right. Uploaded now. Try again
+
+(Reference: `Advisory-WP3-MagnitudeCorrectionConfirmed-2026-07-13.md` +
+`backreaction_corrected.py` — the advisor's independent re-derivation and
+from-scratch rebuild of the $t$-axis gold-standard method, confirming the
+normalization correction reported in Entry 15.)
+
+**Summary of work performed:**
+
+Ran the advisor's confirmation script myself before accepting the confirmation
+at face value (same discipline applied to a confirmation as to any other
+claim): reproduced all seven $D/E^2$ table points to the advisor's quoted
+precision, the gold-standard $t$-axis agreement ($1.5\times10^{-4}$), and the
+two-pass iteration deltas ($7.38\%$, then $0.40\%$, converging to
+$D_2/E^2=-1.028\times10^{-1}$ at $z=0$) — exact match, no discrepancies. The
+advisor owned the bug plainly (named mechanism: "a booby-trapped expression...
+whose Jacobian factors have cancelled internally, leaving a rate that reads as
+axis-free"), confirmed WP4a/WP4b remain untouched, and clarified that M7's
+invoice $\Omega_s=E^2-\Omega_\text{census}$ itself never changed — only the
+internal decomposition between the $F$-sector and the multiplier sectors did.
+
+**Files produced:** this entry (no new update document — a verification pass on
+an already-complete correction, not a new finding).
+
+**Status: step 5 is now formally cleared on both sides**, on the twice-iterated
+constraint $\Omega_s^\text{corr}=\Omega_s-D_2$ (peak correction $-10.3\%$ at
+$z=0$), with the full ledger specified: the $\pi_i$/$p_R$ sectors' own
+continuity contributions, the acceleration-equation channel (from $g_i$'s
+$\dot a$-dependence, named but not yet built), and the $(C_2,\Lambda_M)$
+invariance audit, $C_2$ carried symbolically throughout. This is the entire
+remaining WP3 queue. WP2 discharge-by-incorporation still awaits explicit
+confirmation (proposed: fold WP2 into the closed action's $S_{\mathcal N_i}$
+constraints rather than tracking it as a separate deliverable). WP4a/WP4b
+otherwise unblocked. The KATRIN clock remains the program's most time-critical
+item; nothing in `cdot-7/` was touched.
