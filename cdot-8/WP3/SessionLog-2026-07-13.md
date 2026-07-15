@@ -279,3 +279,127 @@ confirmation (proposed: fold WP2 into the closed action's $S_{\mathcal N_i}$
 constraints rather than tracking it as a separate deliverable). WP4a/WP4b
 otherwise unblocked. The KATRIN clock remains the program's most time-critical
 item; nothing in `cdot-7/` was touched.
+
+---
+
+## Entry 17 — Step 5 run: three items close cleanly, the $(C_2,\Lambda_M)$ audit finds a genuine unfixed free parameter (2026-07-13)
+
+**Prompt (verbatim):**
+> Go for step 5!
+
+**Summary of work performed:**
+
+1. **Acceleration-equation channel**: derived $S_{\mathcal N}+S_{R_h}$'s
+   contribution to $\delta S/\delta a$ (the named, not-yet-built ledger item),
+   verified via nested finite differences on synthetic test functions,
+   converging to $\sim10^{-7}$ relative residual as step size is refined —
+   closes this item.
+
+2. **Total-Bianchi closure**: recognized as structurally guaranteed once every
+   individual equation of motion is independently verified (a consequence of
+   general covariance, not a separate result to manufacture) — stated honestly
+   as such rather than oversold as new numerics.
+
+3. **The razor**: holds by construction at every iteration (the quadrature is
+   solved specifically to make it hold) — but recognized this means it is
+   satisfiable for *any* $C_2$, so it is not, on its own, an independent test.
+
+4. **The $(C_2,\Lambda_M)$ invariance audit — the substantive result**: ran the
+   iterated construction with $C_2$ carried explicitly (not reset to zero) for
+   several trial values, converged to full numerical stability (8 passes).
+   **$C_2$ does not cancel.** $D/E^2$ at $z=0$ swings from $-0.103$ ($C_2=0$) to
+   $+0.113$ ($C_2=10$) to $+0.974$ ($C_2=50$) — an order-unity, physically
+   consequential effect on the energy-budget decomposition, even though the
+   *fitted background* $E(a)$ itself never changes (protected by construction).
+   Checked whether "$D\equiv0$ at all times" could fix $C_2$: **no single $C_2$
+   zeros $D$ at more than one redshift** (checked five points, $z=2$ to $z=0$) —
+   ruling out the one internal candidate closure condition available. This is
+   exactly the scenario the C2Kernel advisory itself flagged as the failure
+   mode ("$C_2$ surviving in observables without being selected... is precisely
+   a failure of the razor").
+
+**Files produced:** `Update-WP3-Step5Confrontation-2026-07-13.md`, this entry;
+verification scripts in session scratchpad.
+
+**Status: not a unilateral kill.** Reported per the program's standing
+discipline — verified three ways, not resolved alone. Candidates for what
+might still fix $C_2$: an unexplored boundedness condition on $\Lambda_M,\pi_i,
+p_R$ (e.g. future-boundedness, analogous to $C_1$'s past-regularity); a
+physical requirement this background-only analysis can't see; or genuine,
+irreducible freedom (an honest but consequential outcome for the "zero
+adjustable parameters" claim). **Recommend a touch point before proceeding
+further** on this specific question, mirroring the pattern that resolved the
+well-posedness snag and the exchange-term construction. WP2
+discharge-by-incorporation still pending; WP4a/WP4b unaffected. The KATRIN
+clock remains the program's most time-critical item; nothing in `cdot-7/` was
+touched.
+
+---
+
+## Entry 18 — Sign bug confirmed, forward divergence reproduced, scheme test 1 clears, the real ambiguity found in my own construction (2026-07-15)
+
+**Prompt (verbatim):**
+> Update uploaded.
+
+(Reference: `Advisory-WP3-Step5Audit-SchemeTest-2026-07-13.md` +
+`c2_future_audit.py` — advisor confirmed and extended the $(C_2,\Lambda_M)$
+finding: owns a second, independent sign bug in the magnitude scripts
+(propagated from the original delivery); reproduces the audit and extends it
+**forward** to $s=3$, finding both channels diverge into the deep-MOND future
+with unequal slopes, so no constant $C_2$ bounds the future either — "the
+program's first non-dissolving alarm"; proposes $D$ is
+**scheme-dependent** (Lagrange-multiplier rescaling + past-regularity
+interacting badly when the rescaling factor is unbounded) as the likely
+resolution, with a decisive two-branch test assigned.)
+
+**Summary of work performed:**
+
+1. **Independently confirmed the sign bug**: reproduced $F/\Omega_s=-1.797$
+   (wrong sign) via a direct probe of what my own `cumulative_trapezoid`
+   construction actually computes ($\int_0^s$, contradicting my own code's
+   comment). Fixed and confirmed $+30/17$ recovered. **Flagged one nuance the
+   advisor's writeup didn't cover**: the *un-iterated* $D$ simply flips sign as
+   claimed, but the *fully-iterated, converged* $D$ shifts in **magnitude** too
+   ($0.0888$ vs. $0.1029$, $\sim14\%$) — the iteration isn't symmetric under
+   $D\to-D$.
+
+2. **Reproduced the forward-divergence finding exactly** by running
+   `c2_future_audit.py` directly — matched every number to the digit, no
+   discrepancy.
+
+3. **Ran scheme test 1** (uniform $N$ multiplying the whole constraint
+   bracket, the advisory's specific proposal): derived the rescaled
+   Euler-Lagrange equation directly, found the homogeneous mode is
+   $p_i^\text{hom}/N$ — since $p_i^\text{hom}$ already diverges as
+   $t\to-\infty$ and $N\to0$ there, dividing makes it diverge *faster*, so
+   past regularity selects the identical solution in both schemes. Verified on
+   a synthetic solved system (residuals $\sim10^{-13}$). **This specific
+   rescaling is scheme-invariant — does not explain the finding.**
+
+4. **Found the real ambiguity by re-examining my own prior work**: my claim in
+   `Update-WP3-ClosedActionCouplingAudit-2026-07-13.md` that the lapse
+   placement inside $g_i$ was "the unique choice" was underjustified — the
+   addendum's pre-verified row is blind to *which* functional form of $g_i(N)$
+   is used, so it never actually distinguished my choice from the equally
+   valid alternative of multiplying the *entire* $g_i$ bracket by $N$
+   (weight-drift term included, not just shell-sweep). $\pi_i(t)$ itself is
+   identical under either choice (the $g_i$-dependence cancels structurally,
+   for any $g_i$), but $\partial g_i/\partial N$ — which the constraint
+   contribution actually uses — differs between the two schemes for radiation
+   (not for matter, whose weight-drift term vanishes identically). **This is a
+   sharper, concrete candidate mechanism, distinct from the advisory's general
+   hypothesis**, not yet numerically closed since it requires species-resolved
+   $\mathcal N_i(t)$ trajectories not yet built (deliberately not
+   reconstructed from memory, per the standing discipline).
+
+**Files produced:** `Update-WP3-SchemeTestPartial-2026-07-15.md`, this entry;
+verification scripts in session scratchpad.
+
+**Status: not a kill, not a resolution.** Scheme test 1 (as specifically
+proposed) closes with a negative result. The more promising lead is the
+$g_i$-internal lapse-placement ambiguity found this round — recommend this
+replace the originally-assigned M5-orientation-flip test as the next concrete
+step, pending species-resolved census machinery. WP2 discharge-by-incorporation
+still held. WP4a/WP4b unaffected regardless of outcome. The KATRIN clock
+remains the program's most time-critical item; nothing in `cdot-7/` was
+touched.

@@ -230,3 +230,64 @@ before or with step 5); worker log-numbering reconciliation (standing); WP4a
 Stage-1 acoustic scale (promoted-immediate, inputs stable); WP4b BBN gated on
 the $e^+e^-$/QCD census kinks; all cdot-7 consolidation-log handoffs unchanged;
 **the KATRIN clock remains the program's most time-critical item.**
+
+---
+
+## Entry 5 — Step-5 audit round: worker confirmed and extended; forward divergence universal; scheme-dependence hypothesis with decisive test; advisor sign bug owned (advisor session, 2026-07-13, ~13:0x–13:4x SAST)
+
+**Prompt (verbatim):**
+> One more check, please.
+> [uploaded: `Update-WP3-Step5Confrontation-2026-07-13.md` — step 5 run in full:
+> acceleration channel derived and verified (convergence-swept finite
+> differences); total-Bianchi correctly stated as structural; the razor
+> recognized as holding by construction (not an independent test once the
+> action closed); the $(C_2,\Lambda_M)$ audit finds $C_2$ does NOT cancel —
+> converged $D/E^2(z{=}0)$ swings $-0.10\to+0.97$ over trial $C_2$; the one
+> internal closure candidate ($D\equiv0$) has no common root; three resolution
+> candidates listed; escalated rather than resolved alone.]
+
+**Summary (advisor; full treatment in `c2_future_audit.py` + sign-diagnosis
+snippet):** Three findings. **(1) Advisor sign bug owned** — the magnitude
+scripts' reversed-grid quadrature carried $F/\Omega_s=-1.764$ where the
+validated value is $+30/17$; propagated to the worker's cross-check via the
+inherited quadrature block (their independently-built kernel channel matches
+exactly, confirming the diagnosis). All magnitudes, convergence, and
+WP4a/WP4b-negligibility unchanged; all sign statements flip ($D(z{=}0)=+9.5\%$;
+multiplier sector *adds*, $F$-sector supplies *less*). Rule adopted: inline
+closed-form ratio check in any script consuming a reconstructed $F$. **(2)
+Worker's audit confirmed and extended** — with iteration off,
+$D=D_\text{part}+C_2D_\text{ker}$ exactly; swing reproduced; and the FORWARD
+integration (never before run for this sector: to $s{=}3$, $x{=}0.011$,
+$\bar g{=}1.5\times10^{-2}$) shows **both channels diverge into the deep-MOND
+future with unequal slopes (1.73, 1.32 measured; 1, 5/6 asymptotic)** —
+$C_2^*(s)$ drifts with no limit — so candidate 1 (future-boundedness) fails
+universally: no $C_2$ bounds the future. Root cause localized: not $q'$
+($\to0$), not the M5 constraint share ($\to0$, benign) — the census/horizon
+multiplier integrals, whose source carries $\Lambda_M\propto Na^3F_Q$, the
+coordinate-volume factor. **(3) The suspect promoted with mechanism**: $D$ is
+plausibly scheme-dependent — on-shell-equivalent constraint rewritings
+$\mathcal C\to f\mathcal C$ rescale multipliers $p\to p/f$, and past-regularity
+("$p\to0$") selects different solutions when $f$ is unbounded ($f{=}N$ is); $D$
+is an integrated multiplier functional and inherits the choice. The
+$C_2$-swing and the divergence read as two symptoms of the un-pinned
+census/M5 constraint normalization. **Decisive bounded test assigned**:
+recompute $D$ in the $N$-normalized and orientation-flipped schemes; if $D$
+moves → prove the invariance theorem for physical outputs (zero-freedom
+survives for observables; $D$'s decomposition recorded as gauge); if $D$ is
+scheme-invariant and still $C_2$-swung → **WP3's kill condition triggers, in
+earnest, for the first time**. Pinned for the record: $E(z)$, M7's invoice, the
+$F$ reconstruction, and all WP4a/WP4b inputs verified $C_2$-robust — the
+episode concerns only whether the covariant bookkeeping sector is gauge or
+physical; nothing cdot-7 owns is touched. WP2 discharge held pending the test
+(the constraint normalization IS WP2's final form).
+
+**Files produced (Entry 5):** `Advisory-WP3-Step5Audit-SchemeTest-2026-07-13.md`,
+`c2_future_audit.py`, `SessionLog-2026-07-13.md` (this file).
+
+**Open items handed forward:** **the scheme test — the single next WP3 task,
+decisive by construction, two-branch fork routed through the author either
+way**; sign-errata propagation to the two magnitude documents; WP2 discharge
+confirmation held; worker log-numbering reconciliation (standing); WP4a
+Stage-1 acoustic scale (promoted-immediate, inputs re-verified robust); WP4b
+BBN gated on the census kinks; all cdot-7 consolidation-log handoffs
+unchanged; **the KATRIN clock remains the program's most time-critical item.**
