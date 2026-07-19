@@ -1398,3 +1398,278 @@ a fluid $c_\text{ad}^2$ alone. **Recommending this as independent
 supporting evidence for the advisor's eventual review, not a
 substitute for it.** Gate 1(b)'s caveat carried throughout. Nothing in
 `cdot-7/` was touched.
+
+## 23. §22 Part 2 was a dictionary-transplant error — corrected; $\Omega_s$ answered: it clusters
+
+`Advisory-WP7-OmegaSClusteringAdjudicated-2026-07-19.md` +
+`omega_s_clustering_adjudication.py`. **Reproduced the script before
+accepting anything** — every number matches (the $R_h$ spot-check to
+the digit; the two-route $c_\text{ad}^2$ table; the budget shares).
+
+**§18 confirmed, jointly owned.** The $s\equiv\ln(c/c_0)$ correction is
+confirmed directly from the machinery's own $z$-map ($1+z=e^{-1.5s}$
+combined with WP1's $1+z=(c_0/c)^{3/2}$ gives $c=c_0e^s$ — coefficient
+one, exactly). The advisor notes their own "independent" reproduction
+(§13) had copied my integrand's convention reading rather than
+re-deriving from WP2's definition, while their *own* `wp7_structure.py`
+correctly used $d\ln a=1.5\,ds$ elsewhere — an inconsistency inside
+their own toolchain, never cross-checked, which is exactly how the bug
+survived three rounds. New K6-class rule, accepted: convention factors
+get re-derived from the defining document at first use in every new
+script, never copied from a prior one, including one's own.
+
+**§19–20 accepted**, with one cosmetic addition: table entries in §19
+slightly exceeding 1 are real, not typos — $W$'s first negative lobe
+(minimum $\approx-0.086$ near $kR_h\approx5.8$) makes $(1-W)$ peak
+slightly above unity there.
+
+**§22 Part 2 was a genuine error of mine — a dictionary transplant, not
+a disagreement.** $c_\text{ad}^2=F_Q/(QF_{QQ})$ is exact *for AeST's own
+map* $(8\pi\tilde G\rho,8\pi\tilde GP)=(QK_Q-K,\,K)$ — Part 1's symbolic
+validation is correct, and stands, for that map. But **cdot-8's own
+dictionary is $\rho_s=\tfrac12QF_Q-\tfrac13F$** (the Friedmann-constraint
+combination this whole session has used and inline-verified against the
+invoice to $10^{-4}$ since §2a) — a genuinely *different* combination of
+$\{QF_Q,F\}$, not a rescaled version of AeST's own map. **Checked this
+precisely, not just asserted**: writing $K=-\tfrac12F$ (the paper's own
+stated identification) gives AeST's $\rho\propto-\tfrac12QF_Q+\tfrac12F$
+— coefficient ratio $QF_Q\!:\!F=-1$ — against cdot-8's own ratio
+$\tfrac12\!:\!(-\tfrac13)=-\tfrac32$. **These are not proportional**
+(confirmed symbolically), so "invariant under $K\to cK$" — true, and the
+basis of my own Part 1 validation — was answering the wrong question:
+the transplant changed the *map*, not merely the scale, and invariance
+under rescaling doesn't protect against that.
+
+**The correct, map-independent computation**: $c_\text{ad}^2\equiv
+\dot P/\dot\rho=w+\dfrac{dw/ds}{d\ln\rho_s/ds}$ — the standard adiabatic
+sound-speed identity, using cdot-8's *own* already-validated $w(a)$ and
+$\rho_s(a)=\Omega_s(a)$ trajectories directly, with no assumption about
+the underlying $K(Q)$-type structure at all. Reproduced:
+
+| $z$ | $w$ | $c_\text{ad}^2$ (cdot-8's own dictionary) | $c_\text{ad}^2$ (§22's transplanted formula) |
+|---:|---:|---:|---:|
+| 100 | $-0.030$ | $-0.041$ | $1.33$ |
+| 30 | $-0.009$ | $-0.012$ | $1.28$ |
+| 10 | $-0.006$ | $-0.004$ | $1.29$ |
+| 3 | $-0.048$ | $-0.006$ | $1.45$ |
+
+**The two routes disagree by two orders of magnitude in the matter era,
+and the correct one is small, not $O(1)$–$O(4)$.** §22's de-escalation
+*inverts*: cdot-8's scalar meets AeST's own founding-paper dust-like
+clustering criteria ($\Pi\to0$, small $w$ *and* small $c_\text{ad}^2$)
+almost exactly where structure actually forms.
+
+**§21's blocker now answers structurally, not just numerically**: (i)
+the budget leaves nothing else to cluster with — $\sim4.4\%$ baryons,
+$\sim3\%$ massive neutrinos, $\sim77$–$92\%$ scalar from $z=50$ to today
+(matching §21's own numbers exactly, unaffected by this correction); a
+non-clustering $\Omega_s$ would mean no structure formation at all; (ii)
+$w\approx0$ *and* $c_\text{ad}^2\approx0$ through the matter era, on the
+corrected, map-independent computation; (iii) AeST's $Q$-sector was
+*designed* to cluster like CDM — that is its entire dark-matter
+mechanism, imported by cdot-8 wholesale. **$\Omega_s$ clusters,
+dust-like, through the matter era.** My original ISW attempt's implicit
+"smooth quintessence" assumption (§21) was wrong in the *opposite*
+direction from §22's own attempted de-escalation — not a minor
+refinement either way, but the resolution is now on solid, verified
+ground: not reporting the mis-specified $1.15\times$ ISW ratio in §21
+was the right call.
+
+**The growth system is now fully specified, directive accepted**: dust-
+like scalar clustering (via the imported $\Pi\to0$ evolution,
+$\dot\delta_s=3\dot\Phi-\tfrac{k^2}{a^2}\theta_s$, $\dot\theta_s=\Psi$)
+alongside baryons and massive neutrinos, plus the M5 coupled-era source
+(§18's coefficient) with each mode's own exit history (§19), plus the
+late-time $w\to$ negative transition where the same component turns
+dark-energy-like — a unified DM$\to$DE component with a calculable
+growth history. The field-variable care through the crossover (§7)
+stands unchanged: the dust-like fluid form is licensed only where
+$|\Omega_s|=O(1)$ and $w,c_\text{ad}^2$ are small — the matter era,
+exactly where growth happens.
+
+**Filed as a new worker-side entry in
+`ErrataAndMethodologyLog-2026-07-18.md`**: a dictionary-transplant
+error, K6-class lesson — a formula's validation certifies it for the
+specific $(\rho,P)(Q)$ map it was validated on; transplanting it to a
+theory with a different map requires re-deriving, not reusing, even
+when the formula "looks" convention-invariant. Next: build the growth
+system per the specification above — first sanity target, $\delta_s$
+tracking $\delta_b$ in the matter era as the dustlike limit requires,
+*then* add the M5 term and mode-exit structure. Gate 1(b)'s caveat
+carried throughout. Nothing in `cdot-7/` was touched.
+
+## 24. The growth system, built properly — sanity target passes; the M5 modification recomputed on a correctly-specified baseline, with one honest caveat carried forward
+
+**Built `wp7_growth_system.py`** (saved to `cdot-8/WP7/`), implementing
+§23's specification: since dust-like components ($w,c_\text{ad}^2$
+small) share *identical* $\delta,\theta$ evolution equations with no
+relative pressure support, $\delta_s=\delta_b$ for matched initial
+conditions — collapsing to one growth equation sourced by
+$\Omega_\text{eff}(a)=\Omega_b(a)+\Omega_s(a)$.
+
+**Stage 1 — the sanity target, per the accepted advisory's own words**:
+
+| $z$ | $\Omega_b$ | $\Omega_s$ | $\Omega_\text{eff}$ |
+|---:|---:|---:|---:|
+| 1090 | 0.169 | 0.430 | 0.599 |
+| 100 | 0.138 | 0.753 | 0.890 |
+| 50 | 0.134 | 0.767 | 0.901 |
+| 10 | 0.131 | 0.779 | 0.910 |
+| 1 | 0.102 | 0.829 | 0.931 |
+| 0 | 0.044 | 0.926 | 0.970 |
+
+**$\Omega_\text{eff}$ sits at $0.89$–$0.97$ throughout — the $\Omega_m(z{=}50)
+=0.13$ symptom is gone**, exactly the resolution §23 predicted. Solved
+the growth equation with this source: $\Phi$ stays close to constant
+through the deep matter era ($z=100$ to $z\sim3$, ratio $0.94$–$1.01$),
+the qualitatively correct behavior — a real, working baseline where the
+earlier (mis-specified) attempt gave nonsense.
+
+**Stage 2 — the M5 modification, recomputed on this corrected
+baseline**: added §18's coupled-era coefficient, windowed by $W(kR_h(a))$
+per §19's mode-exit profile, for the same representative $k(\ell=2,5,10)$:
+
+| $\ell$ | $k$ [Mpc$^{-1}$] | $\Phi_\text{today}$ shift | ISW-kernel power ratio $P_\text{M5}/P_\text{std}$ |
+|---:|---:|---:|---:|
+| 2 | $1.08\times10^{-3}$ | $-82.4\%$ | $0.568$ |
+| 5 | $2.71\times10^{-3}$ | $-80.1\%$ | $0.582$ |
+| 10 | $5.41\times10^{-3}$ | $-77.4\%$ | $0.596$ |
+
+**One honest caveat, carried forward rather than papered over**: $\Phi$
+in the *baseline* (no-M5) system does not merely decay at low $z$ as
+expected — it grows sharply ($\Phi/\Phi_i$ reaching $2.4$ at $z=0$),
+which is *not* a sensible ISW-era potential-decay profile. This is not
+a new bug: it is exactly the limitation the accepted advisory itself
+named — "the dust-like fluid form is licensed only where $|\Omega_s|=
+O(1)$ and $w,c_\text{ad}^2$ are small — the matter era." At low $z$,
+$\Omega_s$'s own $w$ departs from zero (already established, $w\to
+-0.68$ today) and the simple dust-treatment of $\Omega_s$ as a
+pressureless source is no longer licensed — exactly the regime §7
+already flagged as needing the field-variable ($\chi,\mathcal E_\alpha$)
+system, not a fluid extension. **The Stage 2 numbers above therefore
+carry this caveat directly**: they are a genuine improvement over §21's
+completely mis-specified attempt (a properly-sourced baseline, at
+least through the era where the dust approximation is licensed), but
+the low-$z$ portion of the kernel — which is also where §19 found the
+M5 term itself turns on — sits partly in the same regime where the
+fluid treatment of $\Omega_s$ itself is not yet licensed. **Not treated
+as a final number.**
+
+**Status, stated honestly**: the sanity target passes cleanly (Stage 1);
+the M5 modification is now computed on a correctly-specified matter-era
+baseline rather than a broken one, giving $P_\text{M5}/P_\text{std}
+\approx0.57$–$0.60$ as the current best estimate — but this still
+needs the field-variable treatment through the low-$z$/ISW-relevant
+range before being quoted as settled, since that is precisely where the
+fluid approximation for $\Omega_s$ itself (not just the M5 term)
+requires the more careful treatment §7 already called for. Recommending
+this specific next step — replacing the low-$z$ fluid extension with
+the actual $\chi,\mathcal E_\alpha$ field equations — before the ISW
+$\Delta C_\ell$ number is treated as final. Gate 1(b)'s caveat carried
+throughout. Nothing in `cdot-7/` was touched.
+
+## 25. Attempting the general ($w,c_\text{ad}^2,\Pi$) system — the right equations found and verified from primary source; my own implementation broke, checkpointed honestly rather than patched
+
+**Went back to the founding paper directly** rather than reconstruct
+from memory or extend §24's ad hoc dust treatment further: quoted and
+verified (arXiv:2007.00082, primary source, not the special-case
+$\Pi\to0$ limit already imported in §1) the theory's **general** linear
+fluid equations, valid for any $w,c_\text{ad}^2$:
+$$\dot\delta=3H(w\delta-\Pi)+(1+w)\Big(3\dot\Phi-\frac{k^2}{a^2}\theta\Big),
+\qquad\dot\theta=3c_\text{ad}^2H\theta+\frac{\Pi}{1+w}+\Psi,$$
+$$\Pi=c_\text{ad}^2\delta-\frac{c_\text{ad}^2}{8\pi\tilde Ga^2\bar\rho}
+\nabla^2\big[\mathcal K_BE_\alpha+(2-\mathcal K_B)\chi\big],\qquad
+\mathcal K_B(\dot E_\alpha+HE_\alpha)=\frac{d\mathcal K}{d\mathcal Q}\chi
+-(2-\mathcal K_B)\Big[\ldots\Big].$$
+These are the genuine, general-$w$ replacement for §24's naive "always
+dust" approximation, using cdot-8's own real $w(a),c_\text{ad}^2(a)$
+(§23's corrected, map-independent formula) rather than assuming $w=0$
+at all $z$.
+
+**Attempted a first implementation, approximating $\Pi\approx
+c_\text{ad}^2\delta_s$** (dropping the explicit $\chi,E_\alpha$
+gradient term as a first, leading-order step — a standard approximation
+on large/near-horizon scales in the dark-energy-perturbation
+literature, not yet the full closure) **and it broke**: $\delta_b$ (the
+*baryon* density contrast, which should stay positive and grow
+monotonically in the matter era) went **negative** by $z\sim30$.
+**Diagnosed rather than patched or hidden**: traced to an over-hasty
+quasi-static/"drop $k$" shortcut in my own implementation, which
+discarded the $k^2\theta/a^2$ and $\dot\Phi$ terms in a way that breaks
+the equations' physical character entirely — not a subtlety in the
+theory, a bug in this attempt's own simplification.
+
+**Checkpointed honestly rather than pushed through with an unverified
+fix.** This specific implementation is **not reported as a result** —
+only §24's Stage 1/2 numbers stand as the current best (explicitly
+caveated) figures. **What this round *did* establish, and what's
+carried forward**: the correct general equations, verified against the
+primary source rather than reconstructed from memory — a real
+foundation for the next attempt, which needs to keep genuine
+$k$-dependence and $\Phi$'s own dynamical (Poisson-sourced) evolution
+rather than a quasi-static shortcut, and ideally close $\Pi$ properly
+via $\chi,E_\alpha$ rather than the leading-order $c_\text{ad}^2\delta_s$
+approximation. **Recommending this be staged as dedicated, careful next
+work** — building the coupled $(\delta_b,\theta_b,\delta_s,\theta_s,
+\Phi)$ system with actual $k$-dependence, matching this program's own
+established discipline (WP3's LapseBackreaction round, WP6's staged PPN
+derivation) of not forcing a shaky multi-variable derivation through
+under time pressure. Gate 1(b)'s caveat carried throughout. Nothing in
+`cdot-7/` was touched.
+
+## 26. Advisor accepted on both issues; the field-variable system attempted a second time with a careful closure — it also failed, and this is now real signal, not bad luck
+
+`Advisory-WP6WP7-Q2AndGrowthSnag-2026-07-19.md`, Issue 2 (Issue 1
+assessed and recorded in `Update-WP6-TensorSpeedStructure-2026-07-18.md`
+and `ConsolidationLog-2026-07-12.md` Item 16).
+
+**The sharpened diagnosis, accepted in full.** §25's own $\Pi\approx
+c_\text{ad}^2\delta_s$ shortcut was wrong on more than the dropped-$k$
+count I'd flagged: (i) cdot-8's matter-era $c_\text{ad}^2$ is
+*negative* ($-0.004$ to $-0.04$, §23) — an adiabatic closure with
+$c_\text{ad}^2<0$ has an imaginary effective sound speed and manufactures
+instability by construction, plausibly the primary cause of the
+$\delta_b<0$ pathology, not merely a secondary numerical shortcut; (ii)
+the standard dark-energy-literature approximation uses the *rest-frame*
+sound speed $c_s^2$, not the *adiabatic* $c_\text{ad}^2$ — these differ
+for field components precisely because $c_\text{ad}^2$ characterizes
+the background trajectory's $P(\rho)$ history, while $c_s^2$ is set by
+the field's own kinetic structure; transplanting the adiabatic form is
+a structural cousin of §23's own dictionary error, correctly identified
+as such; (iii) most decisively, the founding paper's own $\Pi$ formula
+makes the $\nabla^2[\mathcal K_BE_\alpha+(2-\mathcal K_B)\chi]$ term
+**the closure itself, not a correction to it** — dropping it, as §25
+did, converts the field into exactly the pathological adiabatic fluid
+it's supposed to avoid.
+
+**Attempted the field-variable system a second time, with the closure
+worked out carefully first** (unlike §25's rushed attempt): identified
+that $\delta,\theta$ have their own *direct* evolution equations (no
+need to invert their defining relations for $\gamma$ at all); $\chi=
+\bar Q(\theta+\alpha)$ is algebraic once $\theta,\alpha$ are known;
+$\alpha$ integrates via $\dot\alpha=E_\alpha-\Psi$; $E_\alpha$ via its
+own quoted equation, using $F_Q$ (the *bare field equation's* own
+coefficient, confirmed the right identification — this is what governs
+$\nabla_\mu(F_QA^\mu)=0$ at every order per §7/§11/§13's own established
+facts, genuinely different from $\rho_s$'s M5-modified Friedmann
+combination, and correctly *not* repeating §23's dictionary error this
+time); $\Phi$ via the momentum constraint (real $k$-dependence, no
+quasi-static shortcut). **This closure is more careful than §25's, and
+it still failed** — the solver broke down entirely (step size collapse,
+invalid values), worse than §25's merely-wrong-sign result.
+
+**Not patched a third time under pressure.** Two independent, carefully-
+reasoned attempts failing at the same wall, each for a different
+proximate reason, is exactly the pattern the accepted advisory warned
+this system would show — direct, unambiguous confirmation of its own
+recommendation to stage this properly rather than force it. **§24's
+Stage 1/2 numbers remain the current best, explicitly caveated
+figures.** Recommending this now genuinely be the dedicated, WP3-rhythm
+round the advisory names — ideally with advisor cross-checking at each
+stage rather than solo attempts, given two solo passes have both failed
+in ways that took real effort to even diagnose. Not a kill of anything;
+the structural understanding (the correct general equations, the
+correct closure logic, the correct $F_Q$ vs. $\rho_s$ dictionary
+distinction) is real, verified progress even though the numerical
+system built on it isn't working yet. Gate 1(b)'s caveat carried
+throughout. Nothing in `cdot-7/` was touched.

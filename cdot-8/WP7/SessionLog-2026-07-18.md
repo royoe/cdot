@@ -1019,3 +1019,202 @@ awaiting advisor input.** The machinery is now independently validated
 against a published, closed-form AeST result, and the same formula
 gives the first direct evidence on whether cdot-8's own $\Omega_s$
 clusters. Nothing in `cdot-7/` was touched.
+
+---
+
+## Entry 21 — Advisor adjudicates §18–§22: own dictionary-transplant error found and corrected, $\Omega_s$ resolved: it clusters (2026-07-19)
+
+**Prompt (verbatim):**
+> New WP7/advisory.
+
+**Summary of work performed:**
+
+1. **Located and read** `Advisory-WP7-OmegaSClusteringAdjudicated-2026-07-19.md`
+   + `omega_s_clustering_adjudication.py`. **Reproduced the script
+   before accepting anything** — every number matched (the $R_h$
+   spot-check, the two-route $c_\text{ad}^2$ table, the budget shares).
+
+2. **§18 confirmed, jointly owned**: the $s\equiv\ln(c/c_0)$ fix is
+   confirmed directly from the machinery's own $z$-map. The advisor
+   notes their own "independent" reproduction had copied my convention
+   reading rather than re-deriving it, while their *own* separate script
+   used the correct convention elsewhere — an internal inconsistency
+   that let the bug survive three rounds. New K6 rule accepted:
+   re-derive convention factors from the defining document at first use
+   in every script, never copy.
+
+3. **§19–20 accepted**, with one cosmetic addition ($(1-W)>1$ entries in
+   §19 are real, from $W$'s first negative lobe, not typos).
+
+4. **§22 Part 2 conceded as my own genuine error, not a disagreement**:
+   $c_\text{ad}^2=F_Q/(QF_{QQ})$ was validated correctly for AeST's own
+   $(\rho,P)=(QK_Q-K,K)$ map (Part 1 stands), but I then applied the
+   *same* formula to cdot-8's own $\rho_s=\tfrac12QF_Q-\tfrac13F$,
+   silently assuming the same underlying map up to rescaling. **Checked
+   precisely, not just accepted**: the coefficient ratios on
+   $\{QF_Q,F\}$ are $-3/2$ (cdot-8) vs. $-1$ (AeST, via $K=-\tfrac12F$)
+   — not proportional, confirmed symbolically. "Invariant under
+   $K\to cK$" was true and irrelevant.
+
+5. **Accepted the correct, map-independent computation**:
+   $c_\text{ad}^2=w+(dw/ds)/(d\ln\rho_s/ds)$, using cdot-8's own already-
+   validated $w(a),\rho_s(a)$ directly — giving $c_\text{ad}^2=O(-0.01$
+   to $-0.04)$ through the matter era, small, the *opposite* conclusion
+   from the transplanted formula's $O(1$–$1.5)$.
+
+6. **Accepted §21's resolution**: $\Omega_s$ clusters, dust-like,
+   through the matter era — the budget argument (nothing else to
+   cluster with), the corrected small $w,c_\text{ad}^2$, and AeST's own
+   design intent (the $Q$-sector's whole purpose is CDM-mimicking
+   clustering) converge on the same answer, inverting §22's own
+   de-escalation attempt.
+
+**Files produced:** `Update-WP7-PerturbationStructure-2026-07-18.md`
+(§23, new), `ErrataAndMethodologyLog-2026-07-18.md` (new worker-side
+entry + two new K6 rules), this entry.
+
+**Status: standing blocker resolved.** $\Omega_s$ clusters dust-like
+through the matter era; the growth system is now fully specified
+(dust-like scalar + baryons/neutrinos + M5 coupled-era source + mode
+exits + late-time transition). Next: build the growth system per this
+specification, first sanity target $\delta_s$ tracking $\delta_b$ in the
+matter era, before adding the M5 term. Nothing in `cdot-7/` was touched.
+
+---
+
+## Entry 22 (worker) — The growth system, built properly: sanity target passes, M5 recomputed, one honest caveat carried forward (2026-07-19)
+
+**Prompt (verbatim):**
+> Please proceed.
+
+**Summary of work performed:**
+
+1. **Built `wp7_growth_system.py`**: since dust-like components share
+   identical $\delta,\theta$ equations, collapsed $\delta_s=\delta_b$
+   into one growth equation sourced by $\Omega_\text{eff}=\Omega_b+
+   \Omega_s$.
+
+2. **Stage 1 sanity target passes**: $\Omega_\text{eff}$ sits at
+   $0.89$–$0.97$ from $z=100$ to today — the $\Omega_m(z{=}50)=0.13$
+   symptom is gone. $\Phi$ stays close to constant through the deep
+   matter era, the qualitatively correct behavior.
+
+3. **Stage 2**: recomputed the M5 modification on this corrected
+   baseline — $P_\text{M5}/P_\text{std}\approx0.57$–$0.60$ for
+   $\ell=2,5,10$, replacing §21's spurious, mis-specified $1.15\times$.
+
+4. **Caught and reported honestly, rather than hidden, a remaining
+   limitation**: the baseline $\Phi$ grows sharply at low $z$ instead of
+   decaying — not a new bug, but exactly the already-named limitation
+   that the dust-like fluid treatment of $\Omega_s$ is licensed only
+   where $w,c_\text{ad}^2$ are small (the matter era), and $\Omega_s$'s
+   own $w$ departs from zero at low $z$. This is precisely the regime
+   §7 already flagged as needing the field-variable system, not a fluid
+   extension — so the Stage 2 numbers are real progress but explicitly
+   not final.
+
+**Files produced:** `wp7_growth_system.py` (new, in `cdot-8/WP7/`),
+`Update-WP7-PerturbationStructure-2026-07-18.md` (§24, new), this entry.
+
+**Status: sanity target achieved; M5 modification recomputed on a
+correct baseline; one clearly-scoped remaining step identified** (the
+field-variable treatment through the low-$z$/ISW-relevant range) before
+any number here is quoted as final. Nothing in `cdot-7/` was touched.
+
+---
+
+## Entry 23 (worker) — Attempting the general $(w,c_\text{ad}^2,\Pi)$ system: right equations found, own implementation broke, checkpointed honestly (2026-07-19)
+
+**Prompt (verbatim):**
+> Next step please.
+
+**Summary of work performed:**
+
+1. **Went back to the founding paper directly** for the theory's general
+   (not just $\Pi\to0$) linear fluid equations — quoted and verified
+   $\dot\delta,\dot\theta,\Pi$, and $E_\alpha$'s own evolution equation
+   from primary source, rather than reconstructing from memory.
+
+2. **Attempted a first implementation** (approximating $\Pi\approx
+   c_\text{ad}^2\delta_s$, dropping the $\chi,E_\alpha$ gradient term as
+   a first leading-order step) — **and it broke**: baryon $\delta_b$
+   went unphysically negative by $z\sim30$.
+
+3. **Diagnosed rather than patched**: traced to an over-hasty quasi-
+   static/"drop $k$" shortcut in my own implementation that discarded
+   the $k^2\theta/a^2$ and $\dot\Phi$ terms incorrectly — a bug in this
+   attempt, not a subtlety of the theory.
+
+4. **Checkpointed honestly**: did not report the broken numbers or force
+   a patch under time pressure. §24's Stage 1/2 results remain the
+   current best, explicitly caveated figures. The correct general
+   equations (now verified from primary source) are the real, useful
+   output of this round, carried forward for the next, more careful
+   attempt.
+
+**Files produced:** `Update-WP7-PerturbationStructure-2026-07-18.md`
+(§25, new), this entry.
+
+**Status: an honest checkpoint, consistent with this program's standing
+discipline of not forcing a shaky multi-variable derivation through.**
+Recommending the next attempt keep genuine $k$-dependence and $\Phi$'s
+own Poisson-sourced dynamics, and close $\Pi$ via $\chi,E_\alpha$
+properly rather than the leading-order approximation that broke here.
+Nothing in `cdot-7/` was touched.
+
+---
+
+## Entry 24 (worker) — Advice acted on for both issues: WP6/$Q_2$ recorded, WP7 field-variable system attempted a second time and failed again (2026-07-19)
+
+**Prompt (verbatim):**
+> Please proceed with advice on both as given in the uploaded file.
+
+**Summary of work performed:**
+
+1. **Located** `Advisory-WP6WP7-Q2AndGrowthSnag-2026-07-19.md` (covering
+   both open items). Copied to `cdot-8/WP6/advisory/` per its own
+   proposed location.
+
+2. **Issue 1 ($Q_2$/EFE) recorded in full**: the tidal-radius mechanism
+   ($r_t\sim\sqrt{GM_\odot/a_0}\approx6500$ AU, checked directly — Saturn
+   at 9.5 AU sits deep inside, transmitting rather than screening the
+   external tidal term); the "program choice, not derived structure"
+   framing for the Simple IF/$a_0$; the constructive path (second,
+   independent motivation for the already-known $24$–$41\%$ $\mu$-swap
+   exposure). Updated `Update-WP6-TensorSpeedStructure-2026-07-18.md`
+   and `ConsolidationLog` Item 16 with the fuller picture; sequencing
+   explicitly left to the author.
+
+3. **Issue 2 (WP7 growth snag) — accepted the sharpened diagnosis**:
+   negative $c_\text{ad}^2$ makes an adiabatic $\Pi$ closure
+   structurally unstable; the standard approach uses rest-frame $c_s^2$,
+   not adiabatic $c_\text{ad}^2$; the paper's own $\nabla^2[\ldots]$ term
+   in $\Pi$ *is* the closure, not a correction to it.
+
+4. **Attempted the field-variable system a second time**, working out
+   the closure carefully first (unlike §25's rushed attempt): $\delta,
+   \theta$ integrate directly; $\chi$ algebraic from $\theta,\alpha$;
+   $\alpha,E_\alpha$ integrate via their own equations, correctly using
+   $F_Q$ (the bare field equation's own coefficient, not $\rho_s$'s
+   M5-modified combination — avoiding a repeat of §23's dictionary
+   error); $\Phi$ via the momentum constraint, real $k$-dependence
+   throughout. **It also failed** — the solver broke down entirely,
+   worse than §25's wrong-sign result.
+
+5. **Did not attempt a third patch under pressure.** Two careful,
+   independently-reasoned attempts failing at the same wall is real
+   signal, matching exactly what the advisory itself predicted.
+
+**Files produced:**
+`Update-WP6-TensorSpeedStructure-2026-07-18.md` (new section),
+`ConsolidationLog-2026-07-12.md` (Item 16 updated),
+`Update-WP7-PerturbationStructure-2026-07-18.md` (§26, new),
+`cdot-8/WP6/advisory/Advisory-WP6-Q2EFEAssessed-2026-07-19.md` (copied),
+this entry.
+
+**Status: Issue 1 fully recorded, sequencing left to the author. Issue
+2's structural understanding is real progress (correct equations,
+correct closure logic, correct dictionary) but the numerical system
+still isn't working — recommending this now genuinely be staged as
+dedicated work, ideally with advisor cross-checking at each step rather
+than further solo attempts.** Nothing in `cdot-7/` was touched.

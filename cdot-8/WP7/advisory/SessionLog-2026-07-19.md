@@ -129,3 +129,163 @@ entries).
 consolidation-batch sighting; **KATRIN watch item — Gate-1-class input
 on arrival**; post-WP7 revisit queue unchanged. Nothing in `cdot-7/`
 was touched.
+
+---
+
+## Entry 3 — WP7 §18–§22 adjudicated: worker's s-convention catch confirmed (advisor's non-independent "reproduction" owned, K6 rule added); §22 Part 2 dictionary-transplant error caught (c_ad² formula validated on AeST's map, applied to cdot-8's different map — correct matter-era c_ad² ≈ −0.004 to −0.04, dust-like); §21 answered structurally — Ω_s MUST cluster (it is the dark matter: ~4.4% baryons + ~3% ν + ~92% scalar); growth system fully specified (advisor session, 2026-07-19)
+
+**Prompt (verbatim):**
+> Advice on WP7, please.
+> [uploaded: WP7 file extended with §18 (worker catches own R_h(s)
+> exponent bug — s ≡ ln(c/c₀) per WP2's record, not ln(a/a₀):
+> dR_h/ds = (3/2)(c₀/H₀)e^s/E; inherited unchanged by two advisor
+> rounds; corrected R_h(z*) = 9.54e-4 Mpc, R_h(0) = 2598 Mpc; qualitative
+> conclusions survive, checked directly; exact dln𝒩_tot/ds derived —
+> coefficient stays O(0.5–0.7); filed as worker erratum), §19 (late-time
+> (1−W(g(z;ℓ))) epoch profile: turn-on z ~ 0.3–1 for ℓ = 2–10, ISW
+> window; z* cross-check 1e-15 via independent construction; honest
+> scoping), §20 (anchors folded on corrected pipeline: Anchor A regression
+> 0; Anchor B sharpened — field-side coefficient → −F_Q(today) = −1.8538
+> EXACTLY = WP6 Step 2's symbol and number; WP5/WP6 zero residual), §21
+> (ISW attempt surfaced foundational gap: standard smooth-Ω_s growth gave
+> Ω_m(z=50) = 0.13, kernel peaked z ≈ 27 — implausible; question posed:
+> does Ω_s cluster? 1.15× number explicitly NOT reported; escalated as
+> fork-class), §22 (self-directed while advisor offline per author
+> instruction: c_ad² machinery validated against AeST's sculpted-FRW
+> closed form symbolically — exact dust+Λ reproduction, zero cdot-8
+> input; then c_ad² = F_Q/(QF_QQ) applied to cdot-8's trajectory:
+> O(1)–O(4) through growth era — "quintessence-like, not dust-like";
+> de-escalates §21 preliminarily; honest limits stated).]
+
+**Summary (advisor; verification in
+`omega_s_clustering_adjudication.py`):** (1) **§18 confirmed** from the
+machinery's own z-map (1+z = e^{−1.5s} + WP1's law ⟹ c = c₀e^s ⟹
+s = ln(c/c₀), coefficient 1); corrected values reproduce to the digit
+(9.541e-4 Mpc, 2598 Mpc). **Advisor's share owned**: my "independent
+reproduction" copied the integrand's convention reading rather than
+re-deriving from WP2 — while my own wp7_structure.py used the correct
+1.5 factor elsewhere; two conventions in one toolchain, never
+cross-checked. **K6 rule: convention factors are re-derived from the
+defining document at first use in every new script, never copied from a
+prior script, including one's own.** (2) **§19–§20 accepted**: the epoch
+profile is clean ((1−W) > 1 entries are W's negative first lobe, min
+≈ −0.086 — one explanatory sentence directed); §20's exact −F_Q
+unification with WP6 (same symbol, same number, zero residual at
+kR_h ~ 1e5–1e9) accepted as the anchor-task completion. (3) **§22:
+Part 1 endorsed (absolute-anchor rule applied exactly right); Part 2
+DICTIONARY-TRANSPLANT ERROR caught**: c_ad² = F_Q/(QF_QQ) is exact for
+AeST's (ρ,P) = (QK_Q−K, K) map — which Part 1 validated — but cdot-8's
+own inline-verified map is ρ_s = ½QF_Q − ⅓F; "invariant under K → cK"
+is true and irrelevant (the transplant changed the MAP, not the scale).
+Two-route exposure: invoice-anchored c_ad² = w + (dw/ds)/(dlnρ_s/ds) =
+−0.0044 to −0.041 across z = 3–100 vs transplanted 1.3–1.5 — two orders
+apart. **K6 entry: a formula's validation certifies it for the
+dictionary it was validated on; a different (ρ,P) map requires
+re-derivation, not reuse.** The de-escalation INVERTS — constructively.
+(4) **§21 answered structurally — Ω_s MUST cluster**: (i) budget: 4.42%
+baryon-class + 2.98% massive ν + 92.6% scalar today (77% at z=50, 43%
+at z*) — nothing else to form structure with; (ii) corrected numbers:
+w ≈ 0 AND c_ad² ≈ 0 through the matter era — the founding paper's
+dust-like Π → 0 clustering criteria hold exactly where structure forms;
+(iii) architecture: AeST's Q-sector is DESIGNED to cluster like CDM —
+the theory's dark-matter mechanism, imported wholesale. The
+Ω_m(z=50) = 0.13 symptom dissolves (missing clusterer found); the
+worker's refusal to report the mis-specified 1.15× number was exactly
+right. **Growth system fully specified**: dust-like scalar clustering
+(imported Π → 0 evolution) + baryons + massive ν + M5 coupled-era
+source with exit history + late-time w → −0.68 DE transition — a
+unified DM→DE component with calculable growth; WP7's central
+computation, now well-posed; field-variable care at the crossover
+stands. (5) **Directives**: replace §22 Part 2's table with the
+invoice-anchored route + file the transplant; build the growth system
+(first sanity: δ_s tracks δ_b in the matter era; total growth ~
+Ω_eff ≈ Ω_s + Ω_b universe) THEN add M5 + exits; ISW ΔC_ℓ follows on
+the validated system with §19's profile. (6) Bidirectionality note
+stands — both directions exercised again in one round.
+
+**Files produced (Entry 3):**
+`Advisory-WP7-OmegaSClusteringAdjudicated-2026-07-19.md`,
+`omega_s_clustering_adjudication.py`, `SessionLog-2026-07-19.md` (this
+file, three entries).
+
+**Open items handed forward:** worker: §22 correction + growth system
+per specification + ISW thereafter; standing: consolidation-batch
+sighting; **KATRIN watch item — Gate-1-class input on arrival**;
+post-WP7 revisit queue unchanged. Nothing in `cdot-7/` was touched.
+
+---
+
+## Entry 4 — Two issues assessed jointly: (1) Q₂/EFE tension source-verified (Park/Hees/Famaey/Desmond/Durakovic 2026, (1.6±1.8)e-27 s⁻²) — real, screening-immune (tidal argument), pressures a program CHOICE not derived structure; μ-swap revisit gains a second quantified motivation; IF re-fit recommended to top of post-WP7 queue; (2) WP7 growth snag diagnosis sharpened — Π ≈ c_ad²δ closure structurally wrong (negative c_ad², adiabatic-vs-rest-frame transplant); field-variable system now unavoidable (advisor session, 2026-07-19)
+
+**Prompt (verbatim):**
+> Two issues: The last step in WP7 hit a snag, and a review of recent
+> Cassini data revealed a possible conflict. Please assess and advice.
+> [uploaded: WP6 file with new EFE/Q₂ sub-task — worker validated
+> machinery against the paper's own (e_N, Q₂) pair to 4 sig figs
+> (catching their own e_N = a_e/a₀ slip via the validation), then
+> computed cdot-7's Simple-IF/a₀ = 1.39e-10 prediction Q₂ ≈ 3.71e-26 —
+> ~23× the new bound, ~21σ; family-switch check (RAR δ=1, a₀ = 1.26)
+> gives the same tension; correctly distinguished from sub-task 1
+> (transition-region vs deep-Newtonian); escalated not killed; routed to
+> ConsolidationLog for cdot-7 relevance; AeST-inheritance question
+> honestly open. WP7 file §24 (growth system: Stage 1 sanity passes,
+> Ω_eff = 0.89–0.97, z=50 symptom gone; Stage 2 interim P_M5/P_std ≈
+> 0.57–0.60 with honest caveat — baseline Φ grows ×2.4 at low z where
+> dust treatment unlicensed) and §25 (general (w, c_ad², Π) equations
+> verified from primary source; implementation broke — δ_b negative by
+> z~30; diagnosed as own quasi-static shortcut; checkpointed honestly;
+> staging requested).]
+
+**Summary (advisor; source verification via web search):** **Issue 1 —
+Q₂/EFE**: (1) Paper VERIFIED live (Q₂ = (1.6±1.8)e-27, 40% over Hees
+2014's (3±3)e-27); worker's ~21σ arithmetic checks; Blanchet-Novak's
+standard-IF range (2.1e-27 – 4.1e-26) corroborates — cdot-7's 3.7e-26
+sits at the known shallow-transition top, now cut into by the new
+bound. Worker's handling exemplary (absolute-anchor validation catching
+their own slip; escalate-don't-kill; honest inheritance conditional).
+(2) **Screening-immunity confirmed via the tidal argument**: the EFE
+quadrupole is imprinted at r_t ~ √(GM/a₀) ~ 7000 AU where the external
+field (e_N ~ 1–1.6) sets an anisotropic boundary; Saturn at 9.5 AU sits
+in an interior that transmits, not screens, an external tidal term —
+Q₂ probes the transition shape, the one place the theory MUST be
+MONDian to fit galaxies; AeST is AQUAL-class quasistatically with a
+Gpc-scale mass term irrelevant at r_t ⟹ default expectation: cdot-8
+inherits its chosen IF's tension; the AeST-specific-suppression
+loophole is open but mechanism-free — flagged as such. (3) **What's
+actually under pressure: a program CHOICE** — the Simple IF and a₀ are
+Foundation.md inputs, not census-derived structure; and the program
+already owns the price list: the WP6 μ-collision round's 24–41% closure
+exposure for Cassini-safe swaps. Q₂ gives the μ-swap revisit its second
+independent quantified motivation (T22 + Q₂ push the same direction:
+sharper transition; Desmond-Hees-Famaey 2024 maps the joint-survival
+space). **Recommendation to the author: promote the IF re-fit
+(sharpness-parameterized family; Q₂ + T22 in the likelihood; Δχ² ≈ 13
+Simple-preference as the traded benefit; 24–41% as the cost envelope)
+to the top of the post-WP7 revisit queue** — the second nature-set
+clock, already ticking; sequencing per Gate 1(b) is the author's call.
+**Issue 2 — WP7 snag**: §24 accepted as framed (Stage 1 passes; Stage 2
+properly caveated — the ×2.4 Φ growth is the dust treatment overdriving
+where w → −0.68); §25's checkpoint discipline right; **diagnosis
+sharpened — the quasi-static shortcut was not the only structural
+problem**: Π ≈ c_ad²δ_s is the ADIABATIC-fluid closure, wrong twice
+over — (i) cdot-8's matter-era c_ad² is NEGATIVE (−0.004 to −0.04):
+imaginary sound speed manufactures instability (likely part of the
+δ_b < 0 pathology); (ii) the DE-literature approximation is rest-frame
+c_s², not c_ad² — the transplant is a cousin of §22's dictionary error;
+(iii) the founding paper's ∇²[K_B ℰ_α + (2−K_B)χ] term IS the closure,
+not a correction to it. **Directive: go directly to the field-variable
+system** — coupled (δ_b, θ_b, χ, ℰ_α, Φ) with full k-dependence, §7's
+standing directive now unavoidable (every fluid shortcut has failed at
+the same wall from a different side); staged WP3-rhythm with §24
+Stage 1 as the matter-era regression target. Fold-ins: tidal-argument
+mechanism; closure lesson (third dictionary-class K6 entry).
+
+**Files produced (Entry 4):**
+`Advisory-WP6WP7-Q2AndGrowthSnag-2026-07-19.md`,
+`SessionLog-2026-07-19.md` (this file, four entries).
+
+**Open items handed forward:** AUTHOR DECISION: IF re-fit promotion and
+its sequencing vs Gate 1(b). Worker: field-variable growth system
+(staged); Q₂ item held open pending the author's call; standing:
+consolidation-batch sighting; **KATRIN + Q₂ — two external clocks**.
+Nothing in `cdot-7/` was touched.

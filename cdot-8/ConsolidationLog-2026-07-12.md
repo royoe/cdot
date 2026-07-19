@@ -470,6 +470,32 @@ gating structure, alongside its existing SN/RAR/mass-census tension
 already documented in the four-term fit write-up), independent of
 cdot-8's own trajectory.
 
+**Advisor assessment added, 2026-07-19** (`cdot-8/WP6/advisory/
+Advisory-WP6-Q2EFEAssessed-2026-07-19.md`): verified independently
+(paper, authorship, 40% improvement figure all confirmed via live
+search); the worker's validation-before-computation discipline was
+specifically called out as the absolute-anchor rule applied correctly.
+**Mechanism named**: the EFE quadrupole is imprinted at the MOND
+transition radius $r_t\sim\sqrt{GM_\odot/a_0}\approx6500$ AU (checked
+directly against cdot-7's own $a_0$); Saturn at $9.5$ AU sits deep
+*inside* this radius, in a region that is Newtonian regardless of
+screening — an interior point cannot screen an externally-imposed
+tidal term, it only transmits it. This is *why* sub-task 1's screening
+resolution doesn't transfer here. **Precise scope, sharpened**: the
+Simple IF and $a_0=1.39\times10^{-10}$ m/s² are program *choices*
+(Foundation's own preferred fit among alternatives considered), not
+census-derived structure — the tension strikes a revisable input, not
+the framework's derived core. **Constructive path identified**: this
+gives a *second, independent, quantified* motivation (alongside WP6's
+own earlier $24$–$41\%$ Cassini-safe $\mu$-swap exposure finding) for
+re-fitting cdot-7's interpolating function as a sharpness-parameterized
+family with both $Q_2$ and the T22 Cassini bound in the likelihood.
+**Recommendation for the author, not decided here**: consider promoting
+this IF re-fit to the top of the post-cdot-8-WP7 revisit queue — this is
+now the second external, already-ticking measurement clock this program
+tracks (alongside KATRIN), and unlike KATRIN, the bound is already
+published today.
+
 ---
 
 ## Priority summary for the consolidator

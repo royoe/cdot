@@ -59,6 +59,23 @@ re-deriving from a fresh mistake each time:
     between them, and an unresolved disagreement over a quote should be
     stated as "checked version X, not found" rather than asserted as a
     flat contradiction of the other party's claim.
+12. **Convention re-derivation rule** (new, WP7): a normalization/
+    convention factor (e.g. what a variable like $s$ actually means) gets
+    re-derived from the defining document at first use in *every* new
+    script — never copied from a prior script, including one's own. This
+    is how one worker-side bug ($R_h(s)$'s exponent) survived three
+    rounds: the advisor's own "independent" reproduction copied the same
+    convention reading instead of re-deriving it, while a *different*
+    script by the same advisor used the correct convention elsewhere,
+    unreconciled.
+13. **Dictionary-transplant rule** (new, WP7): a formula validated against
+    one theory's specific $(\rho,P)(Q)$ (or equivalent) map certifies it
+    for *that map only* — applying it to a different theory with a
+    structurally different map is not licensed by the formula's own
+    invariance under overall rescaling ($K\to cK$), since a different map
+    is not merely a rescaling. Check the actual coefficient ratios before
+    reusing a validated formula across theories, even closely related
+    ones.
 
 ## 2. Error tally, both sides, this session (descriptive, not a strict global count)
 
@@ -139,6 +156,30 @@ conceded):**
 - WP6: $J^\mu$ initially mischaracterized as a scalar current rather than
   the aether's own acceleration vector — caught via direct primary-source
   verification before it propagated further than §1/§2a.
+- WP7: a **dictionary-transplant error** (§22 Part 2 of
+  `Update-WP7-PerturbationStructure-2026-07-18.md`, corrected in §23).
+  Validated $c_\text{ad}^2=F_Q/(QF_{QQ})$ symbolically against AeST's own
+  published closed-form $(\rho,P)=(QK_Q-K,\,K)$ map (a genuine, correct
+  validation, still standing) — then applied the *same* formula to
+  cdot-8's own $F(Q)$ trajectory, silently assuming it shared the same
+  underlying $(\rho,P)(Q)$ structure up to an overall rescaling. It
+  doesn't: cdot-8's own established $\rho_s=\tfrac12QF_Q-\tfrac13F$ has
+  coefficient ratio $-3/2$ on $\{QF_Q,F\}$, against AeST's own $-1$ (via
+  $K=-\tfrac12F$) — not proportional, confirmed symbolically. "Invariant
+  under $K\to cK$" was true and irrelevant: the transplant changed the
+  map, not the scale. Advisor-caught (`Advisory-WP7-
+  OmegaSClusteringAdjudicated-2026-07-19.md`), independently reproduced
+  and confirmed before accepting. **Consequence**: the correct,
+  map-independent computation ($c_\text{ad}^2=w+(dw/ds)/(d\ln\rho_s/ds)$,
+  using cdot-8's own already-validated $w(a),\rho_s(a)$ directly) gives
+  $c_\text{ad}^2=O(-0.01\text{ to }-0.04)$ through the matter era —
+  *small*, the opposite conclusion from the transplanted formula's
+  $O(1$–$1.5)$. This inverted §21/§22's "smooth quintessence"
+  de-escalation: $\Omega_s$ clusters, dust-like, through the matter era.
+  **K6-class lesson**: a formula's validation certifies it for the
+  specific $(\rho,P)(Q)$ map it was validated on; transplanting to a
+  theory with a different map needs re-derivation, not reuse — even when
+  the formula "looks" scale-invariant.
 - WP6 sub-task 1: an initial wrong asymptotic formula for the naked-simple
   $\mu$'s Saturn anomaly (modeled as power-law-suppressed rather than
   constant) — self-caught by re-deriving against `cdot-4/T22`'s own exact

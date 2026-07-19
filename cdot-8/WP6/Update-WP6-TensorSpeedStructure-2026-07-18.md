@@ -722,3 +722,67 @@ advisor review given the severity ($\sim20\sigma$-class, not a marginal
 effect). Nothing in `cdot-7/` was touched — this section, the
 `ConsolidationLog` entry, and `wp6_q2_efe_check.py` are the complete
 record of this round.
+
+## $Q_2$/EFE sub-task assessed by advisor — verified, screening-immune (mechanism identified), and a constructive path named
+
+`Advisory-WP6-Q2EFEAssessed-2026-07-19.md` (also cross-referenced from
+`cdot-8/WP7/advisory/`). Verdict: **verified, real, not a kill — and
+sharper than the escalation above stated.**
+
+**Confirmed independently by the advisor**: the paper, authorship, and
+40% improvement over Hees et al. 2014 all check out via live search; my
+own $(e_N,Q_2)$ validation against the paper's published number,
+including catching my own initial $e_N=a_e/a_0$ slip via that same
+validation step, is called out as "the absolute-anchor rule applied
+exactly where it matters." One corroborating data point added: Blanchet
+& Novak's standard-IF survey reportedly spans $2.1\times10^{-27}$–
+$4.1\times10^{-26}$ s$^{-2}$, placing cdot-7's own $3.7\times10^{-26}$
+at the shallow-transition top of that range — **not independently
+verified by me**, offered as context, not load-bearing for the
+conclusion above (which stands on my own validated computation alone).
+
+**The screening-immunity mechanism, now named explicitly**: the EFE
+quadrupole is imprinted at the MOND transition radius $r_t\sim\sqrt{
+GM_\odot/a_0}\sim6500$–$7000$ AU (**checked directly**: $\sqrt{GM_\odot/
+a_0}$ with cdot-7's own $a_0=1.39\times10^{-10}$ m/s² gives $\approx6531$
+AU, matching — this is exactly the paper's own "MOND radius" $R_M$
+already used in `wp6_q2_efe_check.py`), where the Milky Way's external
+field sets an anisotropic boundary condition. **Saturn, at $9.5$ AU,
+sits deep *inside* $r_t$** — a region that is Newtonian regardless of
+any screening completion, and an interior region cannot screen an
+*externally imposed* tidal term; it only transmits it. This is why
+sub-task 1's resolution (a large-gradient completion at Saturn's own
+field) is structurally irrelevant to $Q_2$: **the quadrupole probes the
+IF's transition shape specifically — the one regime the theory must
+stay MONDian in to fit galaxies at all.** The logical loophole (some
+AeST-specific mechanism suppressing $Q_2$ without an explicit screening
+term) remains open but has no known candidate — named as such, not
+leaned on.
+
+**The precise scope of what's under pressure, sharpened**: **the Simple
+IF and $a_0=1.39\times10^{-10}$ m/s² are program *choices*** (Foundation's
+own preferred fit among several considered), **not census-derived
+structure** — the census machinery derives $F(Q)$ itself; the
+quasistatic $\mu(x)$ was always a separate input. This tension therefore
+strikes a *revisable input*, not the framework's derived core.
+**Constructive path, connecting to an already-existing WP6 result**: the
+$\mu$-swap-exposure round (§2a, confirmed independently: `mu_swap_exposure.py`
+reproduces the claimed $24$–$41\%$ Cassini-safe-family offset at the
+working points) already quantified the closure's own cost of moving to a
+sharper, Cassini-safer interpolating function. **$Q_2$ supplies a
+second, independent, quantified motivation for the same swap** — T22's
+deep-Newtonian concern and now the transition-region quadrupole push in
+the *same direction* (sharper transition).
+
+**Recommendation accepted, routed to the author** (not decided here):
+promote an IF re-fit — Simple replaced by a sharpness-parameterized
+family, with $Q_2$ and T22 both in the likelihood alongside the existing
+four-term fit — to the top of the post-WP7 revisit queue, with the
+$24$–$41\%$ closure exposure as the known cost and the $\Delta\chi^2
+\approx13$ preference for Simple as the known benefit being traded away.
+Per Gate 1(b)'s own sequencing, this waits for WP7's completion, but it
+is Gate-1-class input arriving now — **this is the second external,
+already-ticking clock this program is tracking, alongside KATRIN.**
+Sequencing is explicitly the author's call, not decided unilaterally
+here. `ConsolidationLog` Item 16 updated to carry this fuller picture.
+Nothing in `cdot-7/` was touched.
