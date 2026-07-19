@@ -287,6 +287,191 @@ scripts going forward.
 
 ---
 
+## Item 11 — Methodology: verify the solution is the physical one before verifying
+algebra on it (MEDIUM priority, general lesson)
+
+**Source**: recurring across WP3's rounds 2026-07-12 through 2026-07-15
+(`cdot-8/WP3/Update-WP3-BudgetTension-2026-07-12.md` through
+`Update-WP3-SchemeTestPartial-2026-07-15.md`), stated explicitly as the
+advisory's own lesson after round 2.
+
+**The finding**: several of WP3's escalations (traced back afterward) turned out to
+be checking correct algebra against the WRONG solution — an idealized fixed point
+instead of the actual fitted trajectory, or a free-field equation of motion instead
+of the census-constrained one. This is a general methodology trap, not specific to
+AeST or cdot-8's action-level machinery: **before trusting any confrontation number,
+confirm which solution branch is actually being evaluated, separately from checking
+the algebra is right on it.**
+
+**Proposed action**: a one-line methodology note in `ResearchNotes.md`'s existing
+lessons section, alongside Item 5's Etherington-reciprocity entry. No technical
+content to verify; purely a process reminder.
+
+---
+
+## Item 12 — BBN physics: use true-equilibrium (not frozen/decoupled) statistics for
+$e^+e^-$ in any census/closure calculation reaching BBN-era redshifts (HIGH
+confidence, MEDIUM-HIGH value if cdot-7 ever computes its own BBN confrontation)
+
+**Source**: `cdot-8/WP4b/Update-WP4b-BBN-2026-07-16.md` and the correction rounds
+through `Update-WP4b-RebuttalWithdrawn-2026-07-17.md`.
+
+**The finding**: $e^+e^-$ pairs stay in full thermal *and chemical* equilibrium
+through the annihilation epoch and genuinely annihilate away — the correct
+distribution is the true equilibrium Fermi-Dirac form (energy, not momentum, in the
+exponent). This is the opposite of neutrinos, which decouple and free-stream (frozen
+distribution, momentum in the exponent). Reusing the frozen/neutrino-style treatment
+for $e^\pm$ (an easy mistake — caught and corrected twice this session, including once
+by the author's own advisor loop) gives qualitatively wrong behavior (density growing
+instead of Boltzmann-suppressing).
+
+**Why this matters independent of cdot-8**: this is a plain physics fact about
+statistical mechanics near the QED epoch, not anything AeST- or census-specific. Any
+future cdot-7-native BBN/$N_\text{eff}$ calculation (see Item 7, still gated on this
+exact kink) needs this distinction to get the $e^+e^-$ contribution right.
+
+**Proposed action**: fold into whichever script eventually computes Item 7's deferred
+$e^+e^-$/QCD census kink for cdot-7 directly — flag this distinction explicitly in
+that script's own documentation so it isn't rediscovered the hard way a third time.
+
+---
+
+## Item 13 — BBN physics: the photon-temperature boost $(11/4)^{1/3}$ follows from
+entropy conservation, not energy conservation (HIGH confidence, LOW-MEDIUM value,
+mostly a derivation-hygiene note)
+
+**Source**: same WP4b rounds as Item 12, particularly
+`Update-WP4b-Converged-2026-07-17.md`.
+
+**The finding**: naive coordinate-energy conservation across the $e^+e^-$ annihilation
+transition gives the wrong exponent, $(11/4)^{1/4}$; the correct derivation needs
+entropy conservation (the right principle for a bulk, many-body conversion, as opposed
+to single-particle energy bookkeeping), which reproduces the standard $(11/4)^{1/3}$
+boost from first principles. cdot-7 already *uses* this factor
+(`Fable-1`'s $T_{\nu,0}=(4/11)^{1/3}T_{\gamma,0}$) but, as far as this session's
+search found, without deriving it in-repo.
+
+**Proposed action**: optional — if cdot-7 ever wants this factor derived rather than
+cited, this is the correct principle to use. No urgency; the currently-used numerical
+value is already right.
+
+---
+
+## Item 14 — CMB methodology: the correct acoustic-scale distance convention is
+$\theta_*=r_s(z_*)/D_p(z_*)$, NOT $r_s/D_A$ (HIGH confidence, HIGH value — directly
+corrects a historical cdot-4/cdot-5 methodology error)
+
+**Source**: `cdot-8/WP4a/Update-WP4a-AcousticScale-2026-07-16.md` §2; the historical
+error itself flagged in `cdot-8/WP0/Update-WP0-FullPass-2026-07-11.md` (cdot-4/cdot-5's
+CMB attempts used $D_A\equiv D_p$, while cdot-7's own §5.5 proves $d_A=D_p/(1+z)$ — a
+live cross-stage contradiction, not previously reconciled).
+
+**The finding**: in a variable-$c$/lockstep-ruler framework of this kind, the correct
+acoustic-scale formula is $\theta_*=r_s(z_*)/D_p(z_*)$ (proper-motion distance, the
+"comoving-type" quantity whose $(1+z_*)$ factors cancel against $r_s$'s own), derived
+directly from Foundation §5.5's own lockstep-ruler formula — *not* the angular-diameter
+distance $D_A=D_p/(1+z)$ cdot-4/cdot-5 used, which produced the historical 9$\times$–
+765$\times$ CMB failures WP0 found (later "corrected" to a 1.3–1.4$\times$ overshoot,
+with $z_*$ never resolved from first principles in that earlier work either).
+
+**Why this matters independent of cdot-8**: this is a convention/derivation fix
+applicable to cdot-7's own machinery directly, useful for any future cdot-7-side CMB
+attempt regardless of cdot-8's fate — the historical failures were, at least partly,
+a distance-convention bug, not necessarily evidence the underlying physics was as badly
+wrong as 9–765$\times$ suggested.
+
+**Proposed action**: flag prominently in `ResearchNotes.md`/wherever cdot-7's CMB
+attempt history is recorded, so a future attempt starts from the corrected convention
+rather than repeating cdot-4/cdot-5's own error.
+
+---
+
+## Item 15 — Methodology: a "z=0 sanity check" is not always the right diagnostic —
+verify what the compared quantities actually decompose into first (MEDIUM priority,
+general lesson, cautionary rather than a fix)
+
+**Source**: `cdot-8/WP4b/Update-WP4b-RebuttalWithdrawn-2026-07-17.md`.
+
+**The finding**: a plausible-looking, seemingly decisive check — "any correctly
+normalized ratio must equal 1 at $z=0$" — was applied to $E(0)/\sqrt{\hat u(0)}$ and
+wrongly read as a bug (ratio $=3.67$). It was in fact correct: $\hat u$ is only the
+matter+radiation census content, deliberately excluding a separate dark-energy-like
+"invoice" sector that dominates today. The check itself wasn't wrong as a *tool* — it
+was applied without first confirming what's actually being compared decomposes into.
+
+**Why this matters independent of cdot-8**: a general caution for this project's own
+future normalization/consistency checks (of exactly the kind Items 2, 9, and 10 above
+already involve) — a quick sanity check can look decisive and still be a category
+error if the two sides of the comparison aren't verified to mean the same thing first.
+
+**Proposed action**: fold into the same `ResearchNotes.md` methodology-lessons section
+as Items 5 and 11 — one more line, not a technical change.
+
+---
+
+## Item 16 — FLAGGED CONCERN (not an improvement): a new, external, recent measurement is in serious tension with cdot-7's own established interpolating-function/$a_0$ choice (HIGH severity, requires author review, not a fix to merge)
+
+**Source**: `cdot-8/WP6/Update-WP6-TensorSpeedStructure-2026-07-18.md`
+(new sub-task, 2026-07-19), `wp6_q2_efe_check.py`,
+`references/arXiv.2602.17884.md`. Unlike every other item in this log,
+this is **not a candidate improvement** — it is a flagged external
+tension, routed here per this program's standing convention (findings
+relevant to cdot-7, cdot-7 itself never touched) because it bears
+directly on cdot-7's own headline fit result, not anything cdot-8-
+specific.
+
+**The finding**: Park, Hees, Famaey, Desmond & Durakovic (2026,
+arXiv:2602.17884) report an improved Cassini/DE440 bound on the Solar
+System quadrupole $Q_2=(1.6\pm1.8)\times10^{-27}$ s$^{-2}$ — the
+"External Field Effect" (EFE) of AQUAL/QUMOND-type MOND, which depends
+*solely* on the interpolating function's (IF's) shape near $a_0$ (the
+Milky Way's external field at the Sun, $e_N=O(1)$–$O(2)$ in $a_0$
+units), not on how sharply the IF approaches Newtonian gravity far
+above $a_0$. **cdot-7's own established, explicitly-preferred fit**
+(Foundation.md: the Simple IF, $\kappa=1$, $\mu(x)=x/(1+x)$, preferred
+over the standard IF at every fit stage, $\Delta\chi^2\approx13$ at the
+four-term fit; $a_0=1.39\times10^{-10}$ m/s²) **predicts $Q_2\approx
+3.71\times10^{-26}$ s$^{-2}$ — roughly $23\times$ the new bound's
+central value, $\sim21\sigma$ in tension.** Checked whether switching
+to the RAR alternative IF (also explored, though not preferred, by
+cdot-7) helps: using cdot-7's own RAR-alone-preferred $a_0\approx1.26
+\times10^{-10}$ m/s² gives essentially the *same* tension ($\sim23
+\times$, $\sim21\sigma$) — **not a quirk of one IF family, a generic
+feature of any shallow-transition ($n,\delta,\gamma\sim1$) IF
+calibrated near cdot-7's own $a_0$.** The computation machinery was
+validated against the paper's own published number before being
+applied (reproduced their $\delta=1$ RAR-IF/$a_0=1.02\times10^{-10}$
+case to 4 significant figures: $e_N=1.6433$ vs. their quoted $1.643$,
+$Q_2=3.3869\times10^{-26}$ vs. their quoted $3.387\times10^{-26}$) —
+this is not an assumed or hand-waved number.
+
+**Why this matters independent of cdot-8's own fate**: this is a test
+of cdot-7's own AQUAL-based galaxy/Solar-System framework directly — it
+does not depend on AeST, the census, or any cdot-8-specific machinery
+surviving. If cdot-8 is killed at any later stage, this finding still
+applies to cdot-7 as it stands today.
+
+**What this does NOT establish**: whether AeST's/cdot-8's own
+quasistatic completion (a separate, not-yet-derived object from cdot-8's
+own first principles — see WP6 sub-task 1) shares this tension; that
+depends on AeST's own near-$a_0$ IF shape, not yet derived. This item is
+about cdot-7's own established fit specifically.
+
+**Proposed action**: **NOT a bounded task ready to merge — requires
+author review.** This is a genuine, quantified ($\sim20\sigma$-class)
+tension between cdot-7's headline four-term-fit result and a recent,
+carefully-validated Solar-System measurement, surfaced by the user
+supplying the citation and asking for it to be checked. No unilateral
+verdict is offered here (consistent with this program's standing
+discipline of escalating rather than deciding consequential findings
+alone). Recommend: author decides whether/how to route this into
+cdot-7's own record (e.g., a new flagged tension in Foundation.md's own
+gating structure, alongside its existing SN/RAR/mass-census tension
+already documented in the four-term fit write-up), independent of
+cdot-8's own trajectory.
+
+---
+
 ## Priority summary for the consolidator
 
 | Item | Priority | Action needed before merge |
@@ -301,10 +486,26 @@ scripts going forward.
 | 8 — §5.5 labeling bug | **High confidence, Medium priority** | Ready to merge; one-line relabel |
 | 9 — $\hat a_0=\tfrac23\lambda c_0H_\tau$ identity + evidence-ledger note | Low–Medium | Ready to merge as-is |
 | 10 — canonical $x_0$ value | Low | Ready to merge as-is; one line |
+| 11 — verify-solution-first methodology | Medium | Ready to merge as-is; one line |
+| 12 — $e^\pm$ true-equilibrium statistics | Medium–High | Ready; fold into Item 7's eventual script |
+| 13 — entropy vs. energy for $(11/4)^{1/3}$ | Low–Medium | Ready to merge as-is; optional derivation |
+| 14 — $\theta_*=r_s/D_p$ convention fix | **High** | Ready to merge; corrects historical cdot-4/5 error |
+| 15 — "z=0 check" category-error caution | Medium | Ready to merge as-is; one line |
+| 16 — $Q_2$/EFE tension with cdot-7's own fit | **HIGH severity, flagged concern, not an improvement** | **Requires author review — not a bounded merge task** |
 
-None of these ten items require cdot-8 to succeed, use AeST-specific content, or
-depend on WP2/WP3's census/closure machinery — they stand on cdot-7's own terms (Items
-1–2, 6–10) or on this session's historical research alone (Items 4–5), with Item 3 the
-only one genuinely mixed (derived using cdot-7's own definitions, discovered while
-building cdot-8's covariant census). If cdot-8 is killed at any later work package,
-this log should be handed to the consolidator unchanged.
+**Consolidation batch delivered 2026-07-18** (Items 11–15), in response to the
+advisor loop's repeated request across the WP5/WP6 rounds. None of these five
+additions require cdot-8 to succeed or depend on AeST/census-closure machinery
+surviving — Items 11, 15 are pure methodology; 12–13 are BBN physics facts usable by
+any future cdot-7-native calculation; 14 directly corrects a historical cdot-4/cdot-5
+methodology bug, independently of cdot-8's outcome. Combined with Items 1–10, none of
+these fifteen items require cdot-8 to succeed, use AeST-specific content, or depend on
+WP2/WP3's census/closure machinery — they stand on cdot-7's own terms (Items 1–2, 6–15)
+or on this session's historical research alone (Items 4–5), with Item 3 the only one
+genuinely mixed (derived using cdot-7's own definitions, discovered while building
+cdot-8's covariant census). If cdot-8 is killed at any later work package, this log
+should be handed to the consolidator unchanged. **cdot-8-internal bookkeeping (the K6
+methodology-rule library, the full advisor/worker error tally, and jointly-verified
+AeST-specific program results like the $\mu_\text{eff}$ dictionary) is deliberately
+NOT included here** — those are AeST/cdot-8-specific and are tracked instead in
+`cdot-8/proposal/ErrataAndMethodologyLog-2026-07-18.md`.

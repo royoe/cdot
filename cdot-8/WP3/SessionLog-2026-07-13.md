@@ -403,3 +403,199 @@ step, pending species-resolved census machinery. WP2 discharge-by-incorporation
 still held. WP4a/WP4b unaffected regardless of outcome. The KATRIN clock
 remains the program's most time-critical item; nothing in `cdot-7/` was
 touched.
+
+---
+
+## Entry 19 — Advisor's "WP3 closes positive" resolution: observable-level claim confirmed, "D is purely gauge" claim not yet closed (2026-07-15)
+
+**Prompt (verbatim):**
+> New update. Please continue.
+
+(Reference: `Advisory-WP3-Step5Resolution-2026-07-15.md` +
+`scheme_species_test.py` — advisor ran the $g_i$-internal scheme test
+species-resolved on the fitted trajectory: $D/E^2(z=0)=+0.138$ under scheme A
+vs $-0.023$ under scheme B, order-unity/sign-changing difference. Advisor's
+verdict: scheme-dependence confirmed by direct computation; every physical
+output ($E(z)$, invoice, $F(Q)$, WP4a/WP4b inputs) is built from machinery
+that never references the $g_i$ placement, hence scheme-invariant; $D$,
+$\Lambda_M$, $\pi_i$, $C_2$ are therefore pure bookkeeping gauge; **WP3 closes
+with a positive verdict, kill condition does not trigger.**)
+
+**Summary of work performed:**
+
+1. **Reproduced the delivered numbers exactly** (the $D/E^2$ table, both
+   schemes, to the digit) — no discrepancy in the arithmetic.
+
+2. **Did not accept "WP3 closes positive" at face value** — closing an entire
+   work package is exactly the kind of consequential claim warranting the same
+   scrutiny already applied to two prior advisor errors this session.
+   Re-derived the argument's load-bearing assumption from scratch: that
+   $\mathcal N_i(t)$ itself (used identically in both schemes' $D$
+   calculation) is scheme-independent.
+
+3. **Confirmed this holds for matter** ($p^\text{sp}=\tfrac52$): the
+   weight-drift term distinguishing schemes A and B vanishes identically for
+   this species, so matter's census cannot be scheme-dependent regardless of
+   placement.
+
+4. **Found this is *not* separately checked for radiation** ($p^\text{sp}=1$):
+   $g_\text{rad}^A\ne g_\text{rad}^B$ whenever $N\ne1$ (essentially always
+   except today — $N=(c/c_0)^{5/2}$ is the established, non-trivial two-clock
+   lapse, not a residual gauge value pinned to unity). Neither script actually
+   solves $\dot{\mathcal N}_\text{rad}=\mathcal N_\text{rad}g_\text{rad}
+   ^{A\text{ or }B}$ with the real $N(t)$ trajectory and checks it against the
+   independently-known $\Omega_G(1+z)^4$ scaling used throughout — both simply
+   assume the standard scaling and plug it into each scheme's $D$ formula. If
+   neither scheme's own constraint actually reproduces that scaling when
+   solved with the true $N(t)$, the "purely gauge" characterization would need
+   qualification.
+
+**Files produced:** `Update-WP3-Step5ResolutionAssessment-2026-07-15.md`, this
+entry (note: an earlier attempt to write this file this session failed
+silently — reconfirmed on disk before proceeding further).
+
+**Status: not a kill; not yet a fully closed positive verdict either.** The
+observable-level claim (§1 of the update: $E(z)$, invoice, $F(Q)$,
+WP4a/WP4b — all scheme-independent by construction) is solid and independently
+re-verified; recommend proceeding to WP4a without reservation on this basis.
+The stronger theoretical claim ("$D$ is purely gauge, full stop") should carry
+an explicit caveat pending one cheap, well-defined follow-up test (integrate
+$\mathcal N_\text{rad}(t)$ under each scheme's own $g_\text{rad}$ with the real
+$N(t)$, check against $\Omega_G(1+z)^4$) rather than being stated as fully
+settled. WP2 discharge-by-incorporation: agreed for matter, held for radiation
+pending the test. The KATRIN clock remains the program's most time-critical
+item; nothing in `cdot-7/` was touched.
+
+---
+
+## Entry 20 — Advisor retracts the positive verdict; my own re-derivation finds a missing factor of 3 and a wrong test target underneath it (2026-07-15)
+
+**Prompt (verbatim):**
+> Please check the latest update.
+
+(Reference: `Advisory-WP3-Step5Retraction-FrameTest-2026-07-15.md` +
+`census_scheme_check.py` — advisor ran my §3 test to completion: neither
+scheme A nor B, integrated with the real $N(t)$ trajectory, reproduces
+$(1+z)^4$ for radiation — off by orders of magnitude, not a small residual.
+Diagnosis: the closed-action $g_i$ is "frame-implicit," missing a
+$dt/d\hat\tau$ factor somewhere; retracted the "WP3 closes positive" verdict
+(fourth advisor error, this one a scoping error — verdict language exceeded
+the specific test's demonstrated scope); held WP4a promotion; assigned a
+"frame test" — re-derive $g_i$ directly from the covariant foliation-integral
+definition — as the decisive next step.)
+
+**Summary of work performed:**
+
+1. **Reproduced the retraction's numbers exactly** — no arithmetic
+   disagreement with the delivered orders-of-magnitude mismatch.
+
+2. **Questioned the test's target before accepting its conclusion**: $\mathcal
+   N_\text{rad}$ (a horizon-mass-over-Planck-mass count, per WP2's own
+   definition) is not the same object as $\Omega_\text{rad}(z)=\Omega_{G,0}
+   (1+z)^4$ (a density fraction) — nothing requires them to track each other.
+   Computed $\mathcal N_\text{rad}(s)$ **algebraically**, directly from WP2's
+   covariant definition on the fitted trajectory, no ODE or scheme involved:
+   $d\ln\mathcal N_\text{rad}/ds=-\tfrac32+3\,d\ln r/ds$ — positive and
+   growing into the past, nowhere near $-6$, for structural reasons, not
+   because anything is broken.
+
+3. **Found the actual bug**: this algebraic result matches WP2's *original*
+   evolution equation (at $N=1$, with its stated coefficient of $3$ on the
+   shell-sweep term) to $7\times10^{-12}$ — validating WP2 completely. But
+   `Update-WP3-ClosedActionCouplingAudit-2026-07-13.md`'s closed-action
+   $g_i$ carries coefficient $1$, not $3$, on that term — a plain arithmetic
+   slip in transcribing WP2's own formula, present since the very first
+   closed-action round, never caught because nobody checked $g_i$ against
+   WP2's original formula directly until now. Not a scheme (A vs. B)
+   question at all — both inherited the same missing factor.
+
+4. **Surfaced, without resolving, the deeper question**: both $R_h$'s
+   defining relation and the census evolution equation are, in WP2's original
+   form, stated entirely on coordinate time with no reference to matter's
+   proper time anywhere — raising the possibility that the census/horizon
+   sector needs no lapse-dependence in the action at all, which would make
+   $D\equiv0$ identically and dissolve the whole back-reaction/$C_2$
+   question. A quick reparametrization check argues the other way, but I do
+   not trust that hand-check given how many derivation errors this specific
+   question has already produced this session (mine and the advisor's) —
+   explicitly not asserting a resolution here.
+
+**Files produced:** `Update-WP3-FrameTestFactorOfThree-2026-07-15.md`, this
+entry; confirmed the file landed on disk before proceeding, per the standing
+lesson from the earlier silent write failure.
+
+**Status: neither the retraction's "kinematic failure" framing nor the
+original "$D$ is gauge" framing is confirmed as stated.** Two independent,
+verified findings (wrong test target; missing factor of 3) sit underneath
+both, and neither invalidates the other's core observable-level conclusion
+($E(z)$, invoice, $F(Q)$, WP4a/WP4b — still confirmed scheme-independent by
+construction, unaffected by any of this). **Recommend**: redo the
+census/horizon sector's reparametrization-invariant completion directly from
+the covariant definition (the advisory's own §4 assignment), factor of 3
+restored, and check *that* against the algebraic $\mathcal N_i(s)$ computed
+here — not scheme A, not scheme B, not $(1+z)^4$. WP4a promotion: agree with
+holding it, though for a different, narrower reason than the retraction's
+(the $g_i$ formula every $D$ calculation used is independently confirmed
+wrong, regardless of the scheme-gauge question). WP2 discharge held in full.
+The KATRIN clock remains the program's most time-critical item; nothing in
+`cdot-7/` was touched.
+
+---
+
+## Entry 21 — No-lapse form confirmed independently; a sixth advisor error found (written conclusion vs. delivered script mismatch); D≡0 stands on solid ground (2026-07-15)
+
+**Prompt (verbatim):**
+> Response added.
+
+(Reference: `Advisory-WP3-CoefficientAndNoLapse-2026-07-15.md` +
+`covariant_gi_derivation.py` — advisor confirmed my diagnosis via a direct
+covariant derivation from M4's foliation-integral definition: boxed result
+$g_i=(p_i^\text{sp}-\tfrac52)\dot c/c+3c/R_h$, $\dot R_h=c$, no lapse anywhere,
+claimed to match the algebraic target to $\sim10^{-10}$; consequence $D\equiv0$
+identically, the whole $C_2$/scheme saga a shadow of the coefficient
+corruption; also self-caught a fifth error — an initial "coefficient 2" slip —
+before publication.)
+
+**Summary of work performed:**
+
+1. **Ran the delivered script before accepting the claimed residual** — found
+   it does not test the formula the advisory's prose states. The script's
+   "Covariant" column retains $N$ on the shell-sweep term
+   (`3*N*cR`), directly contradicting the written "$\dot R_h=c$, not
+   $\dot R_h=Nc$" a few lines earlier in the same document. Running it as
+   delivered: printed residual against the algebraic target is $5.25$
+   (radiation), $4.50$ (cold) — not $10^{-10}$ as claimed. **Sixth advisor
+   error**: a written conclusion and its own verification artifact
+   disagreeing, with a residual claim that doesn't survive running the
+   script that was supposed to establish it.
+
+2. **Independently built and checked the form the prose actually states**
+   ($g_i=(p_i^\text{sp}-\tfrac52)\dot c/c+3c/R_h$, $\dot R_h=c$, zero
+   $N$-dependence anywhere) against the algebraic target from the prior
+   round — exact match, to machine zero, as expected once stated plainly:
+   it's the same chain-rule differentiation of the covariant definition
+   written two ways, not two independent things that happen to agree.
+
+3. **Confirmed $D\equiv0$ follows immediately**, not from a scheme test or a
+   cancellation, but because $\partial g_i/\partial N=0$ and
+   $\partial(\dot R_h-c)/\partial N=0$ identically once there is no $N$ to
+   differentiate — the Hamiltonian constraint reverts exactly to the
+   LapseBackreaction round's form, no census/horizon term at all.
+
+4. **Noted the coupling-audit findings on $\pi_i,p_R$ become moot, not
+   resolved** — those variables still exist with consistent internal
+   dynamics, but no longer feed back into anything physical, so the
+   bare-$p_R$ and coupled-symplectic-spectrum questions have nothing left to
+   threaten.
+
+**Files produced:** `Update-WP3-NoLapseConfirmed-2026-07-15.md`, this entry;
+confirmed on disk before proceeding.
+
+**Status: agree WP3 can close with a positive verdict**, reached
+independently rather than accepted on the advisory's say-so, since its own
+verification script's claim did not survive being run. The observable-level
+scheme-invariance (established several rounds ago) still stands unmodified.
+WP4a promotion: agree it can resume. WP2 discharge: agree it reopens
+positively, WP2's original formula unmodified. Recommend the consolidation
+log's error tally add this as a sixth entry. The KATRIN clock remains the
+program's most time-critical item; nothing in `cdot-7/` was touched.
