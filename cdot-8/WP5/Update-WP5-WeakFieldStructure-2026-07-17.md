@@ -344,6 +344,23 @@ closes the last open structural question in WP5. The only remaining
 deliverable is the lensing-RAR-vs-lens-redshift confrontation itself
 (§7, rewritten below).
 
+**Correction, 2026-07-20** (found in WP7, confirmed independently twice —
+see `Update-WP7-PerturbationStructure-2026-07-18.md` §28–29): the
+$F_{QQ}(Q_0,\text{today})=-0.696$ figure used above was a domain-boundary
+numerical artifact (a derivative evaluated at the literal edge of the
+solved ODE). The corrected value is $F_{QQ}(0)\approx-0.169$ — same
+sign, roughly $4\times$ smaller in magnitude. Rescanning the same
+$K_B\in(0,2)$ window with the corrected value (same exact-dictionary
+formula, `meff_exact_dictionary.py`): **$\mu^{-1}\approx10$–$20$ Gpc,
+$r_c\approx100$–$160$ Mpc** — roughly $2\times$ and $1.6\times$ the
+originally-quoted band. Every conclusion above is unaffected in
+substance and, if anything, more comfortable: the condensate is even
+further from any observationally accessible scale, and SZ's low-$k$
+window is pushed even further into the super-horizon regime already
+argued to be safe. The qualitative picture ("the skeleton's conclusion
+is the exact conclusion," negligible everywhere, zero-freedom relative
+to vanilla AeST) stands unchanged; only these two numbers update.
+
 <details><summary>Superseded: the original, honestly-incomplete §6c (kept for the record)</summary>
 
 Went back to this program's own established action-level results (WP3,

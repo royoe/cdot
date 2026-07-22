@@ -76,6 +76,51 @@ re-deriving from a fresh mistake each time:
     is not merely a rescaling. Check the actual coefficient ratios before
     reusing a validated formula across theories, even closely related
     ones.
+14. **Domain-boundary derivative rule** (new, WP7 Stage 1): a numerical
+    derivative evaluated at the literal edge of a solved ODE's domain is
+    unreliable regardless of how it's computed (finite difference,
+    spline, or analytic formula fed boundary-only data) — different
+    methods can disagree, including in sign. Fix at the root by
+    extending the integration slightly past the point of interest so it
+    becomes a genuine interior point, then cross-check at least two
+    differentiation methods on the extended domain, rather than trusting
+    reproducibility of the same method across scripts as independent
+    verification.
+
+## 1a. A significant, previously-unnoticed anchor correction found while building Stage 1 (WP7, 2026-07-19)
+
+$F_{QQ}(\mathcal Q_0,\text{today})=-0.696$ — cited in three places
+(WP5's condensate mass; the SZ stability check; WP7 §27's tachyonic-mass
+finding) — is a **domain-boundary numerical artifact**, not a robust
+result: it was computed at $s=0$, the literal edge of the ODE's solved
+domain, and reproduced identically by the *same* differentiation method
+in a second script (`meff_skeleton.py`), which is reproducibility of a
+shared artifact, not independent verification. Self-caught while
+building a robust $F_{QQ}(z)$ for Stage 1 (`Update-WP7-
+PerturbationStructure-2026-07-18.md` §28): extending the ODE integration
+slightly past $s=0$ so it becomes a genuine interior point, three
+independent differentiation methods agree closely on
+**$F_{QQ}(0)\approx-0.17$** (not $-0.696$) — roughly a factor of 4
+smaller in magnitude, same sign. **Every qualitative conclusion built on
+the old value appears to survive** (SZ stability still satisfied;
+WP5's condensate negligibility likely strengthens, since smaller
+$|F_{QQ}|$ gives an even larger Compton wavelength) — but the specific
+numbers in WP5 and Foundation.md need recomputing and are flagged
+provisional pending that. Not yet propagated into those documents;
+recommended for explicit advisor review first, per the K14 rule above.
+
+**CONFIRMED, 2026-07-20** (`Advisory-WP7-FQQCorrectionConfirmed-2026-07-20.md`,
+secondary advisor, cross-checked by the worker before accepting): three
+independent implementations now agree, $F_{QQ}(0)\approx-0.169$. One
+detail in the confirming advisory's own propagation needed a fix before
+use — its condensate-mass recomputation used `meff_skeleton.py`'s
+simplified formula (implicitly fixing $\mathcal K_B=1$) rather than the
+$\mathcal K_B$-range scan (`meff_exact_dictionary.py`) that produced
+WP5's actually-quoted band; recomputed correctly, the update is
+$\mu^{-1}\approx10$–$20$ Gpc, $r_c\approx100$–$160$ Mpc (not the
+single-point figures the advisory quoted). Propagated into
+`Foundation.md` §7/§8 and `Update-WP5-WeakFieldStructure-2026-07-17.md`.
+K14 status: **confirmed**, not just proposed.
 
 ## 2. Error tally, both sides, this session (descriptive, not a strict global count)
 

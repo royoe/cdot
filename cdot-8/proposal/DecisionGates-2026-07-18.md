@@ -186,3 +186,46 @@ predictions for *future* observational results, not reprocessing existing
 survey catalogs in-program. WP5's pre-registered prediction + literature
 gap + differential test design stands as the complete deliverable.
 Proceed to WP6.
+
+**Gate 3 — the $Q_2$/EFE interpolating-function re-fit sequencing
+(author, 2026-07-20).** Deferred until after WP7, on the same sequencing
+logic as Gate 1(b): the finding stands as recorded (cdot-7's own
+preferred Simple IF/$a_0$ fit is in $\sim21\sigma$ tension with the
+Park, Hees, Famaey, Desmond & Durakovic 2026 Cassini/DE440 quadrupole
+bound, `ConsolidationLog` Item 16), and the constructive path (re-fitting
+the interpolating function as a sharpness-parameterized family, jointly
+against $Q_2$ and the existing T22 Cassini exposure) is not pursued now.
+It joins the post-WP7 revisit queue (`Progress.md` §4b) alongside the
+radiation-era-assumption revisit and the KATRIN-aligned low-$\Sigma
+m_\nu$ re-closure lever — not dropped, just sequenced after WP7
+completes, consistent with keeping WP6/WP7 moving on their current
+assumptions before reopening any upstream fit choice.
+
+**Gate 4 — WP7's ISW/growth track: paused (author, 2026-07-21).**
+`WP7/Update-WP7-PerturbationStructure-2026-07-18.md` §42–§43. After the
+vector-sector growth-system rebuild was fully validated (Stage 3g, at
+$k=10^{-4}\,\text{Mpc}^{-1}$), assembling the actual ISW $\Delta C_\ell$
+estimate at the wavenumbers $\ell=2$–$10$ actually require ($k\approx
+1.1$–$5.4\times10^{-3}\,\text{Mpc}^{-1}$) surfaced a serious, confirmed
+finding: the vector sector's fast eigenvalue **never crosses zero**
+from $z=100$ to $z=0$ at these larger, ISW-relevant $k$'s (confirmed in
+the exact, machine-precision-validated $6\times6$ Jacobian, not an
+approximation artifact) — $\Phi$ grows $5$–$8$ orders of magnitude by
+$z=0$, nowhere near a physical ISW source. The secondary advisor
+reframed this as a *continuation* of the already-accepted $c_\text{
+ad}^2<0$ tachyonic-clustering mechanism (§23/§27) to larger $k$ — a
+negative effective pressure destabilizes rather than stabilizes at
+smaller scales, opposite of ordinary Jeans behavior — not an unrelated
+new pathology, though the practical severity is unchanged. A careful
+re-check (requested explicitly, not a rubber stamp) found and corrected
+one genuine numerical artifact in the reported endpoint value (a
+`np.gradient` boundary-differentiation effect, not physics) — the
+substantive verdict was unaffected. **Author decision: pause WP7's
+ISW/growth track here** rather than run the AeST-native cross-check or
+continue toward a fuller Boltzmann-style calculation. This stands as a
+second, independent open structural question alongside Gate 1(b)'s own
+27% $\theta_*$ miss — both bear on whether central WP4a/WP7 deliverables
+are achievable as currently scoped. Effort redirects elsewhere (WP6 sub-
+task 2's exact PPN closure, or other queued items) pending a considered
+view on how to weigh both together. Not a kill, not resolved — a
+deliberate pause, recorded as such.

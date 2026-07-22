@@ -1,6 +1,9 @@
 # Update — WP7: Structural First Installment — Linear Perturbation Machinery Imported, the Genuinely New (Horizon-Scale) Question Posed
 
-*Companion: `SessionLog-2026-07-18.md` (to be created). Proceeds under
+*Companion: `SessionLog-2026-07-18.md` and its per-day continuations
+`SessionLog-2026-07-19.md`, `-20.md`, `-21.md` (split by calendar day
+2026-07-21; entry numbering runs continuously across all four files).
+Proceeds under
 Gate 1(b)'s explicit provisional-failure caveat
 (`cdot-8/proposal/DecisionGates-2026-07-18.md`): WP4a's 27% crossover-era
 $\theta_*$ miss is not resolved, and the author's own sequencing
@@ -1673,3 +1676,1136 @@ correct closure logic, the correct $F_Q$ vs. $\rho_s$ dictionary
 distinction) is real, verified progress even though the numerical
 system built on it isn't working yet. Gate 1(b)'s caveat carried
 throughout. Nothing in `cdot-7/` was touched.
+
+## 27. Stage 0 of the staged round, delivered by the advisor: the double failure diagnosed, and a genuine discovery — the scalar's own tachyonic, Hubble-tracking effective mass is the clustering mechanism
+
+`Advisory-WP7-StiffnessAuditAndClusteringMechanism-2026-07-19.md` +
+`wp7_stiffness_audit.py`. **Reproduced the script before accepting
+anything**, and independently checked the closed-form algebra by hand.
+
+**§26 accepted; the joint, WP3-rhythm staged round confirmed**, advisor
+cross-checking at each stage, as requested. To start that round from
+knowledge rather than a third blind attempt, its Stage 0 (a stiffness
+audit) is delivered here.
+
+**Three candidate killers audited, verdicts checked directly**:
+
+- **K1 (effective-mass stiffness) — exonerated.** $\mu_\text{eff}^2=
+  -\mathcal Q^2F_{QQ}/(2(2-\mathcal K_B))$ along the trajectory gives
+  $|\mu_\text{eff}|/H\lesssim1$ at every epoch — no fast oscillator, the
+  physical system is not intrinsically stiff if formulated in regular
+  variables.
+- **K2 (singular-factor map) — confirmed as the prime suspect, checked
+  against my own §26 record directly**: the effective-fluid $\delta,
+  \theta$ *definitions* carry $1/\rho_s$, $c_\text{ad}^2$, and
+  $1/(1+w)$ factors ($|1/c_\text{ad}^2|\sim20$–$230$ throughout the
+  matter era, not just at the crossing). **My own §26 state vector was
+  literally $(\delta_b,\theta_b,\delta_s,\theta_s,\alpha,E_\alpha,
+  \Phi)$** — exactly the flagged pattern. Standing rule accepted for
+  the next attempt: state variables are $(\chi\text{ or }\gamma,\alpha,
+  E_\alpha,\delta_b,\theta_b,\Phi)$ only — nothing whose *definition*
+  contains $\rho_s,c_\text{ad}^2,$ or $1/(1+w)$; the effective-fluid
+  quantities become output diagnostics computed afterward, not state.
+- **K3 (units contract) — accepted as a co-suspect, sensible
+  precaution.** $|F_Q|$ spans $4473$ ($z_*$) to $1.85$ (today) in
+  $H_0^2$ units; the founding paper's own $dK/dQ$ lives in its own
+  normalization. Accepted: write one dictionary line per imported
+  equation before any code in the next attempt, pre-empting rather than
+  re-discovering this class of error a third time.
+
+**The discovery, verified independently before accepting**: in the
+matter era, $F\propto\mathcal Q^{9/5}$ (already established), giving
+$\mathcal Q^2F_{QQ}=n(n-1)F$ with $n=\tfrac95$ — **checked by hand**:
+$n(n-1)=\tfrac95\cdot\tfrac45=\tfrac{36}{25}$, exactly matching the
+advisory's own closed form. Combined with the established matter-era
+attractor $F/\Omega_s\to30/17$ (WP3):
+$$\frac{\mu^2}{H^2}=-1.271\,\frac{f_s}{2-\mathcal K_B}\approx-0.5\text{
+to }-1\quad(\text{using }f_s\approx0.78\text{--}0.83,\ \mathcal K_B=
+0.4355),$$
+**a negative, Hubble-tracking effective mass, constant in ratio through
+the matter era** — checked two ways (closed form vs. interior spline,
+agreement to 1.6% at $z=10$: $889$ vs. $875$) — flipping to the
+already-established stable sign ($F_{QQ}(0)=-0.696<0$) near today.
+
+**Physical reading, accepted**: a tachyonic mass with $|\mu|<H$ is not
+a Minkowski-stability pathology — it is a Jeans-class, Hubble-rate
+growing mode, i.e. **the actual mechanism destabilizing the smooth
+solution and making the scalar cluster**, switching off exactly when
+the component turns dark-energy-like. This gives §23's structural
+"$\Omega_s$ clusters, dust-like" conclusion a genuine *dynamical*
+mechanism, not just a small-$c_\text{ad}^2$ diagnostic — and it is
+$F_{QQ}(\mathcal Q_0)$'s **fourth** independent load-bearing appearance
+in this program (condensate mass, stability sign, perturbed-constraint
+feedback, now structure formation), the strongest coherence signal yet
+for the zero-adjustable-parameters claim.
+
+**Caveats carried forward, not resolved here**: the sign-flip epoch
+needs a properly-splined (not endpoint/double-gradient) $F_{QQ}(z)$;
+sub-horizon stability needs the full dispersion $\omega^2=c_s^2k^2+
+\mu^2(z)$ with the $\mathcal Y$-sector's own $c_s^2$ (healthy at today's
+anchor per SZ, epoch-dependence not yet checked); consistency with SZ's
+own Minkowski stability conditions holds by scope (anchored at today's
+point, where the sign is stable) but isn't a full check across epochs.
+
+**The staged round's plan, now informed**: Stage 0 done (this audit);
+Stage 1, a robust $F_{QQ}(z)$ and the dispersion relation (the growth
+*rate* is now a genuine, checkable target); Stage 2, the units
+contract; Stage 3, the pure field-variable system built on K2's rule,
+an implicit solver as insurance, §24's Stage 1 as the regression target,
+both anchors as brackets; Stage 4, the M5 term, mode exits, and the ISW
+$\Delta C_\ell$. Each stage to be cross-checked before the next. Gate
+1(b)'s caveat carried throughout. Nothing in `cdot-7/` was touched.
+
+## 28. Stage 1: a robust $F_{QQ}(z)$ — and a significant, previously-unnoticed correction to an established anchor number, flagged for advisor review before propagating
+
+**Built `wp7_stage1_FQQ_robust.py`** (saved to `cdot-8/WP7/`), per the
+advisory's own directive. Rather than smooth the existing double-finite-
+difference chain (F$\to$F_Q via one numerical derivative, F_Q$\to$F_QQ
+via a second), **derived $F_Q,F_{QQ}$ analytically from the defining
+quadrature integral**, removing a derivative from the chain entirely:
+since $F(s)=\mathcal Q(s)^{2/3}G(s)$ with $dG/ds=-5\mathcal Q^{-2/3}
+\Omega_s$ exact by the fundamental theorem of calculus (no finite
+difference at all), and $d\mathcal Q/ds=-2.5\mathcal Q$ exact,
+$$F_Q=\frac23\frac F{\mathcal Q}+2\frac{\Omega_s}{\mathcal Q},\qquad
+F_{QQ}=-\frac29\frac F{\mathcal Q^2}-\frac23\frac{\Omega_s}{\mathcal Q^2}
+-\frac45\frac{d\Omega_s/ds}{\mathcal Q^2}$$
+— only *one* numerical derivative anywhere in the chain (of $\Omega_s$,
+a smooth quantity), not two chained ones. **Cross-checked against the
+old method away from the boundary**: agrees to 4+ significant figures
+everywhere from $z=9640$ down to $z\sim1$.
+
+**A significant discrepancy surfaced right at $z=0$, and it does not
+resolve as expected.** The old method gives $F_{QQ}(0)=-0.696$ (the
+figure already cited in three places in this program: WP5's condensate
+mass, the SZ stability check, and §27's own tachyonic-mass finding); the
+new analytic method gave $+0.43$ at the literal $z=0$ grid point —
+disagreeing in *sign*. **Diagnosed rather than picked a side**:
+$s=0$ ($z=0$) is not just noisy, it is the *literal edge* of the
+integration domain (`solve_ivp` starts its integration at $s=0$ and
+runs backward) — no differentiation scheme, old or new, is reliable
+exactly at a domain boundary. **Fixed at the root**: extended the
+integration slightly past $s=0$ (into $z<0$, mathematically fine for a
+smooth ODE) so that $z=0$ becomes a genuine *interior* point. **Three
+independent methods then agree closely**: the analytic formula above
+($-0.1692$), a centered finite difference on the same analytically-
+computed $F_Q$ ($-0.1675$), and a plain double finite difference
+applied directly to $F$ on the now-extended domain ($-0.1671$) — all
+within 1% of each other.
+
+**Conclusion: $F_{QQ}(\mathcal Q_0,\text{today})\approx-0.17$, not
+$-0.696$.** The previously-established $-0.696$ figure was a domain-
+boundary numerical artifact (computing a derivative at the literal edge
+of a numerically-solved ODE), not an independent, robust result — it
+was reproduced identically by the *same* method in a second script
+(`meff_skeleton.py`), which is reproducibility of a shared artifact, not
+independent verification.
+
+**What this does and does not change, stated carefully**:
+
+- **The SZ stability conclusion is unaffected**: $F_{QQ}$'s *sign*
+  survives ($-0.17<0$, same as $-0.696<0$), so $\mathcal K_2=-\tfrac14
+  F_{QQ}>0$ still holds — the stability condition is still satisfied,
+  just with a smaller margin than previously stated.
+- **WP5's condensate-mass numbers ($\mu^{-1}\approx5$–$10$ Gpc,
+  $r_c\approx64$–$100$ Mpc) need revision**, but very likely in the
+  *reinforcing* direction: $\mu^2\propto|F_{QQ}|$, so a $\sim4\times$
+  smaller $|F_{QQ}|$ gives a $\sim2\times$ smaller $\mu$, i.e. an even
+  *larger* Compton wavelength — the "condensate negligible at every
+  observationally accessible scale" conclusion should survive and
+  strengthen, not weaken, but the specific numbers are now flagged as
+  provisional pending recomputation.
+- **§27's own tachyonic-mass finding is refined, not overturned**: with
+  the robust $F_{QQ}(z)$, $\mu^2/H^2$ still runs negative through most
+  of the matter era ($\approx-0.6$ near $z\sim10$, matching §27's
+  closed-form estimate closely) but **the sign-flip epoch is now
+  precisely $z\approx0.13$–$0.15$** (not loosely "near today" as
+  originally read), with $\mu^2/H^2(0)\approx+0.05$ — small and
+  positive, a much narrower stable margin today than §27's language
+  suggested.
+
+**The dispersion relation, a first estimate**: using $c_s^2=1$
+(canonical, from the $\mathcal Y$-sector's own established healthy-mode
+structure, WP6) and the corrected $\mu^2(z)$, the comoving Jeans
+wavelength for this tachyonic instability comes out at
+$\sim5\times10^4$–$1.7\times10^5$ Mpc across $z=0.2$–$3$ — **an order of
+magnitude *larger* than the Hubble radius today** ($c_0/H_0\approx4283$
+Mpc), comparable to or larger than the $\ell\sim2$ CMB scale itself
+($k\sim1.5\times10^{-4}$ Mpc$^{-1}$ at $z_*$, from §19's own table).
+**This refines the physical picture significantly**: the tachyonic
+growing-mode mechanism, if it operates at all on scales relevant to
+observation, does so only at the very lowest CMB multipoles
+($\ell\lesssim2$–$3$, narrower than the $\ell\lesssim10$ window already
+established for the M5 term), **not at sub-horizon, galaxy-formation
+scales** — ordinary structure formation (galaxies, clusters) must still
+be explained by the scalar tracking baryons gravitationally (the
+$\delta_s\approx\delta_b$ argument, §24), not by this intrinsic
+instability. **Stated honestly as a first, order-of-magnitude estimate**:
+$c_s^2$'s actual epoch-dependence (vs. assumed canonical/constant) has
+not been checked, and this Jeans-scale figure should be treated as
+illustrative pending that check.
+
+**Recommending explicit advisor review of the $F_{QQ}(0)$ correction
+before it is propagated into WP5's own numbers or Foundation.md's
+citations** — this revises a figure used in three places across the
+program, even though every qualitative conclusion built on it appears
+to survive. Not treated as settled until cross-checked. Gate 1(b)'s
+caveat carried throughout. Nothing in `cdot-7/` was touched.
+
+## 29. §28 confirmed by the secondary advisor (Fable 5 unavailable on
+token limits) — accepted, with one propagation detail corrected before use
+
+`Advisory-WP7-FQQCorrectionConfirmed-2026-07-20.md` +
+`wp7_fqq_correction_crosscheck.py`, from the secondary advisor (Opus
+4.8), routed here per the program's own escalation practice while the
+primary advisor is unavailable. **Reproduced the script myself before
+accepting anything** — all four checks ran exactly as reported (Check 1:
+$-0.6962$, reproducing the edge artifact precisely; Checks 2–3: $-0.1692$
+/ $-0.1675$, agreeing with the old method to $0.0001$–$0.01\%$ away from
+the boundary).
+
+**The core confirmation is solid and independently re-derived, not just
+re-run**: the secondary advisor rebuilt the $s\leftrightarrow z$
+convention and the $F(\mathcal Q)$ quadrature from `Foundation.md`
+directly rather than copying either prior script (correctly applying the
+K12 convention-re-derivation rule), and independently re-derived the
+analytic $F_{QQ}$ formula term-for-term by hand. $F_{QQ}(\mathcal Q_0,
+\text{today})\approx-0.169$ is now confirmed by three independent
+implementations (mine, twice over, and the secondary advisor's), not
+two. **Accepted outright.**
+
+**One propagation detail in the secondary advisor's Check 4 needed
+correcting before use, caught by checking against the actual source of
+WP5's quoted numbers rather than trusting the check's own framing.**
+Check 4 propagated the correction using `meff_skeleton.py`'s simplified
+condensate-mass formula (which implicitly fixes $2-\mathcal K_B=1$,
+i.e. $\mathcal K_B=1$ only) — but WP5's actually-quoted band
+($\mu^{-1}\approx5$–$10$ Gpc, $r_c\approx64$–$100$ Mpc) was computed by
+`meff_exact_dictionary.py`, scanning $\mathcal K_B$ over AeST's full
+stable range $(0.1$–$1.5)$, not a single value. **Checked directly**:
+Check 4's own "old" figure ($1/\mu_\text{eff}=7260$ Mpc) exactly
+reproduces the $\mathcal K_B=1.0$ row of the original scan — confirming
+it used only one point of the required range, not the range itself.
+**Recomputed properly** (same exact-dictionary formula, same
+$\mathcal K_B$ scan, corrected $F_{QQ}\approx-0.169$):
+$$\mu^{-1}\approx10\text{--}20\text{ Gpc},\qquad r_c\approx100\text{--}
+160\text{ Mpc}$$
+— roughly $2\times$ and $1.6\times$ the original band, not the
+"$14700$–$14800$ Mpc, $129$–$130$ Mpc" Check 4 reported (which was one
+$\mathcal K_B$ value's worth of the correct new band, not the band
+itself). The secondary advisor's *qualitative* claim ("the condensate
+conclusion strengthens") is exactly right; only the specific quoted
+range needed the correct formula's full $\mathcal K_B$ scan to be
+accurate. This is a understandable gap for a secondary advisor without
+the full session record (which script generated which quoted number is
+exactly the kind of detail that lives in session history, not in
+`Foundation.md`/`Progress.md` alone) — not a substantive error in the
+core physics.
+
+**Propagated**: `Foundation.md` §7/§8 and `Update-WP5-
+WeakFieldStructure-2026-07-17.md` now carry the corrected $F_{QQ}(0)
+\approx-0.169$ and the correctly-rescanned condensate-mass band. §27's
+sign-flip epoch ($z\approx0.13$–$0.15$, $\mu^2/H^2(0)\approx+0.05$) is
+confirmed as stated, independently re-derived by the secondary advisor
+from their own Check-2 output. `ErrataAndMethodologyLog` K14 marked
+confirmed (§ next). Gate 1(b)'s caveat carried throughout; the
+$\Omega_s$-clusters-dust-like conclusion is unaffected (it rests on
+three independent arguments, none of which touch $F_{QQ}(0)$
+specifically — the tachyonic mechanism is a fourth, supporting line, not
+the basis). Nothing in `cdot-7/` was touched.
+
+## 30. Stage 2 — the units contract, written before any code, per the accepted advisory's own directive
+
+Per K3/the accepted staging plan: one written dictionary line per
+imported equation, resolved and cross-checked *before* attempting Stage
+3's implementation, precisely to pre-empt a third failure of the same
+class that broke both prior attempts.
+
+**Contract line 1 — time variable.** The founding paper's dots are
+**cosmic-time** derivatives: confirmed directly from primary source
+($H\equiv\dot a/a$, dot notation used consistently throughout their
+perturbation section, not conformal-time primes). Both prior attempts
+integrated in **e-fold time** $N=\ln a$. Since $dN/dt=H$ exactly,
+$$\dot X=H\,\frac{dX}{dN}\quad\text{for any quantity }X$$
+— every imported cosmic-time equation must be divided through by $H$
+before use as a $d/dN$ evolution equation. **Checked this was actually
+done consistently in both prior attempts — it was not stated as an
+explicit contract line either time**, which is itself informative:
+neither attempt's failure mode (§25's sign-wrong result; §26's solver
+collapse) can be blamed on this specific step alone, since both scripts
+did include *some* $H$-division, but neither had it written down and
+checked as a standalone item — exactly the gap this contract line
+closes.
+
+**Contract line 2 — a second, previously-unexamined normalization
+subtlety in the imported $\mathcal E_\alpha$ equation specifically,
+found while writing this contract.** The founding paper's own
+$dK/dQ$ notation in the $\mathcal E_\alpha$ evolution equation is
+*not* the same object as the bulk-current coefficient $F_Q$ already
+used (correctly, and independently cross-checked against WP6's PPN
+work to machine precision, §20) in the $-F_QA^\mu$ term. **Checked
+directly from primary source**: the paper defines $K(\bar Q)\equiv
+-\tfrac12F(0,\bar Q)$ specifically so their illustrative "sculpted
+FRW" toy action (its own $1/(8\pi\tilde G)$ normalization) reproduces
+the *same* physics as the full covariant action (its own $1/(16\pi
+\tilde G)$ normalization) — the factor of $-\tfrac12$ exactly
+compensates the $8\pi$-vs-$16\pi$ prefactor mismatch between the toy
+model and the real action, algebraically confirmed
+($\tfrac1{8\pi\tilde G}K=\tfrac1{8\pi\tilde G}(-\tfrac12F)=-
+\tfrac1{16\pi\tilde G}F$, matching the real action's own term exactly).
+The $\mathcal E_\alpha$ equation's "$dK/dQ$" is background-only
+($Y=0$) notational shorthand for $-\tfrac12F_Q(\text{background})$,
+reused from the toy-model section — **not** the same object as the
+field equation's own bulk current coefficient (which comes from
+varying the *full* covariant action directly, confirmed by direct
+variation: $\partial\mathcal L/\partial(\nabla_\mu\phi)\supset-F_Q
+A^\mu$ on an FRW background with $\mathcal Y=0$, $J^\mu=0$,
+$\hat F_{\mu\nu}=0$ — genuinely $F_Q$, not $-F_Q/2$).
+
+**Cross-checked independently before trusting this distinction**:
+WP5's own, separately-established condensate-mass relation $\mathcal
+K_2=-\tfrac14F_{QQ}(\mathcal Q_0)$ is *only* consistent with $K=-
+\tfrac12F$ (giving $d^2K/dQ^2=-\tfrac12F_{QQ}$, hence $\mathcal K_2=
+\tfrac12(d^2K/dQ^2)=-\tfrac14F_{QQ}$ — matching WP5's own relation
+exactly). This is an independent confirmation, not just an algebraic
+consistency check on my own new claim: **the $\mathcal E_\alpha$
+equation's coefficient must be $-\tfrac12F_Q$, not $F_Q$** — a genuine
+correction to both prior implementation attempts, which used bare
+$F_Q$ there.
+
+**Contract line 3 — the gradient/$k$-normalization.** $k$ in the
+imported equations is a physical comoving wavenumber (Mpc$^{-1}$); the
+natural dimensionless combination for the $H_0$-unit convention used
+throughout this program is $\kappa\equiv(k/(aH_0))^2$, with the
+$k^2\theta/a^2$-type terms becoming $\kappa H_0^2\theta/E(z)^2\times
+E(z)^2=\kappa\theta$ after full non-dimensionalization consistently
+with $H\to E(z)$, $a\to e^N$ (checked: this recovers the already-
+validated $\kappa=k^2/(a^2H_c^2)$ form used in §24's own working
+script for the analogous term).
+
+**Contract line 4 — background identifications, already established
+and reused unchanged**: $\dot{\bar\phi}=\mathcal Q(t)$ (cdot-8's own
+established $\mathcal Q(s)=e^{-2.5s}$ trajectory, matching directly,
+no rescaling); $\rho_s,w,c_\text{ad}^2$ in the already-validated
+$\Omega$-normalized, $H_0^2$-unit convention (§18, §23, §24); the
+Poisson/momentum-constraint normalization matching $8\pi G\rho_I/
+(3H_0^2)=\Omega_I$, the same convention §24's Stage-1 sanity check
+already validated (giving $\Omega_\text{eff}\approx0.89$–$0.97$, $\Phi$
+roughly constant in the matter era).
+
+**Status**: the units contract is now written and cross-checked term
+by term, with one genuine, previously-unexamined error caught and
+corrected (contract line 2, the $\mathcal E_\alpha$ coefficient) before
+any further code is attempted — precisely the outcome Stage 2 was
+designed to produce. Ready for Stage 3 (the pure field-variable
+rebuild under K2's state-variable rule), recommended to be attempted
+with this contract checked against the advisor before coding, per the
+accepted staging discipline. Gate 1(b)'s caveat carried throughout.
+Nothing in `cdot-7/` was touched.
+
+## 31. Stage 2 confirmed directly against primary source — cleared for Stage 3
+
+`Advisory-WP7-Stage2UnitsContractConfirmed-2026-07-20.md`, secondary
+advisor. **Verified independently before accepting**: checked every
+quoted line directly against the archived primary source
+(`references/arXiv.2007.00082/newRMONDLett.tex`) myself — $\mathcal K(
+\bar Q)=-\tfrac12\mathcal F(0,\bar Q)$ (line 355), the toy action's
+$\tfrac1{8\pi\tilde G}$ vs. the full action's $\tfrac{\sqrt{-g}}
+{16\pi\tilde G}$ prefactors, the $\mathcal K_2(\bar Q-\mathcal Q_0)^2$
+expansion definition, and the $\mathcal E_\alpha$ equation's exact
+parenthesization ($\mathcal K_B(\dot{\mathcal E}_\alpha+H\mathcal
+E_\alpha)=\ldots$) — all match exactly, word for word.
+
+**Contract Line 2 is now confirmed by direct textual match, not just
+internal algebraic consistency** — the strongest verification available
+short of an independent field-theory re-derivation, and not needed here
+since the paper states the result directly: the coefficient is
+literally written as $d\mathcal K/d\mathcal Q$, the paper's own toy-model
+symbol, confirming $-\tfrac12\mathcal F_Q(\text{background})$ is correct
+for this specific equation, distinct from the bulk-current $\mathcal
+F_Q$ used elsewhere. Both prior implementation attempts (§25, §26) used
+the wrong one.
+
+**The secondary advisor also owned their own §29 Check-4 error outright**
+— no correction needed on my side, already resolved in §29.
+
+**One methodology note worth keeping**: the secondary advisor initially
+re-checked this via a fresh `WebFetch`/`pdftotext` extraction of the
+arXiv PDF, which lost the $\mathcal E_\alpha$ equation's parenthesization
+and left the question genuinely ambiguous, before finding and using the
+already-archived `.tex` source instead. Good general lesson, now
+recorded in `references/arXiv.2007.00082.md`'s own status note: check
+`references/` for an already-archived primary source before fetching a
+fresh copy of a paper already in this program's citation list.
+
+**Status: Stage 2 fully cleared, by both the worker's and a second,
+independent primary-source check.** Ready to proceed to Stage 3 — the
+pure field-variable rebuild under K2's state-variable rule
+($\chi\text{ or }\gamma,\alpha,\mathcal E_\alpha,\delta_b,\theta_b,\Phi$
+only), using $d\mathcal K/d\mathcal Q=-\tfrac12\mathcal F_Q$ in the
+$\mathcal E_\alpha$ equation specifically and bare $\mathcal F_Q$ only in
+the bulk-current/field-equation term. Gate 1(b)'s caveat, the $Q_2$/EFE
+sequencing decision, and the KATRIN watch item are all unchanged.
+Nothing in `cdot-7/` was touched.
+
+## 32. Stage 3 attempted — real progress on the dust sector, a genuine new instability found and localized to the vector sector, checkpointed rather than forced
+
+**Worked out the closure carefully before coding**: $\theta\equiv\delta
+\phi/\dot{\bar\phi}$ means $\delta\phi=\dot{\bar\phi}\theta$, so $\chi\equiv\delta
+\phi+\dot{\bar\phi}\alpha=\dot{\bar\phi}(\theta+\alpha)$ — **recoverable from
+$\theta,\alpha$ alone, no $\gamma$ needed** — resolving an apparent gap
+in K2's own state-variable list (which names only "$\chi$ or $\gamma$,"
+not both). This makes $(\delta_b,\theta_b,\delta_s,\theta_s,\alpha,
+\mathcal E_\alpha)$ a valid, complete 6-variable state (matching the
+system's actual 4 vector-scalar + 2 baryon degrees of freedom), with
+$\Phi$ treated algebraically via the sub-horizon Poisson equation
+(matching §24's own convention; the momentum-constraint/super-horizon
+refinement deferred to Stage 4, where the M5/mode-exit machinery lives
+anyway). $\Pi$ computed via the **full** formula (not the
+$c_\text{ad}^2\delta_s$-only approximation that broke §26), using
+$\chi=\mathcal Q(\theta_s+\alpha)$ and the confirmed $d\mathcal K/d
+\mathcal Q=-\tfrac12F_Q$ coefficient in the $\mathcal E_\alpha$
+equation.
+
+**Regression check against §24 (Stage 1), per the advisor's own
+recommendation**: with $\Pi$ forced to zero (vector sector artificially
+decoupled), the dust-sector system now gives $\Phi$ staying at
+$0.94$–$1.00$ through the matter era, **decaying smoothly to
+$\Phi/\Phi_i=0.50$ by $z=0$** — genuinely *better* than §24's own
+regression target (which had $\Phi$ pathologically *growing* to $2.4
+\times$ at low $z$): keeping $w(z)$'s actual transition in the
+$\delta_s$ equation, rather than §24's "always dust" shortcut, gives the
+qualitatively correct ISW-type decay. **This part is solid.**
+
+**The full system, with $\Pi$ properly included, blows up** — and not
+from the numerical-conditioning issue it first looked like. Tried a
+$10\times$ smaller $k$ to reduce the dynamic range of $\kappa=(k/(aH_0)
+)^2$ (which spans $\sim10^5$ to $\sim10$ from $z=100$ to today for
+$k=10^{-3}\,\text{Mpc}^{-1}$) — this reduced the blowup's overall scale
+by many orders of magnitude but did **not** fix it: values are already
+$10^{10}$–$10^{18}$ just one integration step past $z=100$, a fast-onset
+instability, not a slow numerical drift. **This localizes the problem**:
+Stage 0's own stiffness audit only checked the *scalar* condensate
+sector's effective mass ($\mu_\text{eff}^2\propto F_{QQ}$) and found it
+safe ($|\mu_\text{eff}|/H<1$ everywhere) — **it never audited the
+vector/$\mathcal E_\alpha$ sector's own dynamics**, which is exactly
+where this new attempt's instability appears to live.
+
+**Checkpointed rather than forced further.** Two genuine pieces of
+progress stand: the dust-sector regression not only reproduces but
+*improves on* §24's own target, and the closure gap (whether $\chi$ or
+$\gamma$ is needed) is now resolved cleanly. The concrete, narrow next
+step — **not yet attempted, and different in kind from Stage 0's own
+scalar-sector audit** — is a dedicated stiffness/stability audit of the
+$\mathcal E_\alpha$/$\alpha$ (vector) sector specifically: what is this
+system's own effective oscillation/growth rate, independent of the
+scalar condensate mass already cleared? Recommending this as the next
+dedicated, advisor-cross-checked step, per the same staging discipline
+that has served this program well twice already (§25, §26) rather than
+a further solo patch attempt. Gate 1(b)'s caveat carried throughout.
+Nothing in `cdot-7/` was touched.
+
+## 33. §32's instability diagnosed by the secondary advisor: a genuine, large real eigenvalue in the untested vector sector, switched on by the $\Pi$-feedback term — confirmed independently, plus one additional cross-check found in the primary source
+
+**Advisory**: `Advisory-WP7-Stage3VectorInstabilityDiagnosed-2026-07-20.md`
++ `wp7_stage3_vector_stiffness_audit.py`. Built the local $2\times2$
+Jacobian of $(\alpha,\mathcal E_\alpha)$ alone (freezing $\delta_s,
+\theta_s,\Phi$ as slowly-varying external sources — the standard way to
+audit a fast subsystem independent of the slow one it's embedded in),
+reusing §32's own trajectory and the confirmed Stage-2 $d\mathcal K/d
+\mathcal Q=-\tfrac12F_Q$ coefficient directly. Found: a genuine large
+**positive real** eigenvalue at high $z$/large $\kappa$ (e.g.
+$\{-13.2,+485\}$ at $z=100$, $k=10^{-4}\,\text{Mpc}^{-1}$ — exactly
+reproducing §32's actual blowup), settling into a stable, damped complex
+pair by $z\sim10$; setting $\kappa=0$ gives a stable complex pair at
+every epoch, so the instability is switched on entirely by the
+$\Pi$-feedback term; a clean critical $\kappa(z)$ bifurcation exists,
+with the corresponding critical comoving $k$ tiny ($\sim10^{-7}$ to
+$\sim10^{-4}\,\text{Mpc}^{-1}$ from $z=1090$ to $z=10$) — essentially
+every cosmologically relevant $k$ sits on the unstable side once
+$z\gtrsim$ a few tens.
+
+**Independently reproduced, not accepted on say-so**: ran
+`wp7_stage3_vector_stiffness_audit.py` myself end to end — every number
+in the advisory reproduced exactly (eigenvalues, the $\kappa=0$ stable
+pair, the critical-$\kappa$ scan). Also checked the advisory's own
+analytic-trace cross-check (the dominant $\partial\dot{\mathcal
+E}_\alpha/\partial\alpha$ term, $-(2-\mathcal K_B)^2c_\text{ad}^2\kappa
+\bar{\mathcal Q}^2/[\mathcal K_BH_c(1+w)]$) against the coded Jacobian's
+own entry at $z=100$: formula gives $3.72\times10^6$, the coded entry is
+$3.68\times10^6$ — matches to $\sim1\%$. Separately verified the
+Jacobian construction itself is a faithful linearization of
+`wp7_stage3_field_variable.py`'s actual `rhs()` (differentiated $\Pi$,
+$\chi$, and the $\mathcal E_\alpha$ equation by hand term-by-term against
+the coded partials) — this is not a from-scratch reconstruction that
+happens to agree, it is the same equations. **Diagnosis accepted.**
+
+**One open item, honestly flagged by the advisor and not adjudicated**:
+the $\Pi$-formula's own Fourier/Laplacian normalization
+($\nabla^2\to{-k^2}$ vs $-k^2/a^2$ inside the $8\pi\tilde Ga^2\bar\rho$
+prefactor) is the one sub-term Stage 2's units contract never itemized,
+and two hand-worked conventions disagreed with each other and neither
+tamed the instability. **Checked the primary source directly on this
+specific point before leaving it open**: `newRMONDLett.tex` line 456
+defines $\Pi$ with the identical bracket
+$\nabla^2[\mathcal K_B\mathcal E_\alpha+(2-\mathcal K_B)\chi]$ that
+**also appears verbatim in the paper's own $\delta$ definition**, eq.
+(`delta_field_relation`, line 437) — the same $1/(8\pi\tilde Ga^2
+\bar\rho)\nabla^2[\ldots]$ term, not just a similar one. This means
+whatever Fourier convention is eventually adopted for $\Pi$ **must be
+identical to whatever convention $\delta$'s own definition uses** — a
+second, independent constraint on the same unknown, not previously
+noticed. Given the metric convention stated just above these equations
+($g_{ij}=a^2(1-2\Phi)\gamma_{ij}$, i.e. $\nabla$ acts on *comoving*
+coordinates), the natural reading is $\nabla^2\to-k^2$ with $k$ the bare
+comoving wavenumber (no extra $a$), with the $a^2$-dependence entering
+*only* through the already-explicit $a^2$ in the $8\pi\tilde Ga^2
+\bar\rho$ prefactor — matching the advisor's own "comoving-Laplacian"
+option, not the "physical-Laplacian" one. This is a plausibility
+argument from the paper's stated gauge, not a full independent
+derivation, and does not by itself explain why the code's current
+coefficient and that reading reportedly differ by an $O(1)$ factor
+($1/(3\Omega_s)$-shaped) — **left for Stage 3b**, not resolved here.
+
+**Status**: the instability is real, precisely characterized, and not a
+numerical artifact — confirmed independently. Whether it survives after
+the $\Pi$-normalization is nailed down is still open. **Recommending
+Stage 3b** (a dedicated, narrowly-scoped units-contract addendum for the
+$\Pi$-formula's Laplacian convention, cross-checked against both the
+$\delta$-definition constraint found here and, ideally, the advisor's
+own independent route) as the next step, before any further
+explicit-ODE attempt or a quasi-static/slaved-closure redesign. Gate
+1(b)'s caveat, Q2/EFE sequencing (Gate 3), KATRIN watch all unchanged.
+Nothing in `cdot-7/` was touched.
+
+## 34. Stage 3b — the $\Pi$-formula's Laplacian convention worked out; the instability survives every reading tried, so it is very likely real physics, not a units artifact
+
+**Script**: `wp7_stage3b_pi_normalization_check.py` (new, `cdot-8/WP7/`).
+
+**Re-derived the convention directly from primary source**
+(`newRMONDLett.tex` line 456), using the internal self-consistency of
+the formula itself as the deciding argument: $\Pi$'s own prefactor
+already carries an *explicit* $a^2$ multiplying $\bar\rho$
+($8\pi\tilde Ga^2\bar\rho$). If $\nabla^2$ in this same formula already
+meant the "physical" ($1/a^2$-including) Laplacian, that explicit $a^2$
+would double-count the conversion — an unlikely authorial choice in a
+compact PRL that writes no redundant factors elsewhere. The natural,
+minimal reading is therefore $\nabla^2\to-k^2$ (bare comoving $k$), with
+$8\pi\tilde G\bar\rho_s(a)=3H_0^2\Omega_s(a)$ (the plain density
+definition, no extra $a^2$ folded in separately) — giving
+
+$$\Pi = c_\text{ad}^2\delta_s + \frac{c_\text{ad}^2\kappa}{3\Omega_s(a)}\big[K_B\mathcal E_\alpha+(2-K_B)\chi\big]$$
+
+This matches this program's own already-validated Poisson-equation
+convention exactly (cross-checked: $\Phi=-1.5\,\Omega(a)\delta/\kappa$,
+the same $8\pi G\bar\rho=3H_0^2\Omega(a)$ identification, no separate
+$a^2$). **This also surfaces a genuine, separate bug**: the *coded*
+$\Pi$ term in `wp7_stage3_field_variable.py` uses bare $\kappa$ with
+**no $\Omega_s(a)$ division at all** — missing the $1/(3\Omega_s(a))$
+normalization entirely, under either Laplacian convention.
+
+**Tested numerically whether resolving this changes the verdict**: ran
+all three readings (the code's current bare-$\kappa$, the derived
+"comoving" $\kappa/(3\Omega_s)$, and the advisor's alternate "physical"
+$\kappa/(3a^2\Omega_s)$) through the vector-sector Jacobian. **Result:
+the growing real eigenvalue survives under all three** — the comoving
+reading roughly *halves* the eigenvalue's magnitude at fixed $z$ (e.g.
+$485\to221$ at $z=100$) but does not remove it; the physical reading
+makes it dramatically worse. **The instability's existence is robust to
+this normalization choice** — nailing down the exact convention shifts
+the threshold's scale by an $O(1)$–$O(10)$ factor, not by the
+$10^2$–$10^6$ needed to erase it.
+
+**Conclusion**: this is evidence, not proof, that the instability is a
+genuine physical feature of the theory — sourced by the same negative
+$c_\text{ad}^2$ that already made the scalar sector tachyonic/clustering
+(§23, §27, §28), now apparently destabilizing the vector sector's
+explicit evolution too — rather than a units bug hiding the real
+answer. Given how many times this exact class of normalization
+derivation has produced subtle errors elsewhere in this program (the
+$F_{QQ}(0)$ domain artifact, the bare-vs-$-\tfrac12$ $F_Q$ coefficient,
+several WP3-era factor-of-few slips), **this conclusion is offered with
+appropriate humility and flagged for advisor cross-check before
+committing to a redesign**, rather than treated as fully settled on my
+derivation alone.
+
+**Recommendation**: (1) fix the coded $\Pi$ term to include the
+$1/(3\Omega_s(a))$ factor regardless of the outcome below, since it is
+wrong either way; (2) request advisor review of this specific
+derivation (the "explicit-$a^2$-implies-comoving-Laplacian" argument) before
+treating the instability as settled-real; (3) if confirmed, design a
+quasi-static/slaved closure for $(\alpha,\mathcal E_\alpha)$ above
+$\kappa_\text{crit}(z)$ (§33's own recommendation) as Stage 4's
+prerequisite, rather than a fourth explicit-ODE attempt. Gate 1(b)'s
+caveat, Q2/EFE sequencing, KATRIN watch all unchanged. Nothing in
+`cdot-7/` was touched.
+
+## 35. Advisory accepted — Stage 3b confirmed independently, on firmer ground than internal consistency alone
+
+**Advisory**: `Advisory-WP7-Stage3bConfirmed-2026-07-20.md`. Reran
+`wp7_stage3b_pi_normalization_check.py` directly and reproduced every
+number exactly. Adds a second, independent argument for the
+comoving-Laplacian reading beyond this program's own internal
+no-double-counting logic: it is the **standard convention throughout
+the cosmological-perturbation-theory literature** (e.g. Ma &
+Bertschinger's own Poisson equation, $k^2\Phi=-4\pi Ga^2\sum\bar\rho_i
+\delta_i$ — bare comoving $k^2$, all $a$-dependence carried explicitly
+in the source term, precisely so $k$ stays an unambiguous
+redshift-independent label) — retroactively explaining why this
+program's own Poisson equation already worked without anyone having to
+resolve this ambiguity explicitly. Confirms the missing
+$1/(3\Omega_s(a))$ factor is a real, separate bug, right to fix
+regardless. Confirms the instability survives under every reading
+tried and reads the partial ($\sim2\times$), not total, shift under the
+corrected normalization as exactly the expected signature of a genuine
+physical effect being corrected by an O(1) unit fix, not erased by one.
+**Accepted.** Optional (not blocking) suggestion: check whether AeST's
+own native $K(Q)$ examples (Cosh/Exp/Higgs-like, whose $C_\ell^{TT}/P(k)$
+match Planck per the founding paper) show the same instability — not
+attempted here, flagged for later if useful. Recommends fixing the
+$1/(3\Omega_s(a))$ bug and proceeding to design the quasi-static/slaved
+closure.
+
+## 36. Stage 3c attempted — quasi-static closure designed and coded; a genuine coordinate singularity found at the fast/slow transition, checkpointed rather than patched
+
+**Script**: `wp7_stage3c_quasistatic_closure.py` (new, `cdot-8/WP7/`).
+Implemented both recommended fixes: the corrected $\Pi$ normalization
+($\text{Pi}=c_\text{ad}^2\delta_s+\frac{c_\text{ad}^2\kappa}{3\Omega_s(a)}
+[K_B\mathcal E_\alpha+(2-K_B)\chi]$), and an algebraic elimination of
+$\mathcal E_\alpha$ — solving $d\mathcal E_\alpha/dN=0$ for $\mathcal
+E_\alpha(\alpha,\delta_s,\theta_s)$ in closed form (substituting the
+corrected $\Pi$ formula and solving the resulting linear equation) —
+leaving $\alpha$ as the only vector-sector ODE state (not itself
+fast — its own equation carries no large coefficient).
+
+**Regression (kappa$\to0$, vector term negligible)**: sensible, $\Phi$
+decaying smoothly to $0.59\times$ by $z=0$ — same order and shape as
+§32's own full-$\Pi$ regression ($0.50\times$), reassuring.
+
+**Main test ($k=10^{-4}\,\text{Mpc}^{-1}$, the case that blew up in
+§32) FAILED** — the ODE solver choked ("required step size less than
+spacing between numbers"). **Diagnosed rather than brute-forced**:
+traced the elimination's own denominator,
+$\text{coef}_E=K_B H_c+(2-K_B)K_B\bar{\mathcal Q}/(1+w)\cdot
+c_\text{ad}^2\kappa/(3\Omega_s)$, and found (algebraically, then
+confirmed numerically) that $\text{coef}_E\equiv-K_BH_c\,\partial
+\dot{\mathcal E}_\alpha/\partial\mathcal E_\alpha$ — **exactly the
+$(2,2)$ Jacobian entry §33's stiffness audit already computed**. Along
+this trajectory it crosses zero between $z=30$ ($-146.3$) and $z=10$
+($+7.66$) — i.e. **exactly where $\kappa$ crosses $\kappa_\text{crit}(z)$
+and the eigenvalue pair transitions from real (one large positive) to
+complex (stable)**. The algebraic slaving relation has a genuine pole
+right at this crossover — not a numerical artifact, a structural
+feature of adiabatic elimination near a bifurcation, where the
+fast/slow timescale separation the whole method relies on necessarily
+breaks down.
+
+**A second test (applying the same closure unconditionally at very
+small comoving $k=10^{-6}\,\text{Mpc}^{-1}$, i.e. $\kappa$ safely
+*below* threshold everywhere) also failed physically** — $\delta_s$
+flips sign and $\alpha$ diverges to $-74$ by $z=0$. This is the
+expected failure mode of applying an adiabatic-elimination formula
+outside its regime of validity: below $\kappa_\text{crit}$ there is no
+large/fast eigenvalue to eliminate, so forcing $\mathcal E_\alpha$ onto
+the algebraic "fixed point" is simply the wrong physics there — the
+true dynamics has $(\alpha,\mathcal E_\alpha)$ genuinely co-evolving on
+the $H$-timescale, not slaved.
+
+**Conclusion**: the quasi-static closure is right in spirit (confirmed
+sound deep in the super-critical regime, and its failure modes are both
+*understood*, not mysterious) but **cannot be applied as a single
+global substitution** — it needs to be regime-gated (explicit
+$(\alpha,\mathcal E_\alpha)$ ODE pair for $\kappa\lesssim
+\kappa_\text{crit}(z)$, algebraic slaving only once safely above it),
+with a deliberate treatment of the transition zone where the
+elimination denominator itself vanishes — not yet designed. This is
+structurally reminiscent of WP3's own homogeneous-mode/kernel-constant
+difficulties (a bounded-solution selection principle that works cleanly
+far from a marginal point, but needs explicit care exactly at one).
+**Checkpointed rather than patched with an ad hoc regularization.**
+Recommending advisor review of this specific transition-zone design
+before implementing a hard or smoothed switch, given how often this
+program's own normalization/matching derivations have needed a second
+pair of eyes. Gate 1(b)'s caveat, Q2/EFE sequencing, KATRIN watch all
+unchanged. Nothing in `cdot-7/` was touched.
+
+## 37. Advisory accepted, correcting my own transition-zone diagnosis — the hybrid switch built to spec, but a deeper, WP3-shaped issue found: this is a boundary-condition selection, not a relaxation, and the naive initial condition breaks it
+
+**Advisory**: `Advisory-WP7-Stage3cTransitionZoneReview-2026-07-20.md`.
+**Correction accepted**: my own §36 misidentified the switch point as the
+discriminant's zero ($z\approx29$–$30$, real$\to$complex). The advisor
+built the full $\text{tr}(J)$/$\det(J)$/eigenvalue table and showed the
+system is *still unstable* (a growing complex spiral, $\text{Re}(\lambda)
+>0$) all the way down to $z\approx18$–$20$ — the true stability boundary
+is $\text{Re}(\lambda_\text{max})=0$, i.e. $\text{tr}(J)=\text{coef}_E=0$,
+a distinct and lower threshold. Since $J_{11}=0$ identically in this
+system, $\text{tr}(J)=J_{22}=\text{coef}_E/(-K_BH_c)$ exactly, so this
+isn't a numerical coincidence — the elimination's own pole is *exactly*
+the point the fast/slow separation itself vanishes. **Independently
+reconstructed the full table myself** (script inline, reusing the
+Stage-3b-corrected Jacobian): confirmed the discriminant's zero at
+$z\approx29$–$30$ and $\text{tr}(J)=0$ separately at $z\approx18.5$–$19$
+— matching the advisor's bracketing exactly. Recommended design: a
+**hard, criterion-based switch** at $\text{tr}(J)=0$ with a small safety
+margin (not a smoothed blend, since the intervening region is
+dynamically non-uniform), mirroring how Boltzmann codes switch tight
+coupling rather than blend it.
+
+**Built the hybrid closure exactly as specified**:
+`wp7_stage3d_hybrid_closure.py` (new, `cdot-8/WP7/`) — quasi-static
+slaving above $z_\text{switch}(k)+\text{margin}$, full explicit
+$(\alpha,\mathcal E_\alpha)$ ODE below $z_\text{switch}(k)-\text{margin}$,
+matched at the boundary. **The switch redshift reproduces the advisor's
+bracket exactly**: $z_\text{switch}(10^{-4}\,\text{Mpc}^{-1})=18.54$.
+
+**But the hybrid result itself is not stable, and fails the advisor's
+own recommended robustness check dramatically**: $\delta_b(z=0)$ ranges
+from $+0.14$ to $-1.8\times10^7$ across safety margins of $0.2$ to
+$0.02$ e-folds — many orders of magnitude of sensitivity to an
+arbitrary choice that should not matter if the design were sound.
+**Diagnosed rather than reported as a bare failure**: traced it to the
+very first evaluation point. At $z=100$ (the arbitrary starting
+condition inherited from §32/§36, $\delta_b=\theta_b=\delta_s=\theta_s=
+d_0$, $\alpha=0$), $\chi=\bar{\mathcal Q}(\theta_s+\alpha)\approx21.7$ —
+**not small**, because $\bar{\mathcal Q}\approx2190$ is large at $z=100$
+even though $\theta_s$ itself is small. The slaved algebraic $\mathcal
+E_\alpha$ at this point is $\approx-76.4$ — wildly different from the
+true system's own initial condition $\mathcal E_\alpha=0$. **This
+mismatch does not decay: it is amplified**, because in the
+$z>z_\text{switch}$ regime the mode being "eliminated" is the *growing*
+one ($\text{Re}(\lambda)>0$), not a decaying one.
+
+**This exposes something the closure's design, though correctly
+motivated, had not accounted for**: standard quasi-static/tight-coupling
+elimination works because the eliminated mode *decays*, so any initial
+mismatch with the algebraic value is forgotten almost immediately,
+making the choice of starting point safe. Here the eliminated mode
+*grows*, so the algebraic relation is not a dynamical attractor but a
+**boundary-condition selection** — structurally the *same* kind of
+problem as WP3's own past-regularity/$C_1$-determination saga (select
+the one solution that does not blow up, by imposing a condition, not by
+waiting for relaxation). An arbitrary starting condition at $z=100$ is
+not guaranteed to already sit on the selected (non-runaway) trajectory,
+and forcing the algebraic relation there does not fix that — it just
+relocates the mismatch, which then grows because we are, by
+construction, in the unstable regime.
+
+**Status: genuine progress on the switch criterion (confirmed, useful,
+keeps), but the closure as built is not yet trustworthy** — the
+remaining problem is not the switch location but the **initial/boundary
+condition** for the quasi-static phase itself, which likely needs to be
+determined by a consistency requirement (matching known deep-past
+behavior, or a shooting method enforcing boundedness across the whole
+$z>z_\text{switch}$ range) rather than inherited unmodified from the
+earlier explicit-ODE convention. **Checkpointed, not forced.** Given how
+closely this echoes WP3's own hardest historical difficulty, recommend
+routing this specific point (how should the quasi-static phase's own
+initial/boundary condition be chosen, given the eliminated mode is
+growing, not decaying) to the advisor before attempting a fix. Gate
+1(b)'s caveat, Q2/EFE sequencing, KATRIN watch all unchanged. Nothing in
+`cdot-7/` was touched.
+
+## 38. Advisor endorses the diagnosis and adds a compounding finding; independent check surfaces a further, un-flagged subtlety in the proposed fix itself
+
+**Advisory**: `Advisory-WP7-Stage3dBoundaryConditionProblem-2026-07-20.md`.
+**Endorses §37's diagnosis in full**: this is a boundary-condition/
+stable-manifold selection problem (WP3's own past-regularity/$C_1$
+shape), not a relaxation, precisely because the eliminated mode grows.
+**Adds a genuine, independently-checked finding**: the quasi-static
+approximation's own adiabaticity ($|\lambda_\text{max}|\gg1$ per
+e-fold, the natural unit since $N$ is the ODE's own clock) is only good
+for $z\gtrsim50$–$60$ and already marginal by $z\approx25$–$30$ — a
+full ten-plus e-folds in redshift *above* the switch itself, meaning
+"just fix the $z=100$ initial condition" cannot be the whole story even
+once solved. Reproduced the advisor's table exactly (e.g. $z=100$:
+$221.0$; $z=50$: $28.4$; $z=30$: $3.4$; $z=25$: $0.75$; $z=20$: $0.13$).
+**Recommendation**: a Riccati/stable-subspace continuation — express
+$\mathcal E_\alpha=\mu(N)\alpha+\nu(N)$ and evolve $\mu,\nu$ via their
+own consistency equations (derived, not frozen-coefficient re-solves),
+seeded deep in the well-separated regime ($z\gtrsim60$) — the standard
+technique for tracking a stable branch through a marginal zone. Also
+honestly flagged, not asserted: a rough finite-difference check hinted
+at a possible *second* unstable direction in the full 6-variable system
+(tentatively gravitational-Jeans-like, from the $(\delta_b,\theta_b)/
+\Phi$ coupling), not confirmed, recommended for a careful follow-up
+check.
+
+**Derived the Riccati equations myself before treating the
+recommendation as ready to implement**: writing $\mathcal E_\alpha=
+\mu\alpha+\nu$ and requiring consistency with both the true $\mathcal
+E_\alpha$-equation and $\alpha$'s own equation gives
+$$\mu'=\frac{d\mathcal E_\alpha}{d\mathcal E_\alpha}\Big|_{\text{coef}}
+\mu+\frac{d\mathcal E_\alpha}{d\alpha}\Big|_{\text{coef}}-\mu^2/H_c$$
+— a genuine Riccati equation, with the naive frozen-coefficient slaving
+recovered exactly as its fixed point ($\mu'=0$). **Checking where this
+fixed-point quadratic itself has real roots surfaced a finding the
+advisory did not flag**: its discriminant, $(H_c\,\partial\dot{\mathcal
+E}_\alpha/\partial\mathcal E_\alpha)^2+4H_c\,\partial\dot{\mathcal
+E}_\alpha/\partial\alpha$, is proportional to the *original* $2\times2$
+Jacobian's own discriminant and **vanishes at the same $z\approx29$–$30$
+point** (confirmed numerically: e.g. $+1.2\times10^4$ at $z=29.5$,
+$-8.2\times10^4$ at $z=29$) — **not** at the switch ($z\approx18.5$).
+**This means the real-valued slope $\mu$ itself stops existing as a
+real number ten-plus e-folds before reaching $z_\text{switch}$** — once
+the Jacobian's eigenvalues turn complex ($z\lesssim29$–$30$), there is
+no longer a single real stable eigendirection to track by a real
+Riccati slope at all; every real initial condition in that spiral zone
+grows at the same rate $\text{Re}(\lambda)$ (a genuinely 2D unstable
+regime, not a 1D-unstable-plus-1D-stable split). **The proposed method,
+taken literally as a real-valued continuation, cannot be carried through
+the $z\approx18.5$–$29.5$ spiral zone at all** — it needs a complex- or
+matrix-valued (Riccati-matrix) generalization there, a further
+derivation beyond what either the advisor or I have done.
+
+**Status: advisory's core diagnosis and adiabaticity finding both
+independently confirmed and accepted; the concrete method proposed
+needs a real extension before it can be implemented, and this is a
+genuinely new wrinkle, not previously surfaced by either party.**
+Checkpointed rather than attempting a complex-Riccati derivation
+un-reviewed. Recommending this specific point — how to generalize the
+stable-subspace continuation through a genuinely complex-eigenvalue
+(spiral) region — be put to the advisor next, alongside their own
+still-open item (whether a second unstable direction exists in the full
+system). Gate 1(b)'s caveat, Q2/EFE sequencing, KATRIN watch all
+unchanged. Nothing in `cdot-7/` was touched.
+
+## 39. Advisory accepted — no complex generalization needed, one handoff suffices; implementing it surfaces a further, well-diagnosed numerical obstruction: the stable branch's forward-$N$ Riccati flow is itself repelling
+
+**Advisory**: `Advisory-WP7-Stage3eRiccatiSpiralResolution-2026-07-20.md`.
+**Accepted, and re-derived independently before trusting**: in a
+complex-eigenvalue (spiral) regime every real direction shares the same
+growth envelope $\text{Re}(\lambda)$ — there is no preferred direction
+to select, so the $z\approx18.5$–$29.5$ zone needs no elimination method
+at all, real or complex. Verified the key algebraic claim myself,
+$D_\mu=H_c^2D_J$ **exactly** (not approximately): with $\mu=H_c\lambda$
+(the standard eigenvector-slope identity for this $2\times2$ form), the
+Riccati fixed-point quadratic's discriminant is literally $H_c^2$ times
+the original Jacobian's, confirmed symbolically and to 5 figures
+numerically. **Design accepted**: real Riccati continuation seeded at
+$z\gtrsim60$, propagated down to a *single* handoff at $z\approx29$–$30$
+(comfortably inside the real-eigenvalue region, not at $z_\text{switch}=
+18.5$), then one continuous explicit $(\alpha,\mathcal E_\alpha)$
+integration for everything below — covering both the spiral zone and
+the later stable zone without further special handling.
+
+**Implemented exactly this**: `wp7_stage3e_riccati_handoff.py` (new,
+`cdot-8/WP7/`). Caught and fixed my own sign error before trusting any
+output — the fixed-point quadratic has two roots ($\mu=H_c\lambda_
+\text{stable}$ and $\mu=H_c\lambda_\text{unstable}$); an initial
+implementation used the wrong (unstable) branch as the seed, caught by
+checking against the already-known eigenvalues at $z\approx100$/$60$
+before running anything further.
+
+**The corrected run still failed** — same solver error as §36
+("required step size less than spacing between numbers"), now
+localized to the Riccati phase itself, at every handoff redshift tried
+($35$, $32$, $30.5$, $29.8$), including deep inside the supposedly-safe
+real-eigenvalue region. **Diagnosed rather than reported as a bare
+failure**: linearizing the $\mu$-Riccati equation around its own stable
+fixed point gives $d(\delta\mu)/dN=(\lambda_\text{unstable}-\lambda_
+\text{stable})\,\delta\mu$ — since $\lambda_\text{unstable}>\lambda_
+\text{stable}$ always in this region, this coefficient is **always
+positive**: forward-$N$ propagation of the physically-correct (stable)
+root is itself a repelling flow, amplifying any mismatch, however
+small. **Confirmed numerically, cleanly**: seeding at the *exact*
+analytic stable-root value at $z=60$ and integrating forward just
+$\Delta N=0.01$ already drifts from $-2479.3$ to $-2500.0$ purely from
+truncation error; perturbing the seed by $10^{-6}$ or $10^{-9}$ causes
+the solver to blow past the trajectory's own tabulated domain within a
+handful of adaptive steps. **This is a known phenomenon in Riccati/
+shooting-method numerics**: the stable-manifold branch of a Riccati
+equation is generically a repeller under forward time integration
+(exactly the reason real shooting/compound-matrix codes for stiff
+two-point problems integrate such equations *backward*, from a
+well-posed terminal condition, or track an unnormalized direction
+vector instead of the scalar ratio $\mu$ directly, rather than
+forward-integrating the ratio itself).
+
+**Status: the advisory's conceptual resolution (one handoff, no
+complex generalization) is accepted and stands; the concrete numerical
+implementation needs a different integration strategy** — most likely
+backward-$N$ propagation from a well-posed point near the handoff, or a
+compound/unnormalized-vector formulation, neither yet attempted.
+Checkpointed rather than forcing a fix without review, given this is
+now the fifth consecutive round on this single sub-problem and each
+round has surfaced a genuine, non-obvious mathematical subtlety the
+previous one didn't anticipate. Recommending this specific numerical
+question (correct integration direction/formulation for the Riccati
+continuation) be put to the advisor next. Gate 1(b)'s caveat, Q2/EFE
+sequencing, KATRIN watch all unchanged. Nothing in `cdot-7/` was
+touched.
+
+## 40. Stage 3f — resolved: the Riccati apparatus is unnecessary; Stage 3c's original pointwise slaving works perfectly once handed off comfortably above $z\approx30$, not at $z_\text{switch}=18.5$
+
+**Advisory**: `Advisory-WP7-Stage3fPointwiseFixWorks-2026-07-21.md` +
+`wp7_stage3f_pointwise_conservative_handoff.py`. **Confirms §39's
+repelling-flow diagnosis precisely** (the linearized rate at $\mu_
+\text{stable}$ is exactly $\lambda_\text{unstable}-\lambda_\text{stable}$,
+unconditionally positive, verified both analytically and by finite
+difference at seven redshifts) — then, rather than fixing the Riccati
+machinery, **drops it entirely**. Stage 3c's original pointwise
+algebraic slaving (re-solve the frozen-coefficient fixed point fresh at
+every RHS call, propagating no $\mu(N)$ state at all) was never the
+problem — there is nothing for a repelling flow to act on if nothing is
+being propagated. **Stage 3d's catastrophic sensitivity came entirely
+from choosing the wrong handoff redshift** ($z_\text{switch}=18.5$,
+identified in §37 as deep inside the already-marginal/spiral zone) —
+not from any flaw in pointwise slaving itself, which is an excellent
+approximation throughout $z\gtrsim30$–$40$ (§38's own adiabaticity
+table: $|\lambda|\sim3$–$220$ there).
+
+**Ran the companion script myself and reproduced every number
+exactly**: handoff redshifts from $45$ down to $30.2$ (right at the
+edge of the real-eigenvalue region) give smooth, monotonically
+convergent results — $\delta_b(z=0)$ from $0.436$ at $z_\text{handoff}=
+45$ to $0.374$ at $z_\text{handoff}=30.2$, a $\lesssim15\%$ spread,
+nothing like Stage 3d's eight-order-of-magnitude sensitivity. No
+blow-up anywhere in the tested range.
+
+**Adopted as the standard closure going forward**: Stage 3c's pointwise
+slaving with a handoff at $z\approx35$ (comfortable margin, per the
+advisor's own recommendation) to full explicit $(\alpha,\mathcal
+E_\alpha)$ integration for the remainder of the run. The Riccati-ODE
+approach (§38–§39) is retired as a working method, though its
+discriminant identity ($D_\mu=H_c^2D_J$) and the repelling-flow finding
+remain correct and worth keeping on record — they're what correctly
+ruled out the wrong fix and pointed at the right one. **This closes the
+long chain from §32's original blow-up through §33–§39**: the vector
+sector's fast/unstable mode is real physics (§33–§34), its Π-term
+normalization is now correct (§34/§35), and it can be safely and
+robustly eliminated above $z\approx35$ with a simple, cheap, pointwise
+algebraic substitution — no exotic machinery needed after all.
+
+**Still open, not yet checked**: the possible second unstable direction
+in the full 6-variable system (flagged in §38, not confirmed) — the
+advisor recommends this be checked with a careful (symbolic or
+carefully-scaled) Jacobian before treating this closure as fully
+validated, since a second growing direction would need its own
+selection condition alongside this one. Gate 1(b)'s caveat, Q2/EFE
+sequencing, KATRIN watch all unchanged. Nothing in `cdot-7/` was
+touched.
+
+## 41. Stage 3g — the full 6-variable stability audit, done analytically: no second unstable direction; the low-$z$ growth is the already-known scalar tachyonic mechanism, not new physics
+
+**Script**: `wp7_stage3g_full_system_stability_audit.py` (new,
+`cdot-8/WP7/`). Addresses the item both the advisor and I have flagged
+repeatedly but never confirmed: does the full 6-variable system have
+any growing direction beyond the already-audited vector-sector one? The
+advisor's own attempt used a rough finite difference and explicitly
+flagged it as too imprecise to trust, given this system's huge
+coefficient range ($\bar{\mathcal Q}\sim10^3$, $\kappa\sim10^0$–$10^5$).
+
+**Built the $6\times6$ Jacobian analytically instead** (the system is
+linear in the state at fixed $N$, so every entry can be written down
+exactly — no finite-difference error possible) — caught and fixed one
+transcription slip of my own first (a missing $1/H_c$ on the
+$\Pi/(1+w)$ term in row 3, exactly matching the coded `rhs_full`'s own
+parenthesization) by comparing against a real finite difference, then
+**validated the corrected analytic Jacobian against complex-step
+differentiation** (exact to machine precision, immune to the
+cancellation error real finite differences suffer here) — residuals
+$\sim10^{-16}$ at every redshift checked, from $z=100$ to $z=0$.
+
+**Scanned the full spectrum from $z=100$ to $z=0$**: confirmed the
+$(\alpha,\mathcal E_\alpha)$ sub-block of the full Jacobian exactly
+reproduces the earlier reduced $2\times2$ analysis (a consistency
+check, not a new result) — but the **full coupled system's actual
+largest eigenvalue is smaller in magnitude than the isolated
+$2\times2$'s** throughout the high-$z$ regime (e.g. $60.0$ vs $221.0$ at
+$z=100$; $23.6$ vs $47.7$ at $z=60$) — the back-coupling to the slow
+sector measurably damps the effective growth rate relative to the
+frozen-slow-variable idealization, a real but non-alarming effect (if
+anything, it means the earlier analysis was mildly conservative, not
+mildly wrong-in-the-dangerous-direction). **No independent growing
+direction was found in the high-$z$/vector-sector regime** — every
+large eigenvalue there traces back to the same mode already identified
+and worked through in §33–§40.
+
+**A separate, small, persistent real eigenvalue does exist from
+$z\approx10$ down to $z=0$** (e.g. $\text{Re}(\lambda)\approx0.05$ at
+$z=10$, peaking $\approx0.38$ near $z=0.5$, settling to $\approx0.26$ at
+$z=0$) — this is exactly the kind of thing the advisor's rough check
+might have flagged. **Checked directly whether this is vector-sourced**:
+reran the full spectrum with $\kappa\to0$ (vector coupling forced off)
+and the low-$z$ eigenvalue is **essentially unchanged**
+($0.0465\to0.048$ at $z=10$; $0.2571\to0.255$ at $z=0$) — this mode is
+**not sourced by the vector sector at all**. It is the already-known,
+already-accepted scalar tachyonic-clustering mechanism (§23/§27:
+$c_\text{ad}^2<0$ driving $\Omega_s$ to cluster dust-like through the
+matter era, flipping sign near $z\approx0.13$–$0.15$), showing up
+exactly where expected in this linear analysis, not a new instability
+and not of the "gravitational-Jeans" character the advisor's own rough
+check tentatively suggested.
+
+**Verdict: no second unstable direction requiring its own selection
+condition.** The full system has exactly two distinct growing
+mechanisms, both previously identified and understood: the vector
+sector's fast mode (real for $z\gtrsim29$–$30$, handled by Stage 3f's
+pointwise-slaving-plus-handoff closure) and the scalar tachyonic
+clustering mode (small, low-$z$, already a load-bearing, accepted
+feature of the theory since §27, entirely independent of the vector
+sector and not something this closure needs to touch). **The last open
+item from Stage 3f is closed.** The vector-sector closure (§40) can now
+be treated as fully validated. Gate 1(b)'s caveat, Q2/EFE sequencing,
+KATRIN watch all unchanged. Nothing in `cdot-7/` was touched.
+
+## 42. Stage 4 attempted — assembly straightforward, but a serious, escalation-worthy finding: the vector-sector instability never resolves at the $k$ scales the ISW estimate actually needs
+
+**Assembled the two validated pieces**: the growth closure
+(§32–§41 — $\chi,\gamma,\alpha,\mathcal E_\alpha$ unmodified by M5 per
+§7's exact cancellation, evolved via the Stage-3f/g-validated pointwise-
+slaving-plus-handoff design) and the M5 Einstein-constraint term
+(§4–§6's corrected coefficient $8\pi G[\tfrac{F_Q}6+\tfrac{QF_{QQ}}2]q'
+\bar{\mathcal N}_\text{tot}W(kR_h)[\delta_\mathcal N-3\Phi]$, no
+re-derivation) into `wp7_stage4_isw_estimate.py` (new, `cdot-8/WP7/`),
+solving the now-M5-augmented Poisson equation for $\Phi$ algebraically
+(implicit in $\Phi$ via $\delta_\mathcal N-3\Phi$, closed-form solved).
+One flagged, explicit approximation: $\delta_\mathcal N$ (the M5 term's
+own census-weighted contrast) taken as $\delta_b$, matching §18–21's own
+normalization convention — a genuine refinement, not attempted here.
+
+**Running it at the actual ISW-relevant $k$ (per the established
+$k=\ell/D_p(z=0.5)$ convention, $\ell=2,5,10\to k\approx1.1$–$5.4
+\times10^{-3}\,\text{Mpc}^{-1}$) blew up catastrophically** — not the
+tidy, bounded behavior Stage 3f validated. **Diagnosed rather than
+patched around**: Stage 3f/g's entire vector-sector closure (the
+pointwise-slaving/handoff design, the "$z\approx35$ handoff is safe"
+finding, the full-system stability audit) was validated at exactly
+**one** wavenumber, $k=10^{-4}\,\text{Mpc}^{-1}$ — a scale roughly
+$10$–$50\times$ larger (physically, more super-horizon) than what
+$\ell=2$–$10$ actually require. **Checked $z_\text{switch}(k)$ directly
+across this range**: it *decreases* with increasing $k$ ($18.5\to8.5$
+from $k=10^{-4}$ to $3\times10^{-4}\,\text{Mpc}^{-1}$, consistent with
+$\kappa\propto k^2$ dominating $\kappa_\text{crit}(z)$'s much weaker $z$
+dependence) — and **for $k\gtrsim10^{-3}\,\text{Mpc}^{-1}$, no
+$z_\text{switch}$ exists in $z\in[0,2000]$ at all**: the $(\alpha,
+\mathcal E_\alpha)$ subsystem's fast eigenvalue **stays real and
+positive from $z=100$ all the way to $z=0$**, for every one of
+$\ell=2,5,10$'s wavenumbers.
+
+**Confirmed this is not an artifact of the reduced $2\times2$ picture or
+of pointwise slaving**: reran §41's exact, complex-step-validated
+analytic $6\times6$ Jacobian at these same $k$ values. The large,
+positive, real eigenvalue is present in the **full, machine-precision
+Jacobian** at every redshift checked from $z=100$ to $z=0$ (e.g. at
+$k=2.71\times10^{-3}\,\text{Mpc}^{-1}$: $\max\text{Re}(\lambda)=1655$ at
+$z=100$, still $23.8$ at $z=0$ — never once crossing zero). Switching
+to pure pointwise slaving throughout the entire run (no handoff at all,
+since no stable regime exists to hand off into) avoids literal
+numerical divergence, but $\Phi$ still grows by **5–8 orders of
+magnitude** from $z=100$ to $z=0$ at all three $\ell$ values — utterly
+unlike any physically sensible ISW source, and completely swamping any
+$\sim O(0.1)$-scale M5 signature ($P_{M5}/P_\text{std}\approx0$ to the
+precision reported, not because M5 is negligible but because the
+non-M5 "baseline" itself is already dominated by this runaway).
+
+**This is a different, more serious finding than anything in the
+§32–§41 arc, which all concerned the single scale $k=10^{-4}\,
+\text{Mpc}^{-1}$.** It appears the vector sector's instability, far
+from being a high-$z$-only, resolves-by-$z\sim20$-$30$ phenomenon, gets
+*worse* — not better — at smaller scales, and specifically afflicts the
+exact wavenumber range the low-$\ell$ CMB/ISW observables actually
+probe. Since §7 already established the field equations $(\chi,\gamma,
+\alpha,\mathcal E_\alpha)$ are **unmodified by M5 at every $k$**, this
+cannot be an artifact of the M5 assembly itself or fixed by adjusting
+the M5 term — the instability is intrinsic to the imported AeST
+field-perturbation system as applied to cdot-8's own (census-forced,
+quadrature-determined) $F(Q)$ and its large, redshift-spanning
+$\Omega_s$ weight.
+
+**Not declaring a unilateral kill.** Two things are worth stating
+plainly before any verdict: (1) this is the field-perturbation system's
+behavior under cdot-8's *own* $F(Q)$ and background trajectory — it is
+not a statement about AeST's native, CMB-fitting parameter choices,
+which the founding paper's own text notes give $\Pi\to0$/dust-like
+decoupling for "a wide range" of its native $K(Q)$ (§1; the still-open
+optional cross-check flagged in Stage 3b's advisory — whether AeST's
+own tuned examples share this instability — is now considerably more
+urgent than "optional"); (2) nothing has been done yet to check whether
+this reflects a genuine physical pathology of the theory at these
+scales, or a still-undiagnosed error somewhere in this specific
+assembly (the M5 term, the $\delta_\mathcal N\approx\delta_b$
+approximation, or the field-equation import itself) — this program's
+own track record (every WP3 finding, several WP7 ones) shows both are
+live possibilities and neither should be assumed. **Recommending
+advisor review of this finding specifically**, and the AeST-native
+cross-check (does the founding paper's own tuned $K(Q)$ share this
+instability at the same $k$ range?) as the most informative next
+diagnostic, before any further ISW/power-spectrum numerics are
+attempted. Gate 1(b)'s caveat carried, now joined by this new,
+independently-serious concern. Nothing in `cdot-7/` was touched.
+
+## 43. §42 confirmed and reframed by the advisor; a careful reassessment finds their core claim solid, plus one small, genuine correction to both our reported numbers
+
+**Advisory**: `Advisory-WP7-Stage4ISWInstabilityAssessed-2026-07-21.md`.
+Reran both §41 and §42's scripts directly, reproducing every reported
+number to the stated precision (one environment-only `numpy.trapz`
+workaround, not a code issue). **Reframes the finding, not its
+severity**: rather than "a different, unrelated new pathology," this
+reads as the *same*, already-accepted $c_\text{ad}^2<0$ mechanism
+(§23/§27's tachyonic clustering sign) continuing to larger $k$ —
+physically, a negative effective pressure is *destabilizing* rather
+than restoring in the dispersion relation, so larger $k$ makes things
+*worse*, the exact opposite of ordinary Jeans stabilization. This isn't
+a new mechanism; it's the same sign the program already accepted,
+finally pushed to a $k$ range large enough to matter. **The practical
+severity is unchanged**: $\Phi$ growing $5$–$8$ orders of magnitude by
+$z=0$ is nowhere near a physical ISW source regardless of how the
+mechanism is framed. Recommends routing this to the author now,
+alongside Gate 1(b), rather than the advisor and worker deciding
+unilaterally to proceed to the AeST-native cross-check — this is a
+"does WP7's central deliverable work as scoped" question, the same
+class of call Foundation §6 already reserves for the author (cf.
+WP4a's own three-way verdict fork).
+
+**Asked to reassess carefully before drawing conclusions — did exactly
+that, and found one genuine, worth-stating correction.** Independently
+re-verified the advisor's "local minimum near $z\sim0.3$–$2$, then a
+rise to $\sim24$ by $z=0$" claim with a finer scan, and it initially
+reproduced ($9.0$ at $z=0.02\to23.7$ at $z=0$) — but tracing *why*
+surfaced something neither of us had caught: **the sharp rise in the
+last few grid points is a numerical artifact**, not physics. $c_\text{
+ad}^2$'s trajectory is built via `np.gradient` (twice: once for $w$,
+once more for $c_\text{ad}^2$ itself), and `np.gradient`'s default
+one-sided boundary formula (`edge_order=1`) is measurably less accurate
+right at an array's last few points — exactly where this scan was
+looking. **Confirmed directly**: recomputing $w$ and $c_\text{ad}^2$
+with `edge_order=2` (a more accurate boundary stencil) removes the jump
+entirely — $c_\text{ad}^2$'s last six points go from $\{-0.0698,
+-0.0699,-0.0698,-0.0699,-0.2215,-0.3734\}$ (the jump, `edge_order=1`)
+to $\{-0.0698,-0.0698,-0.0699,-0.0699,-0.0698,-0.0696\}$ (smooth,
+`edge_order=2`) — the underlying $\Omega_s(z)$ itself is perfectly
+smooth there ($0.9305\to0.9260$, no feature), confirming the jump lived
+entirely in the differentiation, not the trajectory.
+
+**This does not change the substantive finding, and arguably
+simplifies it**: with the artifact removed, $\max\text{Re}(\lambda)$
+very likely continues its smooth decline toward $z=0$ rather than
+diving down and spiking back up — settling near $8$–$9$ rather than
+$\sim24$ at the literal endpoint. **Either way, it never approaches
+zero anywhere from $z=100$ to $z=0$** at the ISW-relevant $k$'s — the
+escalation-worthy conclusion is unaffected, and if anything more
+straightforward than either of our first passes reported (no genuine
+late-time upturn, just a monotonic floor). **Flagging this as a general
+numerical-hygiene item** for any future use of this background
+trajectory's derivative-built quantities ($w$, $c_\text{ad}^2$) very
+close to $z=0$: use `edge_order=2` (or trim the last few points),
+not a fresh derivation, needed to fix it.
+
+**Status**: the advisor's reframing (same mechanism, larger reach) is
+adopted — it's a better, more coherent account of *why* this happens,
+without softening *how bad* it is. The z=0 endpoint correction is
+real but minor and doesn't move the verdict. **Agreeing with the
+advisor's recommendation: this goes to the author now**, alongside
+Gate 1(b), as a second, independent open structural question, rather
+than either of us picking the next diagnostic unilaterally. Nothing in
+`cdot-7/` was touched.
+
+
+---
+
+**Continued in `Update-WP7-InstabilityRecourses-2026-07-21.md`** — this
+document was split 2026-07-21 once it grew unwieldy. That companion
+document covers the recourse-ladder diagnostic work (R0, R1, R2) done
+after Gate 4 paused WP7's ISW/growth track here at §42–§43; nothing in
+this document past this point is superseded, this is purely a file
+split for length, not a content change.

@@ -364,3 +364,68 @@ decision (standing); KATRIN watch. Post-WP7 revisit queue: IF re-fit
 (promoted, pending author), μ-swap (subsumed into IF re-fit),
 low-Σm_ν re-closure (KATRIN-aligned), radiation-era assumptions per
 Gate 1(b). Nothing in `cdot-7/` was touched.
+
+---
+
+## Entry 6 — Onboarding documents (new project Foundation.md + Progress.md) assessed against the session record: accurate and honest as written; two headline gaps (KATRIN absent from both; WP7 blocker described pre-Stage-0 — audit rules and μ² clustering-mechanism finding missing); five secondary additions; ready-to-merge insertion text supplied (advisor session, 2026-07-19)
+
+**Prompt (verbatim):**
+> I have had made a new project Foundation for cdot-8 and added a
+> Progress document to add clarifications on where we currently are.
+> The purpose of these is to recruit assistance with particular issues
+> from other agents that do not have the full context. Please asses
+> these within your current content and adivce if there are important
+> elements missing.
+
+**Summary (advisor):** (1) **Verdict: both documents are accurate,
+well-scoped, and preserve the honesty conventions** — nothing
+contradicts the record; Gate 1(b) carried correctly everywhere;
+Progress §6's methodology note (verify-before-trust bidirectional;
+escalate-don't-decide; "every crisis except WP4a's has dissolved")
+called out as the best single page and exactly the right prior
+calibration for a recruit. Foundation §3's "critical divergence,
+adopted knowingly" and §11 likewise endorsed as-is. (2) **Headline gap
+1 — KATRIN absent from both**: Σm_ν = 1.374 eV is quoted as acceptance
+data with no exposure statement, yet it implies m_β ≈ 0.458 eV against
+KATRIN's published partial-data bound < 0.45 eV (90% CL), campaigns
+complete, final analysis (< 0.3 eV sensitivity) pending — the
+framework's sharpest nature-scheduled falsification test; registered
+criterion (detection ~0.46 required; null excludes) and the
+WP4a-lever alignment (low-Σm_ν re-closure is the named revisit
+candidate KATRIN will adjudicate) both supplied as insertion text.
+(3) **Headline gap 2 — the top-priority open item (WP7 growth system)
+is described pre-Stage-0**: the drafted diagnosis ("the crossing's
+negative c_ad²") is narrower than the record (c_ad² negative through
+the WHOLE matter era); missing: the audit's exoneration of the physics
+(|μ_eff|/H < 0.7 everywhere — failures are formulation + units), the
+two standing rules that prevent a recruited agent from repeating both
+failures (pure field-variable state; written units contract per
+imported equation), the Stage 0–4 plan with 0 complete, and the
+**μ²(z) ≈ −0.5H² Hubble-tracking clustering-mechanism finding**
+(F_QQ's FOURTH appearance — Foundation §7 says three) with its Stage-1
+caveats — both the item's recruiting asset (checkable growth-rate
+target) and a required safety flag (μ² < 0 must not be misread as a
+found instability). Replacement text supplied. (4) **Secondary
+additions**: the two exact numerical anchors as page-one
+non-negotiables (separate-universe coefficient (F_Q/6 + QF_QQ/2)q′;
+sub-horizon −F_Q = WP6's own number); facet 4 (normalization locality,
+per-slice default) + the matter-immunity third untouchable added to
+open item 5; the α₂ provisional envelope (K_B ≲ 4e-10, flagged
+provisional, potentially binding) + the K_B → 0 benignity statement
+(the squeeze is survivable — envelope ≠ existential threat); the
+post-WP7 revisit queue consolidated as one explicit list (IF re-fit
+[author sequencing + single-μ economy-vs-freedom author question],
+low-Σm_ν re-closure [KATRIN-aligned], radiation-era assumptions);
+consistency nit Ω_closure 0.0750 (docs) vs 0.074 (toolchain) — one
+reconciling line, since a careful recruit will check. (5) All quoted
+numbers traced to the session record; no new computation this round.
+
+**Files produced (Entry 6):**
+`Advisory-OnboardingDocsAssessed-2026-07-19.md`,
+`SessionLog-2026-07-19.md` (this file, six entries).
+
+**Open items handed forward:** author: merge decisions on the proposed
+insertions (KATRIN block; WP7 Stage-0 replacement; five secondary
+items). Standing: joint staged WP7 round (Stages 1–4); Q₂/IF-re-fit
+sequencing decision; **KATRIN watch**. Nothing in `cdot-7/` was
+touched.

@@ -496,6 +496,12 @@ now the second external, already-ticking measurement clock this program
 tracks (alongside KATRIN), and unlike KATRIN, the bound is already
 published today.
 
+**Sequencing decided (author, 2026-07-20)**: postponed until after WP7,
+on the same logic as Gate 1(b)'s own deferral of the radiation-era
+assumptions — see `proposal/DecisionGates-2026-07-18.md` Gate 3. The
+finding itself stands unchanged; only the timing of any re-fit is
+deferred, joining the post-WP7 revisit queue (`Progress.md` §4b).
+
 ---
 
 ## Priority summary for the consolidator

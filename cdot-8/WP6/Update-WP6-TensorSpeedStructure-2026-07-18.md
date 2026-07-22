@@ -786,3 +786,12 @@ already-ticking clock this program is tracking, alongside KATRIN.**
 Sequencing is explicitly the author's call, not decided unilaterally
 here. `ConsolidationLog` Item 16 updated to carry this fuller picture.
 Nothing in `cdot-7/` was touched.
+
+**Sequencing decided (author, 2026-07-20) — Gate 3, `proposal/
+DecisionGates-2026-07-18.md`: postponed until after WP7**, on the same
+logic as Gate 1(b)'s own deferral of the radiation-era assumptions. The
+finding itself is unchanged and unresolved; only the timing of any
+interpolating-function re-fit is deferred. It joins the post-WP7 revisit
+queue (`Progress.md` §4b) alongside the KATRIN-aligned low-$\Sigma
+m_\nu$ re-closure lever and the radiation-era-assumption revisit.
+Nothing in `cdot-7/` was touched.

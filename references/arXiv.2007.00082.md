@@ -38,6 +38,29 @@ cosmology (AeST's own CMB fit relies on the scalar mimicking dark matter
   system reduces to dustlike evolution with the vector field decoupling
   — explicitly a property of AeST's *native* cosmology, not yet checked
   for cdot-8's own census/quadrature-determined $F(Q)$.
+- **Verified directly against `newRMONDLett.tex` (secondary advisor,
+  WP7 Stage 2, 2026-07-20)**: (i) $\mathcal K(\bar{\mathcal Q})\equiv
+  -\tfrac12\mathcal F(0,\bar{\mathcal Q})$ (line 355) — confirms the
+  toy/background function is *minus one-half* the full action's
+  $\mathcal F$, not $\mathcal F$ itself; (ii) the toy action's
+  $1/(8\pi\tilde G)$ prefactor vs. the full action's $1/(16\pi\tilde G)$
+  (eqs. `sculpted_FRW_action`/the $S=\int d^4x\sqrt{-g}/(16\pi\tilde
+  G)[\ldots]$ action) — the two together are exactly what compensates
+  the factor of 2 in (i); (iii) $\mathcal K_2$ is the coefficient of
+  $(\bar{\mathcal Q}-\mathcal Q_0)^2$ in $\mathcal K$'s own expansion
+  (`Kcal_expansion`), giving $\mathcal K_2=-\tfrac14\mathcal
+  F_{QQ}(\mathcal Q_0)$ exactly; (iv) the $\mathcal E_\alpha$ evolution
+  equation's coefficient is written as $d\mathcal K/d\mathcal Q$
+  (verbatim), i.e. $-\tfrac12\mathcal F_Q$(background) — **not** the
+  bulk-current $\mathcal F_Q$ used elsewhere in cdot-8's own field
+  equation. This directly confirms (rather than merely
+  self-consistency-checks) the distinction WP7 §30's units contract
+  relies on. Full equation: $\mathcal K_B(\dot{\mathcal E}_\alpha+H
+  \mathcal E_\alpha)=\tfrac{d\mathcal K}{d\mathcal Q}\chi-(2-\mathcal
+  K_B)\big[\tfrac{\dot{\bar\phi}}{1+w}\Pi+(H+\dot{\bar\phi})\chi-3c_
+  \text{ad}^2H\dot{\bar\phi}\alpha\big]$ (matches
+  `Update-WP7-PerturbationStructure-2026-07-18.md` §25's quote exactly,
+  parenthesization included).
 - Cites an in-preparation companion (Skordis, Ilic & Złośnik) for the
   detailed cosmology and parameter dependence — searched, not found
   published/indexed as of this session; the founding paper's own
@@ -50,5 +73,8 @@ cosmology (AeST's own CMB fit relies on the scalar mimicking dark matter
 ## Status in cdot-8's record
 
 Cited/verified across WP0 (initial literature pass), WP1 (dictionary),
-and WP6 (tensor-speed import, requirement (v) quote). No known dispute;
-treated as a primary, trusted source throughout.
+WP6 (tensor-speed import, requirement (v) quote), and now WP7 (the
+imported linear perturbation system, §25 onward; the $\mathcal K$-vs-
+$\mathcal F$ normalization distinction underlying Stage 2's units
+contract, verified directly against source, 2026-07-20). No known
+dispute; treated as a primary, trusted source throughout.

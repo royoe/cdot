@@ -1165,3 +1165,27 @@ TensorSpeedStructure §"New sub-task" (new), `ConsolidationLog` Item 16
 and escalated appropriately.** Not declared a kill of anything; the
 cdot-7-relevant angle is explicitly routed for author review rather than
 decided here. Nothing in `cdot-7/` was touched.
+
+---
+
+## Entry — $Q_2$/EFE sequencing decided: postponed until after WP7 (author, 2026-07-20)
+
+**Prompt (verbatim):**
+> Regarding the Cassini/DE440 bound sequencing decision. Please record
+> that we postpone that until post-WP7, same as WP4a.
+
+**Summary of work performed:** Recorded the author's sequencing decision
+across every place the open question lived: added **Gate 3** to
+`proposal/DecisionGates-2026-07-18.md` (matching the existing Gate
+1/Gate 2 resolution format); updated `ConsolidationLog-2026-07-12.md`
+Item 16 with the resolution; updated this document's own $Q_2$ section;
+updated `Foundation.md` §9 and `Progress.md` (item 3 and the §4b
+post-WP7 queue) to reflect the decision rather than "awaiting author
+input."
+
+**Status: Gate 3 closed — postponed, not resolved.** The finding itself
+(cdot-7's preferred fit in $\sim21\sigma$ tension with the published
+$Q_2$ bound) is unchanged; only its sequencing is decided, on the same
+logic as Gate 1(b)'s own deferral. Joins the post-WP7 revisit queue
+alongside the radiation-era-assumption revisit and the KATRIN-aligned
+low-$\Sigma m_\nu$ re-closure lever. Nothing in `cdot-7/` was touched.
